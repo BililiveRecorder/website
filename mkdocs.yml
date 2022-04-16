@@ -1,0 +1,128 @@
+site_name: B站录播姬
+site_url: !ENV [SITE_URL ,'https://rec.danmuji.org']
+site_description: B站录播姬是一个方便好用免费开源的B站直播录制工具
+site_author: genteure
+
+strict: false
+
+repo_url: https://github.com/Bililive/BililiveRecorder
+repo_name: Bililive/BililiveRecorder
+
+edit_uri: https://github.com/BililiveRecorder/website/blob/master/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  favicon: favicon.png
+  logo: favicon.svg
+  features:
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换到亮色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到暗色模式
+
+nav:
+  - 首页: index.md
+  - 用户文档:
+      - user/index.md
+      - 安装使用: user/install.md
+      - 常见问题: user/faq.md
+      - 录制模式: user/record-mode.md
+      - 录播修复功能: user/repair.md
+      - 其他工具和项目: user/other-projects.md
+  - 开发文档:
+      - dev/index.md
+      - 项目结构: dev/projects.md
+      - 翻译: dev/translations.md
+      - 录播修复系统: dev/repair.md
+
+plugins:
+  - search
+  - tags
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      js_files:
+        - assets/javascripts/homepage.js
+      css_files:
+        - assets/stylesheets/homepage.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/7033853
+      name: 哔哩哔哩 @genteure
+    - icon: "afdian/afd logo-发电紫"
+      link: https://afdian.net/@genteure
+      name: 爱发电 @genteure
+    - icon: octicons/mark-github-16
+      link: https://github.com/BililiveRecorder
+      name: GitHub 组织 @BiliveRecorder
+    - icon: fontawesome/brands/qq
+      link: https://jq.qq.com/?_wv=1027&k=5NPC2dt
+      name: 反馈QQ群 689636812
+    - icon: material/email-edit
+      link: mailto:rec@danmuji.org
+      name: 反馈邮箱 rec@danmuji.org
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

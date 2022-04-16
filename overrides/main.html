@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block styles %}
+{{ super() }}
+
+{% if config.theme.palette %}
+    {% set palette = config.theme.palette[0] %}
+    {% if palette.primary %}
+        {% import "partials/palette.html" as map %}
+        {% set primary = map.primary(
+                    palette.primary | replace(" ", "-") | lower
+                ) %}
+        <meta name="theme-color" content="{{ primary }}">
+    {% endif %}
+{% endif %}
+{% endblock %}
+
+{% block site_meta %}
+{{ super() }}
+<!-- 半成品预览不要索引 -->
+<meta name="robots" content="noindex">
+<meta name="robots" content="nofollow">
+<meta name="robots" content="none">
+<meta name="robots" content="noarchive">
+{% endblock %}
+
+{% block announce %}
+<div style="text-align:center;font-weight:bold">新版B站录播姬网站预览 - 半成品修改中</div>
+{% endblock %}
