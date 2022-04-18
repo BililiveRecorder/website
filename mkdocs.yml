@@ -27,14 +27,14 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue
-      accent: teal
+      accent: orange
       toggle:
         icon: material/weather-night
         name: 切换到亮色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue
-      accent: teal
+      accent: orange
       toggle:
         icon: material/weather-sunny
         name: 切换到暗色模式

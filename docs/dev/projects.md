@@ -12,15 +12,15 @@ BililiveRecorder.Web | .NET 6 | 跨平台 ASP.NET Core 项目，提供各种 API
 BililiveRecorder.Cli | .NET 6 | 跨平台的 “录播姬命令行版”，通过 Web 项目提供 API
 
 ```mermaid
-classDiagram
-    Flv <.. Core
-    Flv <.. Toolbox
-    Core <.. WPF
-    Toolbox <.. WPF
-    Core <.. Web
-    Web <.. Cli
-    Core <.. Cli
-    Toolbox <.. Cli
+graph BT
+    toolbox(BililiveRecorder.Toolbox) --> flv(BililiveRecorder.Flv)
+    core(BililiveRecorder.Core) --> flv
+    wpf(BililiveRecorder.WPF) --> core
+    wpf --> toolbox
+    cli(BililiveRecorder.Cli) --> toolbox
+    cli ---> core
+    web(BililiveRecorder.Web) --> core
+    cli --> web
 ```
 
 除此以外还有两个测试项目，不过目前测试相对还是很少。
