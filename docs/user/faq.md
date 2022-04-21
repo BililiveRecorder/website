@@ -6,31 +6,9 @@
 
 ## 安装
 
-### 录播姬支持的操作系统
+### 不支持的操作系统
 
-录播姬目前需要系统安装了 .NET Framework 4.7.2 或 .NET Framework 4.8 才能运行，目前 Windows 10 会自带，安装包也会检测是否已经安装了。
-
-支持的操作系统有：
-
-- Windows 11
-- Windows 10 1607 或更高版本
-- Windows 8.1
-- Windows 7 SP 1
-
-以及它们对应的服务器版本：
-
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012
-- Windows Server 2008 R2 SP1
-
-**不支持** 的操作系统有：
-
-- :octicons-x-16:{ style="color:red" } ~~Windows 10 1511~~
-- :octicons-x-16:{ style="color:red" } ~~Windows 10 1507~~
-- :octicons-x-16:{ style="color:red" } ~~Windows 8~~
-- :octicons-x-16:{ style="color:red" } ~~Windows 7 (没有 SP 1)~~
+录播姬不支持部分老旧操作系统，具体请查看[软硬件要求](./system-requirements.md)一页。
 
 ### 下载文件不成功
 

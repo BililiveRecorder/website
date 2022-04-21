@@ -8,7 +8,9 @@ strict: false
 repo_url: https://github.com/Bililive/BililiveRecorder
 repo_name: Bililive/BililiveRecorder
 
-edit_uri: https://github.com/BililiveRecorder/website/blob/master/docs/
+edit_uri: https://github.com/BililiveRecorder/website/blob/main/docs/
+
+copyright: "Copyright &copy; 2022 Genteure. 文档内容为 CC-BY-NC-SA 授权"
 
 theme:
   name: material
@@ -43,6 +45,7 @@ nav:
   - 首页: index.md
   - 用户文档:
       - user/index.md
+      - 软硬件要求: user/system-requirements.md
       - 安装使用: user/install.md
       - 常见问题: user/faq.md
       - 录制模式: user/record-mode.md
@@ -51,7 +54,7 @@ nav:
   - 开发文档:
       - dev/index.md
       - 项目结构: dev/projects.md
-      - 翻译: dev/translations.md
+      - 翻译录播姬: dev/translations.md
       - 录播修复系统: dev/repair.md
 
 plugins:

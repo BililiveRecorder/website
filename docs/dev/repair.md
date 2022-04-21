@@ -4,6 +4,8 @@
 
 这里所说的录播修复是 录播姬 1.3 加入的功能，1.2 及以前的版本是没有的。
 
+本站所有文档内容，另有说明的除外，都按 [CC-BY-NC-SA :fontawesome-brands-creative-commons::fontawesome-brands-creative-commons-by::fontawesome-brands-creative-commons-nc::fontawesome-brands-creative-commons-sa:](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh){ target=_blank } 协议授权。
+
 如果本文档和录播姬的录播修复系统对你有帮助，请在你的项目或软件里给出 credit，谢谢。
 
 !!! example "例子"
@@ -11,7 +13,7 @@
     (链接可以是网站首页、本文档页、或录播姬的 GitHub 仓库页)
 
 ??? fail "反面例子"
-    某订阅付费、每月 30 元的录播软件直接复制粘贴了录播姬的数据处理代码，并对编译输出进行了混淆。
+    某订阅制付费、每月 30 元、还限制每日使用量的录播软件直接复制粘贴了录播姬的数据处理代码，并对编译输出进行了混淆。
 
 ## 为什么需要自己修复
 
