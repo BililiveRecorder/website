@@ -49,13 +49,15 @@ nav:
       - 安装使用: user/install.md
       - 常见问题: user/faq.md
       - 录制模式: user/record-mode.md
-      - 录播修复功能: user/repair.md
+      - 弹幕录制: user/danmaku.md
+      - 软件设置: user/settings.md
+      - 录播修复: user/repair.md
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
       - dev/index.md
       - 项目结构: dev/projects.md
       - 翻译录播姬: dev/translations.md
-      - 录播修复系统: dev/repair.md
+      - 录播修复: dev/repair.md
 
 plugins:
   - search

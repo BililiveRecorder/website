@@ -1,4 +1,8 @@
-# 录播修复系统
+---
+title: 面向开发者的录播修复文档
+---
+
+# 面向开发者的录播修复文档
 
 本文档是面向开发者和想了解录播姬的修复系统底层逻辑的人编写的。
 
@@ -13,7 +17,8 @@
     (链接可以是网站首页、本文档页、或录播姬的 GitHub 仓库页)
 
 ??? fail "反面例子"
-    某订阅制付费、每月 30 元、还限制每日使用量的录播软件直接复制粘贴了录播姬的数据处理代码，并对编译输出进行了混淆。
+    某订阅制付费、每月 ~~48~~ 30 元、还限制每日使用量的录播软件直接复制粘贴了录播姬的数据处理代码，并对编译输出进行了混淆。  
+    [https://t.bilibili.com/651552422928318502](https://t.bilibili.com/651552422928318502){ target=_blank rel=noreferrer }
 
 ## 为什么需要自己修复
 
@@ -168,6 +173,8 @@ End Tag 单独一个组
 
 ### 修复规则 Pipeline
 
+#### 总体概念
+
 这部分参考了在 web server framework 里常见的 middleware 设计。  
 这样的设计在 [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/)、
 nodejs 的 [express.js](https://expressjs.com/en/guide/using-middleware.html)、
@@ -200,6 +207,51 @@ flowchart LR
     r5 --返回 1---> r4 --返回 1---> r3 --调用 2---> r4 --调用 2---> r5
     r5 --返回 2---> r4 --返回 2---> r3 --返回---> r2 --返回---> r1
     r1 --调用---> r2 --调用---> r3 --调用 1---> r4 --调用 1---> r5
+```
+
+这样的设计提供了最大的灵活性，能尽可能保证将来不会出现需要修改整体代码结构的情况。
+
+#### 主要类型
+
+在各个修复规则之间传递数据的是 `FlvProcessingContext`。
+
+`ProcessingPipelineBuilder` 把各个规则按顺序打包到一起，得到一个 `ProcessingDelegate`，调用的代码只需要运行 `pipeline(context);` 即可。
+
+```csharp
+public delegate void ProcessingDelegate(FlvProcessingContext context);
+
+public class FlvProcessingContext
+{
+    public List<PipelineAction> Actions { get; set; }
+    public IDictionary<object, object?> SessionItems { get; private set; }
+    public IDictionary<object, object?> LocalItems { get; private set; }
+    public List<ProcessingComment> Comments { get; private set; }
+}
+```
+
+`Actions` 是第二步 Tag 分组的输出，也是提供给第四步写入文件的命令输入。
+除了承载了直播数据的 `PipelineScriptAction`, `PipelineHeaderAction`, `PipelineDataAction` 以外，还有控制新建文件的 `PipelineNewFileAction` 等 `PipelineAction`。
+
+`Actions` 是一个 `List`，一次调用里可能会传入多个 `PipelineAction`，需要每个规则正确处理。比如录像分段时就会插入一个 `PipelineNewFileAction`。
+
+`SessionItems` 用于保存需要在多次调用之间保存的数据，类似于 HTTP 语境里的 Server Session。比如 `HandleNewHeaderRule` 就在 `SessionItems` 中保存了最后一次收到的 Header Tag 副本。
+
+`LocalItems` 用于暂存不需要在多次调用之间保存的数据。暂时没有使用到。
+
+`Comments` 用于记录各个修复规则对数据进行了的操作。录播姬工具箱的分析功能会使用这个信息给出“问题”的数量。这个信息会记录到日志文件。
+
+#### 修复规则
+
+修复规则可以继承 `IFullProcessingRule` 或 `ISimpleProcessingRule`。
+
+因为很多规则都需要针对每个 `PipelineAction` 运行一次逻辑，所以把循环处理的逻辑单独封装成了一个 [拓展函数 (Extension Methods)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) `PerActionRun`。  
+这个拓展函数使用了 [迭代器 (Iterators)](https://docs.microsoft.com/en-us/dotnet/csharp/iterators) 和 [yield](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield) 使得插入、保留、删除 Action 的代码更清晰简洁。
+
+```csharp
+public static bool PerActionRun(this FlvProcessingContext context, Func<FlvProcessingContext, PipelineAction, IEnumerable<PipelineAction?>> func)
+{
+    // 略，源代码在 FlvProcessingContext.cs 里
+}
 ```
 
 ### 写入文件
