@@ -52,6 +52,7 @@ nav:
       - 弹幕录制: user/danmaku.md
       - 软件设置: user/settings.md
       - 录播修复: user/repair.md
+      - 修复问题反馈: user/repair-feedback.md
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
       - dev/index.md
@@ -62,6 +63,12 @@ nav:
 plugins:
   - search
   - tags
+  - redirects:
+      redirect_maps:
+        'link/faq.md': 'user/faq.md'
+        'link/fix_feedback.md': 'user/repair-feedback.md'
+        'link/sponsor.md': 'https://afdian.net/@genteure'
+        'link/translate.md': 'https://crowdin.com/project/bililiverecorder'
   - minify:
       minify_html: true
       minify_js: true
