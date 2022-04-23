@@ -8,8 +8,8 @@
 
 | 名字 | 链接 | 备注说明 |
 | :--: | ---- | -------- |
-| VLC | [VLC 官网中文首页](https://www.videolan.org/index.zh_CN.html){ target=_blank } | 支持加载 ASS 字幕 |
-| PotPlayer | [PotPlayer 官网中文首页](https://potplayer.daum.net/?lang=zh_CN){ target=_blank } | 支持加载 ASS 字幕 |
+| VLC | [官网中文首页](https://www.videolan.org/index.zh_CN.html){ target=_blank } | 支持加载 ASS 字幕 |
+| PotPlayer | [官网中文首页](https://potplayer.daum.net/?lang=zh_CN){ target=_blank } | 支持加载 ASS 字幕 |
 | 弹弹play | [官网](http://www.dandanplay.com){ target=_blank } | 支持加载 XML 弹幕 |
 
 ## 弹幕文件处理工具
