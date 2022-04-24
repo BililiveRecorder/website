@@ -29,22 +29,24 @@
 此处列出的软件功能说明仅供参考，不一定完整、不一定完全准确。  
 如果有错误或者有其他没有列出的常用工具，可以点击页面右上角 :material-pencil: 编辑并提交 pull request。
 
-:fontawesome-solid-check:{ style="color:green" }: 有这个功能  
-:fontawesome-solid-xmark:{ style="color:red" }: 没有这个功能  
+{% set y = ':fontawesome-solid-check:{ style="color:green" }' -%}
+{% set x = ':fontawesome-solid-xmark:{ style="color:red" }' -%}
+{{y}}: 有这个功能  
+{{x}}: 没有这个功能  
 表格比较宽，可以向右滚动。
 
 | 名字 | 链接 | 界面 | 转封装 | 切割 | 合并 | 编码 | 其他说明 |
 | :--: | --- | :--: | :---: | :--: | :--: | :--: | ------- |
-| FFmpeg                         | [官网](https://ffmpeg.org){ target=_blank }<br>[二进制下载](https://github.com/BtbN/FFmpeg-Builds/releases){ target=_blank }     | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| valkjsaaa/ffmpeg-smart-trim    | [GitHub 项目页](https://github.com/valkjsaaa/ffmpeg-smart-trim){ target=_blank }                                                | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | 基于FFmpeg的快速精准切片 |
-| lossless-cut                   | [GitHub Release](https://github.com/mifi/lossless-cut/releases){ target=_blank }                                                | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | 快速切片工具 |
-| MediaCoder                     | [官网](https://www.mediacoderhq.com/dlfull.htm){ target=_blank }                                                                 | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| Rmbox<br>(Ruminoid Toolbox)    | [B站视频](https://www.bilibili.com/video/BV1aK4y1N7Nf){ target=_blank }<br>[官网](https://ruminoid.world){ target=_blank }       | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| NegativeEncoder 消极压制        | [GitHub Release](https://github.com/zyzsdy/NegativeEncoder/releases){ target=_blank }                                           | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| 小丸工具箱                      | [下载链接](https://dl.hdslb.com/video-press/xiaowantoolsrev194.zip){ target=_blank }                                             | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| 小丸工具箱B站定制版              | [下载链接](https://dl.hdslb.com/video-press/BiliBiliEncoder.zip){ target=_blank }                                                | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| StarTools                      | [GitHub Release](https://github.com/hoshinohikari/StarTools/releases){ target=_blank }                                           | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-check:{ style="color:green" } | 无 |
-| OBS Studio                     | [官网](https://obsproject.com){ target=_blank }                                                                                  | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-check:{ style="color:green" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | :fontawesome-solid-xmark:{ style="color:red" } | 无 |
+| FFmpeg                         | [官网](https://ffmpeg.org){ target=_blank }<br>[二进制下载](https://github.com/BtbN/FFmpeg-Builds/releases){ target=_blank }     | {{ x }} | {{ y }} | {{ y }} | {{ y }} | {{ y }} | 无 |
+| valkjsaaa/ffmpeg-smart-trim    | [GitHub 项目页](https://github.com/valkjsaaa/ffmpeg-smart-trim){ target=_blank }                                                | {{ x }} | {{ y }} | {{ y }} | {{ x }} | {{ x }} | 基于FFmpeg的快速精准切片 |
+| lossless-cut                   | [GitHub Release](https://github.com/mifi/lossless-cut/releases){ target=_blank }                                                | {{ y }} | {{ y }} | {{ y }} | {{ y }} | {{ x }} | 快速切片工具 |
+| MediaCoder                     | [官网](https://www.mediacoderhq.com/dlfull.htm){ target=_blank }                                                                | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| Rmbox<br>(Ruminoid Toolbox)    | [B站视频](https://www.bilibili.com/video/BV1aK4y1N7Nf){ target=_blank }<br>[官网](https://ruminoid.world){ target=_blank }      | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| NegativeEncoder 消极压制        | [GitHub Release](https://github.com/zyzsdy/NegativeEncoder/releases){ target=_blank }                                          | {{ y }} | {{ x }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| 小丸工具箱                      | [下载链接](https://dl.hdslb.com/video-press/xiaowantoolsrev194.zip){ target=_blank }                                            | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| 小丸工具箱B站定制版              | [下载链接](https://dl.hdslb.com/video-press/BiliBiliEncoder.zip){ target=_blank }                                               | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| StarTools                      | [GitHub Release](https://github.com/hoshinohikari/StarTools/releases){ target=_blank }                                          | {{ y }} | {{ x }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| OBS Studio                     | [官网](https://obsproject.com){ target=_blank }                                                                                 | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ x }} | 无 |
 
 ## 基于录播姬的项目
 
