@@ -35,33 +35,31 @@ def write_html(site_dir, old_path, new_path):
         f.write(textwrap.dedent(
             """
             <!doctype html>
-            <html lang="en">
+            <html>
             <head>
-                <meta charset="utf-8">
-                <title>Redirecting...</title>
-                <link rel="canonical" href="{url}">
-                <meta name="robots" content="noindex">
-                <script>var anchor=window.location.hash.substr(1);location.href="{url}"+(anchor?"#"+anchor:"")</script>
-                <meta http-equiv="refresh" content="0; url={url}">
+            <meta charset=utf-8>
+            <title>跳转中...</title>
+            <link rel=canonical href="{url}">
+            <meta name=robots content=noindex>
+            <script>a=location.hash.substr(1);location.href="{url}"+(a?"#"+a:"")</script>
+            <meta http-equiv=refresh content="0;url={url}">
             </head>
             <body>
-            Redirecting...
+            <h1>跳转中...</h1>
+            <a href="{url}">如果没有自动跳转请点击这里</a>
             </body>
             </html>
             """
-        ).format(url=new_path))
+        ).format(url=new_path).replace('\n',''))
 
 
-def get_relative_html_path(old_page, new_page, use_directory_urls):
+def get_relative_html_path(old_html_path, new_html_path, use_directory_urls):
     """ Return the relative path from the old html path to the new html path"""
-    old_path = get_html_path(old_page, use_directory_urls)
-    new_path = get_html_path(new_page, use_directory_urls)
-
     if use_directory_urls:
         # remove /index.html from end of path
-        new_path = posixpath.dirname(new_path) or './'
+        new_html_path = posixpath.dirname(new_html_path) or './'
 
-    relative_path = posixpath.relpath(new_path, start=posixpath.dirname(old_path))
+    relative_path = posixpath.relpath(new_html_path, start=posixpath.dirname(old_html_path))
 
     if use_directory_urls:
         relative_path = relative_path + '/'
@@ -128,10 +126,10 @@ class RedirectPlugin(BasePlugin):
 
         redirect_dict = {}
 
-        self.__build_redirect_htmls(config['site_dir'], redirect_dict, use_directory_urls)
+        self.__build_redirect_htmls(config['site_dir'], redirect_dict, use_directory_urls, use_directory_urls)
 
         if self.config['write_both_url_type']:
-            self.__build_redirect_htmls(config['site_dir'], redirect_dict, not use_directory_urls)
+            self.__build_redirect_htmls(config['site_dir'], redirect_dict, not use_directory_urls, use_directory_urls)
 
         if self.config['build_redirects_json']:
             redirects_json_path = os.path.join(config['site_dir'], 'redirects.json')
@@ -139,7 +137,7 @@ class RedirectPlugin(BasePlugin):
             with open(redirects_json_path, 'w') as f:
                 f.write(json.dumps(redirect_dict))
 
-    def __build_redirect_htmls(self, site_dir, redirect_dict, use_directory_urls):
+    def __build_redirect_htmls(self, site_dir, redirect_dict, old_use_directory_urls, real_use_directory_urls):
 
         # Walk through the redirect map and write their HTML files
         for page_old, page_new in self.redirects.items():
@@ -147,9 +145,12 @@ class RedirectPlugin(BasePlugin):
             # External redirect targets are easy, just use it as the target path
             if page_new.lower().startswith(('http://', 'https://')):
                 dest_path = page_new
+                absolute_dest_path = page_new
 
             elif page_new in self.doc_pages:
-                dest_path = get_relative_html_path(page_old, page_new, use_directory_urls)
+                dest_path = get_relative_html_path(get_html_path(page_old, old_use_directory_urls), get_html_path(page_new, real_use_directory_urls), real_use_directory_urls)
+                absolute_dest_path = get_html_path(page_new, real_use_directory_urls)
+                absolute_dest_path = absolute_dest_path if not real_use_directory_urls else posixpath.dirname(absolute_dest_path) + '/' or './'
 
             # If the redirect target isn't external or a valid internal page, throw an error
             # Note: we use 'warn' here specifically; mkdocs treats warnings specially when in strict mode
@@ -158,8 +159,16 @@ class RedirectPlugin(BasePlugin):
                 continue
 
             # DO IT!
-            src_path = get_html_path(page_old, use_directory_urls)
+            src_path = get_html_path(page_old, old_use_directory_urls)
             write_html(site_dir,
                        src_path,
                        dest_path)
-            redirect_dict[src_path] = dest_path
+
+            if src_path.endswith('index.html'):
+                trimmed_src_path = src_path[:-10]
+            elif src_path.endswith('.html'):
+                trimmed_src_path = src_path[:-5]
+            else:
+                trimmed_src_path = src_path
+
+            redirect_dict[trimmed_src_path] = absolute_dest_path

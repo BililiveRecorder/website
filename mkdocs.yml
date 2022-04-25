@@ -1,9 +1,9 @@
 site_name: B站录播姬
-site_url: !ENV [SITE_URL ,'https://rec.danmuji.org']
+site_url: !ENV [SITE_URL ,'https://rec.danmuji.org/']
 site_description: B站录播姬是一个方便好用免费开源的B站直播录制工具
 site_author: genteure
 
-strict: false
+strict: !ENV [CI, false]
 
 repo_url: https://github.com/Bililive/BililiveRecorder
 repo_name: Bililive/BililiveRecorder

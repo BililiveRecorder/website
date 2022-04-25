@@ -1,0 +1,5 @@
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-redirects
+mkdocs-macros-plugin
+./plugins/mkdocs-redirects/
