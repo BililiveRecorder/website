@@ -64,7 +64,9 @@ nav:
 plugins:
   - search
   - tags
-  - macros
+  - macros:
+      on_error_fail: !ENV [CI, false]
+      include_dir: include
   - brec-redirects:
       build_redirects_json: true
       write_both_url_type: true
