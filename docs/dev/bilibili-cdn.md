@@ -26,8 +26,6 @@ cdn_region_map:
 
 本页面收集了一些B站直播 CDN 相关的信息，我也不知道可能会有什么用。
 
-## CDN 服务商
-
 目前B站直播使用了以下几家 CDN:
 
 {% for key, value in cdn_provider_map.items() %}
@@ -36,12 +34,18 @@ cdn_region_map:
 
 国内最常见的是 B站自建 (B站视频云)、腾讯云、华为云。
 
+地名拼音开头的域名也是B站自建的CDN，在本页的 [B站自建 CDN 节点](#b站自建-cdn-节点) 段落给出了部分域名格式示例。
+## CDN 服务商域名
+
 DNS 信息更新日期: {{ page.meta.cdn_dns_data.time }}。  
 IP 个数指的是一次 DNS 请求返回的数量（显然不可能是总数）。  
 因为有 GeoDNS 的存在，不同地区的请求结果会不一样，以下信息仅供参考。
 
 {% set 有 = '有 :fontawesome-solid-check:{ style="color:green" }, ' -%}
 {% set 无 = '无 :fontawesome-solid-xmark:{ style="color:red" }' -%}
+
+-----
+
 {% for domain in page.meta.cdn_dns_data.dns -%}
 {% set dns = page.meta.cdn_dns_data.dns[domain] -%}
 {% set map = page.meta.cdn_dns_data.map[domain] -%}
@@ -74,7 +78,11 @@ CNAME 指向链：
 
 {% endfor %}
 
-## 地名.bilivideo.com
+## B站自建 CDN 节点
+
+这部分之后还可以再完善一下。
+
+目前发现大概有两种命名方式的域名。
 
 ```txt
 cn-hbsjz-cm-02-08.bilivideo.com
@@ -86,4 +94,6 @@ cn-hbwh-cm-01-13.bilivideo.com
 cn-hbyc-ct-02-27.bilivideo.com
 
 cn-hbyc2-dx-live-05.bilivideo.com
+
+cn-zjhz-cmcc-live-01.bilivideo.com
 ```

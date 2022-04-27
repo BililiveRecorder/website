@@ -50,9 +50,12 @@ nav:
       - 常见问题: user/faq.md
       - 录制模式: user/record-mode.md
       - 弹幕录制: user/danmaku.md
-      - 软件设置: user/settings.md
       - 录播修复: user/repair.md
       - 修复问题反馈: user/repair-feedback.md
+      - 软件设置: user/settings.md
+      - 配置文件: user/config-file.md
+      - 命令行参数: user/commands.md
+      - Webhook: user/webhook.md
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
       - dev/index.md
