@@ -13,14 +13,18 @@ export const onRequestGet: PagesFunction<{
     data, // arbitrary space for passing data between middlewares
   } = context;
 
-  throw "not implemented";
-  return new Response(null, {
+  return new Response('{"error":"not implemented"}', {
     headers: {
-      Location: await generateSignedURL({
-        url: `${previewURLBase}/highres`,
-        imagesKey,
-      }),
-    },
-    status: 302,
+      "Content-Type": "application/json"
+    }
   });
+  //return new Response(null, {
+  //  headers: {
+  //    Location: await generateSignedURL({
+  //      url: `${previewURLBase}/highres`,
+  //      imagesKey,
+  //    }),
+  //  },
+  //  status: 302,
+  //});
 };
