@@ -5,7 +5,7 @@ export async function generateSignedURL(host: string, path: string, key: string)
   return url
 }
 
-async function md5(text: string) {
+export async function md5(text: string) {
   return bufferToHex(await crypto.subtle.digest("MD5", new TextEncoder().encode(text)))
 }
 
