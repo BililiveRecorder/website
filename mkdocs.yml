@@ -51,10 +51,15 @@ nav:
       - 软硬件要求: user/system-requirements.md
       - 安装使用: user/install.md
       - 常见问题: user/faq.md
+      - 更新历史: user/change-log.md
       - 录制模式: user/record-mode.md
       - 弹幕录制: user/danmaku.md
-      - 工具箱: user/toolbox.md
-      - 录播修复: user/repair.md
+      - 工具箱:
+        - user/toolbox/index.md
+        - 录播修复: user/toolbox/repair.md
+        - 转封装: user/toolbox/remux.md
+        - 弹幕合并: user/toolbox/danmaku-merge.md
+      - 录播修复说明: user/repair.md
       - 修复问题反馈: user/repair-feedback.md
       - 命令行参数: user/commands.md
       - 软件设置: user/settings.md
@@ -65,7 +70,7 @@ nav:
       - dev/index.md
       - 项目结构: dev/projects.md
       - 翻译录播姬: dev/translations.md
-      - 录播修复: dev/repair.md
+      - 录播修复系统: dev/repair.md
       - 直播 CDN 信息: dev/bilibili-cdn.md
 
 plugins:
