@@ -2,7 +2,7 @@
 # npx ts-node ./scripts/cdn-dns-scan.ts
 # 粘贴到这里之前格式化一下，用 2 个空格，方便 git diff
 cdn_dns_data: {
-  "time": "2022/4/26",
+  "time": "2022/4/29",
   "dns": {
     "c1--cn-gotcha01.bilivideo.com": {
       "ipv4": 10,
@@ -55,7 +55,7 @@ cdn_dns_data: {
     "d1--cn-gotcha03.bilivideo.com": {
       "d1--cn-gotcha03.bilivideo.com.rtmpv4.pilidns.com": {
         "d1--cn-gotcha03.bilivideo.com.w.cdngslb.com": {
-          "ipv4": 4,
+          "ipv4": 8,
           "ipv6": 2
         }
       }
@@ -63,7 +63,7 @@ cdn_dns_data: {
     "d1--cn-gotcha103.bilivideo.com": {
       "d1--cn-gotcha103.bilivideo.com.rtmpv4.pilidns.com": {
         "d1--cn-gotcha103.bilivideo.com.w.cdngslb.com": {
-          "ipv4": 2,
+          "ipv4": 4,
           "ipv6": 2
         }
       }
@@ -161,7 +161,7 @@ cdn_dns_data: {
     "d1--cn-gotcha08.bilivideo.com": {
       "d1--cn-gotcha08.bilivideo.com.c.cdnhwc3.com": {
         "hcdnl.pullbz.gslb.c.cdnhwc2.com": {
-          "ipv4": 4,
+          "ipv4": 3,
           "ipv6": 4
         }
       }
@@ -169,7 +169,7 @@ cdn_dns_data: {
     "d1--cn-gotcha108.bilivideo.com": {
       "d1--cn-gotcha108.bilivideo.com.c.cdnhwc3.com": {
         "hcdnl.pullbz.gslb.c.cdnhwc2.com": {
-          "ipv4": 4,
+          "ipv4": 3,
           "ipv6": 4
         }
       }
@@ -192,13 +192,13 @@ cdn_dns_data: {
     },
     "d1--cn-gotcha09.bilivideo.com": {
       "d1--cn-gotcha09.bilivideo.com.w.alikunlun.net": {
-        "ipv4": 4,
+        "ipv4": 2,
         "ipv6": 0
       }
     },
     "d1--cn-gotcha209.bilivideo.com": {
       "d1--cn-gotcha209.bilivideo.com.w.alikunlun.net": {
-        "ipv4": 4,
+        "ipv4": 2,
         "ipv6": 0
       }
     },
@@ -237,7 +237,7 @@ cdn_dns_data: {
     "d1--ov-gotcha04.bilivideo.com": {
       "d1--ov-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
         "tdns.l3.sched.dcloudlive.com": {
-          "ipv4": 11,
+          "ipv4": 6,
           "ipv6": 0
         }
       }
@@ -245,7 +245,7 @@ cdn_dns_data: {
     "d1--ov-gotcha104.bilivideo.com": {
       "d1--ov-gotcha104.bilivideo.com.liveplay.myqcloud.com": {
         "tdns.l3.sched.dcloudlive.com": {
-          "ipv4": 11,
+          "ipv4": 6,
           "ipv6": 0
         }
       }
@@ -291,8 +291,16 @@ cdn_dns_data: {
         "d1--ov-gotcha07.bilivideo.com.zengslb.com": {
           "zenlive002.zengslb.net": {
             "ipv4": 5,
-            "ipv6": 0
+            "ipv6": 5
           }
+        }
+      }
+    },
+    "d1--ov-gotcha107.bilivideo.com": {
+      "d1--ov-gotcha107.bilivideo.com.g3.bcelive.com": {
+        "zenlive002.zengslb.net": {
+          "ipv4": 5,
+          "ipv6": 5
         }
       }
     },
@@ -526,6 +534,12 @@ cdn_dns_data: {
       "prefix": "d1",
       "region": "ov",
       "type": "",
+      "id": "07"
+    },
+    "d1--ov-gotcha107.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "1",
       "id": "07"
     },
     "d1--ov-gotcha210.bilivideo.com": {
