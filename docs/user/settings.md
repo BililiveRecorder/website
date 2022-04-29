@@ -12,9 +12,9 @@
 | ------ | ---- |
 | `Example` | `string` |
 
-:fontawesome-solid-triangle-exclamation:{style=color:orange} 此设置项为 [高级设置](#高级设置)，不显示在普通设置界面。
-
 这是简短一句话说明。
+
+:material-cogs:{style=color:orange} 此设置项为 [高级设置](#高级设置)，不显示在普通设置界面。
 
 !!! example "默认设置"
     ```txt

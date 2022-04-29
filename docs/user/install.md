@@ -8,6 +8,8 @@
 安装过录播姬后可以从桌面和开始菜单的快捷方式启动录播姬，不要再次运行安装包。  
 如果想要卸载录播姬，可以在 **系统设置 :material-chevron-right: 应用** 里卸载。
 
+你也可以从 [GitHub Release](https://github.com/Bililive/BililiveRecorder/releases){target=_blank} 下载免安装压缩包以及旧版本的B站录播姬。
+
 打开录播姬后需要选择工作目录，工作目录是保存 **配置文件** 和 **录像文件** 的地方。
 
 !!! tip "关于工作目录"
