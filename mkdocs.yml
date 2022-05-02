@@ -89,7 +89,23 @@ plugins:
         'link/sponsor.md': 'https://afdian.net/@genteure'
         'link/translate.md': 'https://crowdin.com/project/bililiverecorder'
         # Old jekyll website
-        'docs.md': 'user/index.md'
+        docs.md: user/index.md
+        docs/translate.md: dev/translations.md
+        docs/toolbox.md: user/toolbox/index.md
+        docs/toolbox/danmaku_merge.md: user/toolbox/danmaku-merge.md
+        docs/toolbox/fix.md: user/toolbox/repair.md
+        docs/process.md: user/repair.md
+        docs/process/feedback.md: user/repair-feedback.md
+        docs/faq.md: user/faq.md
+        docs/cli.md: user/commands.md
+        docs/cli/docker.md: user/commands.md
+        docs/cli/config_file.md: user/config-file.md
+        docs/basic/webhook.md: user/webhook.md
+        docs/basic/settings.md: user/settings.md
+        docs/basic/related.md: user/other-projects.md
+        docs/basic/record_mode.md: user/record-mode.md
+        docs/basic/danmaku.md: user/danmaku.md
+        docs/basic/auto_cut.md: user/index.md # 没有对应的页面
   - minify:
       minify_html: true
       minify_js: true
