@@ -1,5 +1,5 @@
 site_name: B站录播姬
-site_url: !ENV [SITE_URL ,'https://rec.danmuji.org/']
+site_url: !ENV [SITE_URL, "https://rec.danmuji.org/"]
 site_description: B站录播姬是一个方便好用免费开源的B站直播录制工具
 site_author: genteure
 
@@ -55,10 +55,10 @@ nav:
       - 录制模式: user/record-mode.md
       - 弹幕录制: user/danmaku.md
       - 工具箱:
-        - user/toolbox/index.md
-        - 录播修复: user/toolbox/repair.md
-        - 转封装: user/toolbox/remux.md
-        - 弹幕合并: user/toolbox/danmaku-merge.md
+          - user/toolbox/index.md
+          - 录播修复: user/toolbox/repair.md
+          - 转封装: user/toolbox/remux.md
+          - 弹幕合并: user/toolbox/danmaku-merge.md
       - 录播修复说明: user/repair.md
       - 修复问题反馈: user/repair-feedback.md
       - 命令行参数: user/commands.md
@@ -84,10 +84,10 @@ plugins:
       write_both_url_type: true
       redirect_maps:
         # Links
-        'link/faq.md': 'user/faq.md'
-        'link/fix_feedback.md': 'user/repair-feedback.md'
-        'link/sponsor.md': 'https://afdian.net/@genteure'
-        'link/translate.md': 'https://crowdin.com/project/bililiverecorder'
+        "link/faq.md": "user/faq.md"
+        "link/fix_feedback.md": "user/repair-feedback.md"
+        "link/sponsor.md": "https://afdian.net/@genteure"
+        "link/translate.md": "https://crowdin.com/project/bililiverecorder"
         # Old jekyll website
         docs.md: user/index.md
         docs/translate.md: dev/translations.md
@@ -142,6 +142,9 @@ extra:
     - icon: material/email-edit
       link: mailto:rec@danmuji.org
       name: 反馈邮箱 rec@danmuji.org
+  analytics:
+    provider: google
+    property: G-NH133VH2RG
 
 markdown_extensions:
   - abbr
