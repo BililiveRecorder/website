@@ -26,8 +26,14 @@
 
 ## 命令行版
 
-TODO
+TODO 还没写
+
+从 [GitHub Release](https://github.com/Bililive/BililiveRecorder/releases){target=_blank} 里下载
 
 ## Docker 版
 
-TODO
+TODO 还没写
+
+[GitHub Packages](https://github.com/Bililive/BililiveRecorder/pkgs/container/bililiverecorder){target=_blank} 注意不要用开发版本，之后可能会搬迁地址。
+
+之后会在 Docker Hub 上也放一份。

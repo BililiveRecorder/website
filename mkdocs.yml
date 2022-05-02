@@ -89,6 +89,7 @@ plugins:
         'link/sponsor.md': 'https://afdian.net/@genteure'
         'link/translate.md': 'https://crowdin.com/project/bililiverecorder'
         # Old jekyll website
+        'docs.md': 'user/index.md'
   - minify:
       minify_html: true
       minify_js: true

@@ -78,9 +78,16 @@ mv BililiveRecorder.Cli brec
 ./brec run "工作目录"
 ```
 
+TOOD 还没写
+
 ### 以便携模式运行
 
+TOOD 还没写
+
 ### 工具箱命令
+
+TOOD 还没写
+
 ## Docker 版
 
 录播姬 Docker 版和命令行版完全一样。

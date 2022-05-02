@@ -50,7 +50,7 @@
 
 录播姬占用的系统资源少、性能高，可以同时录制很多直播间。
 
-???+ tip "真实用户案例"
+??? tip "真实用户案例"
     某用户的 CPU 是 Intel Core i7-6700T，他给的截图：
 
     ![任务管理器](../assets/images/user-index-taskmanager.png)

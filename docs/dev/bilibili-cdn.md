@@ -629,7 +629,7 @@ CNAME 指向链：
 
 ## B站自建 CDN 节点
 
-这部分之后还可以再完善一下。
+TODO 这部分之后还可以再完善一下。
 
 目前发现大概有两种命名方式的域名。
 
@@ -645,4 +645,27 @@ cn-hbyc-ct-02-27.bilivideo.com
 cn-hbyc2-dx-live-05.bilivideo.com
 
 cn-zjhz-cmcc-live-01.bilivideo.com
+```
+
+<!-- abcdefghijk -->
+
+```txt
+cn-anhn-cm-01
+cn-gdst-cm-01
+cn-hbsjz-cm-02
+cn-hbwh-cm-01
+cn-jxnc-cm-01
+
+
+cn-ahwh-ct-01
+cn-gddg-ct-01
+cn-gdfs-ct-01
+cn-hblf-ct-01
+cn-hbyc-ct-02
+cn-hljheb-ct-01
+cn-sccd-ct-01
+
+
+cn-hncs-cu-01
+cn-nmghhht-cu-v
 ```
