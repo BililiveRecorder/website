@@ -28,6 +28,8 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   // China Unicom 中国联通
   ['cu', 'hncs', '湖南长沙'],
   ['cu', 'nmghhht', '内蒙古呼和浩特', ['v']],
+  // ?????? 教育网
+  ['fx', 'gdgz', '广东广州'],
 ];
 
 const cdnRegions = CDN_INFO.map(info => {
@@ -83,7 +85,7 @@ type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
     dns: output
   }, null, 2);
 
-  const file = path.resolve(__dirname, '../data/dns_scan_bcdn.json');
+  const file = path.resolve(__dirname, '../data/dns_data_bcdn.json');
   console.log('Writing to: ', file);
 
   writeFileSync(file, outputText + '\n');

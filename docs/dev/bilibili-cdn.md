@@ -64,10 +64,9 @@ gotcha_cdn_region_map:
 {% endfor %}{% endmacro %}
 
 {{  bcdn_isp('电信', 'ct') }}
-
 {{  bcdn_isp('联通', 'cu') }}
-
 {{  bcdn_isp('移动', 'cm') }}
+{{  bcdn_isp('教育网', 'fx') }}
 
 ## CDN 服务商域名
 
@@ -115,39 +114,8 @@ CNAME 指向链：
 ## 其他笔记
 
 ```txt
-cn-hbsjz-cm-02-08.bilivideo.com
-cn-hbsjz-cm-02-09.bilivideo.com
-cn-hbsjz-cm-02-10.bilivideo.com
-cn-gddg-ct-01-22.bilivideo.com
-cn-hbwh-cm-01-13.bilivideo.com
-
-cn-hbyc-ct-02-27.bilivideo.com
-
 cn-hbyc2-dx-live-05.bilivideo.com
-
 cn-zjhz-cmcc-live-01.bilivideo.com
-```
-
-<!-- abcdefghijklmnopqrstuvwxyz -->
-
-```txt
-cn-anhn-cm-01
-cn-gdst-cm-01
-cn-hbsjz-cm-02
-cn-hbwh-cm-01
-cn-jxnc-cm-01
-cn-tj-cm-02
-
-
-cn-ahwh-ct-01
-cn-gddg-ct-01
-cn-gdfs-ct-01
-cn-hblf-ct-01
-cn-hbyc-ct-02
-cn-hljheb-ct-01
-cn-sccd-ct-01
-
-
-cn-hncs-cu-01
-cn-nmghhht-cu-v
+cn-jsnt-dx-v-05.bilivideo.com
+cn-gdgz-fx-live-16.bilivideo.com
 ```
