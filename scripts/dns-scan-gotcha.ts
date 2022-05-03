@@ -1,4 +1,6 @@
 import { Resolver } from "dns/promises";
+import { writeFileSync } from "fs";
+import path from "path";
 const r = new Resolver();
 
 interface CdnInfoIp {
@@ -89,12 +91,21 @@ const output: CdnInfoStore = {};
 
 (async function () {
   await resolveDomains(domains, output);
-  console.log(output)
-  console.log(JSON.stringify({
+  // console.log(output)
+
+  const outputText = JSON.stringify({
     time: new Date().toLocaleDateString('zh-CN', {
       timeZone: 'Asia/Shanghai'
     }),
     dns: output,
     map: Object.fromEntries(Object.entries(domain_feature_map).filter(x => output[x[0]]))
-  }))
+  }, null, 2);
+
+
+  const file = path.resolve(__dirname, '../data/dns_data_gotcha.json');
+  console.log('Writing to: ', file);
+
+  writeFileSync(file, outputText + '\n');
+
+  console.log(' ==== DONE ==== ');
 })()

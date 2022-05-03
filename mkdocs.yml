@@ -13,6 +13,8 @@ edit_uri: https://github.com/BililiveRecorder/website/blob/main/docs/
 copyright: "Copyright &copy; 2022 Genteure. 文档内容为 CC-BY-NC-SA 授权"
 
 watch:
+  - data
+  - include
   - overrides
 
 theme:
@@ -79,6 +81,9 @@ plugins:
   - macros:
       on_error_fail: !ENV [CI, false]
       include_dir: include
+      include_yaml:
+        - dns_data_bcdn: data/dns_data_bcdn.json
+        - dns_data_gotcha: data/dns_data_gotcha.json
   - brec-redirects:
       build_redirects_json: true
       write_both_url_type: true
