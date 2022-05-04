@@ -1,9 +1,16 @@
 name: Purge Cache
-on: page_build
+on: deployment
 jobs:
   purge_cache:
     runs-on: ubuntu-latest
     steps:
+      - name: Print debug info
+        env:
+          EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        run: echo $EVENT_CONTEXT
       - name: Run purge cache script
+        if: >-
+          github.event.deployment.environment == 'github-pages' &&
+          github.event.deployment.creator.id == 52472962
         run: ${{ secrets.SECRET_PAGE_PURGE_CACHE_SCRIPT }}
         # curl -X POST "https://api.cloudflare.com/client/v4/zones//purge_cache" -H "Authorization: Bearer " -H "Content-Type: application/json" --data '{"purge_everything":true}'
