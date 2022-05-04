@@ -1506,6 +1506,102 @@
     ],
     "cu": [
       {
+        "regionCode": "hbcd",
+        "regionName": "河北承德",
+        "domains": {
+          "cn-hbcd-cu-02-02.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.3"
+            ]
+          },
+          "cn-hbcd-cu-02-04.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.5"
+            ]
+          },
+          "cn-hbcd-cu-02-06.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.7"
+            ]
+          },
+          "cn-hbcd-cu-02-07.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.8"
+            ]
+          },
+          "cn-hbcd-cu-02-08.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.9"
+            ]
+          },
+          "cn-hbcd-cu-02-09.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.10"
+            ]
+          },
+          "cn-hbcd-cu-02-10.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.11"
+            ]
+          },
+          "cn-hbcd-cu-02-11.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.12"
+            ]
+          },
+          "cn-hbcd-cu-02-12.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.13"
+            ]
+          },
+          "cn-hbcd-cu-02-13.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.14"
+            ]
+          },
+          "cn-hbcd-cu-02-14.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.17"
+            ]
+          },
+          "cn-hbcd-cu-02-15.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.18"
+            ]
+          },
+          "cn-hbcd-cu-02-16.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.19"
+            ]
+          },
+          "cn-hbcd-cu-02-17.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.20"
+            ]
+          },
+          "cn-hbcd-cu-02-18.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.21"
+            ]
+          },
+          "cn-hbcd-cu-02-19.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.22"
+            ]
+          },
+          "cn-hbcd-cu-02-20.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.23"
+            ]
+          },
+          "cn-hbcd-cu-02-21.bilivideo.com": {
+            "ipv4": [
+              "101.75.242.24"
+            ]
+          }
+        }
+      },
+      {
         "regionCode": "hncs",
         "regionName": "湖南长沙",
         "domains": {

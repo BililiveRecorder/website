@@ -26,6 +26,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['cm', 'jxnc', '江西南昌'],
   ['cm', 'tj', '天津'],
   // China Unicom 中国联通
+  ['cu', 'hbcd', '河北承德'],
   ['cu', 'hncs', '湖南长沙'],
   ['cu', 'nmghhht', '内蒙古呼和浩特', ['v']],
   // ?????? 教育网
@@ -78,11 +79,16 @@ type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
     }
   });
 
+  const outputSorted = Object.fromEntries(Object.entries(output).map(isp => {
+    isp[1] = isp[1].sort((a, b) => a.regionCode > b.regionCode ? 1 : a.regionCode < b.regionCode ? -1 : 0);
+    return isp;
+  }));
+
   const outputText = JSON.stringify({
     time: new Date().toLocaleDateString('zh-CN', {
       timeZone: 'Asia/Shanghai'
     }),
-    dns: output
+    dns: outputSorted
   }, null, 2);
 
   const file = path.resolve(__dirname, '../data/dns_data_bcdn.json');
@@ -119,19 +125,19 @@ async function resolveCdnDomain(zone: string, results: DomainIpMap) {
 async function resolveIpAddress(domain: string) {
   const result: { ipv4?: string[], ipv6?: string[] } = {};
 
-  console.log('--> ' + domain);
+  console.log('  > ' + domain);
 
   for (let i = 0; i < 2; i++) {
     try {
       result.ipv4 = (await r.resolve4(domain))
-      result.ipv4.forEach(ip => console.log('----> ' + ip));
+      result.ipv4.forEach(ip => console.log('    > ' + ip));
       break;
     } catch (e) { }
   }
   for (let i = 0; i < 2; i++) {
     try {
       result.ipv6 = (await r.resolve6(domain))
-      result.ipv6.forEach(ip => console.log('----> ' + ip));
+      result.ipv6.forEach(ip => console.log('    > ' + ip));
       break;
     } catch (e) { }
   }

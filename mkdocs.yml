@@ -111,6 +111,7 @@ plugins:
         docs/basic/record_mode.md: user/record-mode.md
         docs/basic/danmaku.md: user/danmaku.md
         docs/basic/auto_cut.md: user/index.md # 没有对应的页面
+        update/v1-3-1.md: user/change-log.md
   - minify:
       minify_html: true
       minify_js: true
