@@ -790,6 +790,215 @@
         }
       },
       {
+        "regionCode": "jsnt",
+        "regionName": "江苏南通",
+        "domains": {
+          "cn-jsnt-ct-01-01.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.2"
+            ]
+          },
+          "cn-jsnt-ct-01-02.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.3"
+            ]
+          },
+          "cn-jsnt-ct-01-03.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.4"
+            ]
+          },
+          "cn-jsnt-ct-01-04.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.5"
+            ]
+          },
+          "cn-jsnt-ct-01-05.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.6"
+            ]
+          },
+          "cn-jsnt-ct-01-06.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.7"
+            ]
+          },
+          "cn-jsnt-ct-01-07.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.8"
+            ]
+          },
+          "cn-jsnt-ct-01-08.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.9"
+            ]
+          },
+          "cn-jsnt-ct-01-09.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.10"
+            ]
+          },
+          "cn-jsnt-ct-01-10.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.13"
+            ]
+          },
+          "cn-jsnt-ct-01-11.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.14"
+            ]
+          },
+          "cn-jsnt-ct-01-12.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.16"
+            ]
+          },
+          "cn-jsnt-ct-01-13.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.17"
+            ]
+          },
+          "cn-jsnt-ct-01-14.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.18"
+            ]
+          },
+          "cn-jsnt-ct-01-15.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.19"
+            ]
+          },
+          "cn-jsnt-ct-01-17.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.23"
+            ],
+            "ipv6": [
+              "240e:978:1503::223"
+            ]
+          },
+          "cn-jsnt-ct-01-18.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.24"
+            ],
+            "ipv6": [
+              "240e:978:1503::224"
+            ]
+          },
+          "cn-jsnt-ct-01-19.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.25"
+            ],
+            "ipv6": [
+              "240e:978:1503::225"
+            ]
+          },
+          "cn-jsnt-ct-01-20.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.26"
+            ],
+            "ipv6": [
+              "240e:978:1503::226"
+            ]
+          },
+          "cn-jsnt-ct-01-21.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.27"
+            ],
+            "ipv6": [
+              "240e:978:1503::227"
+            ]
+          },
+          "cn-jsnt-ct-01-22.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.28"
+            ],
+            "ipv6": [
+              "240e:978:1503::228"
+            ]
+          },
+          "cn-jsnt-ct-01-23.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.29"
+            ],
+            "ipv6": [
+              "240e:978:1503::229"
+            ]
+          },
+          "cn-jsnt-ct-01-24.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.30"
+            ],
+            "ipv6": [
+              "240e:978:1503::230"
+            ]
+          },
+          "cn-jsnt-ct-01-25.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.31"
+            ],
+            "ipv6": [
+              "240e:978:1503::231"
+            ]
+          },
+          "cn-jsnt-ct-01-26.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.32"
+            ],
+            "ipv6": [
+              "240e:978:1503::232"
+            ]
+          },
+          "cn-jsnt-ct-01-27.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.33"
+            ],
+            "ipv6": [
+              "240e:978:1503::233"
+            ]
+          },
+          "cn-jsnt-ct-01-28.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.20"
+            ],
+            "ipv6": [
+              "240e:978:1503::220"
+            ]
+          },
+          "cn-jsnt-ct-01-29.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.21"
+            ],
+            "ipv6": [
+              "240e:978:1503::221"
+            ]
+          },
+          "cn-jsnt-ct-01-30.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.22"
+            ],
+            "ipv6": [
+              "240e:978:1503::222"
+            ]
+          },
+          "cn-jsnt-ct-01-31.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.34"
+            ],
+            "ipv6": [
+              "240e:978:1503::234"
+            ]
+          },
+          "cn-jsnt-ct-01-32.bilivideo.com": {
+            "ipv4": [
+              "61.147.236.35"
+            ],
+            "ipv6": [
+              "240e:978:1503::235"
+            ]
+          }
+        }
+      },
+      {
         "regionCode": "jxjj",
         "regionName": "江西九江",
         "domains": {
@@ -958,6 +1167,92 @@
             ],
             "ipv6": [
               "240e:d9:a600:834::11"
+            ]
+          }
+        }
+      },
+      {
+        "regionCode": "scya",
+        "regionName": "四川雅安",
+        "domains": {
+          "cn-scya-ct-01-01.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.130"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::2"
+            ]
+          },
+          "cn-scya-ct-01-02.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.131"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::3"
+            ]
+          },
+          "cn-scya-ct-01-03.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.132"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::4"
+            ]
+          },
+          "cn-scya-ct-01-04.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.133"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::5"
+            ]
+          },
+          "cn-scya-ct-01-05.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.134"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::6"
+            ]
+          },
+          "cn-scya-ct-01-06.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.135"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::7"
+            ]
+          },
+          "cn-scya-ct-01-07.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.136"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::8"
+            ]
+          },
+          "cn-scya-ct-01-08.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.137"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::9"
+            ]
+          },
+          "cn-scya-ct-01-09.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.138"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::10"
+            ]
+          },
+          "cn-scya-ct-01-10.bilivideo.com": {
+            "ipv4": [
+              "118.116.2.139"
+            ],
+            "ipv6": [
+              "240e:dd:d800:322::11"
             ]
           }
         }

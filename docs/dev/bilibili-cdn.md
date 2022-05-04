@@ -116,6 +116,7 @@ CNAME 指向链：
 ```txt
 cn-hbyc2-dx-live-05.bilivideo.com
 cn-zjhz-cmcc-live-01.bilivideo.com
+cn-zjhz-cmcc-v-23.bilivideo.com
 cn-jsnt-dx-v-05.bilivideo.com
 cn-gdgz-fx-live-16.bilivideo.com
 ```
