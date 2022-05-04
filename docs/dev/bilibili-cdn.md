@@ -40,8 +40,12 @@ gotcha_cdn_region_map:
 
 ## B站视频云
 
-也就是用地名的拼音命名的那些域名。  
-信息更新日期: {{ dns_data_bcdn.time }}。
+这些是B站自己建设的 CDN，也就是用地名的拼音命名的那些域名。
+
+下面列出了部分已知的直播 CDN 域名，还有另一种命名方式的好像是在逐渐弃用所以没写。  
+如果遇到了这里没列的域名可以联系我添加。
+
+本段落信息更新日期: {{ dns_data_bcdn.time }}。
 
 {% macro bcdn_isp(isp_name, isp_id) %}{% set data = dns_data_bcdn.dns[isp_id] %}
 ### {{ isp_name }} { id={{ isp_id }} }
@@ -70,7 +74,7 @@ gotcha_cdn_region_map:
 
 ## CDN 服务商域名
 
-DNS 信息更新日期: {{ dns_data_gotcha.time }}。  
+本段落信息更新日期: {{ dns_data_gotcha.time }}。  
 IP 个数指的是一次 DNS 请求返回的数量（显然不可能是总数）。  
 因为有 GeoDNS 的存在，不同地区的请求结果会不一样，以下信息仅供参考。
 
