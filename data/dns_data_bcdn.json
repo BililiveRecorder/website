@@ -790,6 +790,93 @@
         }
       },
       {
+        "regionCode": "jxjj",
+        "regionName": "江西九江",
+        "domains": {
+          "cn-jxjj-ct-01-01.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.2"
+            ]
+          },
+          "cn-jxjj-ct-01-02.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.3"
+            ]
+          },
+          "cn-jxjj-ct-01-03.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.4"
+            ]
+          },
+          "cn-jxjj-ct-01-05.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.6"
+            ]
+          },
+          "cn-jxjj-ct-01-06.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.7"
+            ]
+          },
+          "cn-jxjj-ct-01-07.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.8"
+            ]
+          },
+          "cn-jxjj-ct-01-08.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.9"
+            ]
+          },
+          "cn-jxjj-ct-01-09.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.10"
+            ],
+            "ipv6": [
+              "240e:cf:9000:2::90"
+            ]
+          },
+          "cn-jxjj-ct-01-10.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.11"
+            ]
+          },
+          "cn-jxjj-ct-01-11.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.12"
+            ]
+          },
+          "cn-jxjj-ct-01-12.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.13"
+            ]
+          },
+          "cn-jxjj-ct-01-13.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.14"
+            ]
+          },
+          "cn-jxjj-ct-01-14.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.15"
+            ],
+            "ipv6": [
+              "240e:cf:9000:2::95"
+            ]
+          },
+          "cn-jxjj-ct-01-15.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.16"
+            ]
+          },
+          "cn-jxjj-ct-01-16.bilivideo.com": {
+            "ipv4": [
+              "117.21.179.17"
+            ]
+          }
+        }
+      },
+      {
         "regionCode": "sccd",
         "regionName": "四川成都",
         "domains": {

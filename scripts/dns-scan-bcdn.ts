@@ -18,6 +18,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'hbyc', '湖北宜昌'],
   ['ct', 'hljheb', '黑龙江哈尔滨'],
   ['ct', 'sccd', '四川成都'],
+  ['ct', 'jxjj', '江西九江'],
   // China Mobile 中国移动
   ['cm', 'ahhn', '安徽淮南'],
   ['cm', 'gdst', '广东汕头'],
