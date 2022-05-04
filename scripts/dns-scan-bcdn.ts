@@ -23,15 +23,24 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'jsnt', '江苏南通'],
   // China Mobile 中国移动
   ['cm', 'ahhn', '安徽淮南'],
+  ['cm', 'fjqz', '福建泉州'],
+  ['cm', 'gddg', '广东东莞'],
   ['cm', 'gdst', '广东汕头'],
   ['cm', 'hbsjz', '河北石家庄'],
   ['cm', 'hbwh', '湖北武汉'],
+  ['cm', 'hnzz', '河南郑州'],
   ['cm', 'jxnc', '江西南昌'],
+  ['cm', 'lnsy', '辽宁沈阳'],
+  ['cm', 'sxxa', '陕西西安'],
   ['cm', 'tj', '天津'],
+  ['cm', 'zjhz', '浙江杭州'],
   // China Unicom 中国联通
   ['cu', 'hbcd', '河北承德'],
   ['cu', 'hncs', '湖南长沙'],
+  ['cu', 'lnsy', '辽宁沈阳'],
   ['cu', 'nmghhht', '内蒙古呼和浩特', ['v']],
+  ['cu', 'sdyt', '山东烟台'],
+  ['cu', 'zjhz', '浙江杭州'],
   // ?????? 教育网
   ['fx', 'gdgz', '广东广州'],
 ];
