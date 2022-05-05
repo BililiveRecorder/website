@@ -7,6 +7,7 @@ import os
 import posixpath
 import textwrap
 import json
+from urllib.parse import urljoin, urlsplit
 
 from mkdocs import utils
 from mkdocs.config import config_options
@@ -90,6 +91,9 @@ def get_html_path(path, use_directory_urls):
     else:
         return posixpath.join(parent, (name + '.html'))
 
+def calculate_cloudflare_pages_redirect_path(site_url, path):
+        full_url = urljoin(site_url, path)
+        return urlsplit(full_url).path if full_url.startswith(site_url) else full_url
 
 class RedirectPlugin(BasePlugin):
     # Any options that this plugin supplies should go here.
@@ -97,6 +101,7 @@ class RedirectPlugin(BasePlugin):
         ('redirect_maps', config_options.Type(dict, default={})),  # note the trailing comma
         ('write_both_url_type', config_options.Type(bool, default=False)),
         ('build_redirects_json', config_options.Type(bool, default=False)),
+        ('build_cloudflare_pages_redirects', config_options.Type(bool, default=False)),
     )
 
     # Build a list of redirects on file generation
@@ -136,6 +141,20 @@ class RedirectPlugin(BasePlugin):
             log.debug("Creating redirects.json '%s'", redirects_json_path)
             with open(redirects_json_path, 'w') as f:
                 f.write(json.dumps(redirect_dict))
+
+        if self.config['build_cloudflare_pages_redirects']:
+            cloudflare_redirects_path = os.path.join(config['site_dir'], '_redirects')
+            log.debug("Creating Cloudflare Pages _redirects file '%s'", cloudflare_redirects_path)
+
+            original_redirects_content = ''
+            if(os.path.isfile(cloudflare_redirects_path)):
+                with open(cloudflare_redirects_path, 'r') as f:
+                    original_redirects_content = f.read()
+
+            with open(cloudflare_redirects_path, 'w') as f:
+                site_url = config['site_url'] or '/'
+                generated_redirets_content = '\n'.join(map(lambda key: calculate_cloudflare_pages_redirect_path(site_url, key) + ' ' + calculate_cloudflare_pages_redirect_path(site_url, redirect_dict[key]), redirect_dict))
+                f.write(generated_redirets_content + '\n' + original_redirects_content)
 
     def __build_redirect_htmls(self, site_dir, redirect_dict, old_use_directory_urls, real_use_directory_urls):
 

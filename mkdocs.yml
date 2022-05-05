@@ -85,6 +85,7 @@ plugins:
         - dns_data_bcdn: data/dns_data_bcdn.json
         - dns_data_gotcha: data/dns_data_gotcha.json
   - brec-redirects:
+      build_cloudflare_pages_redirects: true
       build_redirects_json: true
       write_both_url_type: true
       redirect_maps:
@@ -111,7 +112,6 @@ plugins:
         docs/basic/record_mode.md: user/record-mode.md
         docs/basic/danmaku.md: user/danmaku.md
         docs/basic/auto_cut.md: user/index.md # 没有对应的页面
-        update/v1-3-1.md: user/change-log.md
   - minify:
       minify_html: true
       minify_js: true
