@@ -1,0 +1,1788 @@
+<!doctype html><html lang=zh class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=B站录播姬是一个方便好用免费开源的B站直播录制工具><meta name=author content=genteure><link href=https://rec.danmuji.org/dev/bilibili-cdn/ rel=canonical><link rel=icon href=../../favicon.png><meta name=generator content="mkdocs-1.3.0, mkdocs-material-8.2.13"><title>直播 CDN 信息 - B站录播姬</title><link rel=stylesheet href=../../assets/stylesheets/main.e411adfe.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.cc9b2e1e.min.css><meta name=theme-color content=#2094f3><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../assets/stylesheets/brec-version.min.css><script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-NH133VH2RG"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-NH133VH2RG",{page_path:e.pathname})})})</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NH133VH2RG"></script></head> <body dir=ltr data-md-color-scheme=slate data-md-color-primary=blue data-md-color-accent=orange> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#直播-cdn-信息 class=md-skip> 跳转至 </a> </div> <div data-md-component=announce> </div> <header class="md-header md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=页眉> <a href=../.. title=B站录播姬 class="md-header__button md-logo" aria-label=B站录播姬 data-md-component=logo> <img src=../../favicon.svg alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> B站录播姬 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> 直播 CDN 信息 </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=blue data-md-color-accent=orange aria-label=切换到亮色模式 type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title=切换到亮色模式 for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=blue data-md-color-accent=orange aria-label=切换到暗色模式 type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title=切换到暗色模式 for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg> </label> </form> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=搜索 placeholder=搜索 autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </label> <nav class=md-search__options aria-label=查找> <button type=reset class="md-search__icon md-icon" aria-label=清空当前内容 tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> 正在初始化搜索引擎 </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/Bililive/BililiveRecorder title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> Bililive/BililiveRecorder </div> </a> </div> </nav> <nav class=md-tabs aria-label=标签 data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> 首页 </a> </li> <li class=md-tabs__item> <a href=../../user/ class=md-tabs__link> 用户文档 </a> </li> <li class=md-tabs__item> <a href=../ class="md-tabs__link md-tabs__link--active"> 开发文档 </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=导航栏 data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title=B站录播姬 class="md-nav__button md-logo" aria-label=B站录播姬 data-md-component=logo> <img src=../../favicon.svg alt=logo> </a> B站录播姬 </label> <div class=md-nav__source> <a href=https://github.com/Bililive/BililiveRecorder title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> Bililive/BililiveRecorder </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> 首页 </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <div class="md-nav__link md-nav__link--index "> <a href=../../user/ >用户文档</a> <label for=__nav_2> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label=用户文档 data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> 用户文档 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../user/system-requirements/ class=md-nav__link> 软硬件要求 </a> </li> <li class=md-nav__item> <a href=../../user/install/ class=md-nav__link> 安装使用 </a> </li> <li class=md-nav__item> <a href=../../user/faq/ class=md-nav__link> 常见问题 </a> </li> <li class=md-nav__item> <a href=../../user/change-log/ class=md-nav__link> 更新历史 </a> </li> <li class=md-nav__item> <a href=../../user/record-mode/ class=md-nav__link> 录制模式 </a> </li> <li class=md-nav__item> <a href=../../user/danmaku/ class=md-nav__link> 弹幕录制 </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2_8 type=checkbox id=__nav_2_8> <div class="md-nav__link md-nav__link--index "> <a href=../../user/toolbox/ >工具箱</a> <label for=__nav_2_8> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label=工具箱 data-md-level=2> <label class=md-nav__title for=__nav_2_8> <span class="md-nav__icon md-icon"></span> 工具箱 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../user/toolbox/repair/ class=md-nav__link> 录播修复 </a> </li> <li class=md-nav__item> <a href=../../user/toolbox/remux/ class=md-nav__link> 转封装 </a> </li> <li class=md-nav__item> <a href=../../user/toolbox/danmaku-merge/ class=md-nav__link> 弹幕合并 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../user/repair/ class=md-nav__link> 录播修复说明 </a> </li> <li class=md-nav__item> <a href=../../user/repair-feedback/ class=md-nav__link> 修复问题反馈 </a> </li> <li class=md-nav__item> <a href=../../user/commands/ class=md-nav__link> 命令行参数 </a> </li> <li class=md-nav__item> <a href=../../user/settings/ class=md-nav__link> 软件设置 </a> </li> <li class=md-nav__item> <a href=../../user/config-file/ class=md-nav__link> 配置文件 </a> </li> <li class=md-nav__item> <a href=../../user/webhook/ class=md-nav__link> Webhook </a> </li> <li class=md-nav__item> <a href=../../user/other-projects/ class=md-nav__link> 其他工具和项目 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3 type=checkbox id=__nav_3 checked> <div class="md-nav__link md-nav__link--index "> <a href=../ >开发文档</a> <label for=__nav_3> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav aria-label=开发文档 data-md-level=1> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> 开发文档 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../projects/ class=md-nav__link> 项目结构 </a> </li> <li class=md-nav__item> <a href=../translations/ class=md-nav__link> 翻译录播姬 </a> </li> <li class=md-nav__item> <a href=../repair/ class=md-nav__link> 录播修复系统 </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> 直播 CDN 信息 <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> 直播 CDN 信息 </a> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#b站视频云 class=md-nav__link> B站视频云 </a> <nav class=md-nav aria-label=B站视频云> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ct class=md-nav__link> 电信 </a> <nav class=md-nav aria-label=电信> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ct-ahwh class=md-nav__link> 安徽芜湖 </a> </li> <li class=md-nav__item> <a href=#ct-gddg class=md-nav__link> 广东东莞 </a> </li> <li class=md-nav__item> <a href=#ct-gdfs class=md-nav__link> 广东佛山 </a> </li> <li class=md-nav__item> <a href=#ct-hblf class=md-nav__link> 河北廊坊 </a> </li> <li class=md-nav__item> <a href=#ct-hbyc class=md-nav__link> 湖北宜昌 </a> </li> <li class=md-nav__item> <a href=#ct-hljheb class=md-nav__link> 黑龙江哈尔滨 </a> </li> <li class=md-nav__item> <a href=#ct-jsnt class=md-nav__link> 江苏南通 </a> </li> <li class=md-nav__item> <a href=#ct-jxjj class=md-nav__link> 江西九江 </a> </li> <li class=md-nav__item> <a href=#ct-sccd class=md-nav__link> 四川成都 </a> </li> <li class=md-nav__item> <a href=#ct-scya class=md-nav__link> 四川雅安 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#cu class=md-nav__link> 联通 </a> <nav class=md-nav aria-label=联通> <ul class=md-nav__list> <li class=md-nav__item> <a href=#cu-hbcd class=md-nav__link> 河北承德 </a> </li> <li class=md-nav__item> <a href=#cu-hncs class=md-nav__link> 湖南长沙 </a> </li> <li class=md-nav__item> <a href=#cu-lnsy class=md-nav__link> 辽宁沈阳 </a> </li> <li class=md-nav__item> <a href=#cu-nmghhht class=md-nav__link> 内蒙古呼和浩特 </a> </li> <li class=md-nav__item> <a href=#cu-sdyt class=md-nav__link> 山东烟台 </a> </li> <li class=md-nav__item> <a href=#cu-zjhz class=md-nav__link> 浙江杭州 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#cm class=md-nav__link> 移动 </a> <nav class=md-nav aria-label=移动> <ul class=md-nav__list> <li class=md-nav__item> <a href=#cm-ahhn class=md-nav__link> 安徽淮南 </a> </li> <li class=md-nav__item> <a href=#cm-fjqz class=md-nav__link> 福建泉州 </a> </li> <li class=md-nav__item> <a href=#cm-gddg class=md-nav__link> 广东东莞 </a> </li> <li class=md-nav__item> <a href=#cm-gdst class=md-nav__link> 广东汕头 </a> </li> <li class=md-nav__item> <a href=#cm-hbsjz class=md-nav__link> 河北石家庄 </a> </li> <li class=md-nav__item> <a href=#cm-hbwh class=md-nav__link> 湖北武汉 </a> </li> <li class=md-nav__item> <a href=#cm-hljheb class=md-nav__link> 黑龙江哈尔滨 </a> </li> <li class=md-nav__item> <a href=#cm-hnzz class=md-nav__link> 河南郑州 </a> </li> <li class=md-nav__item> <a href=#cm-jssz class=md-nav__link> 江苏苏州 </a> </li> <li class=md-nav__item> <a href=#cm-jxnc class=md-nav__link> 江西南昌 </a> </li> <li class=md-nav__item> <a href=#cm-lnsy class=md-nav__link> 辽宁沈阳 </a> </li> <li class=md-nav__item> <a href=#cm-sdjn class=md-nav__link> 山东济南 </a> </li> <li class=md-nav__item> <a href=#cm-sxty class=md-nav__link> 山西太原 </a> </li> <li class=md-nav__item> <a href=#cm-sxxa class=md-nav__link> 陕西西安 </a> </li> <li class=md-nav__item> <a href=#cm-tj class=md-nav__link> 天津 </a> </li> <li class=md-nav__item> <a href=#cm-zjhz class=md-nav__link> 浙江杭州 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#fx class=md-nav__link> 教育网 </a> <nav class=md-nav aria-label=教育网> <ul class=md-nav__list> <li class=md-nav__item> <a href=#fx-gdgz class=md-nav__link> 广东广州 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#cdn-服务商域名 class=md-nav__link> CDN 服务商域名 </a> <nav class=md-nav aria-label="CDN 服务商域名"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#c1--cn-gotcha01bilivideocom class=md-nav__link> c1--cn-gotcha01.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha01bilivideocom class=md-nav__link> d1--cn-gotcha01.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha02bilivideocom class=md-nav__link> d1--cn-gotcha02.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha102bilivideocom class=md-nav__link> d1--cn-gotcha102.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha202bilivideocom class=md-nav__link> d1--cn-gotcha202.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#c1--cn-gotcha03bilivideocom class=md-nav__link> c1--cn-gotcha03.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha03bilivideocom class=md-nav__link> d1--cn-gotcha03.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha103bilivideocom class=md-nav__link> d1--cn-gotcha103.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha203bilivideocom class=md-nav__link> d1--cn-gotcha203.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha04bilivideocom class=md-nav__link> d1--cn-gotcha04.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha104bilivideocom class=md-nav__link> d1--cn-gotcha104.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha204bilivideocom class=md-nav__link> d1--cn-gotcha204.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha05bilivideocom class=md-nav__link> d1--cn-gotcha05.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha105bilivideocom class=md-nav__link> d1--cn-gotcha105.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha06bilivideocom class=md-nav__link> d1--cn-gotcha06.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha106bilivideocom class=md-nav__link> d1--cn-gotcha106.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha206bilivideocom class=md-nav__link> d1--cn-gotcha206.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha07bilivideocom class=md-nav__link> d1--cn-gotcha07.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#c1--cn-gotcha08bilivideocom class=md-nav__link> c1--cn-gotcha08.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha08bilivideocom class=md-nav__link> d1--cn-gotcha08.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha108bilivideocom class=md-nav__link> d1--cn-gotcha108.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#c1--cn-gotcha208bilivideocom class=md-nav__link> c1--cn-gotcha208.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha208bilivideocom class=md-nav__link> d1--cn-gotcha208.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha09bilivideocom class=md-nav__link> d1--cn-gotcha09.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha209bilivideocom class=md-nav__link> d1--cn-gotcha209.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha11bilivideocom class=md-nav__link> d1--cn-gotcha11.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha111bilivideocom class=md-nav__link> d1--cn-gotcha111.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha211bilivideocom class=md-nav__link> d1--cn-gotcha211.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha102bilivideocom class=md-nav__link> d1--ov-gotcha102.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha04bilivideocom class=md-nav__link> d1--ov-gotcha04.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha104bilivideocom class=md-nav__link> d1--ov-gotcha104.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha05bilivideocom class=md-nav__link> d1--ov-gotcha05.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha105bilivideocom class=md-nav__link> d1--ov-gotcha105.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha06bilivideocom class=md-nav__link> d1--ov-gotcha06.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha106bilivideocom class=md-nav__link> d1--ov-gotcha106.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha206bilivideocom class=md-nav__link> d1--ov-gotcha206.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha07bilivideocom class=md-nav__link> d1--ov-gotcha07.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha107bilivideocom class=md-nav__link> d1--ov-gotcha107.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha210bilivideocom class=md-nav__link> d1--ov-gotcha210.bilivideo.com </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#其他笔记 class=md-nav__link> 其他笔记 </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#b站视频云 class=md-nav__link> B站视频云 </a> <nav class=md-nav aria-label=B站视频云> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ct class=md-nav__link> 电信 </a> <nav class=md-nav aria-label=电信> <ul class=md-nav__list> <li class=md-nav__item> <a href=#ct-ahwh class=md-nav__link> 安徽芜湖 </a> </li> <li class=md-nav__item> <a href=#ct-gddg class=md-nav__link> 广东东莞 </a> </li> <li class=md-nav__item> <a href=#ct-gdfs class=md-nav__link> 广东佛山 </a> </li> <li class=md-nav__item> <a href=#ct-hblf class=md-nav__link> 河北廊坊 </a> </li> <li class=md-nav__item> <a href=#ct-hbyc class=md-nav__link> 湖北宜昌 </a> </li> <li class=md-nav__item> <a href=#ct-hljheb class=md-nav__link> 黑龙江哈尔滨 </a> </li> <li class=md-nav__item> <a href=#ct-jsnt class=md-nav__link> 江苏南通 </a> </li> <li class=md-nav__item> <a href=#ct-jxjj class=md-nav__link> 江西九江 </a> </li> <li class=md-nav__item> <a href=#ct-sccd class=md-nav__link> 四川成都 </a> </li> <li class=md-nav__item> <a href=#ct-scya class=md-nav__link> 四川雅安 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#cu class=md-nav__link> 联通 </a> <nav class=md-nav aria-label=联通> <ul class=md-nav__list> <li class=md-nav__item> <a href=#cu-hbcd class=md-nav__link> 河北承德 </a> </li> <li class=md-nav__item> <a href=#cu-hncs class=md-nav__link> 湖南长沙 </a> </li> <li class=md-nav__item> <a href=#cu-lnsy class=md-nav__link> 辽宁沈阳 </a> </li> <li class=md-nav__item> <a href=#cu-nmghhht class=md-nav__link> 内蒙古呼和浩特 </a> </li> <li class=md-nav__item> <a href=#cu-sdyt class=md-nav__link> 山东烟台 </a> </li> <li class=md-nav__item> <a href=#cu-zjhz class=md-nav__link> 浙江杭州 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#cm class=md-nav__link> 移动 </a> <nav class=md-nav aria-label=移动> <ul class=md-nav__list> <li class=md-nav__item> <a href=#cm-ahhn class=md-nav__link> 安徽淮南 </a> </li> <li class=md-nav__item> <a href=#cm-fjqz class=md-nav__link> 福建泉州 </a> </li> <li class=md-nav__item> <a href=#cm-gddg class=md-nav__link> 广东东莞 </a> </li> <li class=md-nav__item> <a href=#cm-gdst class=md-nav__link> 广东汕头 </a> </li> <li class=md-nav__item> <a href=#cm-hbsjz class=md-nav__link> 河北石家庄 </a> </li> <li class=md-nav__item> <a href=#cm-hbwh class=md-nav__link> 湖北武汉 </a> </li> <li class=md-nav__item> <a href=#cm-hljheb class=md-nav__link> 黑龙江哈尔滨 </a> </li> <li class=md-nav__item> <a href=#cm-hnzz class=md-nav__link> 河南郑州 </a> </li> <li class=md-nav__item> <a href=#cm-jssz class=md-nav__link> 江苏苏州 </a> </li> <li class=md-nav__item> <a href=#cm-jxnc class=md-nav__link> 江西南昌 </a> </li> <li class=md-nav__item> <a href=#cm-lnsy class=md-nav__link> 辽宁沈阳 </a> </li> <li class=md-nav__item> <a href=#cm-sdjn class=md-nav__link> 山东济南 </a> </li> <li class=md-nav__item> <a href=#cm-sxty class=md-nav__link> 山西太原 </a> </li> <li class=md-nav__item> <a href=#cm-sxxa class=md-nav__link> 陕西西安 </a> </li> <li class=md-nav__item> <a href=#cm-tj class=md-nav__link> 天津 </a> </li> <li class=md-nav__item> <a href=#cm-zjhz class=md-nav__link> 浙江杭州 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#fx class=md-nav__link> 教育网 </a> <nav class=md-nav aria-label=教育网> <ul class=md-nav__list> <li class=md-nav__item> <a href=#fx-gdgz class=md-nav__link> 广东广州 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#cdn-服务商域名 class=md-nav__link> CDN 服务商域名 </a> <nav class=md-nav aria-label="CDN 服务商域名"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#c1--cn-gotcha01bilivideocom class=md-nav__link> c1--cn-gotcha01.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha01bilivideocom class=md-nav__link> d1--cn-gotcha01.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha02bilivideocom class=md-nav__link> d1--cn-gotcha02.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha102bilivideocom class=md-nav__link> d1--cn-gotcha102.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha202bilivideocom class=md-nav__link> d1--cn-gotcha202.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#c1--cn-gotcha03bilivideocom class=md-nav__link> c1--cn-gotcha03.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha03bilivideocom class=md-nav__link> d1--cn-gotcha03.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha103bilivideocom class=md-nav__link> d1--cn-gotcha103.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha203bilivideocom class=md-nav__link> d1--cn-gotcha203.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha04bilivideocom class=md-nav__link> d1--cn-gotcha04.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha104bilivideocom class=md-nav__link> d1--cn-gotcha104.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha204bilivideocom class=md-nav__link> d1--cn-gotcha204.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha05bilivideocom class=md-nav__link> d1--cn-gotcha05.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha105bilivideocom class=md-nav__link> d1--cn-gotcha105.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha06bilivideocom class=md-nav__link> d1--cn-gotcha06.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha106bilivideocom class=md-nav__link> d1--cn-gotcha106.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha206bilivideocom class=md-nav__link> d1--cn-gotcha206.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha07bilivideocom class=md-nav__link> d1--cn-gotcha07.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#c1--cn-gotcha08bilivideocom class=md-nav__link> c1--cn-gotcha08.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha08bilivideocom class=md-nav__link> d1--cn-gotcha08.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha108bilivideocom class=md-nav__link> d1--cn-gotcha108.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#c1--cn-gotcha208bilivideocom class=md-nav__link> c1--cn-gotcha208.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha208bilivideocom class=md-nav__link> d1--cn-gotcha208.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha09bilivideocom class=md-nav__link> d1--cn-gotcha09.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha209bilivideocom class=md-nav__link> d1--cn-gotcha209.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha11bilivideocom class=md-nav__link> d1--cn-gotcha11.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha111bilivideocom class=md-nav__link> d1--cn-gotcha111.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--cn-gotcha211bilivideocom class=md-nav__link> d1--cn-gotcha211.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha102bilivideocom class=md-nav__link> d1--ov-gotcha102.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha04bilivideocom class=md-nav__link> d1--ov-gotcha04.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha104bilivideocom class=md-nav__link> d1--ov-gotcha104.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha05bilivideocom class=md-nav__link> d1--ov-gotcha05.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha105bilivideocom class=md-nav__link> d1--ov-gotcha105.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha06bilivideocom class=md-nav__link> d1--ov-gotcha06.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha106bilivideocom class=md-nav__link> d1--ov-gotcha106.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha206bilivideocom class=md-nav__link> d1--ov-gotcha206.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha07bilivideocom class=md-nav__link> d1--ov-gotcha07.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha107bilivideocom class=md-nav__link> d1--ov-gotcha107.bilivideo.com </a> </li> <li class=md-nav__item> <a href=#d1--ov-gotcha210bilivideocom class=md-nav__link> d1--ov-gotcha210.bilivideo.com </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#其他笔记 class=md-nav__link> 其他笔记 </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/BililiveRecorder/website/blob/main/docs/dev/bilibili-cdn.md title=编辑此页 class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg> </a> <h1 id=直播-cdn-信息>直播 CDN 信息<a class=headerlink href=#直播-cdn-信息 title="Permanent link">&para;</a></h1> <p>本页面收集了一些B站直播 CDN 相关的信息，我也不知道可能会有什么用。</p> <div class="admonition tip"> <p class=admonition-title>Tip</p> <p>可以用浏览器的搜索功能 <code>Ctrl + F</code> 在本页面上快速查找</p> </div> <p>目前B站直播使用了以下几家 CDN:</p> <ul> <li> <p>B站自建 (B站视频云)</p> </li> <li> <p>金山云</p> </li> <li> <p>七牛云 (阿里云)</p> </li> <li> <p>腾讯云</p> </li> <li> <p>网宿</p> </li> <li> <p>白山云</p> </li> <li> <p>百度云</p> </li> <li> <p>华为云</p> </li> <li> <p>阿里云</p> </li> <li> <p>Akamai</p> </li> <li> <p>京东云</p> </li> </ul> <p>目前国内最常见的是 B站自建 (B站视频云)、腾讯云、华为云。</p> <h2 id=b站视频云>B站视频云<a class=headerlink href=#b站视频云 title="Permanent link">&para;</a></h2> <p>这些是B站自己建设的 CDN，也就是用地名的拼音命名的那些域名。</p> <p>下面列出了部分已知的直播 CDN 域名，还有另一种命名方式的好像是在逐渐弃用所以没写。<br> 如果遇到了这里没列的域名可以联系我添加。</p> <p>本段落信息更新日期: 2022/5/5。</p> <h3 id=ct>电信<a class=headerlink href=#ct title="Permanent link">&para;</a></h3> <h4 id=ct-ahwh>安徽芜湖<a class=headerlink href=#ct-ahwh title="Permanent link">&para;</a></h4> <p>安徽芜湖电信 (<code>ahwh-ct</code>) 共有 10 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-ahwh-ct-01-01.bilivideo.com
+    60.167.59.2
+    240e:958:2102:83::2
+
+cn-ahwh-ct-01-02.bilivideo.com
+    60.167.59.3
+    240e:958:2102:83::3
+
+cn-ahwh-ct-01-03.bilivideo.com
+    60.167.59.4
+    240e:958:2102:83::4
+
+cn-ahwh-ct-01-04.bilivideo.com
+    60.167.59.5
+    240e:958:2102:83::5
+
+cn-ahwh-ct-01-05.bilivideo.com
+    60.167.59.6
+    240e:958:2102:83::6
+
+cn-ahwh-ct-01-06.bilivideo.com
+    60.167.59.7
+    240e:958:2102:83::7
+
+cn-ahwh-ct-01-07.bilivideo.com
+    60.167.59.8
+    240e:958:2102:83::8
+
+cn-ahwh-ct-01-08.bilivideo.com
+    60.167.59.9
+    240e:958:2102:83::9
+
+cn-ahwh-ct-01-09.bilivideo.com
+    60.167.59.10
+    240e:958:2102:83::10
+
+cn-ahwh-ct-01-10.bilivideo.com
+    60.167.59.11
+    240e:958:2102:83::11
+</code></pre></div> </details> <h4 id=ct-gddg>广东东莞<a class=headerlink href=#ct-gddg title="Permanent link">&para;</a></h4> <p>广东东莞电信 (<code>gddg-ct</code>) 共有 25 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-gddg-ct-01-01.bilivideo.com
+    14.17.92.2
+    240e:97d:10:1402:0:1:1:2
+
+cn-gddg-ct-01-02.bilivideo.com
+    14.17.92.3
+    240e:97d:10:1402:0:1:1:3
+
+cn-gddg-ct-01-03.bilivideo.com
+    14.17.92.4
+    240e:97d:10:1402:0:1:1:4
+
+cn-gddg-ct-01-04.bilivideo.com
+    14.17.92.5
+    240e:97d:10:1402:0:1:1:5
+
+cn-gddg-ct-01-05.bilivideo.com
+    14.17.92.6
+    240e:97d:10:1402:0:1:1:6
+
+cn-gddg-ct-01-06.bilivideo.com
+    14.17.92.7
+    240e:97d:10:1402:0:1:1:7
+
+cn-gddg-ct-01-08.bilivideo.com
+    14.17.92.9
+    240e:97d:10:1402:0:1:1:9
+
+cn-gddg-ct-01-09.bilivideo.com
+    14.17.92.10
+    240e:97d:10:1402:0:1:1:10
+
+cn-gddg-ct-01-10.bilivideo.com
+    14.17.92.11
+    240e:97d:10:1402:0:1:1:11
+
+cn-gddg-ct-01-11.bilivideo.com
+    14.17.92.12
+    240e:97d:10:1402:0:1:1:12
+
+cn-gddg-ct-01-12.bilivideo.com
+    14.17.92.13
+    240e:97d:10:1402:0:1:1:13
+
+cn-gddg-ct-01-13.bilivideo.com
+    14.17.92.14
+    240e:97d:10:1402:0:1:1:14
+
+cn-gddg-ct-01-14.bilivideo.com
+    14.17.92.15
+    240e:97d:10:1402:0:1:1:15
+
+cn-gddg-ct-01-15.bilivideo.com
+    14.17.92.16
+    240e:97d:10:1402:0:1:1:16
+
+cn-gddg-ct-01-16.bilivideo.com
+    14.17.92.17
+    240e:97d:10:1402:0:1:1:17
+
+cn-gddg-ct-01-17.bilivideo.com
+    14.17.92.18
+    240e:97d:10:1402:0:1:1:18
+
+cn-gddg-ct-01-18.bilivideo.com
+    14.17.92.19
+    240e:97d:10:1402:0:1:1:19
+
+cn-gddg-ct-01-19.bilivideo.com
+    14.17.92.20
+    240e:97d:10:1402:0:1:1:20
+
+cn-gddg-ct-01-20.bilivideo.com
+    14.17.92.21
+    240e:97d:10:1402:0:1:1:21
+
+cn-gddg-ct-01-21.bilivideo.com
+    14.17.92.22
+    240e:97d:10:1402:0:1:1:22
+
+cn-gddg-ct-01-22.bilivideo.com
+    14.17.92.23
+    240e:97d:10:1402:0:1:1:23
+
+cn-gddg-ct-01-23.bilivideo.com
+    14.17.92.24
+    240e:97d:10:1402:0:1:1:24
+
+cn-gddg-ct-01-24.bilivideo.com
+    14.17.92.25
+    240e:97d:10:1402:0:1:1:25
+
+cn-gddg-ct-01-25.bilivideo.com
+    14.17.92.26
+    240e:97d:10:1402:0:1:1:26
+
+cn-gddg-ct-01-26.bilivideo.com
+    14.17.92.27
+    240e:97d:10:1402:0:1:1:27
+</code></pre></div> </details> <h4 id=ct-gdfs>广东佛山<a class=headerlink href=#ct-gdfs title="Permanent link">&para;</a></h4> <p>广东佛山电信 (<code>gdfs-ct</code>) 共有 26 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-gdfs-ct-01-01.bilivideo.com
+    59.36.228.194
+    240e:97d:2000:c0e::2
+
+cn-gdfs-ct-01-02.bilivideo.com
+    59.36.228.195
+    240e:97d:2000:c0e::3
+
+cn-gdfs-ct-01-03.bilivideo.com
+    59.36.228.196
+    240e:97d:2000:c0e::4
+
+cn-gdfs-ct-01-04.bilivideo.com
+    59.36.228.197
+    240e:97d:2000:c0e::5
+
+cn-gdfs-ct-01-05.bilivideo.com
+    59.36.228.198
+    240e:97d:2000:c0e::6
+
+cn-gdfs-ct-01-06.bilivideo.com
+    59.36.228.199
+    240e:97d:2000:c0e::7
+
+cn-gdfs-ct-01-07.bilivideo.com
+    59.36.228.200
+    240e:97d:2000:c0e::8
+
+cn-gdfs-ct-01-08.bilivideo.com
+    59.36.228.201
+    240e:97d:2000:c0e::9
+
+cn-gdfs-ct-01-09.bilivideo.com
+    59.36.228.202
+    240e:97d:2000:c0e::10
+
+cn-gdfs-ct-01-10.bilivideo.com
+    59.36.228.203
+    240e:97d:2000:c0e::11
+
+cn-gdfs-ct-01-11.bilivideo.com
+    59.36.228.204
+    240e:97d:2000:c0e::12
+
+cn-gdfs-ct-01-12.bilivideo.com
+    59.36.228.205
+    240e:97d:2000:c0e::13
+
+cn-gdfs-ct-01-13.bilivideo.com
+    59.36.228.206
+    240e:97d:2000:c0e::14
+
+cn-gdfs-ct-01-14.bilivideo.com
+    59.36.228.207
+    240e:97d:2000:c0e::15
+
+cn-gdfs-ct-01-15.bilivideo.com
+    59.36.228.208
+    240e:97d:2000:c0e::16
+
+cn-gdfs-ct-01-16.bilivideo.com
+    59.36.228.209
+    240e:97d:2000:c0e::17
+
+cn-gdfs-ct-01-17.bilivideo.com
+    59.36.228.210
+    240e:97d:2000:c0e::18
+
+cn-gdfs-ct-01-18.bilivideo.com
+    59.36.228.211
+    240e:97d:2000:c0e::19
+
+cn-gdfs-ct-01-19.bilivideo.com
+    59.36.228.212
+    240e:97d:2000:c0e::20
+
+cn-gdfs-ct-01-20.bilivideo.com
+    59.36.228.213
+    240e:97d:2000:c0e::21
+
+cn-gdfs-ct-01-21.bilivideo.com
+    59.36.228.214
+    240e:97d:2000:c0e::22
+
+cn-gdfs-ct-01-22.bilivideo.com
+    59.36.228.215
+    240e:97d:2000:c0e::23
+
+cn-gdfs-ct-01-23.bilivideo.com
+    59.36.228.216
+    240e:97d:2000:c0e::24
+
+cn-gdfs-ct-01-24.bilivideo.com
+    59.36.228.217
+    240e:97d:2000:c0e::25
+
+cn-gdfs-ct-01-27.bilivideo.com
+    59.36.228.218
+
+cn-gdfs-ct-01-28.bilivideo.com
+    59.36.228.219
+</code></pre></div> </details> <h4 id=ct-hblf>河北廊坊<a class=headerlink href=#ct-hblf title="Permanent link">&para;</a></h4> <p>河北廊坊电信 (<code>hblf-ct</code>) 共有 10 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hblf-ct-01-01.bilivideo.com
+    124.239.244.2
+    240e:b1:9801:206:10::2
+
+cn-hblf-ct-01-02.bilivideo.com
+    124.239.244.3
+    240e:b1:9801:206:10::3
+
+cn-hblf-ct-01-03.bilivideo.com
+    124.239.244.4
+    240e:b1:9801:206:10::4
+
+cn-hblf-ct-01-04.bilivideo.com
+    124.239.244.5
+    240e:b1:9801:206:10::5
+
+cn-hblf-ct-01-05.bilivideo.com
+    124.239.244.6
+    240e:b1:9801:206:10::6
+
+cn-hblf-ct-01-06.bilivideo.com
+    124.239.244.7
+    240e:b1:9801:206:10::7
+
+cn-hblf-ct-01-07.bilivideo.com
+    124.239.244.8
+    240e:b1:9801:206:10::8
+
+cn-hblf-ct-01-08.bilivideo.com
+    124.239.244.9
+    240e:b1:9801:206:10::12
+
+cn-hblf-ct-01-09.bilivideo.com
+    124.239.244.10
+    240e:b1:9801:206:10::10
+
+cn-hblf-ct-01-10.bilivideo.com
+    124.239.244.11
+    240e:b1:9801:206:10::11
+</code></pre></div> </details> <h4 id=ct-hbyc>湖北宜昌<a class=headerlink href=#ct-hbyc title="Permanent link">&para;</a></h4> <p>湖北宜昌电信 (<code>hbyc-ct</code>) 共有 28 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hbyc-ct-02-01.bilivideo.com
+    116.207.143.66
+
+cn-hbyc-ct-02-02.bilivideo.com
+    116.207.143.67
+
+cn-hbyc-ct-02-04.bilivideo.com
+    116.207.143.69
+
+cn-hbyc-ct-02-05.bilivideo.com
+    116.207.143.70
+
+cn-hbyc-ct-02-06.bilivideo.com
+    116.207.143.71
+
+cn-hbyc-ct-02-07.bilivideo.com
+    116.207.143.72
+
+cn-hbyc-ct-02-08.bilivideo.com
+    116.207.143.73
+
+cn-hbyc-ct-02-09.bilivideo.com
+    116.207.143.74
+
+cn-hbyc-ct-02-10.bilivideo.com
+    116.207.143.75
+
+cn-hbyc-ct-02-11.bilivideo.com
+    116.207.143.76
+
+cn-hbyc-ct-02-12.bilivideo.com
+    116.207.143.77
+
+cn-hbyc-ct-02-13.bilivideo.com
+    116.207.143.78
+
+cn-hbyc-ct-02-14.bilivideo.com
+    116.207.143.79
+
+cn-hbyc-ct-02-15.bilivideo.com
+    116.207.143.80
+
+cn-hbyc-ct-02-16.bilivideo.com
+    116.207.143.81
+
+cn-hbyc-ct-02-17.bilivideo.com
+    116.207.143.82
+
+cn-hbyc-ct-02-18.bilivideo.com
+    116.207.143.83
+
+cn-hbyc-ct-02-19.bilivideo.com
+    116.207.143.84
+
+cn-hbyc-ct-02-20.bilivideo.com
+    116.207.143.85
+
+cn-hbyc-ct-02-21.bilivideo.com
+    116.207.143.86
+
+cn-hbyc-ct-02-22.bilivideo.com
+    116.207.143.87
+
+cn-hbyc-ct-02-23.bilivideo.com
+    116.207.143.88
+
+cn-hbyc-ct-02-24.bilivideo.com
+    116.207.143.89
+
+cn-hbyc-ct-02-25.bilivideo.com
+    116.207.143.90
+
+cn-hbyc-ct-02-26.bilivideo.com
+    116.207.143.107
+
+cn-hbyc-ct-02-27.bilivideo.com
+    116.207.143.108
+
+cn-hbyc-ct-02-28.bilivideo.com
+    116.207.143.109
+
+cn-hbyc-ct-02-29.bilivideo.com
+    116.207.143.110
+</code></pre></div> </details> <h4 id=ct-hljheb>黑龙江哈尔滨<a class=headerlink href=#ct-hljheb title="Permanent link">&para;</a></h4> <p>黑龙江哈尔滨电信 (<code>hljheb-ct</code>) 共有 8 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hljheb-ct-01-01.bilivideo.com
+    42.101.85.194
+
+cn-hljheb-ct-01-02.bilivideo.com
+    42.101.85.195
+
+cn-hljheb-ct-01-03.bilivideo.com
+    42.101.85.196
+
+cn-hljheb-ct-01-04.bilivideo.com
+    42.101.85.197
+
+cn-hljheb-ct-01-05.bilivideo.com
+    42.101.85.198
+    240e:908:103:208::198
+
+cn-hljheb-ct-01-06.bilivideo.com
+    42.101.85.199
+
+cn-hljheb-ct-01-07.bilivideo.com
+    42.101.85.200
+    240e:908:103:208::200
+
+cn-hljheb-ct-01-08.bilivideo.com
+    42.101.85.201
+    240e:908:103:208::201
+</code></pre></div> </details> <h4 id=ct-jsnt>江苏南通<a class=headerlink href=#ct-jsnt title="Permanent link">&para;</a></h4> <p>江苏南通电信 (<code>jsnt-ct</code>) 共有 31 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-jsnt-ct-01-01.bilivideo.com
+    61.147.236.2
+
+cn-jsnt-ct-01-02.bilivideo.com
+    61.147.236.3
+
+cn-jsnt-ct-01-03.bilivideo.com
+    61.147.236.4
+
+cn-jsnt-ct-01-04.bilivideo.com
+    61.147.236.5
+
+cn-jsnt-ct-01-05.bilivideo.com
+    61.147.236.6
+
+cn-jsnt-ct-01-06.bilivideo.com
+    61.147.236.7
+
+cn-jsnt-ct-01-07.bilivideo.com
+    61.147.236.8
+
+cn-jsnt-ct-01-08.bilivideo.com
+    61.147.236.9
+
+cn-jsnt-ct-01-09.bilivideo.com
+    61.147.236.10
+
+cn-jsnt-ct-01-10.bilivideo.com
+    61.147.236.13
+
+cn-jsnt-ct-01-11.bilivideo.com
+    61.147.236.14
+
+cn-jsnt-ct-01-12.bilivideo.com
+    61.147.236.16
+
+cn-jsnt-ct-01-13.bilivideo.com
+    61.147.236.17
+
+cn-jsnt-ct-01-14.bilivideo.com
+    61.147.236.18
+
+cn-jsnt-ct-01-15.bilivideo.com
+    61.147.236.19
+
+cn-jsnt-ct-01-17.bilivideo.com
+    61.147.236.23
+    240e:978:1503::223
+
+cn-jsnt-ct-01-18.bilivideo.com
+    61.147.236.24
+    240e:978:1503::224
+
+cn-jsnt-ct-01-19.bilivideo.com
+    61.147.236.25
+    240e:978:1503::225
+
+cn-jsnt-ct-01-20.bilivideo.com
+    61.147.236.26
+    240e:978:1503::226
+
+cn-jsnt-ct-01-21.bilivideo.com
+    61.147.236.27
+    240e:978:1503::227
+
+cn-jsnt-ct-01-22.bilivideo.com
+    61.147.236.28
+    240e:978:1503::228
+
+cn-jsnt-ct-01-23.bilivideo.com
+    61.147.236.29
+    240e:978:1503::229
+
+cn-jsnt-ct-01-24.bilivideo.com
+    61.147.236.30
+    240e:978:1503::230
+
+cn-jsnt-ct-01-25.bilivideo.com
+    61.147.236.31
+    240e:978:1503::231
+
+cn-jsnt-ct-01-26.bilivideo.com
+    61.147.236.32
+    240e:978:1503::232
+
+cn-jsnt-ct-01-27.bilivideo.com
+    61.147.236.33
+    240e:978:1503::233
+
+cn-jsnt-ct-01-28.bilivideo.com
+    61.147.236.20
+    240e:978:1503::220
+
+cn-jsnt-ct-01-29.bilivideo.com
+    61.147.236.21
+    240e:978:1503::221
+
+cn-jsnt-ct-01-30.bilivideo.com
+    61.147.236.22
+    240e:978:1503::222
+
+cn-jsnt-ct-01-31.bilivideo.com
+    61.147.236.34
+    240e:978:1503::234
+
+cn-jsnt-ct-01-32.bilivideo.com
+    61.147.236.35
+    240e:978:1503::235
+</code></pre></div> </details> <h4 id=ct-jxjj>江西九江<a class=headerlink href=#ct-jxjj title="Permanent link">&para;</a></h4> <p>江西九江电信 (<code>jxjj-ct</code>) 共有 15 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-jxjj-ct-01-01.bilivideo.com
+    117.21.179.2
+
+cn-jxjj-ct-01-02.bilivideo.com
+    117.21.179.3
+
+cn-jxjj-ct-01-03.bilivideo.com
+    117.21.179.4
+
+cn-jxjj-ct-01-05.bilivideo.com
+    117.21.179.6
+
+cn-jxjj-ct-01-06.bilivideo.com
+    117.21.179.7
+
+cn-jxjj-ct-01-07.bilivideo.com
+    117.21.179.8
+
+cn-jxjj-ct-01-08.bilivideo.com
+    117.21.179.9
+
+cn-jxjj-ct-01-09.bilivideo.com
+    117.21.179.10
+    240e:cf:9000:2::90
+
+cn-jxjj-ct-01-10.bilivideo.com
+    117.21.179.11
+
+cn-jxjj-ct-01-11.bilivideo.com
+    117.21.179.12
+
+cn-jxjj-ct-01-12.bilivideo.com
+    117.21.179.13
+
+cn-jxjj-ct-01-13.bilivideo.com
+    117.21.179.14
+
+cn-jxjj-ct-01-14.bilivideo.com
+    117.21.179.15
+    240e:cf:9000:2::95
+
+cn-jxjj-ct-01-15.bilivideo.com
+    117.21.179.16
+
+cn-jxjj-ct-01-16.bilivideo.com
+    117.21.179.17
+</code></pre></div> </details> <h4 id=ct-sccd>四川成都<a class=headerlink href=#ct-sccd title="Permanent link">&para;</a></h4> <p>四川成都电信 (<code>sccd-ct</code>) 共有 10 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-sccd-ct-01-01.bilivideo.com
+    171.214.10.130
+    240e:d9:a600:834::2
+
+cn-sccd-ct-01-02.bilivideo.com
+    171.214.10.131
+    240e:d9:a600:834::3
+
+cn-sccd-ct-01-03.bilivideo.com
+    171.214.10.132
+    240e:d9:a600:834::4
+
+cn-sccd-ct-01-04.bilivideo.com
+    171.214.10.133
+    240e:d9:a600:834::5
+
+cn-sccd-ct-01-05.bilivideo.com
+    171.214.10.134
+    240e:d9:a600:834::6
+
+cn-sccd-ct-01-06.bilivideo.com
+    171.214.10.135
+    240e:d9:a600:834::7
+
+cn-sccd-ct-01-07.bilivideo.com
+    171.214.10.136
+    240e:d9:a600:834::8
+
+cn-sccd-ct-01-08.bilivideo.com
+    171.214.10.137
+    240e:d9:a600:834::9
+
+cn-sccd-ct-01-09.bilivideo.com
+    171.214.10.138
+    240e:d9:a600:834::10
+
+cn-sccd-ct-01-10.bilivideo.com
+    171.214.10.139
+    240e:d9:a600:834::11
+</code></pre></div> </details> <h4 id=ct-scya>四川雅安<a class=headerlink href=#ct-scya title="Permanent link">&para;</a></h4> <p>四川雅安电信 (<code>scya-ct</code>) 共有 10 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-scya-ct-01-01.bilivideo.com
+    118.116.2.130
+    240e:dd:d800:322::2
+
+cn-scya-ct-01-02.bilivideo.com
+    118.116.2.131
+    240e:dd:d800:322::3
+
+cn-scya-ct-01-03.bilivideo.com
+    118.116.2.132
+    240e:dd:d800:322::4
+
+cn-scya-ct-01-04.bilivideo.com
+    118.116.2.133
+    240e:dd:d800:322::5
+
+cn-scya-ct-01-05.bilivideo.com
+    118.116.2.134
+    240e:dd:d800:322::6
+
+cn-scya-ct-01-06.bilivideo.com
+    118.116.2.135
+    240e:dd:d800:322::7
+
+cn-scya-ct-01-07.bilivideo.com
+    118.116.2.136
+    240e:dd:d800:322::8
+
+cn-scya-ct-01-08.bilivideo.com
+    118.116.2.137
+    240e:dd:d800:322::9
+
+cn-scya-ct-01-09.bilivideo.com
+    118.116.2.138
+    240e:dd:d800:322::10
+
+cn-scya-ct-01-10.bilivideo.com
+    118.116.2.139
+    240e:dd:d800:322::11
+</code></pre></div> </details> <h3 id=cu>联通<a class=headerlink href=#cu title="Permanent link">&para;</a></h3> <h4 id=cu-hbcd>河北承德<a class=headerlink href=#cu-hbcd title="Permanent link">&para;</a></h4> <p>河北承德联通 (<code>hbcd-cu</code>) 共有 18 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hbcd-cu-02-02.bilivideo.com
+    101.75.242.3
+
+cn-hbcd-cu-02-04.bilivideo.com
+    101.75.242.5
+
+cn-hbcd-cu-02-06.bilivideo.com
+    101.75.242.7
+
+cn-hbcd-cu-02-07.bilivideo.com
+    101.75.242.8
+
+cn-hbcd-cu-02-08.bilivideo.com
+    101.75.242.9
+
+cn-hbcd-cu-02-09.bilivideo.com
+    101.75.242.10
+
+cn-hbcd-cu-02-10.bilivideo.com
+    101.75.242.11
+
+cn-hbcd-cu-02-11.bilivideo.com
+    101.75.242.12
+
+cn-hbcd-cu-02-12.bilivideo.com
+    101.75.242.13
+
+cn-hbcd-cu-02-13.bilivideo.com
+    101.75.242.14
+
+cn-hbcd-cu-02-14.bilivideo.com
+    101.75.242.17
+
+cn-hbcd-cu-02-15.bilivideo.com
+    101.75.242.18
+
+cn-hbcd-cu-02-16.bilivideo.com
+    101.75.242.19
+
+cn-hbcd-cu-02-17.bilivideo.com
+    101.75.242.20
+
+cn-hbcd-cu-02-18.bilivideo.com
+    101.75.242.21
+
+cn-hbcd-cu-02-19.bilivideo.com
+    101.75.242.22
+
+cn-hbcd-cu-02-20.bilivideo.com
+    101.75.242.23
+
+cn-hbcd-cu-02-21.bilivideo.com
+    101.75.242.24
+</code></pre></div> </details> <h4 id=cu-hncs>湖南长沙<a class=headerlink href=#cu-hncs title="Permanent link">&para;</a></h4> <p>湖南长沙联通 (<code>hncs-cu</code>) 共有 8 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hncs-cu-01-01.bilivideo.com
+    61.240.206.2
+
+cn-hncs-cu-01-02.bilivideo.com
+    61.240.206.3
+
+cn-hncs-cu-01-03.bilivideo.com
+    61.240.206.4
+
+cn-hncs-cu-01-04.bilivideo.com
+    61.240.206.5
+
+cn-hncs-cu-01-05.bilivideo.com
+    61.240.206.6
+
+cn-hncs-cu-01-06.bilivideo.com
+    61.240.206.7
+
+cn-hncs-cu-01-07.bilivideo.com
+    61.240.206.8
+
+cn-hncs-cu-01-08.bilivideo.com
+    61.240.206.9
+</code></pre></div> </details> <h4 id=cu-lnsy>辽宁沈阳<a class=headerlink href=#cu-lnsy title="Permanent link">&para;</a></h4> <p>辽宁沈阳联通 (<code>lnsy-cu</code>) 共有 7 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-lnsy-cu-01-01.bilivideo.com
+    42.56.91.130
+    2408:872f:20:3::130
+
+cn-lnsy-cu-01-02.bilivideo.com
+    42.56.91.131
+    2408:872f:20:3::131
+
+cn-lnsy-cu-01-03.bilivideo.com
+    42.56.91.132
+    2408:872f:20:3::132
+
+cn-lnsy-cu-01-04.bilivideo.com
+    42.56.91.133
+    2408:872f:20:3::133
+
+cn-lnsy-cu-01-05.bilivideo.com
+    42.56.91.134
+    2408:872f:20:3::134
+
+cn-lnsy-cu-01-06.bilivideo.com
+    42.56.91.135
+    2408:872f:20:3::135
+
+cn-lnsy-cu-01-07.bilivideo.com
+    42.56.91.136
+    2408:872f:20:3::136
+</code></pre></div> </details> <h4 id=cu-nmghhht>内蒙古呼和浩特<a class=headerlink href=#cu-nmghhht title="Permanent link">&para;</a></h4> <p>内蒙古呼和浩特联通 (<code>nmghhht-cu</code>) 共有 26 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-nmghhht-cu-01-01.bilivideo.com
+    116.95.24.2
+
+cn-nmghhht-cu-01-02.bilivideo.com
+    116.95.24.3
+
+cn-nmghhht-cu-01-03.bilivideo.com
+    116.95.24.4
+
+cn-nmghhht-cu-01-04.bilivideo.com
+    116.95.24.5
+
+cn-nmghhht-cu-01-05.bilivideo.com
+    116.95.24.6
+
+cn-nmghhht-cu-01-06.bilivideo.com
+    116.95.24.7
+
+cn-nmghhht-cu-01-07.bilivideo.com
+    116.95.24.8
+
+cn-nmghhht-cu-01-08.bilivideo.com
+    116.95.24.9
+
+cn-nmghhht-cu-01-09.bilivideo.com
+    116.95.24.10
+
+cn-nmghhht-cu-01-10.bilivideo.com
+    116.95.24.11
+
+cn-nmghhht-cu-01-11.bilivideo.com
+    116.95.24.12
+
+cn-nmghhht-cu-01-12.bilivideo.com
+    116.95.24.15
+
+cn-nmghhht-cu-01-13.bilivideo.com
+    116.95.24.16
+
+cn-nmghhht-cu-01-14.bilivideo.com
+    116.95.24.17
+
+cn-nmghhht-cu-01-15.bilivideo.com
+    116.95.24.18
+
+cn-nmghhht-cu-v-01.bilivideo.com
+    116.95.24.2
+
+cn-nmghhht-cu-v-02.bilivideo.com
+    116.95.24.3
+
+cn-nmghhht-cu-v-03.bilivideo.com
+    116.95.24.4
+
+cn-nmghhht-cu-v-04.bilivideo.com
+    116.95.24.5
+
+cn-nmghhht-cu-v-05.bilivideo.com
+    116.95.24.6
+
+cn-nmghhht-cu-v-06.bilivideo.com
+    116.95.24.7
+
+cn-nmghhht-cu-v-07.bilivideo.com
+    116.95.24.8
+
+cn-nmghhht-cu-v-08.bilivideo.com
+    116.95.24.9
+
+cn-nmghhht-cu-v-09.bilivideo.com
+    116.95.24.10
+
+cn-nmghhht-cu-v-10.bilivideo.com
+    116.95.24.15
+
+cn-nmghhht-cu-v-11.bilivideo.com
+    116.95.24.16
+</code></pre></div> </details> <h4 id=cu-sdyt>山东烟台<a class=headerlink href=#cu-sdyt title="Permanent link">&para;</a></h4> <p>山东烟台联通 (<code>sdyt-cu</code>) 共有 9 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-sdyt-cu-01-01.bilivideo.com
+    61.156.196.130
+
+cn-sdyt-cu-01-02.bilivideo.com
+    61.156.196.131
+
+cn-sdyt-cu-01-03.bilivideo.com
+    61.156.196.132
+    2408:8719:6301:5:0:2:0:132
+
+cn-sdyt-cu-01-04.bilivideo.com
+    61.156.196.133
+    2408:8719:6301:5:0:2:0:133
+
+cn-sdyt-cu-01-05.bilivideo.com
+    61.156.196.134
+    2408:8719:6301:5:0:2:0:134
+
+cn-sdyt-cu-01-06.bilivideo.com
+    61.156.196.135
+    2408:8719:6301:5:0:2:0:135
+
+cn-sdyt-cu-01-07.bilivideo.com
+    61.156.196.136
+    2408:8719:6301:5:0:2:0:136
+
+cn-sdyt-cu-01-08.bilivideo.com
+    61.156.196.137
+    2408:8719:6301:5:0:2:0:137
+
+cn-sdyt-cu-01-09.bilivideo.com
+    61.156.196.138
+    2408:8719:6301:5:0:2:0:138
+</code></pre></div> </details> <h4 id=cu-zjhz>浙江杭州<a class=headerlink href=#cu-zjhz title="Permanent link">&para;</a></h4> <p>浙江杭州联通 (<code>zjhz-cu</code>) 共有 8 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-zjhz-cu-01-01.bilivideo.com
+    60.12.119.66
+
+cn-zjhz-cu-01-02.bilivideo.com
+    60.12.119.67
+
+cn-zjhz-cu-01-03.bilivideo.com
+    60.12.119.68
+
+cn-zjhz-cu-01-04.bilivideo.com
+    60.12.119.69
+
+cn-zjhz-cu-01-05.bilivideo.com
+    60.12.119.70
+
+cn-zjhz-cu-01-06.bilivideo.com
+    60.12.119.71
+
+cn-zjhz-cu-01-07.bilivideo.com
+    60.12.119.72
+
+cn-zjhz-cu-01-08.bilivideo.com
+    60.12.119.73
+</code></pre></div> </details> <h3 id=cm>移动<a class=headerlink href=#cm title="Permanent link">&para;</a></h3> <h4 id=cm-ahhn>安徽淮南<a class=headerlink href=#cm-ahhn title="Permanent link">&para;</a></h4> <p>安徽淮南移动 (<code>ahhn-cm</code>) 共有 8 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-ahhn-cm-01-01.bilivideo.com
+    112.29.230.194
+
+cn-ahhn-cm-01-02.bilivideo.com
+    112.29.230.195
+
+cn-ahhn-cm-01-03.bilivideo.com
+    112.29.230.196
+
+cn-ahhn-cm-01-04.bilivideo.com
+    112.29.230.197
+
+cn-ahhn-cm-01-05.bilivideo.com
+    112.29.230.198
+
+cn-ahhn-cm-01-06.bilivideo.com
+    112.29.230.199
+
+cn-ahhn-cm-01-07.bilivideo.com
+    112.29.230.200
+    2409:8c30:1000:600::200
+
+cn-ahhn-cm-01-08.bilivideo.com
+    112.29.230.201
+    2409:8c30:1000:600::201
+</code></pre></div> </details> <h4 id=cm-fjqz>福建泉州<a class=headerlink href=#cm-fjqz title="Permanent link">&para;</a></h4> <p>福建泉州移动 (<code>fjqz-cm</code>) 共有 10 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-fjqz-cm-01-01.bilivideo.com
+    112.47.7.2
+
+cn-fjqz-cm-01-02.bilivideo.com
+    112.47.7.3
+
+cn-fjqz-cm-01-03.bilivideo.com
+    112.47.7.4
+    2409:8c34:4400:301::4
+
+cn-fjqz-cm-01-04.bilivideo.com
+    112.47.7.5
+
+cn-fjqz-cm-01-05.bilivideo.com
+    112.47.7.6
+
+cn-fjqz-cm-01-06.bilivideo.com
+    112.47.7.7
+
+cn-fjqz-cm-01-07.bilivideo.com
+    112.47.7.8
+    2409:8c34:4400:301::8
+
+cn-fjqz-cm-01-08.bilivideo.com
+    112.47.7.9
+    2409:8c34:4400:301::9
+
+cn-fjqz-cm-01-09.bilivideo.com
+    112.47.7.10
+    2409:8c34:4400:301::10
+
+cn-fjqz-cm-01-10.bilivideo.com
+    112.47.7.11
+    2409:8c34:4400:301::11
+</code></pre></div> </details> <h4 id=cm-gddg>广东东莞<a class=headerlink href=#cm-gddg title="Permanent link">&para;</a></h4> <p>广东东莞移动 (<code>gddg-cm</code>) 共有 6 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-gddg-cm-01-01.bilivideo.com
+    183.232.239.2
+
+cn-gddg-cm-01-02.bilivideo.com
+    183.232.239.3
+
+cn-gddg-cm-01-03.bilivideo.com
+    183.232.239.4
+
+cn-gddg-cm-01-04.bilivideo.com
+    183.232.239.5
+
+cn-gddg-cm-01-05.bilivideo.com
+    183.232.239.6
+
+cn-gddg-cm-01-06.bilivideo.com
+    183.232.239.7
+</code></pre></div> </details> <h4 id=cm-gdst>广东汕头<a class=headerlink href=#cm-gdst title="Permanent link">&para;</a></h4> <p>广东汕头移动 (<code>gdst-cm</code>) 共有 10 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-gdst-cm-01-01.bilivideo.com
+    120.240.74.34
+    2409:8c54:2810:9105::2
+
+cn-gdst-cm-01-02.bilivideo.com
+    120.240.74.35
+    2409:8c54:2810:9105::3
+
+cn-gdst-cm-01-03.bilivideo.com
+    120.240.74.36
+    2409:8c54:2810:9105::4
+
+cn-gdst-cm-01-04.bilivideo.com
+    120.240.74.37
+    2409:8c54:2810:9105::5
+
+cn-gdst-cm-01-05.bilivideo.com
+    120.240.74.38
+
+cn-gdst-cm-01-06.bilivideo.com
+    120.240.74.39
+
+cn-gdst-cm-01-07.bilivideo.com
+    120.240.74.40
+
+cn-gdst-cm-01-08.bilivideo.com
+    120.240.74.41
+
+cn-gdst-cm-01-09.bilivideo.com
+    120.240.74.42
+    2409:8c54:2810:9105::10
+
+cn-gdst-cm-01-10.bilivideo.com
+    120.240.74.43
+    2409:8c54:2810:9105::11
+</code></pre></div> </details> <h4 id=cm-hbsjz>河北石家庄<a class=headerlink href=#cm-hbsjz title="Permanent link">&para;</a></h4> <p>河北石家庄移动 (<code>hbsjz-cm</code>) 共有 14 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hbsjz-cm-02-01.bilivideo.com
+    111.62.200.2
+
+cn-hbsjz-cm-02-02.bilivideo.com
+    111.62.200.3
+
+cn-hbsjz-cm-02-03.bilivideo.com
+    111.62.200.4
+
+cn-hbsjz-cm-02-04.bilivideo.com
+    111.62.200.5
+
+cn-hbsjz-cm-02-05.bilivideo.com
+    111.62.200.6
+
+cn-hbsjz-cm-02-06.bilivideo.com
+    111.62.200.7
+
+cn-hbsjz-cm-02-07.bilivideo.com
+    111.62.200.8
+
+cn-hbsjz-cm-02-08.bilivideo.com
+    111.62.200.9
+    2409:8c04:1005:1104::9
+
+cn-hbsjz-cm-02-09.bilivideo.com
+    111.62.200.10
+    2409:8c04:1005:1104::10
+
+cn-hbsjz-cm-02-10.bilivideo.com
+    111.62.200.11
+    2409:8c04:1005:1104::11
+
+cn-hbsjz-cm-02-11.bilivideo.com
+    111.62.200.12
+    2409:8c04:1005:1104::12
+
+cn-hbsjz-cm-02-12.bilivideo.com
+    111.62.200.13
+    2409:8c04:1005:1104::13
+
+cn-hbsjz-cm-02-13.bilivideo.com
+    111.62.200.14
+    2409:8c04:1005:1104::14
+
+cn-hbsjz-cm-02-14.bilivideo.com
+    111.62.200.15
+    2409:8c04:1005:1104::15
+</code></pre></div> </details> <h4 id=cm-hbwh>湖北武汉<a class=headerlink href=#cm-hbwh title="Permanent link">&para;</a></h4> <p>湖北武汉移动 (<code>hbwh-cm</code>) 共有 19 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hbwh-cm-01-01.bilivideo.com
+    111.48.57.2
+
+cn-hbwh-cm-01-02.bilivideo.com
+    111.48.57.3
+
+cn-hbwh-cm-01-03.bilivideo.com
+    111.48.57.4
+
+cn-hbwh-cm-01-05.bilivideo.com
+    111.48.57.6
+
+cn-hbwh-cm-01-06.bilivideo.com
+    111.48.57.7
+
+cn-hbwh-cm-01-07.bilivideo.com
+    111.48.57.8
+    2409:8c4c:c00:9::8
+
+cn-hbwh-cm-01-08.bilivideo.com
+    111.48.57.9
+    2409:8c4c:c00:9::9
+
+cn-hbwh-cm-01-09.bilivideo.com
+    111.48.57.31
+    2409:8c4c:c00:9::10
+
+cn-hbwh-cm-01-10.bilivideo.com
+    111.48.57.32
+    2409:8c4c:c00:9::11
+
+cn-hbwh-cm-01-11.bilivideo.com
+    111.48.57.33
+    2409:8c4c:c00:9::12
+
+cn-hbwh-cm-01-12.bilivideo.com
+    111.48.57.34
+    2409:8c4c:c00:9::13
+
+cn-hbwh-cm-01-13.bilivideo.com
+    111.48.57.35
+    2409:8c4c:c00:9::14
+
+cn-hbwh-cm-01-14.bilivideo.com
+    111.48.57.36
+    2409:8c4c:c00:9::15
+
+cn-hbwh-cm-01-15.bilivideo.com
+    111.48.57.37
+    2409:8c4c:c00:9::16
+
+cn-hbwh-cm-01-16.bilivideo.com
+    111.48.57.38
+    2409:8c4c:c00:9::17
+
+cn-hbwh-cm-01-17.bilivideo.com
+    111.48.57.39
+    2409:8c4c:c00:9::18
+
+cn-hbwh-cm-01-18.bilivideo.com
+    111.48.57.40
+    2409:8c4c:c00:9::19
+
+cn-hbwh-cm-01-19.bilivideo.com
+    111.48.57.41
+    2409:8c4c:c00:9::20
+
+cn-hbwh-cm-01-20.bilivideo.com
+    111.48.57.42
+    2409:8c4c:c00:9::21
+</code></pre></div> </details> <h4 id=cm-hljheb>黑龙江哈尔滨<a class=headerlink href=#cm-hljheb title="Permanent link">&para;</a></h4> <p>黑龙江哈尔滨移动 (<code>hljheb-cm</code>) 共有 6 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hljheb-cm-01-01.bilivideo.com
+    111.40.188.226
+
+cn-hljheb-cm-01-02.bilivideo.com
+    111.40.188.227
+
+cn-hljheb-cm-01-03.bilivideo.com
+    111.40.188.228
+
+cn-hljheb-cm-01-04.bilivideo.com
+    111.40.188.229
+
+cn-hljheb-cm-01-05.bilivideo.com
+    111.40.188.230
+
+cn-hljheb-cm-01-06.bilivideo.com
+    111.40.188.241
+</code></pre></div> </details> <h4 id=cm-hnzz>河南郑州<a class=headerlink href=#cm-hnzz title="Permanent link">&para;</a></h4> <p>河南郑州移动 (<code>hnzz-cm</code>) 共有 16 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-hnzz-cm-01-01.bilivideo.com
+    111.6.167.130
+
+cn-hnzz-cm-01-02.bilivideo.com
+    111.6.167.131
+
+cn-hnzz-cm-01-03.bilivideo.com
+    111.6.167.132
+
+cn-hnzz-cm-01-04.bilivideo.com
+    111.6.167.133
+    2409:8c44:b00:ff0d::133
+
+cn-hnzz-cm-01-05.bilivideo.com
+    111.6.190.162
+    2409:8c44:b00:ff0d::162
+
+cn-hnzz-cm-01-06.bilivideo.com
+    111.6.190.163
+    2409:8c44:b00:ff0d::163
+
+cn-hnzz-cm-01-07.bilivideo.com
+    111.6.190.164
+
+cn-hnzz-cm-01-08.bilivideo.com
+    111.6.190.165
+
+cn-hnzz-cm-01-09.bilivideo.com
+    111.6.190.166
+
+cn-hnzz-cm-01-10.bilivideo.com
+    111.6.190.167
+
+cn-hnzz-cm-01-11.bilivideo.com
+    111.6.190.168
+    2409:8c44:b00:ff0d::168
+
+cn-hnzz-cm-01-12.bilivideo.com
+    111.6.190.169
+    2409:8c44:b00:ff0d::169
+
+cn-hnzz-cm-01-13.bilivideo.com
+    111.6.190.179
+
+cn-hnzz-cm-01-14.bilivideo.com
+    111.6.190.180
+
+cn-hnzz-cm-01-15.bilivideo.com
+    111.6.190.181
+
+cn-hnzz-cm-01-16.bilivideo.com
+    111.6.190.182
+</code></pre></div> </details> <h4 id=cm-jssz>江苏苏州<a class=headerlink href=#cm-jssz title="Permanent link">&para;</a></h4> <p>江苏苏州移动 (<code>jssz-cm</code>) 共有 16 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-jssz-cm-02-01.bilivideo.com
+    223.111.250.38
+
+cn-jssz-cm-02-02.bilivideo.com
+    223.111.250.39
+
+cn-jssz-cm-02-03.bilivideo.com
+    223.111.250.40
+
+cn-jssz-cm-02-04.bilivideo.com
+    223.111.250.41
+
+cn-jssz-cm-02-05.bilivideo.com
+    223.111.250.42
+
+cn-jssz-cm-02-06.bilivideo.com
+    223.111.250.43
+
+cn-jssz-cm-02-07.bilivideo.com
+    223.111.250.44
+
+cn-jssz-cm-02-08.bilivideo.com
+    223.111.250.45
+
+cn-jssz-cm-02-09.bilivideo.com
+    223.111.250.46
+
+cn-jssz-cm-02-10.bilivideo.com
+    223.111.250.47
+
+cn-jssz-cm-02-11.bilivideo.com
+    223.111.250.48
+
+cn-jssz-cm-02-12.bilivideo.com
+    223.111.250.49
+
+cn-jssz-cm-02-13.bilivideo.com
+    223.111.250.34
+
+cn-jssz-cm-02-14.bilivideo.com
+    223.111.250.35
+
+cn-jssz-cm-02-15.bilivideo.com
+    223.111.250.36
+
+cn-jssz-cm-02-16.bilivideo.com
+    223.111.250.37
+</code></pre></div> </details> <h4 id=cm-jxnc>江西南昌<a class=headerlink href=#cm-jxnc title="Permanent link">&para;</a></h4> <p>江西南昌移动 (<code>jxnc-cm</code>) 共有 20 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-jxnc-cm-01-01.bilivideo.com
+    117.169.96.226
+
+cn-jxnc-cm-01-02.bilivideo.com
+    117.169.96.227
+    2409:8c38:c40:100::227
+
+cn-jxnc-cm-01-03.bilivideo.com
+    117.169.96.228
+    2409:8c38:c40:100::228
+
+cn-jxnc-cm-01-04.bilivideo.com
+    117.169.96.229
+
+cn-jxnc-cm-01-05.bilivideo.com
+    117.169.96.230
+
+cn-jxnc-cm-01-06.bilivideo.com
+    117.169.96.231
+
+cn-jxnc-cm-01-07.bilivideo.com
+    117.169.96.232
+
+cn-jxnc-cm-01-08.bilivideo.com
+    117.169.96.233
+
+cn-jxnc-cm-01-09.bilivideo.com
+    117.169.96.234
+
+cn-jxnc-cm-01-10.bilivideo.com
+    117.169.96.235
+
+cn-jxnc-cm-01-11.bilivideo.com
+    117.169.96.236
+    2409:8c38:c40:100::236
+
+cn-jxnc-cm-01-12.bilivideo.com
+    117.169.96.237
+    2409:8c38:c40:100::237
+
+cn-jxnc-cm-01-13.bilivideo.com
+    117.169.96.238
+    2409:8c38:c40:100::238
+
+cn-jxnc-cm-01-14.bilivideo.com
+    117.169.96.239
+    2409:8c38:c40:100::239
+
+cn-jxnc-cm-01-15.bilivideo.com
+    117.169.96.247
+    2409:8c38:c40:100::247
+
+cn-jxnc-cm-01-16.bilivideo.com
+    117.169.96.248
+    2409:8c38:c40:100::248
+
+cn-jxnc-cm-01-17.bilivideo.com
+    117.169.96.249
+    2409:8c38:c40:100::249
+
+cn-jxnc-cm-01-18.bilivideo.com
+    117.169.96.250
+    2409:8c38:c40:100::250
+
+cn-jxnc-cm-01-19.bilivideo.com
+    117.169.96.251
+    2409:8c38:c40:100::251
+
+cn-jxnc-cm-01-20.bilivideo.com
+    117.169.96.252
+    2409:8c38:c40:100::252
+</code></pre></div> </details> <h4 id=cm-lnsy>辽宁沈阳<a class=headerlink href=#cm-lnsy title="Permanent link">&para;</a></h4> <p>辽宁沈阳移动 (<code>lnsy-cm</code>) 共有 8 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-lnsy-cm-01-01.bilivideo.com
+    120.201.100.2
+    2409:8c14:f1a:3201::2
+
+cn-lnsy-cm-01-02.bilivideo.com
+    120.201.100.3
+
+cn-lnsy-cm-01-03.bilivideo.com
+    120.201.100.4
+
+cn-lnsy-cm-01-04.bilivideo.com
+    120.201.100.5
+
+cn-lnsy-cm-01-05.bilivideo.com
+    120.201.100.6
+
+cn-lnsy-cm-01-06.bilivideo.com
+    120.201.100.7
+
+cn-lnsy-cm-01-07.bilivideo.com
+    120.201.100.8
+    2409:8c14:f1a:3201::8
+
+cn-lnsy-cm-01-08.bilivideo.com
+    120.201.100.9
+    2409:8c14:f1a:3201::9
+</code></pre></div> </details> <h4 id=cm-sdjn>山东济南<a class=headerlink href=#cm-sdjn title="Permanent link">&para;</a></h4> <p>山东济南移动 (<code>sdjn-cm</code>) 共有 56 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-sdjn-cm-02-01.bilivideo.com
+    120.192.82.66
+    2409:8c3c:4:2::66
+
+cn-sdjn-cm-02-02.bilivideo.com
+    120.192.82.67
+    2409:8c3c:4:2::67
+
+cn-sdjn-cm-02-03.bilivideo.com
+    120.192.82.68
+    2409:8c3c:4:2::68
+
+cn-sdjn-cm-02-04.bilivideo.com
+    120.192.82.69
+
+cn-sdjn-cm-02-05.bilivideo.com
+    120.192.82.70
+
+cn-sdjn-cm-02-06.bilivideo.com
+    120.192.82.71
+
+cn-sdjn-cm-02-07.bilivideo.com
+    120.192.82.72
+    2409:8c3c:4:2::72
+
+cn-sdjn-cm-02-08.bilivideo.com
+    120.192.82.73
+    2409:8c3c:4:2::73
+
+cn-sdjn-cm-02-09.bilivideo.com
+    120.192.82.98
+    2409:8c3c:4:2::8
+
+cn-sdjn-cm-02-10.bilivideo.com
+    120.192.82.99
+    2409:8c3c:4:2::9
+
+cn-sdjn-cm-02-11.bilivideo.com
+    120.192.82.100
+    2409:8c3c:4:2::10
+
+cn-sdjn-cm-02-12.bilivideo.com
+    120.192.82.101
+    2409:8c3c:4:2::11
+
+cn-sdjn-cm-02-13.bilivideo.com
+    120.192.82.102
+    2409:8c3c:4:2::12
+
+cn-sdjn-cm-02-14.bilivideo.com
+    120.192.82.103
+    2409:8c3c:4:2::13
+
+cn-sdjn-cm-03-01.bilivideo.com
+    120.192.83.206
+    2409:8c3c:4:2::a6
+
+cn-sdjn-cm-03-02.bilivideo.com
+    120.192.83.207
+    2409:8c3c:4:2::a7
+
+cn-sdjn-cm-03-03.bilivideo.com
+    120.192.83.208
+    2409:8c3c:4:2::a8
+
+cn-sdjn-cm-03-04.bilivideo.com
+    120.192.83.209
+    2409:8c3c:4:2::a9
+
+cn-sdjn-cm-03-05.bilivideo.com
+    120.192.83.212
+
+cn-sdjn-cm-03-06.bilivideo.com
+    120.192.83.194
+    2409:8c3c:4:2::94
+
+cn-sdjn-cm-03-07.bilivideo.com
+    120.192.83.195
+    2409:8c3c:4:2::95
+
+cn-sdjn-cm-03-08.bilivideo.com
+    120.192.83.196
+    2409:8c3c:4:2::96
+
+cn-sdjn-cm-03-09.bilivideo.com
+    120.192.83.197
+    2409:8c3c:4:2::97
+
+cn-sdjn-cm-03-10.bilivideo.com
+    120.192.83.198
+    2409:8c3c:4:2::98
+
+cn-sdjn-cm-03-11.bilivideo.com
+    120.192.83.199
+    2409:8c3c:4:2::90
+
+cn-sdjn-cm-03-12.bilivideo.com
+    120.192.83.200
+    2409:8c3c:4:2::a0
+
+cn-sdjn-cm-03-13.bilivideo.com
+    120.192.83.201
+    2409:8c3c:4:2::a1
+
+cn-sdjn-cm-03-14.bilivideo.com
+    120.192.83.202
+    2409:8c3c:4:2::a2
+
+cn-sdjn-cm-03-15.bilivideo.com
+    120.192.83.203
+    2409:8c3c:4:2::a3
+
+cn-sdjn-cm-03-16.bilivideo.com
+    120.192.83.204
+
+cn-sdjn-cm-03-17.bilivideo.com
+    120.192.83.216
+
+cn-sdjn-cm-03-18.bilivideo.com
+    120.192.83.217
+
+cn-sdjn-cm-03-19.bilivideo.com
+    120.192.83.218
+
+cn-sdjn-cm-03-20.bilivideo.com
+    120.192.83.219
+
+cn-sdjn-cm-03-21.bilivideo.com
+    120.192.83.220
+
+cn-sdjn-cm-03-22.bilivideo.com
+    120.192.83.221
+
+cn-sdjn-cm-03-23.bilivideo.com
+    120.192.83.222
+
+cn-sdjn-cm-03-24.bilivideo.com
+    120.192.83.223
+
+cn-sdjn-cm-03-25.bilivideo.com
+    120.192.83.224
+
+cn-sdjn-cm-03-26.bilivideo.com
+    120.192.83.225
+
+cn-sdjn-cm-03-27.bilivideo.com
+    120.192.65.194
+
+cn-sdjn-cm-03-28.bilivideo.com
+    120.192.65.195
+
+cn-sdjn-cm-03-29.bilivideo.com
+    120.192.65.196
+
+cn-sdjn-cm-03-30.bilivideo.com
+    120.192.65.197
+
+cn-sdjn-cm-03-31.bilivideo.com
+    120.192.65.198
+
+cn-sdjn-cm-03-32.bilivideo.com
+    120.192.65.199
+
+cn-sdjn-cm-03-33.bilivideo.com
+    120.192.65.200
+
+cn-sdjn-cm-03-34.bilivideo.com
+    120.192.65.201
+
+cn-sdjn-cm-03-35.bilivideo.com
+    120.192.65.202
+
+cn-sdjn-cm-03-36.bilivideo.com
+    120.192.65.203
+
+cn-sdjn-cm-03-38.bilivideo.com
+    120.192.65.205
+
+cn-sdjn-cm-03-39.bilivideo.com
+    120.192.65.206
+
+cn-sdjn-cm-03-40.bilivideo.com
+    120.192.83.205
+    2409:8c3c:4:2::a5
+
+cn-sdjn-cm-03-41.bilivideo.com
+    120.192.83.213
+
+cn-sdjn-cm-03-42.bilivideo.com
+    120.192.83.214
+
+cn-sdjn-cm-03-43.bilivideo.com
+    120.192.83.215
+</code></pre></div> </details> <h4 id=cm-sxty>山西太原<a class=headerlink href=#cm-sxty title="Permanent link">&para;</a></h4> <p>山西太原移动 (<code>sxty-cm</code>) 共有 12 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-sxty-cm-02-01.bilivideo.com
+    183.201.222.2
+    2409:8c0c:310:1800::2
+
+cn-sxty-cm-02-02.bilivideo.com
+    183.201.222.3
+    2409:8c0c:310:1800::3
+
+cn-sxty-cm-02-03.bilivideo.com
+    183.201.222.4
+
+cn-sxty-cm-02-04.bilivideo.com
+    183.201.222.5
+    2409:8c0c:310:1800::5
+
+cn-sxty-cm-02-05.bilivideo.com
+    183.201.222.6
+    2409:8c0c:310:1800::6
+
+cn-sxty-cm-02-06.bilivideo.com
+    183.201.222.7
+    2409:8c0c:310:1800::7
+
+cn-sxty-cm-02-07.bilivideo.com
+    183.201.222.8
+    2409:8c0c:310:1800::8
+
+cn-sxty-cm-02-08.bilivideo.com
+    183.201.222.9
+    2409:8c0c:310:1800::9
+
+cn-sxty-cm-02-09.bilivideo.com
+    183.201.222.10
+    2409:8c0c:310:1800::10
+
+cn-sxty-cm-02-10.bilivideo.com
+    183.201.222.11
+    2409:8c0c:310:1800::11
+
+cn-sxty-cm-02-11.bilivideo.com
+    183.201.222.12
+    2409:8c0c:310:1800::12
+
+cn-sxty-cm-02-12.bilivideo.com
+    183.201.222.13
+    2409:8c0c:310:1800::13
+</code></pre></div> </details> <h4 id=cm-sxxa>陕西西安<a class=headerlink href=#cm-sxxa title="Permanent link">&para;</a></h4> <p>陕西西安移动 (<code>sxxa-cm</code>) 共有 11 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-sxxa-cm-01-01.bilivideo.com
+    111.19.247.130
+    2409:8c70:3a08:2::130
+
+cn-sxxa-cm-01-02.bilivideo.com
+    111.19.247.131
+    2409:8c70:3a08:2::131
+
+cn-sxxa-cm-01-03.bilivideo.com
+    111.19.247.132
+    2409:8c70:3a08:2::132
+
+cn-sxxa-cm-01-04.bilivideo.com
+    111.19.247.133
+    2409:8c70:3a08:2::133
+
+cn-sxxa-cm-01-05.bilivideo.com
+    111.19.247.134
+    2409:8c70:3a08:2::134
+
+cn-sxxa-cm-01-06.bilivideo.com
+    111.19.247.135
+    2409:8c70:3a08:2::135
+
+cn-sxxa-cm-01-07.bilivideo.com
+    111.19.247.136
+    2409:8c70:3a08:2::136
+
+cn-sxxa-cm-01-08.bilivideo.com
+    111.19.247.137
+    2409:8c70:3a08:2::137
+
+cn-sxxa-cm-01-09.bilivideo.com
+    111.19.247.138
+
+cn-sxxa-cm-01-11.bilivideo.com
+    111.19.247.140
+    2409:8c70:3a08:2::140
+
+cn-sxxa-cm-01-12.bilivideo.com
+    111.19.247.141
+</code></pre></div> </details> <h4 id=cm-tj>天津<a class=headerlink href=#cm-tj title="Permanent link">&para;</a></h4> <p>天津移动 (<code>tj-cm</code>) 共有 14 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-tj-cm-02-01.bilivideo.com
+    111.31.33.2
+    2409:8c02:21c:b0::2
+
+cn-tj-cm-02-02.bilivideo.com
+    111.31.33.3
+    2409:8c02:21c:b0::3
+
+cn-tj-cm-02-03.bilivideo.com
+    111.31.33.4
+    2409:8c02:21c:b0::4
+
+cn-tj-cm-02-04.bilivideo.com
+    111.31.33.5
+    2409:8c02:21c:b0::5
+
+cn-tj-cm-02-05.bilivideo.com
+    111.31.33.6
+    2409:8c02:21c:b0::6
+
+cn-tj-cm-02-06.bilivideo.com
+    111.31.33.7
+    2409:8c02:21c:b0::7
+
+cn-tj-cm-02-07.bilivideo.com
+    111.31.33.8
+    2409:8c02:21c:b0::8
+
+cn-tj-cm-02-08.bilivideo.com
+    111.31.33.9
+    2409:8c02:21c:b0::9
+
+cn-tj-cm-02-09.bilivideo.com
+    111.31.33.10
+    2409:8c02:21c:b0::10
+
+cn-tj-cm-02-10.bilivideo.com
+    111.31.33.11
+    2409:8c02:21c:b0::11
+
+cn-tj-cm-02-11.bilivideo.com
+    111.31.33.12
+    2409:8c02:21c:b0::12
+
+cn-tj-cm-02-12.bilivideo.com
+    111.31.33.13
+    2409:8c02:21c:b0::13
+
+cn-tj-cm-02-13.bilivideo.com
+    111.31.33.14
+    2409:8c02:21c:b0::14
+
+cn-tj-cm-02-14.bilivideo.com
+    111.31.33.15
+    2409:8c02:21c:b0::15
+</code></pre></div> </details> <h4 id=cm-zjhz>浙江杭州<a class=headerlink href=#cm-zjhz title="Permanent link">&para;</a></h4> <p>浙江杭州移动 (<code>zjhz-cm</code>) 共有 22 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-zjhz-cm-01-01.bilivideo.com
+    112.13.92.194
+
+cn-zjhz-cm-01-04.bilivideo.com
+    112.13.92.197
+
+cn-zjhz-cm-01-05.bilivideo.com
+    112.13.92.198
+    2409:8c28:202:8::198
+
+cn-zjhz-cm-01-07.bilivideo.com
+    112.13.92.200
+    2409:8c28:202:8::200
+
+cn-zjhz-cm-01-08.bilivideo.com
+    112.13.92.201
+    2409:8c28:202:8::201
+
+cn-zjhz-cm-01-11.bilivideo.com
+    112.13.92.204
+    2409:8c28:202:8::204
+
+cn-zjhz-cm-01-12.bilivideo.com
+    112.13.92.205
+    2409:8c28:202:8::205
+
+cn-zjhz-cm-01-13.bilivideo.com
+    112.13.92.206
+    2409:8c28:202:8::206
+
+cn-zjhz-cm-01-14.bilivideo.com
+    112.13.92.207
+    2409:8c28:202:8::207
+
+cn-zjhz-cm-01-15.bilivideo.com
+    112.13.92.208
+    2409:8c28:202:8::208
+
+cn-zjhz-cm-01-16.bilivideo.com
+    112.13.92.209
+    2409:8c28:202:8::209
+
+cn-zjhz-cm-01-17.bilivideo.com
+    112.13.92.210
+    2409:8c28:202:8::210
+
+cn-zjhz-cm-01-18.bilivideo.com
+    112.13.92.211
+    2409:8c28:202:8::211
+
+cn-zjhz-cm-01-19.bilivideo.com
+    112.13.92.212
+    2409:8c28:202:8::212
+
+cn-zjhz-cm-01-20.bilivideo.com
+    112.13.92.213
+
+cn-zjhz-cm-01-21.bilivideo.com
+    112.13.92.214
+
+cn-zjhz-cm-01-22.bilivideo.com
+    112.13.92.215
+
+cn-zjhz-cm-01-23.bilivideo.com
+    112.13.92.216
+
+cn-zjhz-cm-01-24.bilivideo.com
+    112.13.92.217
+    2409:8c28:202:8::217
+
+cn-zjhz-cm-01-25.bilivideo.com
+    112.13.92.218
+    2409:8c28:202:8::218
+
+cn-zjhz-cm-01-26.bilivideo.com
+    112.13.92.219
+
+cn-zjhz-cm-01-27.bilivideo.com
+    112.13.92.220
+</code></pre></div> </details> <h3 id=fx>教育网<a class=headerlink href=#fx title="Permanent link">&para;</a></h3> <h4 id=fx-gdgz>广东广州<a class=headerlink href=#fx-gdgz title="Permanent link">&para;</a></h4> <p>广东广州教育网 (<code>gdgz-fx</code>) 共有 18 个域名。</p> <details class=cite> <summary>域名列表</summary> <div class=highlight><pre><span></span><code>cn-gdgz-fx-01-01.bilivideo.com
+    222.200.254.34
+    2001:da8:2032:1003::34
+
+cn-gdgz-fx-01-02.bilivideo.com
+    222.200.254.35
+    2001:da8:2032:1003::35
+
+cn-gdgz-fx-01-03.bilivideo.com
+    222.200.254.36
+    2001:da8:2032:1003::36
+
+cn-gdgz-fx-01-04.bilivideo.com
+    222.200.254.37
+    2001:da8:2032:1003::37
+
+cn-gdgz-fx-01-05.bilivideo.com
+    222.200.254.38
+    2001:da8:2032:1003::38
+
+cn-gdgz-fx-01-06.bilivideo.com
+    222.200.254.39
+    2001:da8:2032:1003::39
+
+cn-gdgz-fx-01-07.bilivideo.com
+    222.200.254.40
+    2001:da8:2032:1003::40
+
+cn-gdgz-fx-01-08.bilivideo.com
+    222.200.254.41
+    2001:da8:2032:1003::41
+
+cn-gdgz-fx-01-09.bilivideo.com
+    222.200.254.42
+    2001:da8:2032:1003::42
+
+cn-gdgz-fx-01-10.bilivideo.com
+    222.200.254.43
+    2001:da8:2032:1003::43
+
+cn-gdgz-fx-01-11.bilivideo.com
+    222.200.254.164
+    2001:da8:2032:1003::46
+
+cn-gdgz-fx-01-12.bilivideo.com
+    222.200.254.163
+    2001:da8:2032:1003::45
+
+cn-gdgz-fx-01-13.bilivideo.com
+    222.200.254.162
+    2001:da8:2032:1003::44
+
+cn-gdgz-fx-01-14.bilivideo.com
+    222.200.254.165
+    2001:da8:2032:1003::47
+
+cn-gdgz-fx-01-15.bilivideo.com
+    222.200.254.166
+    2001:da8:2032:1003::48
+
+cn-gdgz-fx-01-16.bilivideo.com
+    222.200.254.167
+    2001:da8:2032:1003::49
+
+cn-gdgz-fx-01-17.bilivideo.com
+    222.200.254.168
+    2001:da8:2032:1003::50
+
+cn-gdgz-fx-01-18.bilivideo.com
+    222.200.254.169
+    2001:da8:2032:1003::51
+</code></pre></div> </details> <h2 id=cdn-服务商域名>CDN 服务商域名<a class=headerlink href=#cdn-服务商域名 title="Permanent link">&para;</a></h2> <p>本段落信息更新日期: 2022/5/4。<br> IP 个数指的是一次 DNS 请求返回的数量（显然不可能是总数）。<br> 因为有 GeoDNS 的存在，不同地区的请求结果会不一样，以下信息仅供参考。</p> <hr> <h3 id=c1--cn-gotcha01bilivideocom>c1--cn-gotcha01.bilivideo.com<a class=headerlink href=#c1--cn-gotcha01bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>B站自建 (B站视频云)</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>c1--cn-gotcha01.bilivideo.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 10 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha01bilivideocom>d1--cn-gotcha01.bilivideo.com<a class=headerlink href=#d1--cn-gotcha01bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>B站自建 (B站视频云)</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha01.bilivideo.com</code><ul> <li><code>a.w.bilicdn1.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha02bilivideocom>d1--cn-gotcha02.bilivideo.com<a class=headerlink href=#d1--cn-gotcha02bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>金山云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha02.bilivideo.com</code><ul> <li><code>d1--cn-gotcha02.bilivideo.com.hdlvcloud.ks-cdn.com</code><ul> <li><code>s03-ipv6.gslb.ksyuncdn.com</code><ul> <li><code>s03-ipv6-yunfan.gslb.borui.yunfancdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 5 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha102bilivideocom>d1--cn-gotcha102.bilivideo.com<a class=headerlink href=#d1--cn-gotcha102bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>金山云</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha102.bilivideo.com</code><ul> <li><code>d1--cn-gotcha102.bilivideo.com.hlsvcloud.ks-cdn.com</code><ul> <li><code>k12.gslb.ksyuncdn.com</code><ul> <li><code>k12-yunfan.gslb.borui.yunfancdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha202bilivideocom>d1--cn-gotcha202.bilivideo.com<a class=headerlink href=#d1--cn-gotcha202bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>金山云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha202.bilivideo.com</code><ul> <li><code>d1--cn-gotcha202.bilivideo.com.hlsvcloud.ks-cdn.com</code><ul> <li><code>k1-ipv6.gslb.ksyuncdn.com</code><ul> <li><code>k1-ipv6-yunfan.gslb.borui.yunfancdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=c1--cn-gotcha03bilivideocom>c1--cn-gotcha03.bilivideo.com<a class=headerlink href=#c1--cn-gotcha03bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>七牛云 (阿里云)</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>c1--cn-gotcha03.bilivideo.com</code><ul> <li><code>c1--cn-gotcha03.bilivideo.com.rtmpv4.pilidns.com</code><ul> <li><code>c1--cn-gotcha03.bilivideo.com.w.alikunlun.net</code><ul> <li><code>offline.specialcdnstatus.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha03bilivideocom>d1--cn-gotcha03.bilivideo.com<a class=headerlink href=#d1--cn-gotcha03bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>七牛云 (阿里云)</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha03.bilivideo.com</code><ul> <li><code>d1--cn-gotcha03.bilivideo.com.rtmpv4.pilidns.com</code><ul> <li><code>d1--cn-gotcha03.bilivideo.com.w.cdngslb.com</code><ul> <li><code>live-origin-sz.alivecdn.com</code><ul> <li><code>live-origin-sz.alivecdn.com.gds.alibabadns.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 9 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha103bilivideocom>d1--cn-gotcha103.bilivideo.com<a class=headerlink href=#d1--cn-gotcha103bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>七牛云 (阿里云)</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha103.bilivideo.com</code><ul> <li><code>d1--cn-gotcha103.bilivideo.com.rtmpv4.pilidns.com</code><ul> <li><code>d1--cn-gotcha103.bilivideo.com.w.cdngslb.com</code><ul> <li><code>offline.specialcdnstatus.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha203bilivideocom>d1--cn-gotcha203.bilivideo.com<a class=headerlink href=#d1--cn-gotcha203bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>七牛云 (阿里云)</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha203.bilivideo.com</code><ul> <li><code>d1--cn-gotcha203.bilivideo.com.w.alikunlun.com</code><ul> <li><code>offline.specialcdnstatus.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha04bilivideocom>d1--cn-gotcha04.bilivideo.com<a class=headerlink href=#d1--cn-gotcha04bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>腾讯云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha04.bilivideo.com</code><ul> <li><code>4877.liveplay.myqcloud.com</code><ul> <li><code>9050520.pack.tcdnlive.com</code><ul> <li><code>d1--cn-gotcha04.bilivideo.com.l5.sched.dcloudlive.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha104bilivideocom>d1--cn-gotcha104.bilivideo.com<a class=headerlink href=#d1--cn-gotcha104bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>腾讯云</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha104.bilivideo.com</code><ul> <li><code>hls.4877.liveplay.myqcloud.com</code><ul> <li><code>txy.wshls.acgvideo.com.tcdnlive.com</code><ul> <li><code>txy.wshls.acgvideo.com.l5-dk.sched.dcloudlive.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha204bilivideocom>d1--cn-gotcha204.bilivideo.com<a class=headerlink href=#d1--cn-gotcha204bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>腾讯云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha204.bilivideo.com</code><ul> <li><code>txy-fmp4hls.bilivideo.com.livecdn.liveplay.myqcloud.com</code><ul> <li><code>d1--cn-gotcha204.bilivideo.com.tcdnlive.com</code><ul> <li><code>d1--cn-gotcha204.bilivideo.com.sched.l11.tdnsv5.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 10 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha05bilivideocom>d1--cn-gotcha05.bilivideo.com<a class=headerlink href=#d1--cn-gotcha05bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>网宿</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha05.bilivideo.com</code><ul> <li><code>d1--cn-gotcha05.bilivideo.com.wsdvs.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha105bilivideocom>d1--cn-gotcha105.bilivideo.com<a class=headerlink href=#d1--cn-gotcha105bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>网宿</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha105.bilivideo.com</code><ul> <li><code>d1--cn-gotcha105.bilivideo.com.wsdvs.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha06bilivideocom>d1--cn-gotcha06.bilivideo.com<a class=headerlink href=#d1--cn-gotcha06bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>白山云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha06.bilivideo.com</code><ul> <li><code>d1--cn-gotcha06.bilivideo.com.trpcdn.net</code><ul> <li><code>live-bili.v.trpcdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 9 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 6 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha106bilivideocom>d1--cn-gotcha106.bilivideo.com<a class=headerlink href=#d1--cn-gotcha106bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>白山云</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha106.bilivideo.com</code><ul> <li><code>d1--cn-gotcha106.bilivideo.com.trpcdn.net</code><ul> <li><code>live-bili.v.trpcdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 9 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 6 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha206bilivideocom>d1--cn-gotcha206.bilivideo.com<a class=headerlink href=#d1--cn-gotcha206bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>白山云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha206.bilivideo.com</code><ul> <li><code>d1--cn-gotcha206.bilivideo.com.trpcdn.net</code><ul> <li><code>live-bili.v.trpcdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 9 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 6 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha07bilivideocom>d1--cn-gotcha07.bilivideo.com<a class=headerlink href=#d1--cn-gotcha07bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>百度云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha07.bilivideo.com</code><ul> <li><code>d1--cn-gotcha07.bilivideo.com.a.bcelive.com</code><ul> <li><code>bcelive.jomodns.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=c1--cn-gotcha08bilivideocom>c1--cn-gotcha08.bilivideo.com<a class=headerlink href=#c1--cn-gotcha08bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>华为云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>c1--cn-gotcha08.bilivideo.com</code><ul> <li><code>c1--cn-gotcha08.bilivideo.com.c.cdnhwc3.com</code><ul> <li><code>hcdnl.pullbz.east.gslb.c.cdnhwc2.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 4 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha08bilivideocom>d1--cn-gotcha08.bilivideo.com<a class=headerlink href=#d1--cn-gotcha08bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>华为云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha08.bilivideo.com</code><ul> <li><code>d1--cn-gotcha08.bilivideo.com.c.cdnhwc3.com</code><ul> <li><code>hcdnl.pullbz.gslb.c.cdnhwc2.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 4 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha108bilivideocom>d1--cn-gotcha108.bilivideo.com<a class=headerlink href=#d1--cn-gotcha108bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>华为云</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha108.bilivideo.com</code><ul> <li><code>d1--cn-gotcha108.bilivideo.com.c.cdnhwc3.com</code><ul> <li><code>hcdnl.pullbz.gslb.c.cdnhwc2.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 4 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=c1--cn-gotcha208bilivideocom>c1--cn-gotcha208.bilivideo.com<a class=headerlink href=#c1--cn-gotcha208bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>华为云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>c1--cn-gotcha208.bilivideo.com</code><ul> <li><code>c1--cn-gotcha208.bilivideo.com.04f6a54d.c.cdnhwc1.com</code><ul> <li><code>biliv7cold.c.cdnhwc2.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha208bilivideocom>d1--cn-gotcha208.bilivideo.com<a class=headerlink href=#d1--cn-gotcha208bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>华为云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha208.bilivideo.com</code><ul> <li><code>d1--cn-gotcha208.bilivideo.com.c.cdnhwc1.com</code><ul> <li><code>biliv.d.cdn.10086.cn</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 8 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 4 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha09bilivideocom>d1--cn-gotcha09.bilivideo.com<a class=headerlink href=#d1--cn-gotcha09bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>阿里云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha09.bilivideo.com</code><ul> <li><code>d1--cn-gotcha09.bilivideo.com.w.alikunlun.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha209bilivideocom>d1--cn-gotcha209.bilivideo.com<a class=headerlink href=#d1--cn-gotcha209bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>阿里云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha209.bilivideo.com</code><ul> <li><code>d1--cn-gotcha209.bilivideo.com.w.alikunlun.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha11bilivideocom>d1--cn-gotcha11.bilivideo.com<a class=headerlink href=#d1--cn-gotcha11bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>京东云</td> <td>FLV</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha11.bilivideo.com</code><ul> <li><code>d1--cn-gotcha11.bilivideo.com.live-play.galileo.jcloud-cdn.com</code><ul> <li><code>live-sched.jcloud-cdn.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha111bilivideocom>d1--cn-gotcha111.bilivideo.com<a class=headerlink href=#d1--cn-gotcha111bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>京东云</td> <td>HLS (ts)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha111.bilivideo.com</code><ul> <li><code>d1--cn-gotcha111.bilivideo.com.live-play.galileo.jcloud-cdn.com</code><ul> <li><code>live-sched.jcloud-cdn.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--cn-gotcha211bilivideocom>d1--cn-gotcha211.bilivideo.com<a class=headerlink href=#d1--cn-gotcha211bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>京东云</td> <td>HLS (fmp4)</td> <td>中国大陆</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--cn-gotcha211.bilivideo.com</code><ul> <li><code>d1--cn-gotcha211.bilivideo.com.vod.galileo.jcloud-cdn.com</code><ul> <li><code>bfn-sched.jcloud-cdn.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha102bilivideocom>d1--ov-gotcha102.bilivideo.com<a class=headerlink href=#d1--ov-gotcha102bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>金山云</td> <td>HLS (ts)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha102.bilivideo.com</code><ul> <li><code>d1--ov-gotcha102.bilivideo.com.hlsvcloud.ks-cdn.com</code><ul> <li><code>k1-bz-lln.gslb.ksyuncdn.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha04bilivideocom>d1--ov-gotcha04.bilivideo.com<a class=headerlink href=#d1--ov-gotcha04bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>腾讯云</td> <td>FLV</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha04.bilivideo.com</code><ul> <li><code>d1--ov-gotcha04.bilivideo.com.liveplay.myqcloud.com</code><ul> <li><code>tdns.l3.sched.dcloudlive.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 11 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha104bilivideocom>d1--ov-gotcha104.bilivideo.com<a class=headerlink href=#d1--ov-gotcha104bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>腾讯云</td> <td>HLS (ts)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha104.bilivideo.com</code><ul> <li><code>d1--ov-gotcha104.bilivideo.com.liveplay.myqcloud.com</code><ul> <li><code>tdns.l3.sched.dcloudlive.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 11 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha05bilivideocom>d1--ov-gotcha05.bilivideo.com<a class=headerlink href=#d1--ov-gotcha05bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>网宿</td> <td>FLV</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha05.bilivideo.com</code><ul> <li><code>d1--ov-gotcha05.bilivideo.com.wsdvs.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha105bilivideocom>d1--ov-gotcha105.bilivideo.com<a class=headerlink href=#d1--ov-gotcha105bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>网宿</td> <td>HLS (ts)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha105.bilivideo.com</code><ul> <li><code>d1--ov-gotcha105.bilivideo.com.wsdvs.com</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 1 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha06bilivideocom>d1--ov-gotcha06.bilivideo.com<a class=headerlink href=#d1--ov-gotcha06bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>白山云</td> <td>FLV</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha06.bilivideo.com</code><ul> <li><code>d1--ov-gotcha06.bilivideo.com.trpcdn.net</code><ul> <li><code>live-smbili.v.trpcdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 7 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha106bilivideocom>d1--ov-gotcha106.bilivideo.com<a class=headerlink href=#d1--ov-gotcha106bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>白山云</td> <td>HLS (ts)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha106.bilivideo.com</code><ul> <li><code>d1--ov-gotcha106.bilivideo.com.trpcdn.net</code><ul> <li><code>live-smbili.v.trpcdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 7 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha206bilivideocom>d1--ov-gotcha206.bilivideo.com<a class=headerlink href=#d1--ov-gotcha206bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>白山云</td> <td>HLS (fmp4)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha206.bilivideo.com</code><ul> <li><code>d1--ov-gotcha206.bilivideo.com.trpcdn.net</code><ul> <li><code>live-smbili.v.trpcdn.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 7 个</li> <li>IPv6: 无 <span class=twemoji style=color:red><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 320 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25-6.2 6.25-14.4 9.35-22.6 9.35s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416s-16.37-3.1-22.625-9.4c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha07bilivideocom>d1--ov-gotcha07.bilivideo.com<a class=headerlink href=#d1--ov-gotcha07bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>百度云</td> <td>FLV</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha07.bilivideo.com</code><ul> <li><code>d1--ov-gotcha07.bilivideo.com.a.bcelive.com</code><ul> <li><code>d1--ov-gotcha07.bilivideo.com.zengslb.com</code><ul> <li><code>zenlive002.zengslb.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 5 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 5 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha107bilivideocom>d1--ov-gotcha107.bilivideo.com<a class=headerlink href=#d1--ov-gotcha107bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>百度云</td> <td>HLS (ts)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha107.bilivideo.com</code><ul> <li><code>d1--ov-gotcha107.bilivideo.com.g3.bcelive.com</code><ul> <li><code>zenlive002.zengslb.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 5 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 5 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h3 id=d1--ov-gotcha210bilivideocom>d1--ov-gotcha210.bilivideo.com<a class=headerlink href=#d1--ov-gotcha210bilivideocom title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>服务商</th> <th>直播流类型</th> <th>服务区域</th> </tr> </thead> <tbody> <tr> <td>Akamai</td> <td>HLS (fmp4)</td> <td>海外</td> </tr> </tbody> </table> <p>CNAME 指向链：</p> <ul> <li><code>d1--ov-gotcha210.bilivideo.com</code><ul> <li><code>d1-ov-gotcha210.akamaized.net</code><ul> <li><code>a495.dscz.akamai.net</code><ul> <li>IPv4: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> <li>IPv6: 有 <span class=twemoji style=color:green><svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.7 0 45.2l-256 256c-12.5 12.5-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2 12.498-12.5 32.758-12.5 45.258 0L159.1 338.7l234.3-233.3c12.5-12.52 32.7-12.52 45.2 0z"/></svg></span>, 2 个</li> </ul> </li> </ul> </li> </ul> </li> </ul> <hr> <h2 id=其他笔记>其他笔记<a class=headerlink href=#其他笔记 title="Permanent link">&para;</a></h2> <div class=highlight><pre><span></span><code>cn-hbyc2-dx-live-05.bilivideo.com
+cn-zjhz-cmcc-live-01.bilivideo.com
+cn-zjhz-cmcc-v-23.bilivideo.com
+cn-jsnt-dx-v-05.bilivideo.com
+cn-gdgz-fx-live-16.bilivideo.com
+</code></pre></div> </article> </div> </div> <a href=# class="md-top md-icon" data-md-component=top data-md-state=hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg> 回到页面顶部 </a> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=页脚> <a href=../repair/ class="md-footer__link md-footer__link--prev" aria-label="上一页: 录播修复系统" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 上一页 </span> 录播修复系统 </div> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2022 Genteure. 文档内容为 CC-BY-NC-SA 授权 </div> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-social> <a href=https://space.bilibili.com/7033853 target=_blank rel=noopener title="哔哩哔哩 @genteure" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg> </a> <a href=https://afdian.net/@genteure target=_blank rel=noopener title="爱发电 @genteure" class=md-social__link> <svg width=160 height=160 viewbox="0 0 160 160" fill=none xmlns=http://www.w3.org/2000/svg> <rect width=160 height=160 rx=2 fill=#946CE6 /> <path fill-rule=evenodd clip-rule=evenodd fill=white d="M64.9999 90.5676C63.4307 90.5676 62.1621 91.8355 62.1621 93.4037C62.1621 94.9754 63.4307 96.2433 64.9999 96.2433C66.5691 96.2433 67.8378 94.9754 67.8378 93.4037C67.8378 91.8355 66.5691 90.5676 64.9999 90.5676Z"/> <path fill-rule=evenodd clip-rule=evenodd fill=white d="M91.7568 99.0811C90.1876 99.0811 88.9189 100.349 88.9189 101.917C88.9189 103.489 90.1876 104.757 91.7568 104.757C93.326 104.757 94.5946 103.489 94.5946 101.917C94.5946 100.349 93.326 99.0811 91.7568 99.0811Z"/> <path fill-rule=evenodd clip-rule=evenodd fill=white d="M133.76 106.248C132.813 106.722 131.453 106.747 130.197 106.313C129.349 106.014 128.434 105.732 127.523 105.451C125.832 104.935 123.006 104.074 122.468 103.422C121.585 102.244 119.908 102.009 118.73 102.899C117.552 103.785 117.317 105.455 118.207 106.633C118.502 107.032 118.901 107.359 119.303 107.676C115.224 113.321 97.3137 124.555 71.985 119.02C60.5719 116.525 52.8897 111.969 49.7641 105.85C47.5106 101.429 48.0233 96.8763 49.1019 94.4025C52.2026 87.9633 74.5837 73.1344 88.8732 64.7375C90.1405 63.9865 90.5641 62.3527 89.8166 61.0819C89.069 59.8147 87.3638 59.3057 86.1641 60.1351C85.0107 60.8114 81.0912 63.1393 76.0896 66.3073C74.3986 65.1718 71.4759 63.7693 66.7911 63.3102C59.3616 62.5734 42.1921 59.295 36.6458 56.9493C32.673 55.2692 23.6557 50.8199 25.6528 45.8116C26.1156 44.6441 28.2907 42.754 33.004 40.9529C36.6351 39.5683 40.2484 38.803 42.9789 38.4969C42.6122 38.6748 42.2562 38.8457 41.9216 39.0094C38.7106 40.5685 35.2076 42.3126 32.8545 44.3736C32.6836 44.2633 32.5056 44.1529 32.3846 44.0319C31.37 42.9712 29.6969 42.8928 28.6147 43.9465C27.5467 44.9645 27.5075 46.6552 28.5292 47.7195C29.4797 48.7162 30.8859 49.4673 32.6765 50.0403C32.7442 50.0617 32.8047 50.0937 32.8723 50.108C39.095 52.023 50.1592 51.7845 65.7587 51.1651C72.4834 50.9017 78.8343 50.6526 84.1314 50.7558C101.692 51.1046 114.889 58.0884 124.479 72.1093C130.371 80.7233 128.246 89.2091 124.875 96.5844C124.472 96.2748 124.042 95.8725 123.718 95.4739C122.796 94.3241 121.09 94.164 119.969 95.0503C118.816 95.9722 118.623 97.6487 119.542 98.802C120.083 99.4854 122.867 102.685 126.316 102.411C126.38 102.415 126.437 102.408 126.501 102.404C126.605 102.39 126.711 102.408 126.822 102.39C129.178 101.959 130.659 102.073 132.044 102.942C133.878 104.099 134.782 104.789 134.6 105.366C134.493 105.729 134.219 105.989 133.76 106.248ZM60.9493 76.5124C60.4189 76.9004 59.8991 77.2848 59.3758 77.6692C58.8133 77.0641 58.3648 76.4875 58.1583 76.0674C58.7777 75.8823 59.8101 76.103 60.9493 76.5124ZM134.614 98.2574C133.294 97.4209 131.909 97.0578 130.563 96.9083C133.724 89.202 135.736 79.1144 128.887 69.0944C118.406 53.7636 103.38 45.7974 84.2346 45.4165C78.7809 45.3097 72.3517 45.5625 65.5487 45.833C57.6493 46.1462 47.1369 46.5556 39.9921 45.9647C41.4161 45.1923 42.9326 44.4519 44.2462 43.8148C49.2728 41.3694 53.2314 39.465 51.9214 36.0871C51.2343 34.1151 49.1874 33.0793 45.8233 33.0045C38.7426 32.8444 23.4421 36.9378 20.6903 43.8397C19.1418 47.7267 18.8854 55.2301 34.5668 61.8615C41.0174 64.5952 59.237 67.9268 66.2678 68.6245C68.2542 68.8167 69.7743 69.219 70.9277 69.6461C69.3151 70.7068 67.6597 71.8209 65.9972 72.96C63.1102 71.3155 58.3897 69.3756 54.8654 71.7782C53.502 72.7001 52.7259 74.0599 52.6903 75.6083C52.6405 77.534 53.8081 79.4169 55.1217 80.9333C49.9314 85.073 45.7343 89.0846 44.2462 92.1778C42.5873 95.9793 41.9109 102.201 45.008 108.27C48.9382 115.973 57.6279 121.344 70.8423 124.235C88.1114 128.004 103.027 124.608 112.895 119.415C118.388 116.525 122.286 113.076 124.18 109.997C124.768 110.182 125.355 110.37 125.96 110.559C126.804 110.815 127.648 111.072 128.438 111.353C131.051 112.257 133.942 112.136 136.167 111.015C136.206 110.997 136.248 110.972 136.291 110.951C137.968 110.068 139.175 108.651 139.705 106.943C141.129 102.337 137.064 99.7915 134.614 98.2574Z"/> </svg> </a> <a href=https://github.com/BililiveRecorder target=_blank rel=noopener title="GitHub 组织 @BiliveRecorder" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 16 16"><path fill-rule=evenodd d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> </a> <a href="https://jq.qq.com/?_wv=1027&k=5NPC2dt" target=_blank rel=noopener title="反馈QQ群 689636812" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg> </a> <a href=mailto:rec@danmuji.org target=_blank rel=noopener title="反馈邮箱 rec@danmuji.org" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M21 12.13c-.15.01-.29.06-.39.17l-1 1 2.05 2 1-1c.22-.21.22-.56 0-.77l-1.24-1.23a.557.557 0 0 0-.38-.17m-2 1.75L13 19.94V22h2.06l6.06-6.07M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v-.89l8.24-8.22c.47-.49 1.12-.76 1.8-.76.34 0 .68.06 1 .19V6c0-1.12-.92-2-2.04-2m0 4-8 5-8-5V6l8 5 8-5"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script> <script src=../../assets/javascripts/bundle.ed9748b7.min.js></script> <script src=../../assets/javascripts/brec-version.min.js></script> </body> </html>
