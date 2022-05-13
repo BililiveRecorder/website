@@ -18,6 +18,7 @@ gotcha_cdn_type_map:
 gotcha_cdn_region_map:
   ov: 海外
   cn: 中国大陆
+  tf: _未知_
 
 # npx ts-node ./scripts/dns-scan-gotcha.ts
 # npx ts-node ./scripts/dns-scan-bcdn.ts
@@ -124,3 +125,49 @@ cn-zjhz-cmcc-v-23.bilivideo.com
 cn-jsnt-dx-v-05.bilivideo.com
 cn-gdgz-fx-live-16.bilivideo.com
 ```
+
+------
+
+- `d1--tf-gotcha01.bilivideo.com`
+    - `CNAME d1--tf-gotcha01-basic.bilivideo.com`
+        - `CNAME live-tf-live-tf-015-ct.bvc-line.bilivideo.com`
+        - `CNAME live-tf-live-tf-0137-ct.bvc-line.bilivideo.com`
+    - `CNAME d1--tf-gotcha01-loc.bilivideo.com`
+        - `CNAME a.w.bilicdn1.com`
+
+??? cite "`d1--tf-gotcha01.bilivideo.com` 最终解析到的 IP"
+    ```txt
+    60.12.119.72
+    42.101.85.198
+    42.101.85.201
+    42.56.91.134
+    117.23.60.11
+    60.12.119.73
+    112.47.7.8
+    117.23.60.10
+    42.101.85.200
+    120.131.2.207
+    112.47.7.9
+    60.12.119.71
+    42.56.91.136
+    23.236.97.62
+    164.52.44.50
+    164.52.76.18
+    148.153.56.163
+    223.85.58.76
+    223.85.58.75
+    103.151.151.2
+    164.52.110.14
+    148.153.46.90
+    103.151.151.130
+    103.151.151.131
+    103.151.151.3
+    45.40.60.170
+    148.153.64.18
+    118.193.16.42
+    164.52.33.182
+    164.52.28.62
+    148.153.34.154
+    103.151.151.5
+    103.151.151.6
+    ```

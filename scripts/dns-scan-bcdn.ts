@@ -41,7 +41,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   // China Unicom 中国联通
   ['cu', 'hbcd', '河北承德'],
   ['cu', 'hncs', '湖南长沙'],
-  ['cu', 'lnsy', '辽宁沈阳'],
+  ['cu', 'lnsy', '辽宁沈阳', ['v']],
   ['cu', 'nmghhht', '内蒙古呼和浩特', ['v']],
   ['cu', 'sdyt', '山东烟台'],
   ['cu', 'zjhz', '浙江杭州'],
