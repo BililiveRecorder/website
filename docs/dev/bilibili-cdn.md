@@ -18,7 +18,6 @@ gotcha_cdn_type_map:
 gotcha_cdn_region_map:
   ov: 海外
   cn: 中国大陆
-  tf: _未知_
 
 # npx ts-node ./scripts/dns-scan-gotcha.ts
 # npx ts-node ./scripts/dns-scan-bcdn.ts
@@ -92,7 +91,7 @@ IP 个数指的是一次 DNS 请求返回的数量（显然不可能是总数）
 
 | 服务商 | 直播流类型 | 服务区域 |
 | ----- | ---------- | ------- |
-| {{ gotcha_cdn_provider_map[map.id] }} | {{ gotcha_cdn_type_map[map.type] }} | {{ gotcha_cdn_region_map[map.region] }}  |
+| {{ gotcha_cdn_provider_map[map.id] }} | {{ gotcha_cdn_type_map[map.type] if gotcha_cdn_region_map[map.region] else '_不确定_' }} | {{ gotcha_cdn_region_map[map.region] or '_不确定_' }}  |
 
 CNAME 指向链：
 
