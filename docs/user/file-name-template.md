@@ -75,6 +75,16 @@ ignore_macros: true
 
 !!! example "示例 5"
     ```jinja
+    {{ roomId }}-{{ name }}/{{ qn | format_qn }}-{{ roomId }}-{{ "now" | time_zone: "Asia/Shanghai" | format_date: "yyyyMMdd-HHmmss-fff" }}-{{ title }}.flv
+    ```
+    ```txt
+    23058-3号直播间/20220118-183426/原画-23058-20220505-225933-067-哔哩哔哩音悦台.flv
+    ```
+
+    使用画质 ID `qn` 转换成对应的画质名字 `format_qn`。
+
+!!! example "示例 6"
+    ```jinja
     {{ roomId }}-{{ name }}/{{ json.room_info.live_start_time | time_zone: 'Asia/Shanghai' | format_date: "yyyyMMdd-HHmmss" }}/录制-{{ roomId }}-{{ "now" | time_zone: "Asia/Shanghai" | format_date: "yyyyMMdd-HHmmss-fff" }}-{{ title }}.flv
     ```
     ```txt
@@ -138,6 +148,17 @@ ignore_macros: true
 !!! example "例子"
     ```txt
     唱见电台
+    ```
+
+### `qn`
+
+当前录制的画质 ID
+
+如果需要画质名字可以使用 `format_qn` filter, 见本页面下面的文档。
+
+!!! example "例子"
+    ```txt
+    10000
     ```
 
 ### `json`
@@ -563,16 +584,28 @@ https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom?room_id={{�
 
 ### 过滤器 Filters
 
+#### format_qn
+
+把画质 ID 转换成画质名字
+
+!!! example "示例"
+    ```jinja
+    {{ qn | format_qn }}
+    ```
+
+    ```txt
+    原画
+    ```
+
 #### format_date
 
 用 .NET 的 [日期格式字符串](https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/custom-date-and-time-format-strings){target=_blank} 格式化日期。
 
-!!! example "示例模板"
+!!! example "示例"
     ```jinja
     {{ "now" | format_date: "yyyyMMdd-HHmmss-fff" }}
     ```
 
-!!! example "示例输出"
     ```txt
     20220505-225933-067
     ```
