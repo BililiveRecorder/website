@@ -54,12 +54,13 @@ nav:
       - 安装使用: user/install.md
       - 常见问题: user/faq.md
       - 更新历史: user/change-log.md
+      - 弹幕录制: user/danmaku.md
       - 软件设置:
           - 设置项: user/settings.md
           - 录制模式: user/record-mode.md
-          - 弹幕录制: user/danmaku.md
           - 文件名格式: user/file-name-template.md
           - 配置文件格式: user/config-file.md
+          - 用户脚本: user/user-script.md
       - 工具箱:
           - user/toolbox/index.md
           - 录播修复: user/toolbox/repair.md

@@ -21,6 +21,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'jxjj', '江西九江'],
   ['ct', 'sccd', '四川成都'],
   ['ct', 'scya', '四川雅安'],
+
   // China Mobile 中国移动
   ['cm', 'ahhn', '安徽淮南'],
   ['cm', 'fjqz', '福建泉州'],
@@ -33,24 +34,30 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['cm', 'jssz', '江苏苏州'],
   ['cm', 'jxnc', '江西南昌'],
   ['cm', 'lnsy', '辽宁沈阳'],
+  ['cm', 'sccd', '四川成都'],
   ['cm', 'sdjn', '山东济南'],
   ['cm', 'sxty', '山西太原'],
   ['cm', 'sxxa', '陕西西安'],
   ['cm', 'tj', '天津'],
   ['cm', 'zjhz', '浙江杭州'],
+
   // China Unicom 中国联通
   ['cu', 'hbcd', '河北承德'],
   ['cu', 'hncs', '湖南长沙'],
-  ['cu', 'lnsy', '辽宁沈阳', ['v']],
-  ['cu', 'nmghhht', '内蒙古呼和浩特', ['v']],
-  ['cu', 'sdyt', '山东烟台'],
+  ['cu', 'lnsy', '辽宁沈阳'],
+  ['cu', 'nmghhht', '内蒙古呼和浩特'],
+  ['cu', 'sdyt', '山东烟台', ['live']],
   ['cu', 'zjhz', '浙江杭州'],
+  ['cu', 'jlcc', '吉林长春'],
+  // ['cu', 'jlcc3', '吉林长春'], 和 jlcc IP 一样， cn-jlcc3-cu-v-01 到 06，IP 是 2 到 7
+
   // ?????? 教育网
   ['fx', 'gdgz', '广东广州'],
+  ['fx', 'sh', '上海'],
 ];
 
 const cdnRegions = CDN_INFO.map(info => {
-  const zones = ['01', '02', '03', ...(info[3] || [])]
+  const zones = ['01', '02', '03', 'v', ...(info[3] || [])]
   const prefixs = zones.map(zone => `cn-${info[1]}-${info[0]}-${zone}`);
   return {
     isp: info[0],
@@ -145,14 +152,14 @@ async function resolveIpAddress(domain: string) {
 
   for (let i = 0; i < 2; i++) {
     try {
-      result.ipv4 = (await r.resolve4(domain))
+      result.ipv4 = (await r.resolve4(domain)).sort()
       result.ipv4.forEach(ip => console.log('    > ' + ip));
       break;
     } catch (e) { }
   }
   for (let i = 0; i < 2; i++) {
     try {
-      result.ipv6 = (await r.resolve6(domain))
+      result.ipv6 = (await r.resolve6(domain)).sort()
       result.ipv6.forEach(ip => console.log('    > ' + ip));
       break;
     } catch (e) { }
