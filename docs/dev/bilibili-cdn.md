@@ -53,7 +53,7 @@ gotcha_cdn_region_map:
 {% for bcdn_region in data -%}
 #### {{ bcdn_region.regionName }} { id={{ isp_id }}-{{ bcdn_region.regionCode }} }
 
-{{ bcdn_region.regionName }}{{ isp_name }} (`{{ bcdn_region.regionCode }}-{{ isp_id }}`) 共有 {{ bcdn_region.domains | length }} 个域名。
+{{ bcdn_region.regionName }} {{ isp_name }} (`{{ bcdn_region.regionCode }}-{{ isp_id }}`) 共有 {{ bcdn_region.domains | length }} 个域名。
 
 ??? cite "域名列表"
     ```txt
@@ -67,10 +67,11 @@ gotcha_cdn_region_map:
 
 {% endfor %}{% endmacro %}
 
-{{  bcdn_isp('电信', 'ct') }}
-{{  bcdn_isp('联通', 'cu') }}
-{{  bcdn_isp('移动', 'cm') }}
-{{  bcdn_isp('教育网', 'fx') }}
+{{ bcdn_isp('电信', 'ct') }}
+{{ bcdn_isp('联通', 'cu') }}
+{{ bcdn_isp('移动', 'cm') }}
+{{ bcdn_isp('教育网', 'fx') }}
+{{ bcdn_isp('Equinix IX', 'eq') }}
 
 ## CDN 服务商域名
 

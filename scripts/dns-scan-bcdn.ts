@@ -54,6 +54,9 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   // ?????? 教育网
   ['fx', 'gdgz', '广东广州'],
   ['fx', 'sh', '上海'],
+
+  // eq
+  ['eq', 'hk', '香港'],
 ];
 
 const cdnRegions = CDN_INFO.map(info => {
