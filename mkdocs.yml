@@ -115,6 +115,11 @@ plugins:
         docs/basic/record_mode.md: user/record-mode.md
         docs/basic/danmaku.md: user/danmaku.md
         docs/basic/auto_cut.md: user/index.md # 没有对应的页面
+        docs/desktop/flvprocess.md: user/repair.md
+        docs/desktop/danmaku.md: user/danmaku.md
+        docs/storage.md: user/index.md
+        docs/server.md: user/index.md
+        docs/home.md: user/index.md
   - minify:
       minify_html: true
       minify_js: true

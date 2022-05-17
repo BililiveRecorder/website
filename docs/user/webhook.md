@@ -28,6 +28,8 @@ Webhook v2 支持以下几种事件类型：
 - 文件打开 `FileOpening`
 - 文件关闭 `FileClosed`
 - 录制结束 `SessionEnded`
+- 直播开始 `StreamStarted` (录播姬 1.4 新增)
+- 直播结束 `StreamEnded` (录播姬 1.4 新增)
 
 !!! tip "提醒"
     之后可能会继续添加其他事件类型，请在代码中做好相应的判断。
@@ -47,7 +49,23 @@ Webhook v2 支持以下几种事件类型：
 
 如果返回的 HTTP 状态码不为 2xx 或请求时出现其他错误，最多会尝试三次，重试时发送的所有数据均不变，可以使用 `EventId` 来判断是否已经处理过当前事件。
 
+所有事件的 `EventData` 里都有以下几个字段：
+
+| 名字 | 含义 |
+| ---- | ---- |
+| `RoomId` | 房间号 |
+| `ShortId` | 短号，如果没有则为 0 |
+| `Name` | 主播名字 |
+| `Title` | 直播间标题 |
+| `AreaNameParent` | 直播间父分区 |
+| `AreaNameChild` | 直播间子分区 |
+| `Recording` | 当前是否正在录制 |
+| `Streaming` | 当前直播间状态是否为直播中 |
+| `DanmakuConnected` | 当前是否连接了弹幕服务器 |
+
 ### 录制开始
+
+开始录制的原因可能是手动电击了开始录制按钮，或者设置了开播自动开始录制。
 
 ```json
 {
@@ -61,12 +79,17 @@ Webhook v2 支持以下几种事件类型：
     "Name": "3号直播间",
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
-    "AreaNameChild": "影音馆"
+    "AreaNameChild": "影音馆",
+    "Recording":true, // 录播姬 1.4 新增
+    "Streaming":true, // 录播姬 1.4 新增
+    "DanmakuConnected":true // 录播姬 1.4 新增
   }
 }
 ```
 
 ### 文件打开
+
+一次录制可能会输出多个文件。
 
 ```json
 {
@@ -82,7 +105,10 @@ Webhook v2 支持以下几种事件类型：
     "Name": "3号直播间",
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
-    "AreaNameChild": "影音馆"
+    "AreaNameChild": "影音馆",
+    "Recording":true, // 录播姬 1.4 新增
+    "Streaming":true, // 录播姬 1.4 新增
+    "DanmakuConnected":true // 录播姬 1.4 新增
   }
 }
 ```
@@ -106,7 +132,10 @@ Webhook v2 支持以下几种事件类型：
     "Name": "3号直播间",
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
-    "AreaNameChild": "影音馆"
+    "AreaNameChild": "影音馆",
+    "Recording":true, // 录播姬 1.4 新增
+    "Streaming":true, // 录播姬 1.4 新增
+    "DanmakuConnected":true // 录播姬 1.4 新增
   }
 }
 ```
@@ -125,7 +154,56 @@ Webhook v2 支持以下几种事件类型：
     "Name": "3号直播间",
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
-    "AreaNameChild": "影音馆"
+    "AreaNameChild": "影音馆",
+    "Recording":true, // 录播姬 1.4 新增
+    "Streaming":true, // 录播姬 1.4 新增
+    "DanmakuConnected":true // 录播姬 1.4 新增
+  }
+}
+```
+
+### 直播开始
+
+这个事件是在录播姬 1.4 添加的。
+
+```json
+{
+  "EventType": "StreamStarted",
+  "EventTimestamp": "2022-05-17T18:17:29.1604718+08:00",
+  "EventId": "2aafd4be-4a6d-44f6-9178-5b04d1929140",
+  "EventData": {
+    "RoomId": 23058,
+    "ShortId": 3,
+    "Name": "3号直播间",
+    "Title": "哔哩哔哩音悦台",
+    "AreaNameParent": "电台",
+    "AreaNameChild": "唱见电台",
+    "Recording": false,
+    "Streaming": true,
+    "DanmakuConnected": false
+  }
+}
+```
+
+### 直播结束
+
+这个事件是在录播姬 1.4 添加的。
+
+```json
+{
+  "EventType": "StreamEnded",
+  "EventTimestamp": "2022-05-17T18:18:21.3751494+08:00",
+  "EventId": "b49b0ed1-2d8f-43a6-b5c6-dece91e5402d",
+  "EventData": {
+    "RoomId": 23058,
+    "ShortId": 3,
+    "Name": "3号直播间",
+    "Title": "哔哩哔哩音悦台",
+    "AreaNameParent": "电台",
+    "AreaNameChild": "唱见电台",
+    "Recording": false,
+    "Streaming": false,
+    "DanmakuConnected": false
   }
 }
 ```
