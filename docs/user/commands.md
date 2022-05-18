@@ -7,8 +7,8 @@
 
 录播姬桌面版也提供了工具箱命令，参数格式与[录播姬命令行版的](#工具箱命令)一样，一般来说更推荐使用录播姬命令行版。
 
-!!! note "关于命令行交互的提醒"
-    因为 `BililiveRecorder.WPF.exe` 是一个 "Windows GUI" 程序而不是 "Windows Console" 程序，在命令行里运行时会立刻返回，然后再输出文本，总体的使用体验很差。  
+!!! info "关于命令行交互"
+    因为 `BililiveRecorder.WPF.exe` 是一个 "Windows GUI" 程序而不是 "Windows Console" 程序，在命令行里运行时会立刻返回，然后再输出文本。总体的使用体验很差，所以推荐用命令行版。
 
 ```txt
 Usage:
@@ -45,30 +45,36 @@ Options:
 
 ## 命令行版
 
-在运行录播姬之前先解压下载的压缩包：
+??? info "运行录播姬之前的准备工作"
 
-```sh
-# 这里用这个文件名举例
-unzip BililiveRecorder-CLI-linux-x64.zip
-```
+    先解压[下载的压缩包](./install.md)并 `cd` 到解压出来的文件夹里
 
-然后检查确认 `BililiveRecorder.Cli` 是否带有可执行权限，如果没有的话使用以下命令添加可执行权限。
+    ```sh
+    # 这里用这个文件名举例
+    unzip BililiveRecorder-CLI-linux-x64.zip
+    cd linux-x64
+    ```
 
-```sh
-chmod +x BililiveRecorder.Cli
-```
+    然后检查确认 `BililiveRecorder.Cli` 是否带有可执行权限，如果没有的话使用以下命令添加可执行权限。
 
-为了少按几次键盘和后续文档的简洁，从这里开始把 `BililiveRecorder.Cli` 称为 `brec`。你也可以使用下面命令给把它改一下名，可执行文件的名字不影响运行。
+    ```sh
+    chmod +x BililiveRecorder.Cli
+    ```
+
+    确认录播姬可以运行、并检查版本号
+
+    ```sh
+    ./BililiveRecorder.Cli --version
+    ```
+
+为了少按几次键盘和后续文档的简洁，从这里开始把 `BililiveRecorder.Cli` 称为 `brec`。  
+你也可以使用下面命令给把它改一下名，可执行文件的名字不影响运行。
 
 ```sh
 mv BililiveRecorder.Cli brec
 ```
 
-确认录播姬可以运行、并检查版本号
-
-```sh
-./brec --version
-```
+录播姬所有命令都可以加上 `--help` 查看帮助。
 
 ### 运行录播姬
 
@@ -78,7 +84,19 @@ mv BililiveRecorder.Cli brec
 ./brec run "工作目录"
 ```
 
-TOOD 还没写
+录播姬 1.4 提供了 HTTP API，可以通过 `--bind` 参数启用。
+
+```sh
+# 侦听本机地址，只有本地可以访问
+./brec run --bind "http://localhost:2356" "工作目录"
+
+# 或者所有设备都可访问
+./brec run --bind "http://*:2356" "工作目录"
+```
+
+配置文件在工作目录里，文件名是 `config.json`。
+一般来说不推荐手写配置文件，可以复制录播姬桌面版的配置文件或者用 HTTP API 来添加房间、修改设置。
+如果需要手改配置文件的话可以参考 [配置文件](./config-file.md) 页面。
 
 ### 以便携模式运行
 
