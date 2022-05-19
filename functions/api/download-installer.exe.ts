@@ -15,6 +15,33 @@ export const onRequestGet: PagesFunction<{
     data, // arbitrary space for passing data between middlewares
   } = context;
 
+  const cf = request.cf;
+
+  if (!cf) {
+    console.log('cf object is null');
+    return Response.redirect(CONSTANTS.FALLBACK_DOWNLOAD_URL, 302);
+  }
+
+  if (cf.country !== 'CN') {
+    console.log('region: ' + cf.country);
+    return Response.redirect(CONSTANTS.FALLBACK_DOWNLOAD_URL, 302);
+  }
+
+  const clientIP = request.headers.get('CF-Connecting-IP');
+  const blockIpPrefix = [
+    '27.115.124.',
+    '111.206.170.',
+    '116.132.223.',
+    '119.167.234.',
+    '171.13.14.',
+    '180.163.220.',
+    '218.91.199.',
+  ];
+  if (blockIpPrefix.some(match => clientIP?.startsWith(match))) {
+    console.log('ip in blocklist: ' + clientIP);
+    return Response.redirect(CONSTANTS.FALLBACK_DOWNLOAD_URL, 302);
+  }
+
   const url = new URL(request.url);
   const req_time = url.searchParams.get('t'), req_ua = url.searchParams.get('u');
 

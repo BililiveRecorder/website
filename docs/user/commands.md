@@ -98,14 +98,124 @@ mv BililiveRecorder.Cli brec
 一般来说不推荐手写配置文件，可以复制录播姬桌面版的配置文件或者用 HTTP API 来添加房间、修改设置。
 如果需要手改配置文件的话可以参考 [配置文件](./config-file.md) 页面。
 
-### 以便携模式运行
+### 便携模式
 
-TOOD 还没写
+这里是便携模式指的是没有配置文件，录播姬不会加载配置文件，也不会保存配置文件。
+
+```sh
+./brec portable "保存目录" 1 3 6655
+
+# 也可以缩写为 p
+./brec p "保存目录" 1 3 6655
+```
+
+可以传入任意数量的房间号，包括 0 个。默认会给所有房间启用自动录制。
+
+部分设置项可以通过命令参数修改，可以修改的参数列表可以用 `--help` 查看
+
+```sh
+./brec p --help
+```
+
+便携模式也可以启用 HTTP API
+
+```sh
+./brec p --bind "http://localhost:2356" "保存目录"
+```
 
 ### 工具箱命令
 
-TOOD 还没写
+命令行版提供了和桌面版一样的工具箱功能。
+
+```sh
+./brec tool -h
+```
+
+关于每个工具的说明，请查看对应的 [工具箱](./toolbox/index.md) 页面。
+
+所有工具箱命令都有 `--json` 和 `--json-indented` 两个选项，可以以 JSON 格式输出运行结果，方便其他脚本调用。
+
+???+ example
+    ```sh
+    ./brec tool analyze --json-indented input.flv
+    ```
+    ```json
+    {
+      "Status": "OK",
+      "Data": {
+        "InputPath": "input.flv",
+        "NeedFix": false,
+        "Unrepairable": false,
+        "OutputFileCount": 1,
+        "VideoStats": {
+          "FrameCount": 11520,
+          "FramePerSecond": 60.005312970419254,
+          "FrameDurations": {
+            "17": 7679,
+            "16": 3840
+          }
+        },
+        "AudioStats": {
+          "FrameCount": 9000,
+          "FramePerSecond": 46.88012751394684,
+          "FrameDurations": {
+            "21": 5999,
+            "22": 3000
+          }
+        },
+        "IssueTypeOther": 0,
+        "IssueTypeUnrepairable": 0,
+        "IssueTypeTimestampJump": 0,
+        "IssueTypeTimestampOffset": 0,
+        "IssueTypeDecodingHeader": 0,
+        "IssueTypeRepeatingData": 0
+      },
+      "ErrorMessage": null,
+      "Exception": null
+    }
+    ```
 
 ## Docker 版
 
 录播姬 Docker 版和命令行版完全一样。
+
+镜像中的 entrypoint 已经设置成运行录播姬，只需要调整 cmd 部分即可。
+
+完整的 docker 命令例子：
+
+```sh
+docker run -v ~/宿主机路径:/rec ghcr.io/bililive/bililiverecorder:v1.3.11 -- run /rec
+```
+
+------
+
+!!! warning "未发布的内容"
+    从这里开始下面的内容是针对录播姬 1.4 的容器镜像编写的
+
+完整的 docker 命令例子：
+
+```sh
+# 复制粘贴运行之前记得修改  "~/宿主机路径"
+docker run -d -v ~/宿主机路径:/rec -p 2356:2356 ghcr.io/bililive/bililiverecorder
+# 或使用 docker.io 镜像
+docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder
+```
+
+录播姬的镜像中 entrypoint 已经设置成运行录播姬，默认的 cmd 是在用容器内的 `/rec` 作为工作目录运行。
+镜像的默认 cmd 相当于：
+
+```sh
+./brec run --bind http://*:2356 /rec
+```
+
+其他手动设置传入录播姬的子命令的例子：
+
+```sh
+# 便携模式
+docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder -- p /rec
+
+# 工具箱
+docker run -it -v ~/宿主机路径:/rec bililive/recorder -- tool analyze --json /rec/video.flv
+```
+
+关于 `docker run` 请参考 [Docker 的文档](https://docs.docker.com/engine/reference/run/){target=_blank}
