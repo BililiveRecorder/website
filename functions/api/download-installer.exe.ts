@@ -30,6 +30,8 @@ export const onRequestGet: PagesFunction<{
   const clientIP = request.headers.get('CF-Connecting-IP');
   const blockIpPrefix = [
     '27.115.124.',
+    '36.99.136.',
+    '111.7.100',
     '111.206.170.',
     '116.132.223.',
     '119.167.234.',
@@ -43,7 +45,8 @@ export const onRequestGet: PagesFunction<{
   }
 
   const url = new URL(request.url);
-  const req_time = url.searchParams.get('t'), req_ua = url.searchParams.get('u');
+  const req_time = url.searchParams.get('t');
+  const req_ua = url.searchParams.get('u');
 
   if (typeof req_time !== 'string' || typeof req_ua !== 'string') {
     console.log('missing argument');
@@ -57,6 +60,11 @@ export const onRequestGet: PagesFunction<{
 
   if ((Date.now() - parseInt(req_time)) / 1000 > CONSTANTS.TIMESTAMP_VALID_DURATION_SECONDS) {
     console.log('request expired');
+    return Response.redirect(CONSTANTS.FALLBACK_DOWNLOAD_URL, 302);
+  }
+
+  if (!req_ua.includes('Windows')) {
+    console.log('not windows');
     return Response.redirect(CONSTANTS.FALLBACK_DOWNLOAD_URL, 302);
   }
 
