@@ -184,7 +184,7 @@ mv BililiveRecorder.Cli brec
 完整的 docker 命令例子：
 
 ```sh
-docker run -v ~/宿主机路径:/rec ghcr.io/bililive/bililiverecorder:v1.3.11 -- run /rec
+docker run -v ~/宿主机路径:/rec ghcr.io/bililive/bililiverecorder:v1.3.11 run /rec
 ```
 
 ------
@@ -212,10 +212,10 @@ docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder
 
 ```sh
 # 便携模式
-docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder -- p /rec
+docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder p /rec
 
 # 工具箱
-docker run -it -v ~/宿主机路径:/rec bililive/recorder -- tool analyze --json /rec/video.flv
+docker run -it -v ~/宿主机路径:/rec bililive/recorder tool analyze --json /rec/video.flv
 ```
 
 关于 `docker run` 请参考 [Docker 的文档](https://docs.docker.com/engine/reference/run/){target=_blank}
