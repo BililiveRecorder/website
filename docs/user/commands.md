@@ -196,7 +196,7 @@ docker run -v ~/宿主机路径:/rec ghcr.io/bililive/bililiverecorder:v1.3.11 r
 
 ```sh
 # 复制粘贴运行之前记得修改  "~/宿主机路径"
-docker run -d -v ~/宿主机路径:/rec -p 2356:2356 ghcr.io/bililive/bililiverecorder
+docker run -d -v ~/宿主机路径:/rec -p 2356:2356 ghcr.io/bililiverecorder/bililiverecorder
 # 或使用 docker.io 镜像
 docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder
 ```

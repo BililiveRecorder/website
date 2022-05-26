@@ -5,8 +5,8 @@ site_author: genteure
 
 strict: !ENV [CI, false]
 
-repo_url: https://github.com/Bililive/BililiveRecorder
-repo_name: Bililive/BililiveRecorder
+repo_url: https://github.com/BililiveRecorder/BililiveRecorder
+repo_name: BililiveRecorder/BililiveRecorder
 
 edit_uri: https://github.com/BililiveRecorder/website/blob/main/docs/
 

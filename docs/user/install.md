@@ -8,7 +8,7 @@
 安装过录播姬后可以从桌面和开始菜单的快捷方式启动录播姬，不要再次运行安装包。  
 如果想要卸载录播姬，可以在 **系统设置 :material-chevron-right: 应用** 里卸载。
 
-你也可以从 [GitHub Releases](https://github.com/Bililive/BililiveRecorder/releases){target=_blank} 下载便携版压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。
+你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载便携版压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。
 
 打开录播姬后需要选择工作目录，工作目录是保存 **配置文件** 和 **录像文件** 的地方。
 
@@ -26,40 +26,68 @@
 
 ## 命令行版
 
-从录播姬 1.4 开始命令行版有 HTTP API 功能。
+从录播姬 1.4 开始，命令行版有 HTTP API 功能。
 
-[GitHub Release 页面](https://github.com/Bililive/BililiveRecorder/releases){target=_blank}
+[GitHub Release 页面](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank}
 
 | 操作系统 | 架构 | 下载链接 | 备注 |
 | -------- | --- | --- | ---- |
-| _N/A_ | _N/A_ | [BililiveRecorder-CLI-any.zip](https://github.com/Bililive/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-any.zip) | 需要自行安装 [.NET 运行时](https://dotnet.microsoft.com/zh-cn/download/dotnet/6.0){target=_blank} |
-| Linux | x64 | [BililiveRecorder-CLI-linux-x64.zip](https://github.com/Bililive/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-x64.zip) | 在服务器上运行选这个 |
-| Linux | arm32 | [BililiveRecorder-CLI-linux-arm.zip](https://github.com/Bililive/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm.zip) |
-| Linux | arm64 | [BililiveRecorder-CLI-linux-arm64.zip](https://github.com/Bililive/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm64.zip) |
-| Windows | x64 | [BililiveRecorder-CLI-win-x64.zip](https://github.com/Bililive/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-win-x64.zip) |
-| macOS | x64 | [BililiveRecorder-CLI-osx-x64.zip](https://github.com/Bililive/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-x64.zip) |
+| _N/A_ | _N/A_ | [BililiveRecorder-CLI-any.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-any.zip) | 需要自行安装 [.NET 运行时](https://dotnet.microsoft.com/zh-cn/download/dotnet/6.0){target=_blank} |
+| Linux | x64 | [BililiveRecorder-CLI-linux-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-x64.zip) | 在服务器上运行一般选这个 |
+| Linux | arm32 | [BililiveRecorder-CLI-linux-arm.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm.zip) |
+| Linux | arm64 | [BililiveRecorder-CLI-linux-arm64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm64.zip) |
+| Windows | x64 | [BililiveRecorder-CLI-win-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-win-x64.zip) |
+| macOS | x64 | [BililiveRecorder-CLI-osx-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-x64.zip) |
 
 具体用法请参考 [命令行参数](./commands.md)
 
 ## Docker 镜像
 
-Docker 镜像主要在 [GitHub Container registry](https://github.com/Bililive/BililiveRecorder/pkgs/container/bililiverecorder){target=_blank} 上提供。
+Docker 镜像在 [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags){target=_blank} 和 [GitHub Container registry](https://github.com/BililiveRecorder/BililiveRecorder/pkgs/container/bililiverecorder){target=_blank} 上提供。
 
 <!-- TODO Docker Hub -->
 
-```bash
-docker pull ghcr.io/bililive/bililiverecorder
-# 或指定 tag
-docker pull ghcr.io/bililive/bililiverecorder:v1.3.11
-```
-
-!!! warning "不要用开发版本"
-    注意不要用开发版本，不要用 `dev` tag 或者其他分支名 tag。开发版不保证能用。
-
-镜像内设置的默认执行的命令是 `BililiveRecorder.Cli run /rec`
-
 Docker 镜像内录播姬的用法和命令行版完全一样，具体用法请参考 [命令行参数](./commands.md)
 
-之后可能会搬迁 GitHub Container registry 上的镜像地址（因为打算搬迁仓库）。
+```bash
+docker pull bililive/recorder:latest
+# 或指定 tag
+docker pull bililive/recorder:v1.3.11
+```
 
-之后会在 Docker Hub 上也放一份。
+```bash
+docker pull ghcr.io/bililiverecorder/bililiverecorder
+# 或指定 tag
+docker pull ghcr.io/bililiverecorder/bililiverecorder:v1.3.11
+```
+
+!!! warning "不要误用开发版本"
+    ghcr.io/bililiverecorder/bililiverecorder 同时提供了开发版，注意不要误用开发版本。  
+    不要用 `dev` tag 或者其他分支名 tag。开发版不保证能用。
+
+## 开发版
+
+!!! warning "提醒"
+    开发版不保证能正常使用
+
+在 [GitHub 仓库的 Actions](https://github.com/BililiveRecorder/BililiveRecorder/actions) 里可以下载最新的代码编译出来的版本。
+
+GitHub Actions 的 Artifacts 下载需要登录 GitHub 账号。  
+下面提供了最新一个 `dev` 分支编译输出的免登录下载链接：
+
+| 版本 | 编译配置 | 操作系统 | 架构 | 下载链接 |
+| ---- | ------- | ------- | --- | -------- |
+| 桌面版 | Debug   | Windows | _N/A_ | [WPF-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/WPF-Debug.zip)
+| 桌面版 | Release | Windows | _N/A_ | [WPF-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/WPF-Release.zip)
+| 命令行版 | Debug   | 任意 | (自行安装运行时) | [CLI-any-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-any-Debug.zip)
+| 命令行版 | Release | 任意 | (自行安装运行时) | [CLI-any-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-any-Release.zip)
+| 命令行版 | Debug   | Linux | arm64 | [CLI-linux-arm64-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-linux-arm64-Debug.zip)
+| 命令行版 | Release | Linux | arm64 | [CLI-linux-arm64-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-linux-arm64-Release.zip)
+| 命令行版 | Debug   | Linux | arm | [CLI-linux-arm-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-linux-arm-Debug.zip)
+| 命令行版 | Release | Linux | arm | [CLI-linux-arm-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-linux-arm-Release.zip)
+| 命令行版 | Debug   | Linux | x64 | [CLI-linux-x64-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-linux-x64-Debug.zip)
+| 命令行版 | Release | Linux | x64 | [CLI-linux-x64-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-linux-x64-Release.zip)
+| 命令行版 | Debug   | macOS | x64 | [CLI-osx-x64-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-osx-x64-Debug.zip)
+| 命令行版 | Release | macOS | x64 | [CLI-osx-x64-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-osx-x64-Release.zip)
+| 命令行版 | Debug   | Windows | x64 | [CLI-win-x64-Debug.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-win-x64-Debug.zip)
+| 命令行版 | Release | Windows | x64 | [CLI-win-x64-Release.zip](https://nightly.link/BililiveRecorder/BililiveRecorder/workflows/build/dev/CLI-win-x64-Release.zip)

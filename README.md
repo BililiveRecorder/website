@@ -1,6 +1,6 @@
-# [B站录播姬](https://github.com/Bililive/BililiveRecorder) 的 [网站](https://rec.danmuji.org)
+# [B站录播姬](https://github.com/BililiveRecorder/BililiveRecorder) 的 [网站](https://rec.danmuji.org)
 
-[BiliveRecorder / B站录播姬](https://github.com/Bililive/BililiveRecorder)
+[BiliveRecorder / B站录播姬](https://github.com/BililiveRecorder/BililiveRecorder)
 
 [Website / 网站](https://rec.danmuji.org)
 

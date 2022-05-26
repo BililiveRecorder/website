@@ -4,7 +4,7 @@ window.addEventListener('load', _ => {
   if (s) {
     v.forEach(x => x.textContent = s.version)
   } else {
-    fetch("https://api.github.com/repos/bililive/bililiverecorder/releases/latest")
+    fetch("https://api.github.com/repos/bililiverecorder/bililiverecorder/releases/latest")
       .then(x => x.json())
       .then(j => v.forEach(x => x.textContent = j.tag_name))
   }

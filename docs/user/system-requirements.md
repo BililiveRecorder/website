@@ -43,7 +43,7 @@
     - Linux (x64, Arm32, Arm64)
     - macOS (x64, Arm64)
 
-具体的列表和系统版本要求可以参考 [录播姬的 GitHub Release 页面](https://github.com/Bililive/BililiveRecorder/releases) 以及 [.NET 6 所支持的平台](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md){target=_blank}。
+具体的列表和系统版本要求可以参考 [录播姬的 GitHub Release 页面](https://github.com/BililiveRecorder/BililiveRecorder/releases) 以及 [.NET 6 所支持的平台](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md){target=_blank}。
 
 ## 硬件要求
 

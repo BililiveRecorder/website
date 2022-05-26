@@ -11,13 +11,13 @@
 如果需要手动修改配置文件，推荐使用的编辑器是 VSCode。  
 推荐添加 JSON Schema，会有自动补全和简单设置说明。
 
-Schema 在 GitHub 仓库根文件夹里 [configV3.schema.json](https://raw.githubusercontent.com/Bililive/BililiveRecorder/dev/configV3.schema.json)
+Schema 在 GitHub 仓库根文件夹里 [configV3.schema.json](https://raw.githubusercontent.com/BililiveRecorder/BililiveRecorder/dev/configV3.schema.json)
 
 关于所有设置项的列表可以参考 [软件设置](/docs/basic/settings/)
 
 ```json
 {
-  "$schema":"https://raw.githubusercontent.com/Bililive/BililiveRecorder/dev/configV3.schema.json",
+  "$schema":"https://raw.githubusercontent.com/BililiveRecorder/BililiveRecorder/dev/configV3.schema.json",
   "version": 3,
   "global": {},
   "rooms": []
