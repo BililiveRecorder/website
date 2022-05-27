@@ -50,11 +50,12 @@
 !!! info "提醒"
     录播姬作者并不推荐添加超大量直播间
 
-??? tip "真实用户案例"
-    某用户的 CPU 是 Intel Core i7-6700T，他给的截图：
+??? tip "用户案例 - Intel Atom N270"
+    ![桌面截图](../assets/images/user-index-user2-1.png)
 
-    ![任务管理器](../assets/images/user-index-taskmanager.png)
+??? tip "用户案例 - Intel Core i7-6700T"
+    ![任务管理器](../assets/images/user-index-user1-taskmgr.png)
 
     注意右侧细细的滚动条，图片里显示了大约 1/4 的房间
 
-    ![满屏幕的房间](../assets/images/user-index-roomlist.png)
+    ![满屏幕的房间](../assets/images/user-index-user1-roomlist.png)

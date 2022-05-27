@@ -184,7 +184,7 @@ mv BililiveRecorder.Cli brec
 完整的 docker 命令例子：
 
 ```sh
-docker run -v ~/宿主机路径:/rec ghcr.io/bililive/bililiverecorder:v1.3.11 run /rec
+docker run -v ~/宿主机路径:/rec ghcr.io/bililiverecorder/bililiverecorder:v1.3.11 run /rec
 ```
 
 ------

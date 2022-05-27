@@ -10,6 +10,9 @@
 
 你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载便携版压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。
 
+通过安装包安装的录播姬有版本检查功能，能自动更新。更新不会重启软件，不影响正在录制的直播，更新后下一次运行录播姬会自动使用新版本。  
+如果需要运行特定的版本，可以用便携版，没有版本检查功能也不会更新。通常来说只有最后一个正式版是受支持的，旧版本特有的问题不会修复。
+
 打开录播姬后需要选择工作目录，工作目录是保存 **配置文件** 和 **录像文件** 的地方。
 
 !!! tip "关于工作目录"
@@ -45,9 +48,10 @@
 
 Docker 镜像在 [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags){target=_blank} 和 [GitHub Container registry](https://github.com/BililiveRecorder/BililiveRecorder/pkgs/container/bililiverecorder){target=_blank} 上提供。
 
-<!-- TODO Docker Hub -->
+两个位置提供的正式版本镜像完全一样。  
+GitHub Container registry 上还提供了开发版的镜像。
 
-Docker 镜像内录播姬的用法和命令行版完全一样，具体用法请参考 [命令行参数](./commands.md)
+Docker 镜像内的录播姬的用法和命令行版完全一样，请参考 [命令行参数](./commands.md)
 
 ```bash
 docker pull bililive/recorder:latest
@@ -60,6 +64,12 @@ docker pull ghcr.io/bililiverecorder/bililiverecorder
 # 或指定 tag
 docker pull ghcr.io/bililiverecorder/bililiverecorder:v1.3.11
 ```
+
+!!! warning "地址有变动"
+    之前镜像地址是 `ghcr.io/bililive/bililiverecorder` 这个旧地址已经不再使用。
+
+    这个地址目前还可以使用，但不会再更新新的镜像，之后会完全删除。  
+    请更换到上面给出的两个镜像。
 
 !!! warning "不要误用开发版本"
     ghcr.io/bililiverecorder/bililiverecorder 同时提供了开发版，注意不要误用开发版本。  
