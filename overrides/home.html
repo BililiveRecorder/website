@@ -5,21 +5,17 @@
 <link rel="stylesheet" href="{{ 'assets/stylesheets/homepage.min.css' | url }}">
 {% endblock %}
 
-<!-- Render hero under tabs -->
-{% block tabs %}
-{{ super() }}
-
-<!-- Hero for landing page -->
+{% block hero %}
 <section class="brec-home-container">
   <div class="md-grid md-typeset">
     <div class="brec-home-hero">
-
       <!-- Hero image -->
       <div class="brec-home-hero__image">
-        <img src="assets/images/home-light.png#only-light" alt="" draggable="false" oncontextmenu="return !1" loading="lazy">
-        <img src="assets/images/home-dark.png#only-dark" alt="" draggable="false" oncontextmenu="return !1" loading="lazy">
+        <img src="assets/images/home-light.png#only-light" alt="" draggable="false" oncontextmenu="return !1"
+          loading="lazy">
+        <img src="assets/images/home-dark.png#only-dark" alt="" draggable="false" oncontextmenu="return !1"
+          loading="lazy">
       </div>
-
       <!-- Hero content -->
       <div class="brec-home-hero__content">
         <h1>B站录播姬</h1>
@@ -37,6 +33,33 @@
             安装遇到问题？
           </a>
         </div>
+      </div>
+    </div>
+    <div class="brec-features">
+      <div class="brec-feature">
+        <h2>简单方便</h2>
+        <p>下载、安装、选择保存位置、粘贴直播间链接，1 分钟即可开录。开始录制、停止录制，操作简单，本地录制B站直播回放。</p>
+      </div>
+      <div class="brec-feature">
+        <h2>自动录制</h2>
+        <p>实时监控直播间状态，开播自动开始录制，响应速度极快，通常在 10 秒内启动。不需要人工等待开播再手动开始录制。</p>
+      </div>
+      <div class="brec-feature">
+        <h2>高性能</h2>
+        <p>录播姬占用的系统资源少、性能高，可以同时录制很多直播间，或<a target="_blank" href="{{ 'user/#低占用高性能' | url }}">在低端硬件上运行</a>。</p>
+      </div>
+      <div class="brec-feature">
+        <h2>弹幕录制</h2>
+        <p>支持同时<a href="{{ 'user/danmaku/' | url }}">录制直播弹幕</a>、赠送礼物、醒目留言、舰长购买，保存为兼容B站主站弹幕格式的 XML 文件。</p>
+      </div>
+      <div class="brec-feature">
+        <h2>稳定可靠</h2>
+        <p>经过了大量用户的使用和时间的检验，可 24×7 长时间稳定运行。</p>
+      </div>
+      <div class="brec-feature">
+        <h2>直播数据修复</h2>
+        <p><a target="_blank" href="{{ 'dev/repair/' | url }}">原创的</a>B站<a target="_blank"
+            href="{{ 'user/repair/' | url }}">直播数据修复系统</a>，自动修复影响视频文件播放和使用的各种常见问题。</p>
       </div>
     </div>
   </div>
