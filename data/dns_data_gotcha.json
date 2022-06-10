@@ -7,14 +7,16 @@
     },
     "d1--cn-gotcha01.bilivideo.com": {
       "a.w.bilicdn1.com": {
-        "ipv4": 13,
-        "ipv6": 8
+        "b.w.bilicdn1.com": {
+          "ipv4": 11,
+          "ipv6": 0
+        }
       }
     },
     "d1--cn-gotcha02.bilivideo.com": {
       "d1--cn-gotcha02.bilivideo.com.hdlvcloud.ks-cdn.com": {
         "s03-ipv6.gslb.ksyuncdn.com": {
-          "ipv4": 15,
+          "ipv4": 11,
           "ipv6": 3
         }
       }
@@ -22,7 +24,7 @@
     "d1--cn-gotcha102.bilivideo.com": {
       "d1--cn-gotcha102.bilivideo.com.hlsvcloud.ks-cdn.com": {
         "k12.gslb.ksyuncdn.com": {
-          "ipv4": 15,
+          "ipv4": 3,
           "ipv6": 0
         }
       }
@@ -30,7 +32,7 @@
     "d1--cn-gotcha202.bilivideo.com": {
       "d1--cn-gotcha202.bilivideo.com.hlsvcloud.ks-cdn.com": {
         "k1-ipv6.gslb.ksyuncdn.com": {
-          "ipv4": 15,
+          "ipv4": 1,
           "ipv6": 4
         }
       }
@@ -75,9 +77,9 @@
     },
     "d1--cn-gotcha04.bilivideo.com": {
       "4877.liveplay.myqcloud.com": {
-        "4877.switch.hyzhibo.cdntip.com": {
-          "all.douyu.sched.ovscdns.net": {
-            "ipv4": 15,
+        "9050520.pack.tcdnlive.com": {
+          "d1--cn-gotcha04.bilivideo.com.l5.sched.dcloudlive.com": {
+            "ipv4": 1,
             "ipv6": 0
           }
         }
@@ -87,8 +89,8 @@
       "hls.4877.liveplay.myqcloud.com": {
         "txy.wshls.acgvideo.com.tcdnlive.com": {
           "txy.wshls.acgvideo.com.l5-dk.sched.dcloudlive.com": {
-            "ipv4": 11,
-            "ipv6": 8
+            "ipv4": 1,
+            "ipv6": 5
           }
         }
       }
@@ -97,7 +99,7 @@
       "txy-fmp4hls.bilivideo.com.livecdn.liveplay.myqcloud.com": {
         "d1--cn-gotcha204.bilivideo.com.tcdnlive.com": {
           "d1--cn-gotcha204.bilivideo.com.l5.sched.dcloudlive.com": {
-            "ipv4": 2,
+            "ipv4": 1,
             "ipv6": 0
           }
         }
@@ -118,24 +120,24 @@
     "d1--cn-gotcha06.bilivideo.com": {
       "d1--cn-gotcha06.bilivideo.com.trpcdn.net": {
         "live-bili.v.trpcdn.net": {
-          "ipv4": 12,
-          "ipv6": 8
+          "ipv4": 4,
+          "ipv6": 6
         }
       }
     },
     "d1--cn-gotcha106.bilivideo.com": {
       "d1--cn-gotcha106.bilivideo.com.trpcdn.net": {
         "live-bili.v.trpcdn.net": {
-          "ipv4": 12,
-          "ipv6": 0
+          "ipv4": 4,
+          "ipv6": 6
         }
       }
     },
     "d1--cn-gotcha206.bilivideo.com": {
       "d1--cn-gotcha206.bilivideo.com.trpcdn.net": {
         "live-bili.v.trpcdn.net": {
-          "ipv4": 12,
-          "ipv6": 0
+          "ipv4": 4,
+          "ipv6": 6
         }
       }
     },
@@ -174,7 +176,7 @@
     "c1--cn-gotcha208.bilivideo.com": {
       "c1--cn-gotcha208.bilivideo.com.04f6a54d.c.cdnhwc1.com": {
         "biliv7cold.c.cdnhwc2.com": {
-          "ipv4": 12,
+          "ipv4": 8,
           "ipv6": 6
         }
       }
@@ -239,23 +241,23 @@
     },
     "d1--ov-gotcha04.bilivideo.com": {
       "d1--ov-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
-        "all.hylivecdn.sched.ovscdns.net": {
-          "ipv4": 15,
+        "tdns.l3.sched.dcloudlive.com": {
+          "ipv4": 3,
           "ipv6": 0
         }
       }
     },
     "d1--ov-gotcha104.bilivideo.com": {
       "d1--ov-gotcha104.bilivideo.com.liveplay.myqcloud.com": {
-        "all.hylivecdn.sched.ovscdns.net": {
-          "ipv4": 15,
+        "tdns.l3.sched.dcloudlive.com": {
+          "ipv4": 3,
           "ipv6": 0
         }
       }
     },
     "d1--ov-gotcha05.bilivideo.com": {
       "d1--ov-gotcha05.bilivideo.com.wsdvs.com": {
-        "ipv4": 4,
+        "ipv4": 1,
         "ipv6": 0
       }
     },
@@ -268,7 +270,7 @@
     "d1--ov-gotcha06.bilivideo.com": {
       "d1--ov-gotcha06.bilivideo.com.trpcdn.net": {
         "live-smbili.v.trpcdn.net": {
-          "ipv4": 7,
+          "ipv4": 8,
           "ipv6": 0
         }
       }
@@ -276,7 +278,7 @@
     "d1--ov-gotcha106.bilivideo.com": {
       "d1--ov-gotcha106.bilivideo.com.trpcdn.net": {
         "live-smbili.v.trpcdn.net": {
-          "ipv4": 7,
+          "ipv4": 8,
           "ipv6": 0
         }
       }
@@ -284,7 +286,7 @@
     "d1--ov-gotcha206.bilivideo.com": {
       "d1--ov-gotcha206.bilivideo.com.trpcdn.net": {
         "live-smbili.v.trpcdn.net": {
-          "ipv4": 7,
+          "ipv4": 8,
           "ipv6": 0
         }
       }
@@ -312,10 +314,12 @@
       }
     },
     "d1--tf-gotcha01.bilivideo.com": {
-      "d1--tf-gotcha01-basic.bilivideo.com": {
-        "live-tf-live-tf-0159-cu.bvc-line.bilivideo.com": {
-          "ipv4": 3,
-          "ipv6": 0
+      "d1--tf-gotcha01-loc.bilivideo.com": {
+        "a.w.bilicdn1.com": {
+          "b.w.bilicdn1.com": {
+            "ipv4": 11,
+            "ipv6": 0
+          }
         }
       }
     },
@@ -333,8 +337,8 @@
       "d1--p1--cn-gotcha02.bilivideo.com.hdlvcloud.ks-cdn.com": {
         "s03-ipv6.gslb.ksyuncdn.com": {
           "s03-ipv6-yunfan.gslb.borui.yunfancdn.net": {
-            "ipv4": 15,
-            "ipv6": 4
+            "ipv4": 4,
+            "ipv6": 3
           }
         }
       }
@@ -342,7 +346,7 @@
     "d1--p1--cn-gotcha04.bilivideo.com": {
       "p1-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
         "tdns.l5.sched.dcloudlive.com": {
-          "ipv4": 11,
+          "ipv4": 1,
           "ipv6": 0
         }
       }
@@ -350,8 +354,10 @@
     "d1--p2--cn-gotcha02.bilivideo.com": {
       "d1--p2--cn-gotcha02.bilivideo.com.hdlvcloud.ks-cdn.com": {
         "s03-ipv6.gslb.ksyuncdn.com": {
-          "ipv4": 15,
-          "ipv6": 2
+          "s03-ipv6-yunfan.gslb.borui.yunfancdn.net": {
+            "ipv4": 4,
+            "ipv6": 3
+          }
         }
       }
     },
