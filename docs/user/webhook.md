@@ -28,8 +28,8 @@ Webhook v2 支持以下几种事件类型：
 - 文件打开 `FileOpening`
 - 文件关闭 `FileClosed`
 - 录制结束 `SessionEnded`
-- 直播开始 `StreamStarted` (录播姬 1.4 新增)
-- 直播结束 `StreamEnded` (录播姬 1.4 新增)
+- 直播开始 `StreamStarted` (录播姬 2.0.0 新增)
+- 直播结束 `StreamEnded` (录播姬 2.0.0 新增)
 
 !!! tip "提醒"
     之后可能会继续添加其他事件类型，请在代码中做好相应的判断。
@@ -65,7 +65,7 @@ Webhook v2 支持以下几种事件类型：
 
 ### 录制开始
 
-开始录制的原因可能是手动电击了开始录制按钮，或者设置了开播自动开始录制。
+开始录制的原因可能是手动点击了开始录制按钮，或者设置了开播自动开始录制。
 
 ```json
 {
@@ -80,9 +80,9 @@ Webhook v2 支持以下几种事件类型：
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
     "AreaNameChild": "影音馆",
-    "Recording":true, // 录播姬 1.4 新增
-    "Streaming":true, // 录播姬 1.4 新增
-    "DanmakuConnected":true // 录播姬 1.4 新增
+    "Recording":true, // 录播姬 2.0.0 新增
+    "Streaming":true, // 录播姬 2.0.0 新增
+    "DanmakuConnected":true // 录播姬 2.0.0 新增
   }
 }
 ```
@@ -106,9 +106,9 @@ Webhook v2 支持以下几种事件类型：
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
     "AreaNameChild": "影音馆",
-    "Recording":true, // 录播姬 1.4 新增
-    "Streaming":true, // 录播姬 1.4 新增
-    "DanmakuConnected":true // 录播姬 1.4 新增
+    "Recording":true, // 录播姬 2.0.0 新增
+    "Streaming":true, // 录播姬 2.0.0 新增
+    "DanmakuConnected":true // 录播姬 2.0.0 新增
   }
 }
 ```
@@ -133,9 +133,9 @@ Webhook v2 支持以下几种事件类型：
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
     "AreaNameChild": "影音馆",
-    "Recording":true, // 录播姬 1.4 新增
-    "Streaming":true, // 录播姬 1.4 新增
-    "DanmakuConnected":true // 录播姬 1.4 新增
+    "Recording":true, // 录播姬 2.0.0 新增
+    "Streaming":true, // 录播姬 2.0.0 新增
+    "DanmakuConnected":true // 录播姬 2.0.0 新增
   }
 }
 ```
@@ -155,16 +155,16 @@ Webhook v2 支持以下几种事件类型：
     "Title": "哔哩哔哩音悦台",
     "AreaNameParent": "生活",
     "AreaNameChild": "影音馆",
-    "Recording":true, // 录播姬 1.4 新增
-    "Streaming":true, // 录播姬 1.4 新增
-    "DanmakuConnected":true // 录播姬 1.4 新增
+    "Recording":true, // 录播姬 2.0.0 新增
+    "Streaming":true, // 录播姬 2.0.0 新增
+    "DanmakuConnected":true // 录播姬 2.0.0 新增
   }
 }
 ```
 
 ### 直播开始
 
-这个事件是在录播姬 1.4 添加的。
+这个事件是在录播姬 2.0.0 添加的。
 
 ```json
 {
@@ -187,7 +187,7 @@ Webhook v2 支持以下几种事件类型：
 
 ### 直播结束
 
-这个事件是在录播姬 1.4 添加的。
+这个事件是在录播姬 2.0.0 添加的。
 
 ```json
 {

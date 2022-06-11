@@ -87,6 +87,7 @@ plugins:
       include_yaml:
         - dns_data_bcdn: data/dns_data_bcdn.json
         - dns_data_gotcha: data/dns_data_gotcha.json
+        - brec_settings: data/brec_settings.json
   - brec-redirects:
       build_cloudflare_pages_redirects: true
       build_redirects_json: true

@@ -1,35 +1,201 @@
-# 设置项
-
-!!! info "WIP"
-    新网站的这个设置页还没写，先把旧网站的设置页面的内容复制过来凑合看吧。
+---
+data_configType_map:
+  roomOnly: 房间单独设置
+  room: 全局设置和单独设置
+  globalOnly: 仅全局设置
+data_type_map:
+  int: 数字 (int32)
+  uint: 无符号数字 (uint32)
+  bool: 布尔值 (boolean)
+  "string?": 字符串 (string)
+  AllowedAddressFamily: 枚举 (enum)
+  RecordMode: 枚举 (enum)
+  CuttingMode: 枚举 (enum)
+  
+---
+# 软件设置
 
 查看本页面时可以使用目录快速跳转到要找的内容。  
 电脑上目录在页面内容的右侧。  
 手机上先点击页面左上角的 :material-menu: 图标，再点击当前页面 **软件设置** 就会打开目录。
 
-{% include 'generated_settings_list.md' %}
-
-<!--
-## 设置项
-
-### 设置项示例 { id=s-Example }
-
-| 设置ID | 类型 |
-| ------ | ---- |
-| `Example` | `string` |
-
-这是简短一句话说明。
-
-:material-cogs:{style=color:orange} 此设置项为 [高级设置](#高级设置)，不显示在普通设置界面。
-
-!!! example "默认设置"
-    ```txt
-    example
-    ```
-
-这是一些补充说明。
-
 ## 高级设置
 
-TODO 补充高级设置说明和提醒
--->
+本页面列出了录播姬软件的所有设置，其中有一部分设置被标记为了 “:material-cogs:{style=color:#ff3c26} 高级设置”。
+这些设置项通常不需要被修改，随意修改可能会导致录播姬无法正常工作。
+
+录播姬桌面版显示高级设置的方式是：鼠标右键点击两次界面左下角的设置按钮。
+
+## 设置项
+
+
+<!-- 设置项长说明区域开始 -->
+{% set longDescriptions = namespace()  %}
+{% set longDescriptions.RecordMode %}
+
+| 键 | 值 | 含义 |
+| -- | -- | --- |
+| `RecordMode.Standard` | 0 | 标准模式 |
+| `RecordMode.RawData` | 1 | 原始数据模式 |
+
+关于录制模式的说明见 [录制模式](./record-mode.md)
+
+{% endset %}
+{% set longDescriptions.CuttingMode %}
+
+| 键 | 值 | 含义 |
+| -- | -- | --- |
+| `CuttingMode.Disabled` | 0 | 不分段 |
+| `CuttingMode.ByTime` | 1 | 按视频时长分段 |
+| `CuttingMode.BySize` | 2 | 按文件大小分段 |
+
+{% endset %}
+{% set longDescriptions.CuttingNumber %}
+
+根据 CuttingMode 设置的不同：    
+当按时长分段时，本设置的单位为分钟。  
+当按大小分段时，本设置的单位为MiB。
+
+{% endset %}
+{% set longDescriptions.RecordDanmaku %}
+
+是否录制弹幕，`true` 为录制，`false` 为不录制。
+
+本设置同时是所有“弹幕录制”的总开关，当本设置为 `false` 时其他所有“弹幕录制”设置无效，不会写入弹幕 XML 文件。
+
+{% endset %}
+{% set longDescriptions.RecordDanmakuRaw %}
+
+是否记录原始 JSON 数据。
+
+弹幕原始数据会保存到 XML 文件每一条弹幕数据的 `raw` attribute 上。
+
+当 `RecordDanmaku` 为 `false` 时本项设置无效。
+
+{% endset %}
+{% set longDescriptions.RecordDanmakuSuperChat %}
+
+是否记录 SuperChat。
+
+当 `RecordDanmaku` 为 `false` 时本项设置无效。
+
+{% endset %}
+{% set longDescriptions.RecordDanmakuGift %}
+
+是否记录礼物。
+
+当 `RecordDanmaku` 为 `false` 时本项设置无效。
+
+{% endset %}
+{% set longDescriptions.RecordDanmakuGuard %}
+
+是否记录上船（购买舰长）。
+
+当 `RecordDanmaku` 为 `false` 时本项设置无效。
+
+{% endset %}
+{% set longDescriptions.RecordingQuality %}
+
+录制的直播画质 qn 值，以英文逗号分割，靠前的优先。
+
+**注意**：
+
+- 所有主播刚开播时都是只有 “原画” 的，如果选择不录原画会导致直播开头漏录。
+- 如果设置的录制画质里没有原画，但是主播只有原画画质，会导致不能录制直播。
+- 录播姬不会为了切换录制的画质主动断开录制。
+- 这个设置项 **不是录制码率** 。
+- 这个设置项也不是录制分辨率、录制帧率。
+
+??? cite "画质 ID 对照表"
+    画质 | qn 值
+    :--:|:--:
+    杜比 | 30000
+    4K   | 20000
+    原画 | 10000
+    蓝光(杜比) | 401
+    蓝光 | 400
+    超清 | 250
+    高清 | 150
+    流畅 | 80
+
+{% endset %}
+{% set longDescriptions.FileNameRecordTemplate %}
+
+请参考[文件名格式](./file-name-template.md)页面。
+
+{% endset %}
+{% set longDescriptions.WebHookUrls %}
+
+请参考[Webhook](./webhook.md)页面。
+
+{% endset %}
+{% set longDescriptions.WebHookUrlsV2 %}
+
+请参考[Webhook](./webhook.md)页面。
+
+{% endset %}
+{% set longDescriptions.WpfShowTitleAndArea %}
+
+只在桌面版（WPF版）有效
+
+{% endset %}
+{% set longDescriptions.NetworkTransportAllowedAddressFamily %}
+
+| 键 | 值 | 含义 |
+| -- | -- | --- |
+| `AllowedAddressFamily.System` | -1 | 由系统控制和决定
+| `AllowedAddressFamily.Any` | 0 | 由录播姬随机选择任意地址
+| `AllowedAddressFamily.Ipv4` | 1 | 由录播姬选择 IPv4 地址
+| `AllowedAddressFamily.Ipv6` | 2 | 由录播姬选择 IPv6 地址
+
+{% endset %}
+{% set longDescriptions.UserScript %}
+
+请参考[用户脚本](./user-script.md)页面。
+
+{% endset %}
+<!-- 设置项长说明区域结束 -->
+
+{% for setting in brec_settings %}
+
+-----
+
+### {{ setting.name }} { id=s-{{ setting.id }} }
+
+{% if setting.advancedConfig -%}
+:material-cogs:{style=color:#ff3c26} 此设置项为[高级设置](#高级设置)，不显示在普通设置界面。
+{%- endif %}
+
+| 设置ID | 设置类型 | 数据类型 |
+| ------ | ------- | ------- |
+| `{{setting.id}}` | {{ data_configType_map[setting.configType] }} | {{data_type_map[setting.type] or '`' ~ setting.type ~ '`'}} |
+
+
+{% if setting.configType != "roomOnly" %}
+!!! example "默认设置"
+{% if setting.default is boolean %}
+    ```csharp
+    {{ 'true' if setting.default else 'false' }}
+    ```
+{% elif setting.default is integer %}
+    ```csharp
+    {{ setting.default }}
+    ```
+{% elif setting.default == '' %}
+    _(空字符串)_
+{% elif setting.id == 'FileNameRecordTemplate' %}
+    ```jinja
+    {{ setting.default }}
+    ```
+{% else %}
+    ```txt
+    {{ setting.default }}
+    ```
+{% endif %}{% endif %}
+
+{% if longDescriptions[setting.id] %}
+{{ longDescriptions[setting.id] }}
+{% endif %}
+{% endfor%}
+
+-----

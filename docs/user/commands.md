@@ -79,12 +79,15 @@ mv BililiveRecorder.Cli brec
 ### 运行录播姬
 
 录播姬的配置文件和录制的视频文件在同一个文件夹内。
+配置文件在工作目录里，文件名是 `config.json`。
+一般来说不推荐手写配置文件，可以复制录播姬桌面版的配置文件、或者在浏览器打开录播姬管理页面来添加房间、修改设置。
+如果需要手改配置文件的话可以参考 [配置文件](./config-file.md) 页面。
 
 ```sh
 ./brec run "工作目录"
 ```
 
-录播姬 1.4 提供了 HTTP API，可以通过 `--bind` 参数启用。
+录播姬命令行版提供了 HTTP API 和管理网页，可以通过 `--bind` 参数启用。
 
 ```sh
 # 侦听本机地址，只有本地可以访问
@@ -94,9 +97,40 @@ mv BililiveRecorder.Cli brec
 ./brec run --bind "http://*:2356" "工作目录"
 ```
 
-配置文件在工作目录里，文件名是 `config.json`。
-一般来说不推荐手写配置文件，可以复制录播姬桌面版的配置文件或者用 HTTP API 来添加房间、修改设置。
-如果需要手改配置文件的话可以参考 [配置文件](./config-file.md) 页面。
+!!! danger "重要安全提醒"
+    如果要把录播姬的管理页面对公网开放，请一定一定一定做好安全措施，给录播姬设置一个密码，或使用其他有身份验证功能的反向代理软件。
+
+    直接把没有身份验证的录播姬暴露到公网可能会有严重的安全风险。轻则被添加一大堆直播间导致硬盘塞满，重则可能会被任意上传下载文件。（理论上是不能通过录播姬来做到任意代码执行的，不过不做任何保证）
+
+录播姬目前有 HTTP Basic 登录功能：
+
+```sh
+./brec run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" "工作目录"
+```
+
+启用 HTTP 服务之后，默认在 `/file` 路径下会提供整个录播工作目录的内容。可以通过 `--enable-file-browser false` 来禁用。
+
+```sh
+./brec run --bind "http://*:2356" --enable-file-browser false "工作目录"
+```
+
+录播姬支持以 HTTPS 协议提供服务
+
+```sh
+# 注意 --bind 参数传入的协议是 https 而不是 http
+# 使用录播姬自己生成的自签名证书
+./brec run --bind "https://*:2356" "工作目录"
+
+# 使用 pem 格式的证书，和 Nginx Caddy 等软件的证书格式一致
+./brec run --bind "https://*:2356" --cert-pem-path "证书文件路径" --cert-key-path "私钥文件路径" "工作目录"
+# 使用带密码的私钥
+./brec run --bind "https://*:2356" --cert-pem-path "证书文件路径" --cert-key-path "私钥文件路径" --cert-password "私钥密码" "工作目录"
+
+# 使用 pfx 格式的证书
+./brec run --bind "https://*:2356" --cert-pfx-path "证书文件路径" "工作目录"
+# 使用带密码的证书
+./brec run --bind "https://*:2356" --cert-pfx-path "证书文件路径" --cert-password "私钥密码" "工作目录"
+```
 
 ### 便携模式
 
@@ -117,7 +151,7 @@ mv BililiveRecorder.Cli brec
 ./brec p --help
 ```
 
-便携模式也可以启用 HTTP API
+便携模式也可以启用 HTTP API，参数和普通的运行方式一样。
 
 ```sh
 ./brec p --bind "http://localhost:2356" "保存目录"
@@ -177,45 +211,45 @@ mv BililiveRecorder.Cli brec
 
 ## Docker 版
 
-录播姬 Docker 版和命令行版完全一样。
+录播姬 Docker 版和命令行版完全一样，如果需要修改传入录播姬的参数，参考本页面上面的[命令行版](#命令行版)部分即可。
 
-镜像中的 entrypoint 已经设置成运行录播姬，只需要调整 cmd 部分即可。
-
-完整的 docker 命令例子：
-
-```sh
-docker run -v ~/宿主机路径:/rec ghcr.io/bililiverecorder/bililiverecorder:v1.3.11 run /rec
-```
-
-------
-
-!!! warning "未发布的内容"
-    从这里开始下面的内容是针对录播姬 1.4 的容器镜像编写的
-
-完整的 docker 命令例子：
-
-```sh
-# 复制粘贴运行之前记得修改  "~/宿主机路径"
-docker run -d -v ~/宿主机路径:/rec -p 2356:2356 ghcr.io/bililiverecorder/bililiverecorder
-# 或使用 docker.io 镜像
-docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder
-```
-
-录播姬的镜像中 entrypoint 已经设置成运行录播姬，默认的 cmd 是在用容器内的 `/rec` 作为工作目录运行。
-镜像的默认 cmd 相当于：
+录播姬的镜像中 entrypoint 已经设置成运行录播姬，默认的 cmd 是在用容器内的 `/rec` 作为工作目录运行。  
+镜像的默认命令相当于是：
 
 ```sh
 ./brec run --bind http://*:2356 /rec
+```
+
+完整的 Docker 启动命令例子：
+
+```sh
+# 复制粘贴运行之前记得修改  "宿主机路径"
+docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder
+# 或使用 ghcr.io ，两个不同的 registry 里的镜像内容是一样的
+docker run -d -v 宿主机路径:/rec -p 2356:2356 ghcr.io/bililiverecorder/bililiverecorder
+```
+
+!!! danger "重要安全提醒"
+    如果要把录播姬的管理页面对公网开放，请一定一定一定做好安全措施，给录播姬设置一个密码，或使用其他有身份验证功能的反向代理软件。
+
+    直接把没有身份验证的录播姬暴露到公网可能会有严重的安全风险。轻则被添加一大堆直播间导致硬盘塞满，重则可能会被任意上传下载文件。（理论上是不能通过录播姬来做到任意代码执行的，不过不做任何保证）
+
+录播姬目前有 HTTP Basic 登录功能，设置了用户名和密码的 docker 命令例：
+
+```sh
+docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" /rec
 ```
 
 其他手动设置传入录播姬的子命令的例子：
 
 ```sh
 # 便携模式
-docker run -d -v ~/宿主机路径:/rec -p 2356:2356 bililive/recorder p /rec
+docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder p /rec
 
 # 工具箱
-docker run -it -v ~/宿主机路径:/rec bililive/recorder tool analyze --json /rec/video.flv
+docker run -it -v 宿主机路径:/rec bililive/recorder tool analyze --json /rec/video.flv
 ```
 
-关于 `docker run` 请参考 [Docker 的文档](https://docs.docker.com/engine/reference/run/){target=_blank}
+关于录播姬的其他命令参数请参考本页面上面的[命令行版](#命令行版)部分。
+
+关于 `docker run` 请参考 [Docker 的文档](https://docs.docker.com/engine/reference/run/){target=_blank}。

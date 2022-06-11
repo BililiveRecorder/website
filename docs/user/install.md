@@ -11,7 +11,9 @@
 你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载便携版压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。
 
 通过安装包安装的录播姬有版本检查功能，能自动更新。更新不会重启软件，不影响正在录制的直播，更新后下一次运行录播姬会自动使用新版本。  
-如果需要运行特定的版本，可以用便携版，没有版本检查功能也不会更新。通常来说只有最后一个正式版是受支持的，旧版本特有的问题不会修复。
+如果需要运行特定的版本，可以用便携版，没有版本检查功能也不会更新。
+
+通常来说只有最后一个正式版是受支持的。
 
 打开录播姬后需要选择工作目录，工作目录是保存 **配置文件** 和 **录像文件** 的地方。
 
@@ -29,9 +31,13 @@
 
 ## 命令行版
 
-从录播姬 1.4 开始，命令行版有 HTTP API 功能。
+录播姬命令行版是跨平台的，可以在 Linux 系统上运行。
 
-[GitHub Release 页面](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank}
+命令行版提供了 HTTP API 和网页管理界面，可以在浏览器里启停录制、修改设置。
+
+具体用法请参考 [命令行参数](./commands.md#命令行版)。
+
+下载：[GitHub Release 页面](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank}
 
 | 操作系统 | 架构 | 下载链接 | 备注 |
 | -------- | --- | --- | ---- |
@@ -42,8 +48,6 @@
 | Windows | x64 | [BililiveRecorder-CLI-win-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-win-x64.zip) |
 | macOS | x64 | [BililiveRecorder-CLI-osx-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-x64.zip) |
 
-具体用法请参考 [命令行参数](./commands.md)
-
 ## Docker 镜像
 
 Docker 镜像在 [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags){target=_blank} 和 [GitHub Container registry](https://github.com/BililiveRecorder/BililiveRecorder/pkgs/container/bililiverecorder){target=_blank} 上提供。
@@ -51,18 +55,22 @@ Docker 镜像在 [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags){t
 两个位置提供的正式版本镜像完全一样。  
 GitHub Container registry 上还提供了开发版的镜像。
 
-Docker 镜像内的录播姬的用法和命令行版完全一样，请参考 [命令行参数](./commands.md)
+Docker 镜像内的录播姬的用法和命令行版完全一样，请参考 [命令行参数](./commands.md#docker-版)
 
 ```bash
 docker pull bililive/recorder:latest
-# 或指定 tag
-docker pull bililive/recorder:v1.3.11
+# 或指定 tag (请注意此处写的可能不是最新版本)
+docker pull bililive/recorder:2
+docker pull bililive/recorder:2.0
+docker pull bililive/recorder:2.0.0
 ```
 
 ```bash
 docker pull ghcr.io/bililiverecorder/bililiverecorder
-# 或指定 tag
-docker pull ghcr.io/bililiverecorder/bililiverecorder:v1.3.11
+# 或指定 tag (请注意此处写的可能不是最新版本)
+docker pull ghcr.io/bililiverecorder/bililiverecorder:2
+docker pull ghcr.io/bililiverecorder/bililiverecorder:2.0
+docker pull ghcr.io/bililiverecorder/bililiverecorder:2.0.0
 ```
 
 !!! warning "地址有变动"

@@ -3,9 +3,6 @@ ignore_macros: true
 ---
 # 文件名格式
 
-!!! warning "暂未发布"
-    本页面的内容是录播姬 1.4 的功能
-
 录播姬的文件名模板使用了 [Liquid](https://shopify.github.io/liquid/basics/introduction/){target=_blank} ([第三方中文镜像](https://liquid.bootcss.com/basics/introduction/){target=_blank}) 语法，如果你用过下面这些工具的话这个语法应该会很熟悉。
 
 - Jekyll

@@ -1,8 +1,5 @@
 # 用户脚本
 
-!!! warning "暂未发布"
-    本页面的内容是录播姬 1.4 的功能
-
 录播姬的高级设置里可以写 javascript 脚本，实现一些比较特殊的功能。录播姬桌面版的高级设置打开方法是鼠标右键点击两次界面左下角的设置齿轮按钮。
 
 在 [BililiveRecorder/recorder-scripting-template](https://github.com/BililiveRecorder/recorder-scripting-template) 里提供了 d.ts 类型文件，推荐 clone 这个仓库后用 VSCode 打开，新建一个 js 文件编写。VSCode 会提供基本的类型提醒以及错误检查。
