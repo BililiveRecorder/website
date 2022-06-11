@@ -24,47 +24,24 @@
             <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://afdian.net/@genteure">
               <TextBlock TextAlignment="Center" Text="赞助 Sponsor&#xa;afdian.net/@genteure"/>
             </Button>
-            <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/docs/faq/">
+            <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/faq/">
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
-          <GroupBox Header="关于最近可能出现的问题">
+          <GroupBox Header="2.0.0 更新内容">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <TextBlock Text="2021年12月4日公告："/>
-              <TextBlock Text="近期B站直播测试上线了 SRT 推流协议（以前是RTMP）"/>
-              <TextBlock Text="录播姬的修复系统可能对新推流协议对应的新问题不太兼容"/>
-              <TextBlock Text="如果遇到了无法录制等问题，可以在左下角设置里切换录制模式为原始数据"/>
-              <TextBlock Text="并联系作者进行问题反馈（联系方式见网站）"/>
-              <TextBlock Text="注：原始数据录制模式下分段功能无效，具体见网站文档"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="1.3.11 更新内容">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/update/v1-3-11/">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                   <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
                   <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
                 </StackPanel>
               </Button>
-              <TextBlock Text="- 修复工具箱-弹幕合并的 bug"/>
-              <TextBlock Text="- 修复记住工作路径功能的 bug"/>
-              <TextBlock Text="- 修复了偶尔崩溃的 bug"/>
-              <TextBlock Text="- 调整了工具箱-修复失败导出数据的内容"/>
-              <TextBlock Text="- 其他调整（见网站）"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="1.3.10 更新内容">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/update/v1-3-10/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 现在会严格遵守直播画质设置，没有设置里的画质可录时不再默认原画，而是不录"/>
-              <TextBlock Text="- 修改了工具箱里的弹幕合并，可以手动修改时间偏移量了"/>
-              <TextBlock Text="- 修复了直播标题含有特殊字符导致无法录制弹幕的问题"/>
-              <TextBlock Text="- 在托盘图标显示里增加了开播状态"/>
+              <TextBlock Text="- 修改了文件名格式模板系统"/>
+              <TextBlock Text="- 给 Webhook 添加了两个新的事件：直播开始、直播结束"/>
+              <TextBlock Text="- 修改了录播姬弹幕 XML 的样式表"/>
+              <TextBlock Text="- 修复了一个弹幕用户 ID 超过 Int32.max 导致的 bug"/>
+              <TextBlock Text="- 请求直播流时默认不再使用系统全局代理"/>
+              <TextBlock Text="- 添加了手动切换暗色模式的按钮"/>
               <TextBlock Text="- 其他调整（见网站）"/>
             </ui:SimpleStackPanel>
           </GroupBox>
