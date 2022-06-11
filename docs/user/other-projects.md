@@ -60,6 +60,20 @@
 | :--: | ------------ | -------- |
 | blrec | [GitHub 项目页](https://github.com/acgnhiki/blrec){ target=_blank } | Python 跨平台，有自己写的直播 FLV 修复 |
 
+## 录播站
+
+此处列出的录播站与本站无关，信息仅供参考。
+
+{% macro link(url) -%}
+- [{{url}}]({{url}}){target="_blank" rel="noopener"}
+{%- endmacro %}
+
+{{link('https://nf.asoul-rec.com')}}
+{{link('https://rec.baysonfox.com')}}
+{{link('https://rec.arukas.cn')}}
+{{link('https://rec.ttklt.com')}}
+{{link('https://rec.nana7mi.123485k.ltd:444')}}
+
 ## 自动化
 
 可配合录播姬的 Webhook 功能使用
