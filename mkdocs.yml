@@ -32,16 +32,16 @@ theme:
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue
-      accent: orange
+      scheme: "slate"
+      primary: "blue"
+      accent: "orange"
       toggle:
         icon: material/weather-night
         name: 切换到亮色模式
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue
-      accent: orange
+      scheme: "default"
+      primary: "blue"
+      accent: "orange"
       toggle:
         icon: material/weather-sunny
         name: 切换到暗色模式
@@ -51,7 +51,11 @@ nav:
   - 用户文档:
       - user/index.md
       - 软硬件要求: user/system-requirements.md
-      - 安装使用: user/install.md
+      - 安装使用:
+          - user/install/index.md
+          - 桌面版: user/install/wpf.md
+          - 命令行版: user/install/cli.md
+          - Docker 镜像: user/install/docker.md
       - 常见问题: user/faq.md
       - 更新历史: user/change-log.md
       - 弹幕录制: user/danmaku.md
@@ -68,7 +72,6 @@ nav:
           - 弹幕合并: user/toolbox/danmaku-merge.md
       - 录播修复说明: user/repair.md
       - 修复问题反馈: user/repair-feedback.md
-      - 命令行参数: user/commands.md
       - Webhook: user/webhook.md
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
@@ -93,6 +96,7 @@ plugins:
       build_redirects_json: true
       write_both_url_type: true
       redirect_maps:
+        user/commands.md: user/install/cli.md
         # Links
         "link/faq.md": "user/faq.md"
         "link/fix_feedback.md": "user/repair-feedback.md"
@@ -107,8 +111,8 @@ plugins:
         docs/process.md: user/repair.md
         docs/process/feedback.md: user/repair-feedback.md
         docs/faq.md: user/faq.md
-        docs/cli.md: user/commands.md
-        docs/cli/docker.md: user/commands.md
+        docs/cli.md: user/install/cli.md
+        docs/cli/docker.md: user/install/cli.md
         docs/cli/config_file.md: user/config-file.md
         docs/basic/webhook.md: user/webhook.md
         docs/basic/settings.md: user/settings.md
