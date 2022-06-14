@@ -44,6 +44,17 @@
 
 闪退崩溃还有可能是其他问题导致的，如操作系统故障、显卡驱动问题、电脑硬件问题等等。如果无法解决可以加QQ群或发邮件询问。
 
+### (macOS) 无法打开“BililiveRecorder.Cli”，因为无法验证开发者。
+
+macOS 存在安全限制，需要对程序进行临时签名才可运行。可以参考如下命令或者[图中](https://asciinema.org/a/4SepVOSkgCr9UNY5pqbpAgDVX?t=24)的操作：
+
+```shell
+# 移除 quarantine 属性
+$ xattr -rd com.apple.quarantine .
+# 本地临时签名
+$ codesign -fs - --deep BililiveRecorder.Cli
+```
+
 ## 使用
 
 ### 可以用录播姬录自己直播间吗？
