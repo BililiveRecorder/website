@@ -72,6 +72,7 @@ nav:
           - 弹幕合并: user/toolbox/danmaku-merge.md
       - 录播修复说明: user/repair.md
       - 修复问题反馈: user/repair-feedback.md
+      - API: user/api.md
       - Webhook: user/webhook.md
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
