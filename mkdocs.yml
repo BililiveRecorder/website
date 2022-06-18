@@ -74,6 +74,7 @@ nav:
       - 修复问题反馈: user/repair-feedback.md
       - API: user/api.md
       - Webhook: user/webhook.md
+      - 日志文件: user/log-file.md
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
       - dev/index.md
