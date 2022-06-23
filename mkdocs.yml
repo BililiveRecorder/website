@@ -54,8 +54,15 @@ nav:
       - 安装使用:
           - user/install/index.md
           - 桌面版: user/install/wpf.md
-          - 命令行版: user/install/cli.md
-          - Docker 镜像: user/install/docker.md
+          - 命令行版:
+            - user/install/cli.md
+            - 用 PM2 运行命令行版: user/install/cli-pm2.md
+            - 用 systemd 运行命令行版: user/install/cli-systemd.md
+            - 用 Windows 服务 运行命令行版: user/install/cli-windows-service.md
+          - Docker 版:
+            - user/install/docker.md
+            - 用 Portainer 运行 Docker 版: user/install/docker-portainer.md
+            - 用 群晖 Synology 运行 Docker 版: user/install/docker-synology.md
       - 常见问题: user/faq.md
       - 更新历史: user/change-log.md
       - 弹幕录制: user/danmaku.md

@@ -10,7 +10,12 @@
 
 - [桌面版安装使用说明](./wpf.md)
 - [命令行版安装使用说明](./cli.md)
+    - [用 PM2 运行命令行版](./cli-pm2.md)
+    - [用 systemd 运行命令行版](./cli-systemd.md)
+    - [用 Windows 服务 运行命令行版](./cli-windows-service.md)
 - [Docker 镜像使用说明](./docker.md)
+    - [用 Portainer 运行 Docker 版](./docker-portainer.md)
+    - [用 群晖 Synology 运行 Docker 版](./docker-synology.md)
 
 <p style="padding:30px"></p>
 

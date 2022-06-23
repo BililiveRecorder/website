@@ -51,6 +51,16 @@ mv BililiveRecorder.Cli brec
 
 录播姬所有命令都可以加上 `--help` 查看帮助。
 
+!!! note "自行安装 .NET 6 Runtime 的用法"
+    自行安装 [.NET 6 Runtime](https://dotnet.microsoft.com/zh-cn/download/dotnet/6.0){target=_blank} 后可以下载使用 `BililiveRecorder-CLI-any.zip`。
+
+    把本教程内的所有命令中的 `./BililiveRecorder.Cli` 和 `./brec` 替换为 `dotnet BililiveRecorder.Cli.dll` 即可，例：
+
+    ```sh
+    dotnet BililiveRecorder.Cli.dll --version
+    dotnet BililiveRecorder.Cli.dll run --bind "http://localhost:2356" "工作目录"
+    ```
+
 ### 运行录播姬
 
 录播姬的配置文件和录制的视频文件在同一个文件夹内。
