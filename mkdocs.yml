@@ -58,7 +58,6 @@ nav:
             - user/install/cli.md
             - 用 PM2 运行命令行版: user/install/cli-pm2.md
             - 用 systemd 运行命令行版: user/install/cli-systemd.md
-            - 用 Windows 服务 运行命令行版: user/install/cli-windows-service.md
           - Docker 版:
             - user/install/docker.md
             - 用 Portainer 运行 Docker 版: user/install/docker-portainer.md
