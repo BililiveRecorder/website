@@ -35,7 +35,7 @@ export const onRequestGet: PagesFunction<{
 
   if (new_sign === sign) {
     console.log('redirecting...');
-    return Response.redirect(await generateSignedURL(env.CDN_HOST, '/Setup.exe', env.CDN_KEY), 302);
+    return Response.redirect(await generateSignedURL(env.CDN_HOST, '/BililiveRecorderSetup.exe', env.CDN_KEY), 302);
   } else {
     console.log('sign mismatch');
     return Response.redirect(CONSTANTS.FALLBACK_DOWNLOAD_URL, 302);

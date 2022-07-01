@@ -69,5 +69,5 @@ export const onRequestGet: PagesFunction<{
   }
 
   console.log('redirecting...');
-  return Response.redirect(await generateSignedURL(env.CDN_HOST, '/Setup.exe', env.CDN_KEY), 302);
+  return Response.redirect(await generateSignedURL(env.CDN_HOST, '/BililiveRecorderSetup.exe', env.CDN_KEY), 302);
 };

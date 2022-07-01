@@ -28,6 +28,21 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2.2.0 更新内容">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 调整了直播数据处理系统"/>
+              <TextBlock Text="- 添加了一个设置项 “检测到可能缺少数据时分段”"/>
+              <TextBlock Text="- 调整了获取直播流的 API，增加了对 “4K全景” 直播流的支持"/>
+              <TextBlock Text="- 在录制状态中添加了当前连接的直播服务器"/>
+              <TextBlock Text="- 更换了版本检查和更新的库，导致安装包和安装文件夹变大了，但新系统更稳定"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.0.0 更新内容">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
