@@ -104,3 +104,4 @@ docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind 
 ... run --bind "https://*:2356" --cert-pfx-path "证书文件路径" --cert-password "私钥密码" "工作目录"
 ```
 
+日志文件默认保存在 `/app/logs`，可以把这个目录也挂载出来。或者可以修改日志文件保存位置，请参考 [日志文件](../log-file.md) 页面。
