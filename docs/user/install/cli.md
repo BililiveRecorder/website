@@ -22,12 +22,13 @@ title: 命令行版 - 安装使用
 
 ## 使用
 
-解压压缩包，以 Linux 版为例：
+下载并解压压缩包，以 Linux x64 为例：
 
 ```sh
-# 这里用这个文件名举例
+mkdir brec
+cd brec
+# wget https://下载链接
 unzip BililiveRecorder-CLI-linux-x64.zip
-cd linux-x64
 ```
 
 然后检查确认 `BililiveRecorder.Cli` 是否带有可执行权限，如果没有的话使用以下命令添加可执行权限。

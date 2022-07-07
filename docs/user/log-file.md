@@ -15,8 +15,15 @@ Docker 镜像的日志文件位置默认在
 ```/app/logs```
 
 可以通过设置环境变量 `BILILIVERECORDER_LOG_FILE_PATH` 来指定日志文件保存位置。  
-例子: `BILILIVERECORDER_LOG_FILE_PATH=/rec/logs/bilirec.txt`  
+例子: `BILILIVERECORDER_LOG_FILE_PATH=/rec/logs/bilirec.txt`
+
 录播姬会自动在文件名后面添加日期。
+
+## HTTP 服务日志
+
+HTTP 服务的日志因为比较大，单独存放在一个 txt 文件中。
+
+文件名是普通日志的路径后添加 `-web`，默认相当于是 `logs/bilirec-web.txt`。
 
 ## 阅读日志文件
 

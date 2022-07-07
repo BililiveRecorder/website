@@ -7,9 +7,10 @@
 下面给出一个简单的例子：
 
 ```sh
+mkdir brec
+cd brec
 # wget https://下载链接
 unzip BililiveRecorder-CLI-linux-x64.zip
-cd linux-x64 # 不同架构的文件夹名字不一样
 chmod +x BililiveRecorder.Cli
 
 # 确认录播姬可以运行、并检查版本号
