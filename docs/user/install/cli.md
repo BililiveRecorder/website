@@ -19,6 +19,7 @@ title: 命令行版 - 安装使用
 | Linux | arm64 | [BililiveRecorder-CLI-linux-arm64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm64.zip) |
 | Windows | x64 | [BililiveRecorder-CLI-win-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-win-x64.zip) |
 | macOS | x64 | [BililiveRecorder-CLI-osx-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-x64.zip) |
+| macOS | arm64 | [BililiveRecorder-CLI-osx-arm64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-arm64.zip) |
 
 ## 使用
 
