@@ -28,6 +28,12 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2022年7月公告">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <TextBlock Text="从大约 7 月 2、3 日 左右开始，B站直播服务器给的直播数据新出现了一个问题，音视频数据的顺序不正确，虽然不影响播放但是会导致录播姬的数据修复系统无法正确判断。"/>
+              <TextBlock Text="临时解决办法：换原始数据模式录制。之后会对这个新问题做兼容。"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.1.1 更新内容">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
