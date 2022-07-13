@@ -13,12 +13,12 @@
 yarn add @bililive/rec-sdk@v2-alpha
 npm i @bililive/rec-sdk@v2-alpha
 
-# 如果你使用 SDK 功能，需要：
+# 如果你使用 SDK 功能，需要添加：
 yarn add axios
 
-# 如果你使用实例启动器，需要:
-yarn add portfinder
+# 如果使用 Webhook 功能，需要添加:
+yarn add eventemitter3 express portfinder
 
-# 如果使用 Webhook 功能，需要:
-yarn add express eventemitter3
+# 如果你使用实例启动器或者，需要添加:
+yarn add axios eventemitter3 express portfinder
 ```
