@@ -84,6 +84,13 @@ nav:
       - 其他工具和项目: user/other-projects.md
   - 开发文档:
       - dev/index.md
+      - sdk.js:
+        - dev/sdk.js/index.md
+        - 面向对象的SDK: dev/sdk.js/sdk.md
+        - Webhook 服务: dev/sdk.js/webhook.md
+        - 录播姬实例启动器: dev/sdk.js/service.md
+        - 实用工具: dev/sdk.js/utils.md
+        - API 封装: dev/sdk.js/api.md
       - 项目结构: dev/projects.md
       - 翻译录播姬: dev/translations.md
       - 录播修复系统: dev/repair.md
@@ -99,6 +106,7 @@ plugins:
         - dns_data_bcdn: data/dns_data_bcdn.json
         - dns_data_gotcha: data/dns_data_gotcha.json
         - brec_settings: data/brec_settings.json
+        - js_sdk_maps: data/js_sdk_maps.json
   - brec-redirects:
       build_cloudflare_pages_redirects: true
       build_redirects_json: true
