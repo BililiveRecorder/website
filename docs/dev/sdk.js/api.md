@@ -25,5 +25,5 @@ const api = new ApiInstance(axios.create({ ... }));
 | API Name | API Path | 说明 |
 | -------- | -------- | ---- |
 {% for api in js_sdk_maps.api_map -%}
-|{{ api.name }}|{{ api.path }}|{{ api.summary }}|
+|`{{ api.name }}`|`{{ api.path }}`|{{ api.summary }}|
 {% endfor %}
