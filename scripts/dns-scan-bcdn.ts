@@ -1,7 +1,9 @@
 import { Resolver } from "dns/promises";
 import { writeFileSync } from "fs";
 import path from "path";
+
 const r = new Resolver();
+r.setServers(['119.29.29.29'])
 
 const groupBy = <T, Y>(array: T[], predicate: (v: T) => string, filter: (v: T) => Y) =>
   array.reduce((acc, value) => {
@@ -50,6 +52,9 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['cu', 'zjhz', '浙江杭州'],
   ['cu', 'jlcc', '吉林长春'],
   // ['cu', 'jlcc3', '吉林长春'], 和 jlcc IP 一样， cn-jlcc3-cu-v-01 到 06，IP 是 2 到 7
+
+  // 广电
+  ['gd', 'gdgz', '广东广州'],
 
   // ?????? 教育网
   ['fx', 'gdgz', '广东广州'],

@@ -1,7 +1,9 @@
 import { Resolver } from "dns/promises";
 import { writeFileSync } from "fs";
 import path from "path";
+
 const r = new Resolver();
+r.setServers(['119.29.29.29'])
 
 interface CdnInfoIp {
   ipv4: number
@@ -91,7 +93,6 @@ const output: CdnInfoStore = {};
 
 (async function () {
   await resolveDomains(domains, output);
-  // console.log(output)
 
   const outputText = JSON.stringify({
     time: new Date().toLocaleDateString('zh-CN', {

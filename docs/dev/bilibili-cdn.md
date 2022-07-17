@@ -70,6 +70,7 @@ gotcha_cdn_region_map:
 {{ bcdn_isp('电信', 'ct') }}
 {{ bcdn_isp('联通', 'cu') }}
 {{ bcdn_isp('移动', 'cm') }}
+{{ bcdn_isp('广电', 'gd') }}
 {{ bcdn_isp('教育网', 'fx') }}
 {{ bcdn_isp('Equinix IX', 'eq') }}
 

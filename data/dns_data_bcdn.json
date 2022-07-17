@@ -1,5 +1,5 @@
 {
-  "time": "2022/6/10",
+  "time": "2022/7/17",
   "dns": {
     "ct": [
       {
@@ -290,6 +290,36 @@
             ],
             "ipv6": [
               "240e:97d:10:1402:0:1:1:27"
+            ]
+          },
+          "cn-gddg-ct-01-27.bilivideo.com": {
+            "ipv4": [
+              "14.17.92.64"
+            ]
+          },
+          "cn-gddg-ct-01-28.bilivideo.com": {
+            "ipv4": [
+              "14.17.92.65"
+            ]
+          },
+          "cn-gddg-ct-01-29.bilivideo.com": {
+            "ipv4": [
+              "14.17.92.66"
+            ]
+          },
+          "cn-gddg-ct-01-30.bilivideo.com": {
+            "ipv4": [
+              "14.17.92.67"
+            ]
+          },
+          "cn-gddg-ct-01-31.bilivideo.com": {
+            "ipv4": [
+              "14.17.92.68"
+            ]
+          },
+          "cn-gddg-ct-01-32.bilivideo.com": {
+            "ipv4": [
+              "14.17.92.69"
             ]
           }
         }
@@ -731,6 +761,36 @@
             "ipv4": [
               "116.207.143.110"
             ]
+          },
+          "cn-hbyc-ct-02-30.bilivideo.com": {
+            "ipv4": [
+              "116.207.137.73"
+            ]
+          },
+          "cn-hbyc-ct-02-31.bilivideo.com": {
+            "ipv4": [
+              "116.207.137.74"
+            ]
+          },
+          "cn-hbyc-ct-02-32.bilivideo.com": {
+            "ipv4": [
+              "116.207.137.75"
+            ]
+          },
+          "cn-hbyc-ct-02-33.bilivideo.com": {
+            "ipv4": [
+              "116.207.137.76"
+            ]
+          },
+          "cn-hbyc-ct-02-34.bilivideo.com": {
+            "ipv4": [
+              "116.207.137.77"
+            ]
+          },
+          "cn-hbyc-ct-02-35.bilivideo.com": {
+            "ipv4": [
+              "116.207.137.78"
+            ]
           }
         }
       },
@@ -1044,44 +1104,6 @@
             "ipv6": [
               "240e:cf:9000:2::90"
             ]
-          },
-          "cn-jxjj-ct-01-10.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.11"
-            ]
-          },
-          "cn-jxjj-ct-01-11.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.12"
-            ]
-          },
-          "cn-jxjj-ct-01-12.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.13"
-            ]
-          },
-          "cn-jxjj-ct-01-13.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.14"
-            ]
-          },
-          "cn-jxjj-ct-01-14.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.15"
-            ],
-            "ipv6": [
-              "240e:cf:9000:2::95"
-            ]
-          },
-          "cn-jxjj-ct-01-15.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.16"
-            ]
-          },
-          "cn-jxjj-ct-01-16.bilivideo.com": {
-            "ipv4": [
-              "117.21.179.17"
-            ]
           }
         }
       },
@@ -1167,6 +1189,36 @@
             ],
             "ipv6": [
               "240e:d9:a600:834::11"
+            ]
+          },
+          "cn-sccd-ct-01-11.bilivideo.com": {
+            "ipv4": [
+              "171.214.10.145"
+            ]
+          },
+          "cn-sccd-ct-01-12.bilivideo.com": {
+            "ipv4": [
+              "171.214.10.146"
+            ]
+          },
+          "cn-sccd-ct-01-13.bilivideo.com": {
+            "ipv4": [
+              "171.214.10.147"
+            ]
+          },
+          "cn-sccd-ct-01-14.bilivideo.com": {
+            "ipv4": [
+              "171.214.10.148"
+            ]
+          },
+          "cn-sccd-ct-01-15.bilivideo.com": {
+            "ipv4": [
+              "171.214.10.149"
+            ]
+          },
+          "cn-sccd-ct-01-16.bilivideo.com": {
+            "ipv4": [
+              "171.214.10.150"
             ]
           }
         }
@@ -1415,6 +1467,36 @@
             "ipv4": [
               "183.232.239.7"
             ]
+          },
+          "cn-gddg-cm-01-07.bilivideo.com": {
+            "ipv4": [
+              "183.232.239.12"
+            ]
+          },
+          "cn-gddg-cm-01-08.bilivideo.com": {
+            "ipv4": [
+              "183.232.239.13"
+            ]
+          },
+          "cn-gddg-cm-01-09.bilivideo.com": {
+            "ipv4": [
+              "183.232.239.14"
+            ]
+          },
+          "cn-gddg-cm-01-10.bilivideo.com": {
+            "ipv4": [
+              "183.232.239.15"
+            ]
+          },
+          "cn-gddg-cm-01-11.bilivideo.com": {
+            "ipv4": [
+              "183.232.239.16"
+            ]
+          },
+          "cn-gddg-cm-01-12.bilivideo.com": {
+            "ipv4": [
+              "183.232.239.17"
+            ]
           }
         }
       },
@@ -1606,6 +1688,11 @@
           "cn-hbwh-cm-01-03.bilivideo.com": {
             "ipv4": [
               "111.48.57.4"
+            ]
+          },
+          "cn-hbwh-cm-01-04.bilivideo.com": {
+            "ipv4": [
+              "111.48.57.5"
             ]
           },
           "cn-hbwh-cm-01-05.bilivideo.com": {
@@ -1952,6 +2039,26 @@
             "ipv4": [
               "223.111.250.37"
             ]
+          },
+          "cn-jssz-cm-02-17.bilivideo.com": {
+            "ipv4": [
+              "223.111.250.40"
+            ]
+          },
+          "cn-jssz-cm-02-18.bilivideo.com": {
+            "ipv4": [
+              "223.111.250.41"
+            ]
+          },
+          "cn-jssz-cm-02-19.bilivideo.com": {
+            "ipv4": [
+              "223.111.250.38"
+            ]
+          },
+          "cn-jssz-cm-02-20.bilivideo.com": {
+            "ipv4": [
+              "223.111.250.39"
+            ]
           }
         }
       },
@@ -2164,6 +2271,11 @@
             "ipv6": [
               "2409:8c14:f1a:3201::9"
             ]
+          },
+          "cn-lnsy-cm-01-09.bilivideo.com": {
+            "ipv4": [
+              "120.201.100.10"
+            ]
           }
         }
       },
@@ -2259,6 +2371,16 @@
           "cn-sccd-cm-03-16.bilivideo.com": {
             "ipv4": [
               "223.85.58.80"
+            ]
+          },
+          "cn-sccd-cm-03-17.bilivideo.com": {
+            "ipv4": [
+              "112.45.122.100"
+            ]
+          },
+          "cn-sccd-cm-03-18.bilivideo.com": {
+            "ipv4": [
+              "112.45.122.101"
             ]
           }
         }
@@ -2723,6 +2845,36 @@
             "ipv6": [
               "2409:8c0c:310:1800::13"
             ]
+          },
+          "cn-sxty-cm-02-13.bilivideo.com": {
+            "ipv4": [
+              "183.201.222.14"
+            ]
+          },
+          "cn-sxty-cm-02-14.bilivideo.com": {
+            "ipv4": [
+              "183.201.222.15"
+            ]
+          },
+          "cn-sxty-cm-02-15.bilivideo.com": {
+            "ipv4": [
+              "183.201.222.16"
+            ]
+          },
+          "cn-sxty-cm-02-16.bilivideo.com": {
+            "ipv4": [
+              "183.201.222.17"
+            ]
+          },
+          "cn-sxty-cm-02-17.bilivideo.com": {
+            "ipv4": [
+              "183.201.222.18"
+            ]
+          },
+          "cn-sxty-cm-02-18.bilivideo.com": {
+            "ipv4": [
+              "183.201.222.19"
+            ]
           }
         }
       },
@@ -3154,32 +3306,32 @@
           },
           "cn-hbcd-cu-02-14.bilivideo.com": {
             "ipv4": [
-              "101.75.242.17"
+              "101.75.242.15"
             ]
           },
           "cn-hbcd-cu-02-15.bilivideo.com": {
             "ipv4": [
-              "101.75.242.18"
+              "101.75.242.16"
             ]
           },
           "cn-hbcd-cu-02-16.bilivideo.com": {
             "ipv4": [
-              "101.75.242.19"
+              "101.75.242.26"
             ]
           },
           "cn-hbcd-cu-02-17.bilivideo.com": {
             "ipv4": [
-              "101.75.242.20"
+              "101.75.242.18"
             ]
           },
           "cn-hbcd-cu-02-18.bilivideo.com": {
             "ipv4": [
-              "101.75.242.21"
+              "101.75.242.19"
             ]
           },
           "cn-hbcd-cu-02-19.bilivideo.com": {
             "ipv4": [
-              "101.75.242.22"
+              "101.75.242.20"
             ]
           },
           "cn-hbcd-cu-02-20.bilivideo.com": {
@@ -3236,6 +3388,36 @@
           "cn-hncs-cu-01-08.bilivideo.com": {
             "ipv4": [
               "61.240.206.9"
+            ]
+          },
+          "cn-hncs-cu-01-09.bilivideo.com": {
+            "ipv4": [
+              "61.240.206.18"
+            ]
+          },
+          "cn-hncs-cu-01-10.bilivideo.com": {
+            "ipv4": [
+              "61.240.206.19"
+            ]
+          },
+          "cn-hncs-cu-01-11.bilivideo.com": {
+            "ipv4": [
+              "61.240.206.20"
+            ]
+          },
+          "cn-hncs-cu-01-12.bilivideo.com": {
+            "ipv4": [
+              "61.240.206.21"
+            ]
+          },
+          "cn-hncs-cu-01-13.bilivideo.com": {
+            "ipv4": [
+              "61.240.206.22"
+            ]
+          },
+          "cn-hncs-cu-01-14.bilivideo.com": {
+            "ipv4": [
+              "61.240.206.17"
             ]
           },
           "cn-hncs-cu-v-01.bilivideo.com": {
@@ -3312,6 +3494,36 @@
           "cn-jlcc-cu-03-08.bilivideo.com": {
             "ipv4": [
               "139.215.227.9"
+            ]
+          },
+          "cn-jlcc-cu-03-09.bilivideo.com": {
+            "ipv4": [
+              "139.215.227.10"
+            ]
+          },
+          "cn-jlcc-cu-03-10.bilivideo.com": {
+            "ipv4": [
+              "139.215.227.11"
+            ]
+          },
+          "cn-jlcc-cu-03-11.bilivideo.com": {
+            "ipv4": [
+              "139.215.227.12"
+            ]
+          },
+          "cn-jlcc-cu-03-12.bilivideo.com": {
+            "ipv4": [
+              "139.215.227.13"
+            ]
+          },
+          "cn-jlcc-cu-03-13.bilivideo.com": {
+            "ipv4": [
+              "139.215.227.14"
+            ]
+          },
+          "cn-jlcc-cu-03-14.bilivideo.com": {
+            "ipv4": [
+              "139.215.227.15"
             ]
           }
         }
@@ -3761,6 +3973,114 @@
           "cn-zjhz-cu-v-06.bilivideo.com": {
             "ipv4": [
               "60.12.119.71"
+            ]
+          }
+        }
+      }
+    ],
+    "gd": [
+      {
+        "regionCode": "gdgz",
+        "regionName": "广东广州",
+        "domains": {
+          "cn-gdgz-gd-01-01.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.226"
+            ]
+          },
+          "cn-gdgz-gd-01-02.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.228"
+            ]
+          },
+          "cn-gdgz-gd-01-03.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.230"
+            ]
+          },
+          "cn-gdgz-gd-01-04.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.232"
+            ]
+          },
+          "cn-gdgz-gd-01-05.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.234"
+            ]
+          },
+          "cn-gdgz-gd-01-06.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.236"
+            ]
+          },
+          "cn-gdgz-gd-01-07.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.238"
+            ]
+          },
+          "cn-gdgz-gd-01-08.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.240"
+            ]
+          },
+          "cn-gdgz-gd-01-09.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.242"
+            ]
+          },
+          "cn-gdgz-gd-01-10.bilivideo.com": {
+            "ipv4": [
+              "43.243.247.244"
+            ]
+          },
+          "cn-gdgz-gd-01-11.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.138"
+            ]
+          },
+          "cn-gdgz-gd-01-12.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.140"
+            ]
+          },
+          "cn-gdgz-gd-01-13.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.142"
+            ]
+          },
+          "cn-gdgz-gd-01-14.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.144"
+            ]
+          },
+          "cn-gdgz-gd-01-15.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.147"
+            ]
+          },
+          "cn-gdgz-gd-01-16.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.150"
+            ]
+          },
+          "cn-gdgz-gd-01-17.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.153"
+            ]
+          },
+          "cn-gdgz-gd-01-18.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.155"
+            ]
+          },
+          "cn-gdgz-gd-01-19.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.157"
+            ]
+          },
+          "cn-gdgz-gd-01-20.bilivideo.com": {
+            "ipv4": [
+              "103.27.27.218"
             ]
           }
         }
