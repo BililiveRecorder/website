@@ -20,6 +20,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'hbyc', '湖北宜昌'],
   ['ct', 'hljheb', '黑龙江哈尔滨'],
   ['ct', 'jsnt', '江苏南通'],
+  ['ct', 'jsyz', '江苏扬州'],
   ['ct', 'jxjj', '江西九江'],
   ['ct', 'sccd', '四川成都'],
   ['ct', 'scya', '四川雅安'],

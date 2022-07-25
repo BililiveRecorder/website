@@ -60,19 +60,30 @@
 | :--: | ------------ | -------- |
 | blrec | [GitHub 项目页](https://github.com/acgnhiki/blrec){ target=_blank } | Python 跨平台，有自己写的直播 FLV 修复 |
 
-## 录播站
 
-此处列出的录播站与本站无关，信息仅供参考。
+## 文件浏览器
+
+可以用来建设录播站
+
+- [AList](https://alist-doc.nn.ci/docs/intro){target="_blank" rel="noopener"}: 多存储后端，在线播放视频、加载弹幕
+- [OLAINDEX](https://github.com/WangNingkai/OLAINDEX){target="_blank" rel="noopener"}: 仅 OneDrive，在线播放视频
+- [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index){target="_blank" rel="noopener"}: 仅 OneDrive，在线播放 MP4
+- [OneManager-php](https://github.com/qkqpttgf/OneManager-php){target="_blank" rel="noopener"}: 仅 OneDrive
+
+## 录播站
 
 {% macro link(url) -%}
 - [{{url}}]({{url}}){target="_blank" rel="noopener"}
 {%- endmacro %}
+
+此处列出的录播站与本站无关，信息仅供参考。
 
 {{link('https://nf.asoul-rec.com')}}
 {{link('https://rec.baysonfox.com')}}
 {{link('https://rec.arukas.cn')}}
 {{link('https://rec.ttklt.com')}}
 {{link('https://rec.nana7mi.123485k.ltd:444')}}
+{{link('https://rec.eula.uk')}}
 
 ## 自动化
 
