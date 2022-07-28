@@ -2,9 +2,9 @@
 
 <style>.md-content h3:before{content:'Q: ';color:var(--md-accent-fg-color);font-weight:bold}</style>
 
-反馈QQ群：689636812  
-闲聊QQ群：725135081 (只闲聊不解答问题)  
-反馈邮箱： rec@danmuji.org
+反馈 QQ 群: [689636812](https://jq.qq.com/?_wv=1027&k=5cXu8IHS){ target=_blank }  
+邮箱: [rec@danmuji.org](mailto:rec@danmuji.org){ target=_blank }  
+Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=_blank }  
 
 本页面主要面向录播姬桌面版编写，但其中大部分信息对命令行版也生效。
 

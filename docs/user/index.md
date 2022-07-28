@@ -2,10 +2,13 @@
 
 录播姬是一个方便好用免费开源的B站直播录制工具。
 
+!!! tip inline end "Discord"
+    <iframe src="https://discord.com/widget?id=1002130286374555648&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
 [![在爱发电赞助我](../assets/images/support-on-afdian.svg)](https://afdian.net/@genteure){ target=_blank title=在爱发电赞助我 }  
 反馈 QQ 群: [689636812](https://jq.qq.com/?_wv=1027&k=5cXu8IHS){ target=_blank }  
-闲聊 QQ 群: [725135081](https://jq.qq.com/?_wv=1027&k=BdBflTb5){ target=_blank }  
-邮箱: [rec@danmuji.org](mailto:rec@danmuji.org){ target=_blank }
+邮箱: [rec@danmuji.org](mailto:rec@danmuji.org){ target=_blank }  
+Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=_blank }  
 
 ## 特点和功能
 

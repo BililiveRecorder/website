@@ -114,6 +114,7 @@ plugins:
       redirect_maps:
         user/commands.md: user/install/cli.md
         # Links
+        "link/discord.md": "https://discord.gg/YQWtUsbGSw"
         "link/faq.md": "user/faq.md"
         "link/fix_feedback.md": "user/repair-feedback.md"
         "link/sponsor.md": "https://afdian.net/@genteure"
@@ -171,6 +172,9 @@ extra:
     - icon: octicons/mark-github-16
       link: https://github.com/BililiveRecorder
       name: GitHub 组织 @BiliveRecorder
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/YQWtUsbGSw
+      name: Discord invite link
     - icon: fontawesome/brands/qq
       link: https://jq.qq.com/?_wv=1027&k=5NPC2dt
       name: 反馈QQ群 689636812
