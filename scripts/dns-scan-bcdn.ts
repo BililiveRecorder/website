@@ -14,6 +14,7 @@ const groupBy = <T, Y>(array: T[], predicate: (v: T) => string, filter: (v: T) =
 const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneName?: string[]][] = [
   // China Telecom 中国电信
   ['ct', 'ahwh', '安徽芜湖'],
+  ['ct', 'cq', '重庆'],
   ['ct', 'gddg', '广东东莞'],
   ['ct', 'gdfs', '广东佛山'],
   ['ct', 'hblf', '河北廊坊'],

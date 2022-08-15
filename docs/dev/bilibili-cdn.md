@@ -30,13 +30,13 @@ gotcha_cdn_region_map:
 !!! tip
     可以用浏览器的搜索功能 `Ctrl + F` 在本页面上快速查找
 
-目前B站直播使用了以下几家 CDN:
+B站直播使用 (或曾经用过) 以下几家 CDN:
 
 {% for key, value in gotcha_cdn_provider_map.items() %}
 - {{ value }}
 {% endfor %}
 
-目前国内最常见的是 B站自建 (B站视频云)、腾讯云、华为云。
+目前国内最常见的是 B站自建 (B站视频云, FLV, HLS)、腾讯云(FLV)、阿里云(FLV)、华为云(HLS)。
 
 ## B站视频云
 

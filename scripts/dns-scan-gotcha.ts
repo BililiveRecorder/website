@@ -20,7 +20,7 @@ type CdnInfoMap = {
   [domain: string]: any
 }
 
-const gotcha_prefix = ['c1', 'd1']
+const gotcha_prefix = ['c1', 'd1', 'd0']
 const gotcha_region = ['cn', 'ov', 'tf', 'p1--cn', 'p2--cn']
 const gotcha_type = ['', '1', '2']
 const gotcha_id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(x => x.toString().padStart(2, '0'))
