@@ -19,6 +19,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'gdfs', '广东佛山'],
   ['ct', 'hblf', '河北廊坊'],
   ['ct', 'hbyc', '湖北宜昌'],
+  ['ct', 'hnld', '湖南娄底'],
   ['ct', 'hljheb', '黑龙江哈尔滨'],
   ['ct', 'jsnt', '江苏南通'],
   ['ct', 'jsyz', '江苏扬州'],
