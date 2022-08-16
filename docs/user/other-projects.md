@@ -53,6 +53,7 @@
 | 名字 | 链接 | 备注说明 |
 | :--: | ------------ | -------- |
 | valkjsaaa/auto-bilibili-recorder | [GitHub 项目页](https://github.com/valkjsaaa/auto-bilibili-recorder){ target=_blank } | 全自动录播上传脚本 |
+| Morax-xyc/bililiveauto | [GitHub 项目页](https://github.com/morax-xyc/bililiveauto){ target=_blank } | 自动处理弹幕，转封装,通过rclone上传到网盘的简单脚本 |
 
 ## 其他录播软件
 
