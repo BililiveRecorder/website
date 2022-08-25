@@ -18,7 +18,9 @@
 
 ### 更新 WebUI 设置页面
 
-TODO
+- `src\utils\api.ts`
+- `src\components\RoomCard.vue`
+- `src\views\recorder\Settings.vue`
 
 ## 新配置文件版本
 
