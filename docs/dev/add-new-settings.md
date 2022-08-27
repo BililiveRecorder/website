@@ -18,8 +18,9 @@
 
 ### 更新 WebUI 设置页面
 
+一共有三个位置会有设置项，参考已有设置
 - `src\utils\api.ts`
-- `src\components\RoomCard.vue`
+- `src\components\RoomSettingModal.vue`
 - `src\views\recorder\Settings.vue`
 
 ## 新配置文件版本
