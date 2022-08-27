@@ -12,6 +12,32 @@
 | {{ year }} 年 {{ month }} 月 {{ day }} 日 |
 {%- endmacro %}
 
+## 2.3.0
+
+{{ d(2022,8,27) }}
+
+通用：
+
+- 新增了保存直播间封面图片的功能
+- 新增了 WS/WSS 弹幕协议支持，现在默认会 TCP/WS/WSS 随机混合使用
+- 现在会在视频文件里保存更多有关直播服务器的信息
+- 文件名模板新增了 `{{ partIndex }}` 分段序号
+- 微调了 FLV 修复系统
+
+桌面版：
+
+- 新增了开播通知。在 Windows 10 和 11 上会使用通知中心，能显示头像和直播间封面
+
+??? tip "桌面开播通知效果"
+    ![desktop-notification](../assets/images/user-change_log-notification.png){loading="lazy"}
+    <video loop muted controls src="../../assets/images/user-change_log-notification.mp4" style="width:100%;"></video>
+
+命令行版：
+
+- 给 `run` 子命令新增了 `--config-override` 参数，可以把配置文件保存到另外的位置
+- 现在 WebUI 支持被反代到任意路径
+- 更新了内嵌的 WebUI
+
 ## 2.2.0
 
 {{ d(2022,8,2) }}

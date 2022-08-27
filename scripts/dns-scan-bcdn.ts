@@ -26,6 +26,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'jxjj', '江西九江'],
   ['ct', 'sccd', '四川成都'],
   ['ct', 'scya', '四川雅安'],
+  ['ct', 'zjjh', '浙江金华'],
 
   // China Mobile 中国移动
   ['cm', 'ahhn', '安徽淮南'],
@@ -68,7 +69,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
 ];
 
 const cdnRegions = CDN_INFO.map(info => {
-  const zones = ['01', '02', '03', 'v', ...(info[3] || [])]
+  const zones = ['01', '02', '03', '04', 'v', ...(info[3] || [])]
   const prefixs = zones.map(zone => `cn-${info[1]}-${info[0]}-${zone}`);
   return {
     isp: info[0],
