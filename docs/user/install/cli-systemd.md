@@ -89,7 +89,7 @@ sudo systemctl restart brec
 查看日志：
 
 ```sh
-sudo jounalctl -u brec.service
+sudo journalctl -u brec.service
 ```
 
 也可以直接查看录播姬旁边 logs 文件夹内的日志文件。

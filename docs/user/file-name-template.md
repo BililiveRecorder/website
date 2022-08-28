@@ -90,6 +90,15 @@ ignore_macros: true
 
     根据开播时间分文件夹，每次直播都新建一个名字为开播时间的文件夹。
 
+!!! example "示例 7"
+    ```jinja
+    {{ roomId }}-{{ name }}/录制-{{ roomId }}-{{ "now" | time_zone: "Asia/Shanghai" | format_date: "yyyyMMdd-HHmmss-fff" }}-{{ title }}-{{ partIndex | format_number: "000" }}.flv
+    ```
+    ```txt
+    23058-3号直播间/录制-23058-20220505-225933-067-哔哩哔哩音悦台-001.flv
+    ```
+
+    `partIndex` 是分段序号，使用 `format_number` 把它变成以 `0` 开头的 3 位数，方便文件名排序。
 
 ## 变量列表
 
@@ -145,6 +154,15 @@ ignore_macros: true
 !!! example "例子"
     ```txt
     唱见电台
+    ```
+
+### `partIndex`
+
+从 `1` 开始的分段序号，手动分段、根据视频时长或文件大小自动分段之后会 +1
+
+!!! example "例子"
+    ```txt
+    1
     ```
 
 ### `qn`
