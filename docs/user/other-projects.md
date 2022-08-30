@@ -85,7 +85,7 @@
 {{link('https://rec.ttklt.com')}}
 {{link('https://rec.nana7mi.123485k.ltd:444')}}
 {{link('https://rec.eula.uk')}}
-{{link('https://rec.a-soul.cloud')}}
+{{link('https://rec.a-soul.ws')}}
 
 ## 自动化
 
