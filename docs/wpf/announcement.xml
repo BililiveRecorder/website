@@ -40,7 +40,7 @@
               <TextBlock Text="如果有什么反馈意见的话，可以加QQ群、Discord Server、或发邮件。"/>
             </ui:SimpleStackPanel>
           </GroupBox>
-          <GroupBox Header="2.3.0 更新内容（2022年9月3日）">
+          <GroupBox Header="2.4.0 更新内容（2022年9月3日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
