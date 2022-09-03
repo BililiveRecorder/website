@@ -34,6 +34,10 @@
               <TextBlock Text="从录播姬 2.2.0 开始，用标准模式录制时，会在检测到连续 10 次收到重复数据后主动断开录制。"/>
               <TextBlock Text="原始数据模式不会对直播服务器发送的数据做任何分析处理，需要手动结束录制。"/>
               <TextBlock Text="请重点关注一下主播下播后的录制状态。"/>
+              <TextBlock Text=""/>
+              <TextBlock Text=""/>
+              <TextBlock Text="之后录播姬桌面版考虑只支持 Windows 10 系统，不再支持 Windows 7 8 8.1"/>
+              <TextBlock Text="如果有什么反馈意见的话，可以加QQ群、Discord Server、或发邮件。"/>
             </ui:SimpleStackPanel>
           </GroupBox>
           <GroupBox Header="2.3.0 更新内容（2022年9月3日）">
