@@ -304,7 +304,7 @@
     ./BililiveRecorder.Cli tool analyze input.flv
     ./BililiveRecorder.Cli tool analyze --json input.flv # 以 JSON 格式输出结果
     ./BililiveRecorder.Cli tool fix input.flv output.flv
-    ./BililiveRecorder.Cli tool export input.flv output.brec.xml.gz
+    ./BililiveRecorder.Cli tool export input.flv output.zip
     ```
 
     **软件功能**

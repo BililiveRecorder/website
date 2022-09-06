@@ -105,3 +105,21 @@ docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind 
 ```
 
 日志文件默认保存在 `/app/logs`，可以把这个目录也挂载出来。或者可以修改日志文件保存位置，请参考 [日志文件](../log-file.md) 页面。
+
+## 更新录播姬
+
+更新录播姬只需要重新拉取镜像，删除旧版本的容器，再重新运行新的容器即可。
+
+```sh
+# 拉取最新版本的镜像
+# 参考本页面上面的拉取镜像部分
+docker pull bililive/recorder:latest
+
+# 停止运行并删除
+docker stop <旧容器ID>
+docker rm <旧容器ID>
+
+# 重新新建容器运行
+# 参考本页面上面的运行录播姬部分
+docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder:latest
+```

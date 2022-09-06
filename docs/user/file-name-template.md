@@ -10,6 +10,8 @@ ignore_macros: true
 - Django (Python)
 - pkg.go.dev/text/template (Go)
 
+基础的语法请参考 [Liquid 原版文档](https://shopify.github.io/liquid/basics/introduction/){target=_blank} 或 [第三方翻译的中文镜像](https://liquid.bootcss.com/basics/introduction/){target=_blank}，这里就不再复制粘贴过来一份了。
+
 录播姬默认的模板内容是
 
 ```jinja
@@ -579,9 +581,9 @@ https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom?room_id={{�
 
 ## 语法说明
 
-基础的语法建议参考 [Liquid 原版文档](https://shopify.github.io/liquid/basics/introduction/){target=_blank} 或 [第三方翻译的中文镜像](https://liquid.bootcss.com/basics/introduction/){target=_blank}，这里就不复制粘贴过来一份了。
+基础的语法请参考 [Liquid 原版文档](https://shopify.github.io/liquid/basics/introduction/){target=_blank} 或 [第三方翻译的中文镜像](https://liquid.bootcss.com/basics/introduction/){target=_blank}，这里就不再复制粘贴过来一份了。
 
-在原版功能的基础上，录播姬的模板多了一些功能：
+在原版功能的基础上，录播姬的模板引擎多了一些功能：
 
 ### 生成随机数
 

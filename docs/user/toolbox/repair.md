@@ -25,5 +25,5 @@ title: 录播修复 - 工具箱
 ./BililiveRecorder.Cli tool fix "input.flv" "output.flv"
 
 # 导出分析数据
-./BililiveRecorder.Cli tool export "input.flv" "output.brec.xml.gz"
+./BililiveRecorder.Cli tool export "input.flv" "output.zip"
 ```
