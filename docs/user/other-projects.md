@@ -81,11 +81,12 @@
 
 {{link('https://nf.asoul-rec.com')}}
 {{link('https://rec.baysonfox.com')}}
-{{link('https://rec.arukas.cn')}}
+{{link('https://arukas.cn')}}
 {{link('https://rec.ttklt.com')}}
 {{link('https://rec.nana7mi.123485k.ltd:444')}}
 {{link('https://rec.eula.uk')}}
 {{link('https://rec.a-soul.ws')}}
+{{link('https://bili-rec.com')}}
 
 ## 自动化
 
