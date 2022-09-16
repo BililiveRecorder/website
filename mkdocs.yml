@@ -28,6 +28,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - announce.dismiss
   icon:
     repo: fontawesome/brands/github
   palette:
@@ -121,6 +122,7 @@ plugins:
         "link/fix_feedback.md": "user/repair-feedback.md"
         "link/sponsor.md": "https://afdian.net/@genteure"
         "link/translate.md": "https://crowdin.com/project/bililiverecorder"
+        "link/wj202209.md": "https://wj.qq.com/s2/10745355/60e9/"
         # Old jekyll website
         docs.md: user/index.md
         docs/translate.md: dev/translations.md

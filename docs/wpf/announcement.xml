@@ -28,6 +28,17 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="录播姬调查问卷（2022年9月16日开始）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://wj.qq.com/s2/10745355/60e9/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="https://wj.qq.com/s2/10745355/60e9/" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="主要是调查大家都是怎么使用录播姬和录播输出的视频文件的，问卷结果将用于辅助决定录播姬之后会添加什么功能、做什么修改。"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2022年8月公告">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <TextBlock Text="从大约 7 月 20 日 左右开始，B站自建的直播服务器在直播结束后不会断开直播流，而是超大量重复发送最后几秒直播数据。"/>
