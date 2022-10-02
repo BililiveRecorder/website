@@ -122,7 +122,9 @@ plugins:
         "link/fix_feedback.md": "user/repair-feedback.md"
         "link/sponsor.md": "https://afdian.net/@genteure"
         "link/translate.md": "https://crowdin.com/project/bililiverecorder"
-        "link/wj202209.md": "https://wj.qq.com/s2/10745355/60e9/"
+        "link/wj202209.md": "https://wj.qq.com/s2/10745355/60e9"
+        "link/wj202209_web.md": "https://wj.qq.com/s2/10745355/60e9?openid=rec_web"
+        "link/wj202209_wpf.md": "https://wj.qq.com/s2/10745355/60e9?openid=rec_wpf"
         # Old jekyll website
         docs.md: user/index.md
         docs/translate.md: dev/translations.md
