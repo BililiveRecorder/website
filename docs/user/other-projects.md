@@ -87,7 +87,7 @@
 {{link('https://rec.eula.uk')}}
 {{link('https://rec.a-soul.ws')}}
 {{link('https://bili-rec.com')}}
-{{link('http://driver.mengguyi.com/Bilibili_live_playback')}}
+{{link('http://drive.mengguyi.com/Bilibili_live_playback')}}
 
 ## 自动化
 
