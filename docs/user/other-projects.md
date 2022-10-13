@@ -86,7 +86,7 @@
 {{link('https://rec.nana7mi.123485k.ltd:444')}}
 {{link('https://rec.eula.uk')}}
 {{link('https://rec.a-soul.ws')}}
-{{link('https://bili-rec.com')}}
+{{link('https://bili.lubo.media')}}
 {{link('https://drive.mengguyi.com/Bilibili_live_playback')}}
 
 ## 自动化
