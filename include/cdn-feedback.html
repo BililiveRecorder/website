@@ -1,0 +1,99 @@
+<div>
+  <style>
+    .grecaptcha-badge {
+      visibility: hidden;
+    }
+
+    #feedback-text {
+      font-size: 1rem;
+      font-family: var(--md-text-font-family);
+      background-color: hsla(var(--md-hue), 15%, 30%, 1);
+      color: var(--md-typeset-color);
+      width: 100%;
+    }
+
+    #feedback-submit {
+      font-size: 1.2rem;
+      text-align: center;
+      width: 100%;
+      padding: 5px;
+      margin: 5px 0;
+      cursor: pointer;
+      border-radius: 7px;
+      border: 1px solid;
+      border-color: var(--md-typeset-kbd-border-color);
+
+      background-color: var(--md-default-bg-color);
+      box-shadow: var(--md-shadow-z1);
+      color: var(--md-default-fg-color--light);
+    }
+
+    #feedback-submit:is(:focus, :hover) {
+      background-color: var(--md-accent-fg-color);
+      color: var(--md-accent-bg-color);
+    }
+  </style>
+  <form onsubmit="return false">
+    <textarea id="feedback-text" placeholder="请写明缺少的域名和/或其他相关信息" rows="4"></textarea>
+    <div id="feedback-result" style="text-align:center"></div>
+    <button id="feedback-submit" class="g-recaptcha" data-callback="submitCdnFeedback"
+      data-sitekey="6Les2MkiAAAAAK3eg0tTp2Jm_WfQ4s9qVh5YDAUA">提交</button>
+  </form>
+  <div style="font-size: 12px;">
+    This site is protected by reCAPTCHA and the Google
+    <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer">Privacy Policy</a>
+    and
+    <a href="https://policies.google.com/terms" target="_blank" rel="nofollow noopener noreferrer">Terms of Service</a>
+    apply.
+  </div>
+  <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+  <script>
+    window.submitCdnFeedback = function (t) {
+      const result = document.querySelector('#feedback-result');
+      if (!result) return;
+
+      result.textContent = '正在提交...';
+      result.style.color = '';
+
+      let s = document.querySelector("#feedback-text").value;
+      if (!s || s.length < 5) {
+        result.textContent = '反馈内容需要至少 5 个字';
+        result.style.color = 'red';
+        window.grecaptcha.reset();
+        return;
+      }
+      if (s.length > 1000) {
+        result.textContent = '反馈内容不能超过 1000 个字';
+        result.style.color = 'red';
+        window.grecaptcha.reset();
+        return;
+      }
+      fetch("/api/send-cdn-feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text: s,
+          token: t,
+        }),
+      })
+        .then((r) => r.json())
+        .then((r) => {
+          if (r.success) {
+            result.textContent = '反馈已提交！';
+            result.style.color = 'green';
+            document.querySelector("#feedback-text").value = "";
+          } else {
+            result.textContent = '反馈提交失败，请稍后再试';
+            result.style.color = 'red';
+          }
+          window.grecaptcha.reset();
+        }).catch((e) => {
+          result.textContent = '反馈提交失败，请稍后再试';
+          result.style.color = 'red';
+          window.grecaptcha.reset();
+        });
+    }
+  </script>
+</div>
