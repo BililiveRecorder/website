@@ -39,6 +39,14 @@ const domains = gotcha_region.map(region => {
   })
 }).flat(3)
 
+domains.push(...gotcha_type.map(type => {
+  return new Array(10).fill(0).map((_, i) => {
+    const d = `d1--cn-gotcha${type}04-${i}.bilivideo.com`;
+    domain_feature_map[d] = { prefix: 'd1', region: 'cn', type, id: '04' }
+    return d;
+  })
+}).flat())
+
 console.log(domains, domains.length)
 
 async function resolveDomains(domains: string[], output: CdnInfoStore, logPrefix: string = "") {
