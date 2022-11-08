@@ -40,19 +40,24 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['cm', 'jssz', '江苏苏州'],
   ['cm', 'jxnc', '江西南昌'],
   ['cm', 'lnsy', '辽宁沈阳'],
+  ['cm', 'nmghhht', '内蒙古呼和浩特'],
   ['cm', 'sccd', '四川成都'],
   ['cm', 'sdjn', '山东济南'],
   ['cm', 'sxty', '山西太原'],
   ['cm', 'sxxa', '陕西西安'],
   ['cm', 'tj', '天津'],
+  ['cm', 'xj', '新疆'],
   ['cm', 'zjhz', '浙江杭州'],
 
   // China Unicom 中国联通
+  ['cu', 'gddg', '广东东莞'],
   ['cu', 'hbcd', '河北承德'],
   ['cu', 'hncs', '湖南长沙'],
   ['cu', 'hnly', '河南洛阳'],
+  ['cu', 'jstz', '江苏泰州'],
   ['cu', 'lnsy', '辽宁沈阳'],
   ['cu', 'nmghhht', '内蒙古呼和浩特'],
+  ['cu', 'sccd', '四川成都'],
   ['cu', 'sdyt', '山东烟台', ['live']],
   ['cu', 'zjhz', '浙江杭州'],
   ['cu', 'jlcc', '吉林长春'],
@@ -64,6 +69,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   // ?????? 教育网
   ['fx', 'gdgz', '广东广州'],
   ['fx', 'hnzz', '河南郑州'],
+  ['fx', 'sccd', '四川成都'],
   ['fx', 'sh', '上海'],
 
   // eq
@@ -83,6 +89,8 @@ const cdnRegions = CDN_INFO.map(info => {
 
 // console.log(cdnRegions);
 
+const parallelQueryCount: number = 3;
+
 type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
 
 (async function () {
@@ -93,19 +101,51 @@ type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
     domains: DomainIpMap;
   }[] = [];
 
-  for (const region of cdnRegions) {
-    const domains: DomainIpMap = {};
+  if (parallelQueryCount < 1) {
+    for (const region of cdnRegions) {
+      const domains: DomainIpMap = {};
 
-    for (const zone of region.zones) {
-      await resolveCdnDomain(zone, domains);
+      for (const zone of region.zones) {
+        await resolveCdnDomain(zone, domains);
+      }
+
+      tempStore.push({
+        isp: region.isp,
+        regionCode: region.regionCode,
+        regionName: region.regionName,
+        domains
+      });
+    }
+  } else {
+    async function runParallelQuery(regions: {
+      isp: string;
+      regionCode: string;
+      regionName: string;
+      zones: string[];
+    }[]) {
+      while (true) {
+        const region = regions.shift();
+        if (!region) break;
+
+        const domains: DomainIpMap = {};
+
+        for (const zone of region.zones) {
+          await resolveCdnDomain(zone, domains);
+        }
+
+        tempStore.push({
+          isp: region.isp,
+          regionCode: region.regionCode,
+          regionName: region.regionName,
+          domains
+        });
+      }
     }
 
-    tempStore.push({
-      isp: region.isp,
-      regionCode: region.regionCode,
-      regionName: region.regionName,
-      domains
-    });
+    // make multiple async calls at the same time
+    const localRegions = [...cdnRegions];
+    const tasks: Promise<void>[] = new Array(parallelQueryCount).fill(0).map(() => runParallelQuery(localRegions));
+    await Promise.all(tasks);
   }
 
   const output = groupBy(tempStore, x => x.isp, x => {
