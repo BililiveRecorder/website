@@ -66,7 +66,7 @@
 
 可以用来建设录播站
 
-- [AList](https://alist-doc.nn.ci/docs/intro){target="_blank" rel="noopener"}: 多存储后端，在线播放视频、加载弹幕
+- [AList](https://alist.nn.ci){target="_blank" rel="noopener"}: 多存储后端，在线播放视频、加载弹幕
 - [OLAINDEX](https://github.com/WangNingkai/OLAINDEX){target="_blank" rel="noopener"}: 仅 OneDrive，在线播放视频
 - [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index){target="_blank" rel="noopener"}: 仅 OneDrive，在线播放 MP4
 - [OneManager-php](https://github.com/qkqpttgf/OneManager-php){target="_blank" rel="noopener"}: 仅 OneDrive
@@ -87,7 +87,7 @@
 {{link('https://rec.eula.uk')}}
 {{link('https://rec.a-soul.ws')}}
 {{link('https://bili.lubo.media')}}
-{{link('https://drive.mengguyi.com/Bilibili_live_playback')}}
+{{link('https://drive.mengguyi.com')}} 进去后打开Bilibili_live_playback
 
 ## 自动化
 
