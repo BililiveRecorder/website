@@ -68,6 +68,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
 
   // ?????? 教育网
   ['fx', 'gdgz', '广东广州'],
+  ['fx', 'hbwh', '湖北武汉'],
   ['fx', 'hnzz', '河南郑州'],
   ['fx', 'sccd', '四川成都'],
   ['fx', 'sh', '上海'],
