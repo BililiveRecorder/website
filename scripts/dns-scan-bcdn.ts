@@ -58,6 +58,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['cu', 'lnsy', '辽宁沈阳'],
   ['cu', 'nmghhht', '内蒙古呼和浩特'],
   ['cu', 'sccd', '四川成都'],
+  ['cu', 'sxty', '山西太原'],
   ['cu', 'sdqd', '山东青岛'],
   ['cu', 'sdyt', '山东烟台', ['live']],
   ['cu', 'zjhz', '浙江杭州'],
