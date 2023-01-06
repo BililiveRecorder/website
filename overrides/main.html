@@ -2,17 +2,7 @@
 
 {% block styles %}
 {{ super() }}
-
-{% if config.theme.palette %}
-    {% set palette = config.theme.palette[0] %}
-    {% if palette.primary %}
-        {% import "partials/palette.html" as map %}
-        {% set primary = map.primary(
-                    palette.primary | replace(" ", "-") | lower
-                ) %}
-        <meta name="theme-color" content="{{ primary }}">
-    {% endif %}
-{% endif %}
+<meta name="theme-color" content="#2094f3">
 {% endblock %}
 
 {% block site_meta %}
