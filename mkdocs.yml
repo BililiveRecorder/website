@@ -8,8 +8,6 @@ strict: !ENV [CI, false]
 repo_url: https://github.com/BililiveRecorder/BililiveRecorder
 repo_name: BililiveRecorder/BililiveRecorder
 
-edit_uri: https://github.com/BililiveRecorder/website/blob/main/docs/
-
 copyright: "Copyright &copy; 2022 Genteure. 文档内容为 CC-BY-NC-SA 授权"
 
 watch:
@@ -24,6 +22,7 @@ theme:
   favicon: favicon.png
   logo: favicon.svg
   features:
+    - content.action.view
     - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
