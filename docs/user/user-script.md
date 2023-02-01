@@ -153,6 +153,12 @@
 
 类似 node 和 浏览器 中的 `console`，不过少了一点功能。
 
+### sharedStorage
+
+一个 `Storage`，和浏览器里的 `localStorage` `sessionStorage` 类似，除了这里以外其他所有的变量在多次运行之间都不会保留。
+
+需要注意如果只在里面添加数据但不删除的话会导致内存占用增加。
+
 ### fetchSync
 
 参考标准的 `fetch` 实现的一个 HTTP 请求接口，是同步而不是异步的。

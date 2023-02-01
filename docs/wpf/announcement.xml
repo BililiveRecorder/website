@@ -28,15 +28,17 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
-          <GroupBox Header="录播姬调查问卷（2022年9月16日开始）">
+          <GroupBox Header="2.5.0 更新内容（2023年2月1日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/link/wj202209_wpf">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="https://wj.qq.com/s2/10745355/60e9/" Margin="0,0,5,0"/>
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
                   <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
                 </StackPanel>
               </Button>
-              <TextBlock Text="主要是调查大家都是怎么使用录播姬和录播输出的视频文件的，问卷结果将用于辅助决定录播姬之后会添加什么功能、做什么修改。"/>
+              <TextBlock Text="- 给用户脚本添加了新接口"/>
+              <TextBlock Text="- 在特定情况下（如硬盘满了）停止自动重试"/>
+              <TextBlock Text="- 其他改动"/>
             </ui:SimpleStackPanel>
           </GroupBox>
           <GroupBox Header="2022年8月公告">
