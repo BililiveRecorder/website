@@ -194,7 +194,7 @@ async function resolveCdnDomain(zone: string, results: DomainIpMap) {
         lastSuccessId = id;
       }
 
-      if (id - lastSuccessId > 3)
+      if (id - lastSuccessId > 5)
         break;
     }
   } catch (error) {
