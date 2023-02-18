@@ -11,12 +11,13 @@ title: 桌面版 - 安装使用
 安装过录播姬后可以从桌面和开始菜单的快捷方式启动录播姬，不要再次运行安装包。  
 如果想要卸载录播姬，可以在 **系统设置 :material-chevron-right: 应用** 里卸载。
 
-你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载便携版压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。
+你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载 zip 压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。  
+这里下载的压缩包解压后即可运行，不需要安装，没有版本检查和自动更新功能。
 
 通过安装包安装的录播姬有版本检查功能，能自动更新。更新不会重启软件，不影响正在录制的直播，更新后下一次运行录播姬会自动使用新版本。  
 如果需要运行特定的版本，可以用便携版，没有版本检查功能也不会更新。
 
-通常来说只有最后一个正式版是受支持的。
+通常来说只有最后一个正式版是受支持的，使用旧版本遇到问题后请确认在最新版本里是否也会有同样的问题。
 
 打开录播姬后需要选择工作目录，工作目录是保存 **配置文件** 和 **录像文件** 的地方。
 

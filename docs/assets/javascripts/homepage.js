@@ -1,5 +1,6 @@
 window.addEventListener('load', _ => {
-  const b = document.getElementById('brec_download_button');
+  if(/Windows NT [456]\.\d/.exec(navigator.userAgent))document.getElementById('brec-old-windows').style.display='';
+  const b = document.getElementById('brec-download-button');
   b.addEventListener('click', v => {
     const n = Date.now(), d = 'dtime';
     if (v.isTrusted && n - __md_get(d) > 6e6) {

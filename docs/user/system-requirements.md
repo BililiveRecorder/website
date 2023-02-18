@@ -9,16 +9,19 @@
 !!! check "桌面版支持的操作系统"
     - Windows 11
     - Windows 10 1607 或更高版本
-    - Windows 8.1
-    - Windows 7 SP 1
+    - :octicons-alert-16:{ style="color:orange" } Windows 8.1
+    - :octicons-alert-16:{ style="color:orange" } Windows 7 SP 1
 
     以及它们所对应的服务器版操作系统
 
     - Windows Server 2022
     - Windows Server 2019
     - Windows Server 2016
-    - Windows Server 2012
-    - Windows Server 2008 R2 SP1
+    - :octicons-alert-16:{ style="color:orange" } Windows Server 2012
+    - :octicons-alert-16:{ style="color:orange" } Windows Server 2008 R2 SP1
+
+    :octicons-alert-16:{ style="color:orange" } 虽然录播姬本体暂时还支持这些旧系统，但安装包最低支持到 Windows 10，旧系统目前可以从 GitHub Release 下载 zip 包解压运行。
+
 
 ??? fail "不支持的操作系统"
     - :octicons-x-16:{ style="color:red" } Windows 10 1511

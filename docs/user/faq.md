@@ -14,11 +14,18 @@ Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=
 
 录播姬不支持部分老旧操作系统，具体请查看[软硬件要求](./system-requirements.md)一页。
 
+录播姬桌面版本身目前暂时还支持 Windows 7，但是安装包最低支持 Windows 10。  
+Windows 7 等老旧操作系统可以从 GitHub Release 下载 zip 压缩包解压使用，但没有版本检查与更新，具体请参考 [桌面版 - 安装使用](install/wpf.md) 页面。
+
 ### 下载文件不成功
 
 有时微软 Edge 等浏览器会因为 “**该文件有可能是不需要的程序**” 之类的原因阻止下载文件。
 
 解决方法：点击浏览器内下载文件图标旁边的菜单按钮（类似这样： :material-dots-vertical:、:material-dots-horizontal:、:fontawesome-solid-angle-up:），在菜单中选择 “**保留文件**” 或 “**继续下载**” 等选项。
+
+有时 Windows Defender 也会因为 “**该文件有可能是不需要的程序**” “**该程序会执行来自攻击者的命令**” 等原因锁定下载的文件。
+
+解决方法：点击 Windows Defender 的通知栏图标，在查杀历史中选择 “**允许**” 或 “**保留**” 等选项。可以给我发条消息（联系方式在本页面最上面），我去给微软发一个误报反馈，微软审核通过后就不会再有这个问题了。
 
 ### 操作系统阻止安装
 
