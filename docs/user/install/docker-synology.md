@@ -37,6 +37,14 @@ run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密�
 
 在 “存储空间设置” 这一步点击 “添加文件夹”，选择 NAS 里打算用于保存录播的文件夹。然后在 “装载路径” 文本框内输入 `/rec`。注意不要勾选 “只读”，否则无法写入文件。
 
+!!! tip "注意映射存储路径"
+    如果对 Docker 的原理和使用方法不太了解，在使用录播姬之前强烈建议通过 [Docker 官方文档](https://docs.docker.com/get-started/) 或其他中文教程等途径了解 Docker 使用方法。  
+    其中重点注意挂载目录（有的文章里也叫做 卷/绑定/Volume 等）相关的内容，如 Docker 官方文档的 [Manage data in Docker](https://docs.docker.com/storage/) 章节，避免出现录了之后找不到文件的情况。
+
+    提醒：如果没有把录播姬的工作目录映射到宿主机，录制的视频文件会在容器内部，容器被删除之后文件也会丢失。
+    同时需要注意 Docker 不支持修改已有容器的运行参数、映射目录等设置，各种 Docker 管理网页的修改设置功能是会先删除容器再重新创建一个新容器，如果没有把录播姬的工作目录映射到宿主机，这样的操作会导致录制的视频文件丢失。
+    可以使用 `docker cp` 命令把容器里的文件复制出来，具体方法请参考 [Docker 官方文档](https://docs.docker.com/engine/reference/commandline/cp/)。
+
 ![](../../assets/images/user-install-docker-synology-7.png)
 ![](../../assets/images/user-install-docker-synology-8.png)
 
