@@ -55,6 +55,7 @@
 | valkjsaaa/auto-bilibili-recorder | [GitHub 项目页](https://github.com/valkjsaaa/auto-bilibili-recorder){ target=_blank } | 全自动录播上传脚本 |
 | Morax-xyc/bililiveauto | [GitHub 项目页](https://github.com/morax-xyc/bililiveauto){ target=_blank } | 自动处理弹幕，转封装,通过rclone上传到网盘的简单脚本 |
 | mwxmmy/biliupforjava | [Docker Hub 镜像页](https://hub.docker.com/r/mwxmmy/biliupforjava){ target=_blank } | 基于录播姬WebhookV2使用java编写的录播上传插件支持webui、边录边传、弹幕发送、自定义投稿封面 |
+| ayumi-otosaka-314/brec-pp | [GitHub 项目页](https://github.com/ayumi-otosaka-314/brec-pp){ target=_blank } | 自动上传 Google Drive、删除旧文件、通过 Discord 发消息推送 |
 
 ## 其他录播软件
 
