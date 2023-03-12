@@ -76,11 +76,15 @@ B站直播使用 (或曾经用过) 以下几家 CDN:
 {{ bcdn_isp('移动', 'cm') }}
 {{ bcdn_isp('广电', 'gd') }}
 {{ bcdn_isp('教育网', 'fx') }}
+{{ bcdn_isp('教育网（赛尔网络）', 'se') }}
+{{ bcdn_isp('长城/鹏博士', 'cc') }}
+{{ bcdn_isp('上海驰联网络 IX', 'ix') }}
 {{ bcdn_isp('Equinix IX', 'eq') }}
 
 ## CDN 服务商域名
 
 本段落信息更新日期: `{{ dns_data_gotcha.time }}`。  
+下面列出的部分 CDN 已经不再使用。  
 IP 个数指的是一次 DNS 请求返回的数量（显然不可能是总数）。  
 因为有 GeoDNS 的存在，不同地区的请求结果会不一样，以下信息仅供参考。
 

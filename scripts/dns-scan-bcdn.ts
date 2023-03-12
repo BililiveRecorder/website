@@ -3,7 +3,7 @@ import { writeFileSync } from "fs";
 import path from "path";
 
 const r = new Resolver();
-r.setServers(['119.29.29.29'])
+r.setServers(['119.29.29.29', '182.254.118.118'])
 
 const groupBy = <T, Y>(array: T[], predicate: (v: T) => string, filter: (v: T) => Y) =>
   array.reduce((acc, value) => {
@@ -26,16 +26,20 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['ct', 'jxjj', '江西九江'],
   ['ct', 'sccd', '四川成都'],
   ['ct', 'scya', '四川雅安'],
+  ['ct', 'sxxa', '陕西西安'],
+  ['ct', 'xj', '新疆'],
   ['ct', 'zjjh', '浙江金华'],
 
   // China Mobile 中国移动
   ['cm', 'ahhn', '安徽淮南'],
+  ['cm', 'cq', '重庆'],
   ['cm', 'fjqz', '福建泉州'],
   ['cm', 'gddg', '广东东莞'],
   ['cm', 'gdst', '广东汕头'],
   ['cm', 'hbsjz', '河北石家庄'],
   ['cm', 'hbwh', '湖北武汉'],
   ['cm', 'hljheb', '黑龙江哈尔滨'],
+  ['cm', 'hncs', '湖南长沙'],
   ['cm', 'hnzz', '河南郑州'],
   ['cm', 'jssz', '江苏苏州'],
   ['cm', 'jxnc', '江西南昌'],
@@ -59,6 +63,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['cu', 'nmghhht', '内蒙古呼和浩特'],
   ['cu', 'sccd', '四川成都'],
   ['cu', 'sxty', '山西太原'],
+  ['cu', 'sxxa', '陕西西安'],
   ['cu', 'sdqd', '山东青岛'],
   ['cu', 'sdyt', '山东烟台', ['live']],
   ['cu', 'zjhz', '浙江杭州'],
@@ -67,16 +72,36 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
 
   // 广电
   ['gd', 'gdgz', '广东广州'],
+  ['gd', 'hljheb', '黑龙江哈尔滨'],
+
+  // cc 长城/鹏博士/电信通
+  ['cc', 'bj', '北京'],
+  ['cc', 'sh', '上海'],
+
+  // ccc 三线带宽 暂不扫，回头改一下脚本一起把所有IP都扫出来
+  // ['ccc', 'hnld', '湖南娄底'],
+  // ['ccc', 'jsyz', '江苏扬州'],
+  // ['ccc', 'sdqd', '山东青岛'],
 
   // ?????? 教育网
+  ['fx', 'bj', '北京'],
+  ['fx', 'fjfz', '福建福州'],
   ['fx', 'gdgz', '广东广州'],
   ['fx', 'hbwh', '湖北武汉'],
+  ['fx', 'hncs', '湖南长沙'],
   ['fx', 'hnzz', '河南郑州'],
   ['fx', 'sccd', '四川成都'],
+  ['fx', 'sdjn', '山东济南'],
   ['fx', 'sh', '上海'],
 
   // eq
   ['eq', 'hk', '香港'],
+
+  // 上海驰联网络 www.wexchange.com.cn
+  ['ix', 'sh', '上海'],
+
+  // 教育网（赛尔网络）
+  ['se', 'bj', '北京'],
 ];
 
 const cdnRegions = CDN_INFO.map(info => {
@@ -92,7 +117,7 @@ const cdnRegions = CDN_INFO.map(info => {
 
 // console.log(cdnRegions);
 
-const parallelQueryCount: number = 3;
+const parallelQueryCount: number = 6;
 
 type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
 
