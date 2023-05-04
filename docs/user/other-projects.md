@@ -90,6 +90,7 @@
 {{link('https://rec.a-soul.ws')}}
 {{link('https://bili.lubo.media')}}
 {{link('https://drive.mengguyi.com')}} 进去后打开Bilibili_live_playback
+{{link('https://vuprec.waitsaber.org')}}
 
 ## 自动化
 
