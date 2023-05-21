@@ -90,6 +90,7 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['fx', 'hbwh', '湖北武汉'],
   ['fx', 'hncs', '湖南长沙'],
   ['fx', 'hnzz', '河南郑州'],
+  ['fx', 'jsnj', '江苏南京'],
   ['fx', 'sccd', '四川成都'],
   ['fx', 'sdjn', '山东济南'],
   ['fx', 'sh', '上海'],
