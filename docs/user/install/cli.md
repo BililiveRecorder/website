@@ -93,6 +93,11 @@ mv BililiveRecorder.Cli brec
 
 ```sh
 ./brec run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" "工作目录"
+
+# 也可以使用环境变量设置用户名和密码。命令行参数传入的优先级更高
+export BREC_HTTP_BASIC_USER="用户名"
+export BREC_HTTP_BASIC_PASS="密码"
+./brec run --bind "http://*:2356" "工作目录"
 ```
 
 启用 HTTP 服务之后，默认在 `/file` 路径下会提供整个录播工作目录的内容。可以通过 `--enable-file-browser false` 来禁用。

@@ -46,6 +46,8 @@ pm2 start --name recorder BililiveRecorder.Cli -- run --bind "http://*:2356" "�
 
     直接把没有身份验证的录播姬暴露到公网可能会有严重的安全风险。轻则被添加一大堆直播间导致硬盘塞满，重则可能会被任意上传下载文件。（理论上是不能通过录播姬来做到任意代码执行的，不过不做任何保证）
 
+    从录播姬 2.6.3 开始也可以使用环境变量 `BREC_HTTP_BASIC_USER` 和 `BREC_HTTP_BASIC_PASS` 来设置用户名密码。
+
 录播姬目前有 HTTP Basic 登录功能：
 
 ```sh

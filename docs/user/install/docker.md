@@ -84,6 +84,12 @@ docker run -d -v 宿主机路径:/rec -p 2356:2356 ghcr.io/bililiverecorder/bili
 docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" /rec
 ```
 
+从录播姬 2.6.3 开始也可以使用环境变量 `BREC_HTTP_BASIC_USER` 和 `BREC_HTTP_BASIC_PASS` 来设置用户名密码，不再需要覆盖掉镜像的默认命令。
+
+```sh
+docker run -d -v 宿主机路径:/rec -p 2356:2356 -e BREC_HTTP_BASIC_USER="用户名" -e BREC_HTTP_BASIC_PASS="密码" bililive/recorder
+```
+
 启用 HTTP 服务之后，默认在 `/file` 路径下会提供整个录播工作目录的内容。可以通过 `--enable-file-browser false` 来禁用。
 
 ```sh

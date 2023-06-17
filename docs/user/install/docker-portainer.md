@@ -45,6 +45,8 @@ container 写入 `/rec`，然后选择 Bind 选项。
 run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" /rec
 ```
 
+从录播姬 2.6.3 开始也可以使用环境变量 `BREC_HTTP_BASIC_USER` 和 `BREC_HTTP_BASIC_PASS` 来设置用户名密码，如果通过环境变量设置的话 Command 保持默认即可。
+
 ![](../../assets/images/user-install-docker-portainer-4.png)
 
 最后点击 Deploy the container 按钮部署。

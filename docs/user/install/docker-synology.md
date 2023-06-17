@@ -28,6 +28,8 @@
 run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" /rec
 ```
 
+从录播姬 2.6.3 开始也可以使用环境变量 `BREC_HTTP_BASIC_USER` 和 `BREC_HTTP_BASIC_PASS` 来设置用户名密码，如果通过环境变量设置的话 “命令” 保持默认即可。
+
 ![](../../assets/images/user-install-docker-synology-b.png)
 
 在 “端口设置” 这一步点击 “新增”，容器端口设置为 `2356`，本地端口可以是自动或者可以你自己选择一个端口号。类型为 TCP。
