@@ -84,6 +84,12 @@ docker run -d -v 宿主机路径:/rec -p 2356:2356 ghcr.io/bililiverecorder/bili
 docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" /rec
 ```
 
+从录播姬 2.6.3 开始也可以使用环境变量 `BREC_HTTP_BASIC_USER` 和 `BREC_HTTP_BASIC_PASS` 来设置用户名密码，不再需要覆盖掉镜像的默认命令。
+
+```sh
+docker run -d -v 宿主机路径:/rec -p 2356:2356 -e BREC_HTTP_BASIC_USER="用户名" -e BREC_HTTP_BASIC_PASS="密码" bililive/recorder
+```
+
 启用 HTTP 服务之后，默认在 `/file` 路径下会提供整个录播工作目录的内容。可以通过 `--enable-file-browser false` 来禁用。
 
 ```sh
@@ -117,6 +123,10 @@ docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind 
 ## 更新录播姬
 
 更新录播姬只需要重新拉取镜像，删除旧版本的容器，再重新运行新的容器即可。
+
+!!! info "更新前请注意"
+    更新前请注意检查录制出的视频文件是否映射到了宿主机上，是否能直接在宿主机上访问到。偶尔有人在创建容器的时候忘记映射目录，平常使用录播姬自带的文件浏览器访问文件，在更新录播姬时删除容器后录制的视频文件也一起删除了。  
+    如果没有映射出来，在更新录播姬之前可以使用 `docker cp` 命令把容器里的文件复制出来，具体方法请参考 [Docker 官方文档](https://docs.docker.com/engine/reference/commandline/cp/)。
 
 ```sh
 # 拉取最新版本的镜像

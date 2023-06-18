@@ -28,6 +28,19 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2.6.3 更新内容（2023年6月18日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 修改了弹幕文件内弹幕时间的计算方法，不再受系统时间变动的影响"/>
+              <TextBlock Text="- 当直播间被管理员切断或封禁时会记录一条日志"/>
+              <TextBlock Text="- 修改了版本号，表示还在更新（别急，在搓大的了）"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.6.2 更新内容（2023年2月13日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
@@ -74,58 +87,6 @@
               <TextBlock Text=""/>
               <TextBlock Text="之后录播姬桌面版考虑只支持 Windows 10 系统，不再支持 Windows 7 8 8.1"/>
               <TextBlock Text="如果有什么反馈意见的话，可以加QQ群、Discord Server、或发邮件。"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.5.0 更新内容（2022年10月2日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 修复了用户脚本里 fetchSync 不支持设置 Cookie header 的问题"/>
-              <TextBlock Text="- 在房间列表页面添加了调查问卷链接"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.4.0 更新内容（2022年9月3日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 调整了修复逻辑，解决了一部分时间戳跳变问题修不到的问题"/>
-              <TextBlock Text="- 给直播封面下载添加了超时时间和失败重试"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.3.0 更新内容（2022年8月27日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志（推荐）" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 新增了开播提醒功能，在 Windows 10、11 上能显示头像和直播间封面，默认关闭"/>
-              <TextBlock Text="- 新增了录播同时保存直播间封面的功能"/>
-              <TextBlock Text="- 新增了 WS/WSS 弹幕协议支持"/>
-              <TextBlock Text="- 调整了数据处理系统"/>
-              <TextBlock Text="- 其他小修改"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.2.0 更新内容（2022年8月2日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志（推荐）" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 调整了直播数据修复系统"/>
-              <TextBlock Text="- 新增了判定规则：连续收到10次重复的直播数据就主动断开录制"/>
-              <TextBlock Text="- 现在每次开始录制之前都会更新一次直播间信息"/>
             </ui:SimpleStackPanel>
           </GroupBox>
         </ui:SimpleStackPanel>
