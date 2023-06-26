@@ -1,5 +1,5 @@
 {
-  "time": "2023/5/21",
+  "time": "2023/6/26",
   "dns": {
     "c1--cn-gotcha01.bilivideo.com": {
       "c1--cn-gotcha01-basic.bilivideo.com": {
@@ -14,8 +14,8 @@
       }
     },
     "d0--cn-gotcha01.bilivideo.com": {
-      "bottom-line-live-relay-01101-ct.bvc-line.bilivideo.com": {
-        "ipv4": 15,
+      "bottom-line-live-relay-01108-ct.bvc-line.bilivideo.com": {
+        "ipv4": 20,
         "ipv6": 0
       }
     },
@@ -39,7 +39,7 @@
       "d1--cn-gotcha03.bilivideo.com.rtmpv4.pilidns.com": {
         "d1--cn-gotcha03.bilivideo.com.w.cdngslb.com": {
           "ipv4": 4,
-          "ipv6": 2
+          "ipv6": 4
         }
       }
     },
@@ -64,8 +64,8 @@
     "d1--cn-gotcha04.bilivideo.com": {
       "4877.liveplay.myqcloud.com": {
         "9050520.pack.tcdnlive.com": {
-          "d1--cn-gotcha04.bilivideo.com.l5.sched.dcloudlive.com": {
-            "ipv4": 4,
+          "d1--cn-gotcha04.bilivideo.com.sched.l8.tdnsv5.com": {
+            "ipv4": 11,
             "ipv6": 0
           }
         }
@@ -74,9 +74,9 @@
     "d1--cn-gotcha104.bilivideo.com": {
       "hls.4877.liveplay.myqcloud.com": {
         "txy.wshls.acgvideo.com.tcdnlive.com": {
-          "txy.wshls.acgvideo.com.l5-dk.sched.dcloudlive.com": {
-            "ipv4": 4,
-            "ipv6": 3
+          "txy.wshls.acgvideo.com.sched.l8-dk.tdnsv5.com": {
+            "ipv4": 11,
+            "ipv6": 1
           }
         }
       }
@@ -126,7 +126,7 @@
       "d1--cn-gotcha08.bilivideo.com.c.cdnhwc3.com": {
         "hcdnl.pullbz.gslb.c.cdnhwc2.com": {
           "ipv4": 3,
-          "ipv6": 4
+          "ipv6": 0
         }
       }
     },
@@ -134,7 +134,7 @@
       "d1--cn-gotcha108.bilivideo.com.c.cdnhwc3.com": {
         "hcdnl.pullbz.gslb.c.cdnhwc2.com": {
           "ipv4": 3,
-          "ipv6": 4
+          "ipv6": 0
         }
       }
     },
@@ -207,7 +207,7 @@
     "d1--ov-gotcha04.bilivideo.com": {
       "d1--ov-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
         "tdns.l3.sched.dcloudlive.com": {
-          "ipv4": 1,
+          "ipv4": 5,
           "ipv6": 0
         }
       }
@@ -215,7 +215,7 @@
     "d1--ov-gotcha104.bilivideo.com": {
       "d1--ov-gotcha104.bilivideo.com.liveplay.myqcloud.com": {
         "tdns.l3.sched.dcloudlive.com": {
-          "ipv4": 1,
+          "ipv4": 5,
           "ipv6": 0
         }
       }
@@ -278,7 +278,7 @@
     "d1--p1--cn-gotcha04.bilivideo.com": {
       "p1-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
         "tdns.l5.sched.dcloudlive.com": {
-          "ipv4": 4,
+          "ipv4": 3,
           "ipv6": 0
         }
       }
