@@ -185,6 +185,7 @@ type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
     }
   });
 
+  // TODO: 固定 isp 的顺序。现在会根据实际运行中的拿到回复的先后来排，又因为是并发的，所以每次运行的顺序都不一样。
   const outputSorted = Object.fromEntries(Object.entries(output).map(isp => {
     isp[1] = isp[1].sort((a, b) => a.regionCode > b.regionCode ? 1 : a.regionCode < b.regionCode ? -1 : 0);
     return isp;

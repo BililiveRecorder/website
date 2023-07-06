@@ -28,6 +28,18 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2.7.0 更新内容（2023年7月7日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 现在连接弹幕服务器也会使用高级设置里设置的 Cookie"/>
+              <TextBlock Text="- 给用户脚本添加了 `onDanmakuHandshake` 事件用于自定义发给弹幕服务器的握手信息"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.6.3 更新内容（2023年6月18日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
