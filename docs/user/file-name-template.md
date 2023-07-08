@@ -131,6 +131,15 @@ ignore_macros: true
     3号直播间
     ```
 
+### `uid`
+
+主播 UID
+
+!!! example "例子"
+    ```txt
+    11153765
+    ```
+
 ### `title`
 
 直播间标题
