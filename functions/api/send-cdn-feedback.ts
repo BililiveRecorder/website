@@ -33,10 +33,10 @@ export const onRequestPost: PagesFunction<{
 
     if (recaptchaRespData.success) {
       const dataString = JSON.stringify({
-        username: 'B站直播流 CDN 反馈',
+        username: 'mikufans直播流 CDN 反馈',
         avatar_url: 'https://rec.danmuji.org/favicon.png',
         embeds: [{
-          title: "B站直播流 CDN 反馈",
+          title: "mikufans直播流 CDN 反馈",
           description: postData.text,
           color: 0x4b67e3,
           fields: [

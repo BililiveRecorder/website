@@ -1,6 +1,6 @@
 # 翻译录播姬
 
-B站录播姬非常意外有不少非中文用户，因此录播姬桌面版添加了多语言支持。
+mikufans录播姬非常意外有不少非中文用户，因此录播姬桌面版添加了多语言支持。
 
 录播姬翻译使用的平台是 crowdin，任何人都可以注册账号参与到翻译中。  
 项目地址是 [https://crowdin.com/project/bililiverecorder](https://crowdin.com/project/bililiverecorder){ target=_blank }

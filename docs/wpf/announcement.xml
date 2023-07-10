@@ -91,7 +91,7 @@
           </GroupBox>
           <GroupBox Header="2022年8月公告">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <TextBlock Text="从大约 7 月 20 日 左右开始，B站自建的直播服务器在直播结束后不会断开直播流，而是超大量重复发送最后几秒直播数据。"/>
+              <TextBlock Text="从大约 7 月 20 日 左右开始，mikufans自建的直播服务器在直播结束后不会断开直播流，而是超大量重复发送最后几秒直播数据。"/>
               <TextBlock Text="从录播姬 2.2.0 开始，用标准模式录制时，会在检测到连续 10 次收到重复数据后主动断开录制。"/>
               <TextBlock Text="原始数据模式不会对直播服务器发送的数据做任何分析处理，需要手动结束录制。"/>
               <TextBlock Text="请重点关注一下主播下播后的录制状态。"/>

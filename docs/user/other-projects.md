@@ -41,10 +41,10 @@
 | valkjsaaa/ffmpeg-smart-trim    | [GitHub 项目页](https://github.com/valkjsaaa/ffmpeg-smart-trim){ target=_blank }                                                | {{ x }} | {{ y }} | {{ y }} | {{ x }} | {{ x }} | 基于FFmpeg的快速精准切片 |
 | lossless-cut                   | [GitHub Release](https://github.com/mifi/lossless-cut/releases){ target=_blank }                                                | {{ y }} | {{ y }} | {{ y }} | {{ y }} | {{ x }} | 快速切片工具 |
 | MediaCoder                     | [官网](https://www.mediacoderhq.com/dlfull.htm){ target=_blank }                                                                | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
-| Rmbox<br>(Ruminoid Toolbox)    | [B站视频](https://www.bilibili.com/video/BV1aK4y1N7Nf){ target=_blank }<br>[官网](https://ruminoid.world){ target=_blank }      | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| Rmbox<br>(Ruminoid Toolbox)    | [mikufans视频](https://www.bilibili.com/video/BV1aK4y1N7Nf){ target=_blank }<br>[官网](https://ruminoid.world){ target=_blank }      | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
 | NegativeEncoder 消极压制        | [GitHub Release](https://github.com/zyzsdy/NegativeEncoder/releases){ target=_blank }                                          | {{ y }} | {{ x }} | {{ x }} | {{ x }} | {{ y }} | 无 |
 | 小丸工具箱                      | [下载链接](https://dl.hdslb.com/video-press/xiaowantoolsrev194.zip){ target=_blank }                                            | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
-| 小丸工具箱B站定制版              | [下载链接](https://dl.hdslb.com/video-press/BiliBiliEncoder.zip){ target=_blank }                                               | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
+| 小丸工具箱mikufans定制版              | [下载链接](https://dl.hdslb.com/video-press/BiliBiliEncoder.zip){ target=_blank }                                               | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ y }} | 无 |
 | StarTools                      | [GitHub Release](https://github.com/hoshinohikari/StarTools/releases){ target=_blank }                                          | {{ y }} | {{ x }} | {{ x }} | {{ x }} | {{ y }} | 无 |
 | OBS Studio                     | [官网](https://obsproject.com){ target=_blank }                                                                                 | {{ y }} | {{ y }} | {{ x }} | {{ x }} | {{ x }} | 无 |
 

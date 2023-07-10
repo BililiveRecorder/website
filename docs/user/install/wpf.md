@@ -11,7 +11,7 @@ title: 桌面版 - 安装使用
 安装过录播姬后可以从桌面和开始菜单的快捷方式启动录播姬，不要再次运行安装包。  
 如果想要卸载录播姬，可以在 **系统设置 :material-chevron-right: 应用** 里卸载。
 
-你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载 zip 压缩包以及旧版本的B站录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。  
+你也可以从 [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases){target=_blank} 下载 zip 压缩包以及旧版本的mikufans录播姬，文件名是 `BililiveRecorder-WPF-Portable.zip`。  
 这里下载的压缩包解压后即可运行，不需要安装，没有版本检查和自动更新功能。
 
 通过安装包安装的录播姬有版本检查功能，能自动更新。更新不会重启软件，不影响正在录制的直播，更新后下一次运行录播姬会自动使用新版本。  
@@ -60,7 +60,7 @@ Options:
 
 !!! example "示例"
     ```powershell
-    ./BililiveRecorder.WPF.exe run "D:\B站录播\"
+    ./BililiveRecorder.WPF.exe run "D:\mikufans录播\"
     ```
 
 如果传入了 `--ask-path` 选项，不管之前有没有选择过 “不再询问” 都会再弹出选择工作目录的选项框。
