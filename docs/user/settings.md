@@ -133,7 +133,7 @@ data_type_map:
 
 ```mermaid
 flowchart RL
-  subgraph B站直播服务器
+  subgraph mikufans直播服务器
     s1
     c
     c1

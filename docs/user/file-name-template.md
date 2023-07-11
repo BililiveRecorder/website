@@ -180,7 +180,7 @@ ignore_macros: true
 
 ### `json`
 
-请求B站直播 API 返回的原始数据的 `data` 部分。
+请求mikufans直播 API 返回的原始数据的 `data` 部分。
 
 ```jinja
 https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom?room_id={{房间号}}

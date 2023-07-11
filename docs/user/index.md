@@ -1,6 +1,6 @@
 # 用户文档
 
-录播姬是一个方便好用免费开源的B站直播录制工具。
+录播姬是一个方便好用免费开源的直播录制工具（只支持某特定平台）
 
 !!! tip inline end "Discord"
     <iframe src="https://discord.com/widget?id=1002130286374555648&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
@@ -15,7 +15,7 @@ Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=
 ### 简单方便
 
 下载、安装、选择保存位置、粘贴直播间链接，1 分钟即可开录。  
-开始录制、停止录制，操作简单，本地录制B站直播回放。
+开始录制、停止录制，操作简单，本地录制mikufans直播回放。
 ### 自动录制
 
 开播自动开始录制，响应速度极快（通常在 10 秒以内），能录到直播的最开头。
@@ -26,7 +26,7 @@ Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=
 
 ### 弹幕录制
 
-支持同时录制直播弹幕，保存为兼容B站主站弹幕格式的 XML 文件。  
+支持同时录制直播弹幕，保存为兼容mikufans主站弹幕格式的 XML 文件。  
 除了普通弹幕以外还支持保存赠送礼物、醒目留言/SuperChat、和购买舰长。
 
 ### 无损分段
@@ -39,7 +39,7 @@ Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=
 
 ### 直播数据修复
 
-原创的B站直播数据修复系统，自动修复时间戳跳变、视频总时长显示为 0、主播PK连麦导致的花屏绿屏等B站录播的各种常见问题。
+原创的mikufans直播数据修复系统，自动修复时间戳跳变、视频总时长显示为 0、主播PK连麦导致的花屏绿屏等mikufans录播的各种常见问题。
 
 !!! bug "不支持修复的问题"
     目前录播姬有一种问题还不支持进行处理

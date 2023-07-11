@@ -25,7 +25,7 @@ utils.getRoomId("我跟你讲，我今天找到个声音超好听的妹子，她
 
 ### validateCookie
 
-验证一段 cookie 是否对于B站是否形式合法，它验证了 `DedeUserID`, `SESSDATA`, `bili_jct` 三个字段
+验证一段 cookie 是否对于mikufans是否形式合法，它验证了 `DedeUserID`, `SESSDATA`, `bili_jct` 三个字段
 
 ```ts
 utils.validateCookie(
