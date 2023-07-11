@@ -1,6 +1,6 @@
 site_name: 录播姬
 site_url: !ENV [SITE_URL, "https://rec.danmuji.org/"]
-site_description: 录播姬是一个方便好用免费开源的mikufans直播录制工具
+site_description: 录播姬是一个方便好用免费开源的直播录制工具
 site_author: genteure
 
 strict: !ENV [CI, false]

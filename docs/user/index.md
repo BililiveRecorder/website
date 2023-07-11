@@ -1,6 +1,6 @@
 # 用户文档
 
-录播姬是一个方便好用免费开源的mikufans直播录制工具。
+录播姬是一个方便好用免费开源的直播录制工具（只支持某特定平台）
 
 !!! tip inline end "Discord"
     <iframe src="https://discord.com/widget?id=1002130286374555648&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
