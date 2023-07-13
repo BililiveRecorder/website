@@ -71,12 +71,22 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   // ['cu', 'jlcc3', '吉林长春'], 和 jlcc IP 一样， cn-jlcc3-cu-v-01 到 06，IP 是 2 到 7
 
   // 广电
+  ['gd', 'cq', '重庆'],
   ['gd', 'gdgz', '广东广州'],
+  ['gd', 'gzgy', '贵州贵阳'],
+  ['gd', 'hb', '河北'],
+  ['gd', 'hbwh', '湖北武汉'],
   ['gd', 'hljheb', '黑龙江哈尔滨'],
+  ['gd', 'jlcc', '吉林长春'],
+  ['gd', 'jsnj', '江苏南京'],
+  ['gd', 'hncs', '湖南长沙'],
+  ['gd', 'zjhz', '浙江杭州'],
 
   // cc 长城/鹏博士/电信通
   ['cc', 'bj', '北京'],
+  ['cc', 'gdfs', '广东佛山'],
   ['cc', 'sh', '上海'],
+
 
   // ccc 三线带宽 暂不扫，回头改一下脚本一起把所有IP都扫出来
   // ['ccc', 'hnld', '湖南娄底'],
@@ -94,6 +104,10 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   ['fx', 'sccd', '四川成都'],
   ['fx', 'sdjn', '山东济南'],
   ['fx', 'sh', '上海'],
+  ['fx', 'tj', '天津'],
+
+  // wasu 华数
+  ['wasu', 'zjhz', '浙江杭州'],
 
   // eq
   ['eq', 'hk', '香港'],
@@ -104,6 +118,14 @@ const CDN_INFO: [isp: string, regionCode: string, regionName: string, extraZoneN
   // 教育网（赛尔网络）
   ['se', 'bj', '北京'],
 ];
+
+const ispOrder = [] as string[];
+
+for (const info of CDN_INFO) {
+  if (ispOrder.indexOf(info[0]) === -1) {
+    ispOrder.push(info[0]);
+  }
+}
 
 const cdnRegions = CDN_INFO.map(info => {
   const zones = ['01', '02', '03', '04', 'v', ...(info[3] || [])]
@@ -185,10 +207,16 @@ type DomainIpMap = { [domain: string]: { ipv4?: string[], ipv6?: string[] } };
     }
   });
 
-  // TODO: 固定 isp 的顺序。现在会根据实际运行中的拿到回复的先后来排，又因为是并发的，所以每次运行的顺序都不一样。
-  const outputSorted = Object.fromEntries(Object.entries(output).map(isp => {
+  let outputSorted = Object.fromEntries(Object.entries(output).map(isp => {
     isp[1] = isp[1].sort((a, b) => a.regionCode > b.regionCode ? 1 : a.regionCode < b.regionCode ? -1 : 0);
     return isp;
+  }));
+
+  // the keys of outputSorted is the ISP name, sort entries by the isp names in ispOrder
+  outputSorted = Object.fromEntries(Object.entries(outputSorted).sort((a, b) => {
+    const aIndex = ispOrder.indexOf(a[0]);
+    const bIndex = ispOrder.indexOf(b[0]);
+    return aIndex > bIndex ? 1 : aIndex < bIndex ? -1 : 0;
   }));
 
   const outputText = JSON.stringify({

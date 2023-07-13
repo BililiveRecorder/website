@@ -78,6 +78,7 @@ mikufans直播使用 (或曾经用过) 以下几家 CDN:
 {{ bcdn_isp('教育网', 'fx') }}
 {{ bcdn_isp('教育网（赛尔网络）', 'se') }}
 {{ bcdn_isp('长城/鹏博士', 'cc') }}
+{{ bcdn_isp('华数', 'wasu') }}
 {{ bcdn_isp('上海驰联网络 IX', 'ix') }}
 {{ bcdn_isp('Equinix IX', 'eq') }}
 
