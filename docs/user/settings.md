@@ -185,6 +185,13 @@ flowchart RL
 请参考[用户脚本](./user-script.md)页面。
 
 {% endset %}
+{% set longDescriptions.DanmakuAuthenticateWithStreamerUid %}
+
+此设置项为 `true` 时，连接弹幕服务器只传递主播的 uid。
+
+此设置项为 `false` 时，连接弹幕服务器会根据是否设置了 cookie，传递 cookie 所对应的账号信息或完全匿名。
+
+{% endset %}
 <!-- 设置项长说明区域结束 -->
 
 {% for setting in brec_settings %}
