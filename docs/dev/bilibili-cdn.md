@@ -23,15 +23,15 @@ gotcha_cdn_region_map:
 # npx ts-node ./scripts/dns-scan-bcdn.ts
 ---
 
-# 直播 CDN 信息
+# 生放送 CDN 信息
 
-本页面收集了一些mikufans直播 CDN 相关的信息，我也不知道可能会有什么用。  
-本页面主要分为两部分，分别列出了[mikufans自建的视频云域名](#mikufans视频云)（更新时间：`{{ dns_data_bcdn.time }}`）和mikufans直播用到的[第三方服务商域名](#cdn-服务商域名)（更新时间：`{{ dns_data_gotcha.time }}`）。
+本页面收集了一些mikufans生放送 CDN 相关的信息，我也不知道可能会有什么用。  
+本页面主要分为两部分，分别列出了[mikufans自建的视频云域名](#mikufans视频云)（更新时间：`{{ dns_data_bcdn.time }}`）和mikufans生放送用到的[第三方服务商域名](#cdn-服务商域名)（更新时间：`{{ dns_data_gotcha.time }}`）。
 
 !!! tip
     可以用浏览器的搜索功能 `Ctrl + F` 在本页面上快速查找
 
-mikufans直播使用 (或曾经用过) 以下几家 CDN:
+mikufans生放送使用 (或曾经用过) 以下几家 CDN:
 
 {% for key, value in gotcha_cdn_provider_map.items() %}
 - {{ value }}
@@ -41,7 +41,7 @@ mikufans直播使用 (或曾经用过) 以下几家 CDN:
 
 ## mikufans视频云
 
-这些是mikufans自己建设的 CDN，也就是用地名的拼音命名的那些域名。除了直播以外，主站视频也会用到这些服务器。
+这些是mikufans自己建设的 CDN，也就是用地名的拼音命名的那些域名。除了生放送以外，主站视频也会用到这些服务器。
 
 下面列出了部分已知的 CDN 域名。  
 如果遇到了这里没列的域名可以联系我添加。
@@ -100,7 +100,7 @@ IP 个数指的是一次 DNS 请求返回的数量（显然不可能是总数）
 
 ### {{ domain }}
 
-| 服务商 | 直播流类型 | 服务区域 |
+| 服务商 | 生放送流类型 | 服务区域 |
 | ----- | ---------- | ------- |
 | {{ gotcha_cdn_provider_map[map.id] }} | {{ gotcha_cdn_type_map[map.type] if gotcha_cdn_region_map[map.region] else '_不确定_' }} | {{ gotcha_cdn_region_map[map.region] or '_不确定_' }}  |
 
