@@ -28,6 +28,19 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2.8.0 更新内容（2023年7月16日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 添加了一个高级设置项：使用主播 uid 连接弹幕服务器，默认为启用状态"/>
+              <TextBlock Text="- 微调了一下软件界面文本"/>
+              <TextBlock Text="- 文件名模板、用户脚本、和其他细节修改"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.7.0 更新内容（2023年7月7日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
