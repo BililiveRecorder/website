@@ -98,6 +98,7 @@ nav:
       - 生放送 CDN 信息: dev/bilibili-cdn.md
       - 添加新的设置项: dev/add-new-settings.md
       - 发布新版本: dev/releasing-new-version.md
+      - 录播姬3测试说明: dev/v3.md
 
 plugins:
   - search
