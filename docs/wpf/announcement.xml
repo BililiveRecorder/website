@@ -28,6 +28,17 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2.8.2 更新内容（2023年8月19日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 修复了部分用户不能及时开始录制的问题"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.8.1 更新内容（2023年7月23日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
@@ -64,55 +75,6 @@
               </Button>
               <TextBlock Text="- 现在连接弹幕服务器也会使用高级设置里设置的 Cookie"/>
               <TextBlock Text="- 给用户脚本添加了 `onDanmakuHandshake` 事件用于自定义发给弹幕服务器的握手信息"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.6.3 更新内容（2023年6月18日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 修改了弹幕文件内弹幕时间的计算方法，不再受系统时间变动的影响"/>
-              <TextBlock Text="- 当直播间被管理员切断或封禁时会记录一条日志"/>
-              <TextBlock Text="- 修改了版本号，表示还在更新（别急，在搓大的了）"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.6.2 更新内容（2023年2月13日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 修复用户脚本 runtime 的一个 bug"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.6.1 更新内容（2023年2月3日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 修复用户脚本 runtime 的一个 bug"/>
-              <TextBlock Text="- 其他小改动"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.6.0 更新内容（2023年2月1日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 给用户脚本添加了新接口"/>
-              <TextBlock Text="- 在特定情况下（如硬盘满了）停止自动重试"/>
-              <TextBlock Text="- 其他改动"/>
             </ui:SimpleStackPanel>
           </GroupBox>
           <GroupBox Header="2022年8月公告">
