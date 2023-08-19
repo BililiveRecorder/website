@@ -1,5 +1,5 @@
 {
-  "time": "2023/7/13",
+  "time": "2023/8/19",
   "dns": {
     "ct": [
       {
@@ -2932,32 +2932,32 @@
         "domains": {
           "cn-xj-ct-01-01.bilivideo.com": {
             "ipv4": [
-              "120.71.150.130"
+              "49.119.127.226"
             ]
           },
           "cn-xj-ct-01-02.bilivideo.com": {
             "ipv4": [
-              "49.119.121.195"
+              "49.119.127.227"
             ]
           },
           "cn-xj-ct-01-03.bilivideo.com": {
             "ipv4": [
-              "49.119.121.197"
+              "49.119.127.228"
             ]
           },
           "cn-xj-ct-01-04.bilivideo.com": {
             "ipv4": [
-              "49.119.121.198"
+              "49.119.127.229"
             ]
           },
           "cn-xj-ct-01-05.bilivideo.com": {
             "ipv4": [
-              "49.119.121.199"
+              "49.119.127.230"
             ]
           },
           "cn-xj-ct-01-06.bilivideo.com": {
             "ipv4": [
-              "49.119.121.200"
+              "49.119.127.231"
             ]
           }
         }
@@ -3334,6 +3334,46 @@
           "cn-cq-cm-01-11.bilivideo.com": {
             "ipv4": [
               "221.178.63.17"
+            ]
+          },
+          "cn-cq-cm-01-14.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.20"
+            ]
+          },
+          "cn-cq-cm-01-17.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.23"
+            ]
+          },
+          "cn-cq-cm-01-18.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.24"
+            ]
+          },
+          "cn-cq-cm-01-19.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.25"
+            ]
+          },
+          "cn-cq-cm-01-20.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.26"
+            ]
+          },
+          "cn-cq-cm-01-21.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.27"
+            ]
+          },
+          "cn-cq-cm-01-22.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.28"
+            ]
+          },
+          "cn-cq-cm-01-23.bilivideo.com": {
+            "ipv4": [
+              "221.178.63.29"
             ]
           }
         }
@@ -7414,11 +7454,6 @@
         "regionCode": "cq",
         "regionName": "重庆",
         "domains": {
-          "cn-cq-gd-01-01.bilivideo.com": {
-            "ipv4": [
-              "117.59.125.85"
-            ]
-          },
           "cn-cq-gd-01-02.bilivideo.com": {
             "ipv4": [
               "117.59.125.86"
