@@ -3,6 +3,10 @@ title: Docker 镜像 - 安装使用
 ---
 # Docker 镜像 - 安装使用
 
+本页面介绍了如何使用 Docker 和 Docker Compose 来运行录播姬。两种运行方式选择一个即可。
+
+[推荐使用 Docker Compose 运行录播姬。](#docker-compose)
+
 ## 拉取镜像
 
 Docker 镜像在 [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags){target=_blank} 和 [GitHub Container registry](https://github.com/BililiveRecorder/BililiveRecorder/pkgs/container/bililiverecorder){target=_blank} 上提供。
@@ -32,12 +36,13 @@ docker pull ghcr.io/bililiverecorder/bililiverecorder:2.0.0
     `2.0` 是大版本为 2 次版本为 0 的最新一个版本。  
     `2.0.0` 是固定的 2.0.0 版，不会变。
 
-录播姬的镜像中 entrypoint 已经设置成运行录播姬，默认的 cmd 是在用容器内的 `/rec` 作为工作目录运行。  
-镜像的默认命令相当于是：
+!!! info "镜像的默认 cmd"
+    录播姬的镜像中 entrypoint 已经设置成运行录播姬，默认的 cmd 是在用容器内的 `/rec` 作为工作目录运行。  
+    镜像的默认命令相当于是：
 
-```sh
-./brec run --bind http://*:2356 /rec
-```
+    ```sh
+    ./brec run --bind http://*:2356 /rec
+    ```
 
 !!! warning "地址有变动"
     之前镜像地址是 `ghcr.io/bililive/bililiverecorder` 这个旧地址已经不再使用。
@@ -120,6 +125,42 @@ docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder run --bind 
 
 日志文件默认保存在 `/app/logs`，可以把这个目录也挂载出来。或者可以修改日志文件保存位置，请参考 [日志文件](../log-file.md) 页面。
 
+### Docker Compose
+
+推荐使用 [Docker Compose](https://docs.docker.com/compose/){target=_blank} 来运行录播姬。
+
+`docker-compose.yml` 文件示例：
+
+```yml
+version: "3.8"
+services:
+  recorder:
+    image: bililive/recorder:latest
+    # 或者
+    # image: ghcr.io/bililiverecorder/bililiverecorder:latest
+    
+    volumes:
+      - type: bind
+        source: # 在这里写宿主机保存录播的路径
+        target: /rec
+    
+    ports:
+      - "2356:2356"
+      # 第一个 2356 是宿主机的端口，可以根据自己需求改动。
+      # 第二个 2356 是容器内的端口，不要修改。
+    
+    # 如果需要设置用户名密码，可以在这里设置环境变量
+    environment:
+      - BREC_HTTP_BASIC_USER=用户名
+      - BREC_HTTP_BASIC_PASS=密码
+```
+
+编辑好 `docker-compose.yml` 文件之后，使用下面的命令启动录播姬。
+
+```sh
+docker compose up -d
+```
+
 ## 更新录播姬
 
 更新录播姬只需要重新拉取镜像，删除旧版本的容器，再重新运行新的容器即可。
@@ -140,4 +181,13 @@ docker rm <旧容器ID>
 # 重新新建容器运行
 # 参考本页面上面的运行录播姬部分
 docker run -d -v 宿主机路径:/rec -p 2356:2356 bililive/recorder:latest
+```
+
+### Docker Compose 的更新方法
+
+```sh
+# 拉取最新版本的镜像
+docker compose pull
+# 重新运行最新的容器
+docker compose up -d
 ```
