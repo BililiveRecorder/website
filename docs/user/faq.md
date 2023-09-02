@@ -14,8 +14,7 @@ Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=
 
 录播姬不支持部分老旧操作系统，具体请查看[软硬件要求](./system-requirements.md)一页。
 
-录播姬桌面版本身目前暂时还支持 Windows 7，但是安装包最低支持 Windows 10。  
-Windows 7 等老旧操作系统可以从 GitHub Release 下载 zip 压缩包解压使用，但没有版本检查与更新，具体请参考 [桌面版 - 安装使用](install/wpf.md) 页面。
+需要注意 Windows 7 也是不支持的。
 
 ### 下载文件不成功
 
