@@ -12,6 +12,16 @@
 | {{ year }} 年 {{ month }} 月 {{ day }} 日 |
 {%- endmacro %}
 
+## 2.9.2
+
+{{ d(2023,9,2) }}
+
+通用：
+
+- 增加了弹幕协议 `protover: 3` (brotli) 支持
+
+注：`BililiveRecorder.Core` 从 `.NET Standard 2.0` 改为了 multitarget `.NET 6` 和 `.NET Framework 4.7.2`，这个改动对用户来说应该是无感的。
+
 ## 2.8.2
 
 {{ d(2023,8,19) }}
