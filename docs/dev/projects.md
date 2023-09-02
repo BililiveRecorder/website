@@ -5,7 +5,7 @@
 项目名 | Target | 说明
 :---- | :-----: | :---
 BililiveRecorder.Flv | .NET Standard 2.0 | FLV 解析、处理(修复)、和输出
-BililiveRecorder.Core | .NET Standard 2.0 | 核心逻辑，包括直播状态检测、直播录制、弹幕录制等
+BililiveRecorder.Core | .NET 6<br>.NET Framework 4.7.2 | 核心逻辑，包括直播状态检测、直播录制、弹幕录制等
 BililiveRecorder.Toolbox | .NET Standard 2.0 | 基于 Flv 项目实现的工具箱，如录播修复等
 BililiveRecorder.WPF | .NET Framework 4.7.2 | WPF 界面，也就是 “录播姬桌面版”
 BililiveRecorder.Web | .NET 6 | 跨平台 ASP.NET Core 项目，提供各种 API，不能独立运行
