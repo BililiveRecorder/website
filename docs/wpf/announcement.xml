@@ -35,6 +35,20 @@
               <TextBlock Text="因为B站曾经只提供FLV流、每个直播间都有FLV流、HLS不是每个直播间都有，所以目前录播姬只支持录制FLV流。"/>
               <TextBlock Text="录播姬的 HLS 录制功能目前正在写，进度大概有 50%（？），预计两个星期™后会在录播姬的 QQ群 和 Discord Server 发第一个测试版。"/>
               <TextBlock Text="等功能完善、群内测试没有发现什么大问题后，再发正式版。"/>
+              <TextBlock Text="追加更新：虽然 录播姬 3.0 还没整出来，但整了个显示哪个分区录不了的活: https://hls.bilibili.stream/"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
+          <GroupBox Header="2.9.1 更新内容（2023年10月5日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 修复了部分情况下时间戳跳变修复误判的情况。"/>
+              <TextBlock Text="- 调整了添加房间的链接正则表达式，支持更多格式的链接。"/>
+              <TextBlock Text="- 更新了部分依赖。解决了用户脚本的一些问题。"/>
             </ui:SimpleStackPanel>
           </GroupBox>
           <GroupBox Header="2.9.0 更新内容（2023年9月2日）">
