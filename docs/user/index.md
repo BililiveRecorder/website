@@ -1,6 +1,8 @@
 # 用户文档
 
-录播姬是一个方便好用免费开源的直播录制工具（只支持某特定平台）
+<style>span.hidden-text-xd{background-color:#9b9da2;color:#0000}span.hidden-text-xd::selection{color:#0000}</style>
+
+录播姬是一个方便好用免费开源的<span class="hidden-text-xd">B站</span>直播录制工具
 
 !!! tip inline end "Discord"
     <iframe src="https://discord.com/widget?id=1002130286374555648&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
