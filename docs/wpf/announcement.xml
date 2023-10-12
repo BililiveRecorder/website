@@ -38,6 +38,17 @@
               <TextBlock Text="追加更新：虽然 录播姬 3.0 还没整出来，但整了个显示哪个分区录不了的活: https://hls.bilibili.stream/"/>
             </ui:SimpleStackPanel>
           </GroupBox>
+          <GroupBox Header="2.10.0 更新内容（2023年10月12日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 添加了直播间标题变动时自动分段的功能，默认关闭。感谢 @cxumol 贡献的修改。"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.9.1 更新内容（2023年10月5日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
