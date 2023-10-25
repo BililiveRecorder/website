@@ -28,6 +28,13 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="关于录制出的视频画面模糊的问题">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <TextBlock Text="2023 年 10 月 25 日直播流地址接口新增加了限制，不登录账号限制只能观看低画质的直播流。"/>
+              <TextBlock Text="因此即使设置录制的画质ID是“原画”，也有可能录制到“高清”之类的低分辨率低码率流。"/>
+              <TextBlock Text="本来就没有低画质流的臭底边主播不受影响。"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="关于部分分区的直播间不能录制的问题">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <TextBlock Text="日志中如果有 “启动录制出错 no supported stream url, qn:” 并且无法录制"/>
