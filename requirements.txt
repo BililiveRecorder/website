@@ -1,5 +1,5 @@
-mkdocs-material
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-macros-plugin
+mkdocs-material==9.4.7
+mkdocs-minify-plugin==0.7.1
+mkdocs-redirects==1.2.1
+mkdocs-macros-plugin==1.0.4
 ./plugins/mkdocs-redirects/
