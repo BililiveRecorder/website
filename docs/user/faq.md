@@ -48,11 +48,11 @@ Discord: [https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw){ target=
 
 解决方法：在网站下载安装包，重新安装。（无需提前卸载，覆盖安装即可）
 
-闪退崩溃还有可能是其他问题导致的，如操作系统故障、显卡驱动问题、电脑硬件问题等等。如果无法解决可以加QQ群或发邮件询问。
+闪退崩溃还有可能是其他问题导致的，如操作系统故障、显卡驱动问题、电脑硬件问题等等。如果无法解决可以加 QQ 群或发邮件询问。
 
-### (macOS) 无法打开“BililiveRecorder.Cli”，因为无法验证开发者。
+### (macOS) 无法打开“BililiveRecorder.Cli”因为无法验证开发者
 
-macOS 存在安全限制，需要对程序进行临时签名才可运行。可以参考如下命令或者[图中](https://asciinema.org/a/4SepVOSkgCr9UNY5pqbpAgDVX?t=24)的操作：
+macOS 存在安全限制，需要对程序进行临时签名才可运行。
 
 ```shell
 # 移除 quarantine 属性
