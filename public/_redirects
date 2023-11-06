@@ -1,6 +1,3 @@
-/docs /user/versions/
-/docs/ /user/versions/
-/docs/* /user/versions/
 /link/discord https://discord.gg/YQWtUsbGSw
 /link/discord/ https://discord.gg/YQWtUsbGSw
 /link/faq /user/faq/
@@ -11,11 +8,6 @@
 /link/sponsor/ https://afdian.net/a/genteure
 /link/translate https://crowdin.com/project/bililiverecorder
 /link/translate/ https://crowdin.com/project/bililiverecorder
-/update/* /user/changelog/
-/user/commands /reference/arguments/
-/user/commands/ /reference/arguments/
-/user/repair-feedback /user/repair/
-/user/repair-feedback/ /user/repair/
 
 /user/ /
 /user/system-requirements/ /user/faq/
@@ -41,3 +33,13 @@
 /user/webhook/ /reference/webhook/
 /user/log-file/ /reference/logs/
 /dev/bilibili-cdn/ /dev/cdn-info/
+
+/user/commands /reference/arguments/
+/user/commands/ /reference/arguments/
+/user/repair-feedback /user/repair/
+/user/repair-feedback/ /user/repair/
+
+/docs /user/versions/
+/docs/ /user/versions/
+/docs/* /user/versions/
+/update/* /user/changelog/
