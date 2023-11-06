@@ -1,0 +1,16 @@
+---
+interface Props {
+  date: [number, number, number];
+}
+const {
+  date: [year, month, day],
+} = Astro.props;
+---
+
+<div>{year} 年 {month} 月 {day} 日</div>
+
+<style>
+  div {
+    margin-top: 0.25em !important;
+  }
+</style>

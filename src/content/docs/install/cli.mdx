@@ -1,0 +1,158 @@
+---
+title: 下载使用命令行版
+description: 如何下载和使用录播姬命令行版
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+录播姬命令行版是跨平台的，可以在 Windows、Linux、MacOS 上运行。命令行版提供了 HTTP API 和网页管理界面，可以在浏览器里启停录制、修改设置。录播姬命令行版比桌面版使用的 CPU、内存更少。
+
+你可以在录播姬的 [GitHub Release](https://github.com/BililiveRecorder/BililiveRecorder/releases) 页面下载到录播姬命令行版。
+
+带有 `any` 字样的压缩包内不含 .NET 运行时，需要自行安装运行时，压缩包文件更小。其他压缩包内已经自带了 .NET 运行时。
+
+| 操作系统 | 架构  | 下载链接                                                                                                                              | 备注                                                                               |
+| -------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| _N/A_    | _N/A_ | [any.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-any.zip)                 | 需要自行安装 [.NET 运行时](https://dotnet.microsoft.com/zh-cn/download/dotnet/6.0) |
+| Linux    | x64   | [linux-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-x64.zip)     | 在服务器上运行一般选这个                                                           |
+| Linux    | arm32 | [linux-arm.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm.zip)     |
+| Linux    | arm64 | [linux-arm64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-linux-arm64.zip) |
+| Windows  | x64   | [win-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-win-x64.zip)         |
+| macOS    | x64   | [osx-x64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-x64.zip)         |
+| macOS    | arm64 | [osx-arm64.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-CLI-osx-arm64.zip)     |
+
+## 使用录播姬命令行版
+
+Windows 上可执行文件名为 `BililiveRecorder.Cli.exe`，Linux 和 macOS 上可执行文件名为 `BililiveRecorder.Cli`，不自带运行时的 any 版的入口点是 `dotnet BililiveRecorder.Cli.dll`。
+
+首先检查录播姬是否能正常运行：
+
+<Tabs>
+<TabItem label="Linux/macOS">
+
+```bash
+./BililiveRecorder.Cli --version
+```
+
+如果没有问题的话，会输出录播姬的版本号。
+
+如果提示没有执行权限，可以使用 `chmod` 命令添加执行权限：
+
+```bash
+chmod +x ./BililiveRecorder.Cli
+```
+
+</TabItem>
+<TabItem label="Windows PowerShell">
+
+```powershell
+./BililiveRecorder.Cli.exe --version
+```
+
+如果没有问题的话，会输出录播姬的版本号。
+
+</TabItem>
+<TabItem label="Any">
+
+```bash
+dotnet BililiveRecorder.Cli.dll --version
+```
+
+如果没有问题的话，会输出录播姬的版本号。
+
+</TabItem>
+</Tabs>
+
+为了后续文档的简洁，从这里开始把 `BililiveRecorder.Cli` 称为 `brec`。
+
+<Tabs>
+<TabItem label="Linux/macOS">
+
+以下设置 alias 的命令仅为示意，你可以不操作、直接把所有文档中的 `brec` 替换为 `./BililiveRecorder.Cli` 即可。
+
+```bash
+alias brec="./BililiveRecorder.Cli"
+```
+
+</TabItem>
+<TabItem label="Windows PowerShell">
+
+以下设置 alias 的命令仅为示意，你可以不操作、直接把所有文档中的 `brec` 替换为 `./BililiveRecorder.Cli.exe` 即可。
+
+```powershell
+Set-Alias -Name brec -Value ./BililiveRecorder.Cli.exe
+```
+
+</TabItem>
+<TabItem label="Any">
+
+以下设置 alias 的命令仅为示意，你可以不操作、直接把所有文档中的 `brec` 替换为 `dotnet BililiveRecorder.Cli.dll` 即可。
+
+```bash
+alias brec="dotnet BililiveRecorder.Cli.dll"
+```
+
+</TabItem>
+</Tabs>
+
+### 启动录播姬
+
+在运行录播姬之前需要先选择一个保存配置文件和录制的文件的**工作目录**。建好目录后，启动录播姬：
+
+```bash
+brec run --bind "http://localhost:2356" "工作目录"
+```
+
+这里的 `--bind` 参数指定了录播姬的 HTTP API 监听地址，可以在浏览器里管理录播姬。如果不指定 `--bind` 参数就不会启动 HTTP 服务，无法在浏览器里管理录播姬。
+
+如果需要允许从其他机器访问录播姬，可以使用下面的命令：
+
+<Tabs>
+<TabItem label="环境变量传参 (sh)">
+
+```bash
+export BREC_HTTP_BASIC_USER="用户名"
+export BREC_HTTP_BASIC_PASS="密码"
+brec run --bind "http://*:2356" "工作目录"
+```
+
+</TabItem>
+<TabItem label="环境变量传参 (PowerShell)">
+
+```powershell
+$env:BREC_HTTP_BASIC_USER="用户名"
+$env:BREC_HTTP_BASIC_PASS="密码"
+brec run --bind "http://*:2356" "工作目录"
+```
+
+</TabItem>
+<TabItem label="命令传参">
+
+```bash
+brec run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" "工作目录"
+```
+
+</TabItem>
+</Tabs>
+
+:::caution[重要安全提醒]
+如果要把录播姬的管理页面对公网开放，请一定一定一定做好安全措施，给录播姬设置一个密码，或使用其他有身份验证功能的反向代理软件。
+
+直接把没有身份验证的录播姬暴露到公网可能会有严重的安全风险。轻则被添加一大堆直播间导致硬盘塞满，重则可能会被任意上传下载文件。虽然理论上是不能通过录播姬来做到任意代码执行的，不过开发者不做任何保证。
+:::
+
+启动了录播姬之后在浏览器内访问对应的地址（如果是用默认端口运行在本机的话就是 `http://localhost:2356`）即可打开录播姬的管理页面。如果设置了密码的话会弹出 HTTP Basic 登录框，输入命令行传入录播姬的用户名和密码即可登录。
+
+### 停止录播姬
+
+按 `Ctrl + C` (即发送 `SIGINT`) 退出录播姬，录播姬退出时会先停止当前正在进行的录播并保存配置。
+
+在 Windows 上直接点击命令行窗口右上角的关闭按钮或者在所有系统上通过任何方式强制结束录播姬进程可能会导致配置文件不被保存、正在录制的弹幕文件不完整等问题。
+
+## 更新录播姬命令行版
+
+手动下载新版本的压缩包解压到一个新位置，然后使用相同的工作目录启动录播姬即可。
+
+## 反馈、建议和问题
+
+如有问题可以通过 [GitHub Issues](https://github.com/BililiveRecorder/BililiveRecorder/issues)、[QQ 群 (689636812)](https://jq.qq.com/?_wv=1027&k=5NPC2dt)、[Discord Server](https://discord.gg/YQWtUsbGSw) 或[发送邮件到 `rec@danmuji.org`](mailto:rec@danmuji.org) 联系开发者。

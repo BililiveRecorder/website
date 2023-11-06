@@ -1,0 +1,38 @@
+---
+interface Props {
+  graph: string;
+  height?: string;
+  maxHeight?: string;
+}
+
+const { graph, height, maxHeight } = Astro.props;
+
+const style = {} as any;
+if (height) {
+  style.height = height;
+}
+if (maxHeight) {
+  style.maxHeight = maxHeight;
+}
+
+// TODO: better dark mode support
+// TODO: better writing experience by using a custom graph definition loader
+---
+
+<div>
+  <pre class="mermaid" {style} set:html={graph} />
+</div>
+
+<script>
+  import mermaid from "mermaid";
+  mermaid.initialize({ startOnLoad: true });
+</script>
+<style>
+  pre.mermaid {
+    display: flex;
+    justify-content: center;
+  }
+  pre.mermaid:not(:where([data-processed="true"])) {
+    color: transparent;
+  }
+</style>

@@ -1,0 +1,112 @@
+---
+title: 下载使用录播姬容器镜像
+description: 如何下载和使用录播姬容器镜像
+---
+
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+录播姬提供了命令行版的容器镜像，可以在任何支持 Docker 的平台上运行录播姬。录播姬的镜像支持 `linux/amd64`、`linux/arm64` 和 `linux/arm/v7` 三种架构。
+
+镜像在 [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags) 和 [GitHub Container Registry](https://github.com/BililiveRecorder/BililiveRecorder/pkgs/container/bililiverecorder) 上提供，两个镜像源的镜像版本是同步的，可以任选其一。GitHub Container Registry 上除了正式版以外还提供了开发版的镜像，一般情况下不建议使用开发版。
+
+```bash
+docker pull bililive/recorder:latest
+docker pull ghcr.io/bililiverecorder/bililiverecorder:latest
+```
+
+录播姬的镜像 tag 遵循容器镜像版本管理惯例，每个版本可能对应多个 tag。`latest` 目前的最新正式版本。`2` 是 2.x.x 中的最新一个版本。`2.0` 是 2.0.x 中的最新一个版本。`2.0.0` 是固定的版本 2.0.0，不会变。
+
+## 使用录播姬容器镜像
+
+本文以 [docker compose](https://docs.docker.com/compose/) 和 [docker](https://docs.docker.com/) 为例介绍如何使用录播姬容器镜像。
+
+<Tabs>
+<TabItem label="docker compose">
+
+新建一个 `docker-compose.yml` 文件，内容参考如下：
+
+```yaml
+version: "3.8"
+services:
+  recorder:
+    image: bililive/recorder:latest
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: # 在这里写宿主机保存录播的路径
+        target: /rec
+    ports:
+      - "2356:2356"
+      # 第一个 2356 是宿主机的端口，可以根据自己需求改动。
+      # 第二个 2356 是容器内的端口，不要修改。
+    environment:
+      - BREC_HTTP_BASIC_USER=用户名
+      - BREC_HTTP_BASIC_PASS=密码
+```
+
+替换上面示例中的 `source` 为宿主机保存录播的路径，设置好管理用户名和密码，然后运行 `docker compose up -d` 即可启动。配置文件和录制的数据都会保存在容器内的 `/rec` 中。
+
+更多 `docker-compose.yml` 的语法请参考 [docker compose 官方文档](https://docs.docker.com/compose/compose-file/compose-file-v3/)。
+
+</TabItem>
+<TabItem label="docker cli">
+
+```bash
+docker run -d \
+  --name bililive-recorder \
+  -p 2356:2356 \
+  -v /path/to/recordings:/rec \
+  -e BREC_HTTP_BASIC_USER=用户名 \
+  -e BREC_HTTP_BASIC_PASS=密码 \
+  bililive/recorder:latest
+```
+
+替换上面示例中的 `/path/to/recordings` 为宿主机保存录播的路径，并修改传入的管理用户名密码。配置文件和录制的数据都会保存在容器内的 `/rec` 中。
+
+更多 docker 命令行的用法请参考 [docker 官方文档](https://docs.docker.com/engine/reference/run/)。
+
+</TabItem>
+</Tabs>
+
+:::caution[重要安全提醒]
+如果要把录播姬的管理页面对公网开放，请一定一定一定做好安全措施，给录播姬设置一个密码，或使用其他有身份验证功能的反向代理软件。
+
+直接把没有身份验证的录播姬暴露到公网可能会有严重的安全风险。轻则被添加一大堆直播间导致硬盘塞满，重则可能会被任意上传下载文件。虽然理论上是不能通过录播姬来做到任意代码执行的，不过开发者不做任何保证。
+:::
+
+启动了容器之后在浏览器内访问对应的地址（如果是用默认端口运行在本机的话就是 `http://localhost:2356`）即可打开录播姬的管理页面。如果设置了密码的话会弹出 HTTP Basic 登录框，输入启动容器时设置的用户名和密码即可登录。
+
+## 更新录播姬容器镜像
+
+<Tabs>
+<TabItem label="docker compose">
+
+根据需要修改 `docker-compose.yml` 文件中的 `image` 字段，拉取最新的镜像，再重新运行启动即可。
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
+</TabItem>
+<TabItem label="docker cli">
+
+更新 docker 容器需要先拉取新的镜像，然后停止并删除旧的容器，再启动新的容器。
+
+```bash
+# 拉取最新的镜像
+docker pull bililive/recorder:latest
+
+# 停止并删除旧的容器
+docker stop bililive-recorder
+docker rm bililive-recorder
+
+docker run ... # 参考上面的 docker cli 新建容器的命令
+```
+
+</TabItem>
+</Tabs>
+
+## 反馈、建议和问题
+
+如有问题可以通过 [GitHub Issues](https://github.com/BililiveRecorder/BililiveRecorder/issues)、[QQ 群 (689636812)](https://jq.qq.com/?_wv=1027&k=5NPC2dt)、[Discord Server](https://discord.gg/YQWtUsbGSw) 或[发送邮件到 `rec@danmuji.org`](mailto:rec@danmuji.org) 联系开发者。

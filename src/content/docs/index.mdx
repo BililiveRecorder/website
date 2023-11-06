@@ -1,0 +1,49 @@
+---
+title: 录播姬
+head:
+  - tag: title
+    content: 录播姬 ★ 一个简单好用的直播录制工具
+description: 一个简单好用免费开源的直播录制工具
+template: splash
+editUrl: false
+hero:
+  tagline: 一个简单好用免费开源的直播录制工具
+  image:
+    dark: ../../assets/home-dark-new.png
+    light: ../../assets/home-light-new.png
+  actions:
+    - text: 下载桌面版
+      link: "https://soft.danmuji.org/BililiveRecorder/BililiveRecorderSetup.exe"
+      icon: down-caret
+      variant: primary
+    - text: 其他版本
+      link: "/install/versions/"
+      variant: secondary
+    - text: 使用文档
+      link: "/install/desktop/"
+    - text: 常见问题
+      link: "/user/faq/"
+---
+
+import DownloadLink from "../../components/DownloadLink.astro";
+import UnsupportedSystemWarning from "../../components/UnsupportedSystemWarning.astro";
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<DownloadLink />
+<UnsupportedSystemWarning />
+
+<CardGrid>
+  <Card title="简单方便">
+    下载、安装、选择保存位置、粘贴直播间链接，1
+    分钟即可开录。操作简单，本地录制直播回放。
+  </Card>
+  <Card title="自动录制">
+    实时监控直播间状态，开播自动开始录制，不需要人工等待开播再手动开始录制。
+  </Card>
+  <Card title="高性能">
+    录播姬占用的系统资源少、性能高，可以同时录制很多直播间，或在低端硬件上运行。
+  </Card>
+  <Card title="稳定可靠">
+    经过了大量用户的使用和时间的检验，可 24×7 长时间稳定运行。
+  </Card>
+</CardGrid>

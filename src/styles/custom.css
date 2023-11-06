@@ -1,0 +1,22 @@
+.external-link-badge {
+  background-color: var(--sl-color-gray-6);
+  border-color: var(--sl-color-gray-5);
+  border-radius: 0.25rem;
+  border: 1px solid;
+  color: var(--sl-color-text);
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-inline: 0.25em 0;
+  padding: 0.25em 0.5em;
+  white-space: nowrap;
+}
+
+.external-link-badge::after {
+  content: "外链";
+}
+
+starlight-tabs section {
+  padding: 0 1em;
+}

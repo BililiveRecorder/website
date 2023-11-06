@@ -1,0 +1,40 @@
+---
+title: 录播姬的各个版本
+description: 录播姬的各个版本以及它们之间的区别
+---
+
+**对大多数用户来说，推荐在[本网站首页](/)下载录播姬安装包使用。**
+
+录播姬主要有两个版本：桌面版和命令行版。两个版本共用同一套核心逻辑代码、功能完全一致。在相同的核心逻辑基础上，桌面版提供了 Windows 图形化界面，而命令行版则是提供 HTTP 接口和管理网页界面。
+
+桌面版有两个打包方式：安装包和压缩包（绿色版）。安装包安装的录播姬比压缩包多了版本检查和自动更新，除此以外没有区别。
+
+命令行版提供了压缩包和容器镜像。命令行版本身可以在 Windows Linux 和 macOS 上运行。容器镜像支持 amd64 arm64 和 armv7 架构。
+
+import Mermaid from "@components/Mermaid.astro";
+
+<Mermaid
+  height="600px"
+  graph={`graph TD
+  core[录播姬核心逻辑]
+  core --> d(桌面版)
+  core --> c(命令行版)
+  d --> d1[[桌面版安装包]]
+  d --> d2([桌面版压缩包])
+  subgraph c1[命令行版压缩包]
+    direction LR
+    z1([windows])
+    z2([linux])
+    z3([osx])
+    z4([......])
+  end
+  subgraph c2[容器镜像]
+    direction LR
+    x1([amd64])
+    x2([arm64])
+    x3([armv7])
+  end
+  c ---> c2
+  c ---> c1
+`}
+/>

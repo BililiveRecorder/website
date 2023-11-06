@@ -1,0 +1,49 @@
+---
+
+---
+
+<script>
+  attachDownloadClickHandler();
+
+  function attachDownloadClickHandler() {
+    const LastClickTimeKey = "brld";
+    const href = "href";
+    const button = document.querySelector<HTMLAnchorElement>(
+      "div.hero a.action.primary"
+    );
+
+    if (
+      button &&
+      typeof button[href] === "string" &&
+      button[href].endsWith(".exe")
+    ) {
+      button.addEventListener("click", (event) => {
+        const now = Date.now();
+
+        // skip if the event is not trusted
+        if (!event.isTrusted) return;
+
+        // skip if the last click was less than 100 minutes ago
+        if (
+          now - Number(localStorage.getItem(LastClickTimeKey)) <
+          100 * 60 * 1000
+        )
+          return;
+
+        localStorage.setItem(LastClickTimeKey, String(now));
+
+        const url = new URL("/api/download-installer.exe", location.href);
+        const params = url.searchParams;
+        const oldHref = button.getAttribute(href);
+
+        params.set("t", String(Date.now()));
+        params.set("u", navigator.userAgent);
+        button.setAttribute(href, url.toString());
+
+        setTimeout(() => {
+          button.setAttribute(href, oldHref!);
+        });
+      });
+    }
+  }
+</script>

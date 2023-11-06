@@ -1,0 +1,63 @@
+---
+title: 下载使用桌面版
+description: 如何下载和使用录播姬桌面版
+---
+
+import { Image } from "astro:assets";
+import desktopSidebarDark from "@assets/desktop-sidebar-dark.png";
+import desktopSidebarLight from "@assets/desktop-sidebar-light.png";
+
+录播姬桌面版有两个打包版本。两个打包方式的录播姬在功能上没有任何区别。
+
+- 安装包：通过[本站首页](/)下载的安装包安装的录播姬会检查新版本并自动更新。
+- 压缩包：[录播姬的 GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases) 中提供的压缩包不会检查更新，更新需要手动下载新版本压缩包。
+
+录播姬桌面版安装包请到[本网站的首页](/)下载。  
+最新版本录播姬压缩包下载链接：[BililiveRecorder-WPF-Portable.zip](https://github.com/BililiveRecorder/BililiveRecorder/releases/latest/download/BililiveRecorder-WPF-Portable.zip)。
+
+## 使用录播姬桌面版
+
+在安装了安装包或解压了压缩包、打开了录播姬后，首先需要选择录播姬的**工作目录**。工作目录就是录播姬保存配置文件和录制下来的数据的位置。如果点击“工具箱”按钮则只能使用录播姬工具箱中的功能，无法录制直播。
+
+勾选了“不再询问”后，录播姬会在启动时自动使用上次选择的工作目录。如果需要更改工作目录，可以在房间列表界面的“文件”菜单中点击“修改工作目录”选项，修改工作目录会重启软件导致正在进行的录制断开。
+
+软件设置保存在工作目录里的 `config.json` 文件中，写入配置文件时旧文件会被移动到 `config.backup.json` 作为备份。因为配置文件是在工作目录里的，所以在不同的工作目录运行的录播姬的数据是完全独立的，如果需要移动工作目录记得把原来的工作目录里的 `config.json` 文件也一起移动到新位置。
+
+### 录播姬界面
+
+<div>
+  <Image
+    src={desktopSidebarDark}
+    alt="录播姬桌面版界面截图"
+    class="light:sl-hidden"
+  />
+  <Image
+    src={desktopSidebarLight}
+    alt="录播姬桌面版界面截图"
+    class="dark:sl-hidden"
+  />
+</div>
+
+你可以通过界面左侧的导航栏切换不同的页面。启动录播姬、选择了工作目录后会自动切换到房间列表页面。添加直播间支持房间号和链接，注意不要误写成用户 ID。
+
+设置页面可以通过界面左下角的齿轮图标打开，其中部分设置项可以每个房间单独设置。
+
+房间卡片上的菜单按钮可以控制每个房间的录制开始和停止、调整自动录制状态、修改房间设置、删除房间等。
+
+如果遇到问题可以检查一下日志里有没有报错。问问题时请一定记得附上日志。
+
+## 更新录播姬桌面版
+
+通过安装包安装的录播姬会在启动时检查新版本并自动更新。
+
+通过压缩包安装的录播姬需要手动更新，直接下载新版本压缩包解压运行，选择原来的工作目录即可。
+
+## 卸载录播姬桌面版
+
+通过安装包安装的录播姬可以在系统设置中卸载。
+
+通过压缩包安装的录播姬直接删除解压的文件夹即可。
+
+## 反馈、建议和问题
+
+如有问题可以通过 [GitHub Issues](https://github.com/BililiveRecorder/BililiveRecorder/issues)、[QQ 群 (689636812)](https://jq.qq.com/?_wv=1027&k=5NPC2dt)、[Discord Server](https://discord.gg/YQWtUsbGSw) 或[发送邮件到 `rec@danmuji.org`](mailto:rec@danmuji.org) 联系开发者。

@@ -1,0 +1,617 @@
+{
+  "time": "2023/8/19",
+  "dns": {
+    "c1--cn-gotcha01.bilivideo.com": {
+      "c1--cn-gotcha01-basic.bilivideo.com": {
+        "ipv4": 12,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha01.bilivideo.com": {
+      "a.w.bilicdn1.com": {
+        "ipv4": 8,
+        "ipv6": 8
+      }
+    },
+    "d0--cn-gotcha01.bilivideo.com": {
+      "bottom-line-live-relay-01108-ct.bvc-line.bilivideo.com": {
+        "ipv4": 20,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha101.bilivideo.com": {
+      "d1--cn-gotcha101-basic.bilivideo.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "c1--cn-gotcha03.bilivideo.com": {
+      "c1--cn-gotcha03.bilivideo.com.rtmpv4.pilidns.com": {
+        "c1--cn-gotcha03.bilivideo.com.w.alikunlun.net": {
+          "offline.specialcdnstatus.com": {
+            "ipv4": 1,
+            "ipv6": 0
+          }
+        }
+      }
+    },
+    "d1--cn-gotcha03.bilivideo.com": {
+      "d1--cn-gotcha03.bilivideo.com.rtmpv4.pilidns.com": {
+        "d1--cn-gotcha03.bilivideo.com.w.cdngslb.com": {
+          "ipv4": 4,
+          "ipv6": 4
+        }
+      }
+    },
+    "d1--cn-gotcha103.bilivideo.com": {
+      "d1--cn-gotcha103.bilivideo.com.rtmpv4.pilidns.com": {
+        "d1--cn-gotcha103.bilivideo.com.w.cdngslb.com": {
+          "offline.specialcdnstatus.com": {
+            "ipv4": 1,
+            "ipv6": 0
+          }
+        }
+      }
+    },
+    "d1--cn-gotcha203.bilivideo.com": {
+      "d1--cn-gotcha203.bilivideo.com.w.alikunlun.com": {
+        "offline.specialcdnstatus.com": {
+          "ipv4": 1,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha04.bilivideo.com": {
+      "4877.liveplay.myqcloud.com": {
+        "9050520.pack.tcdnlive.com": {
+          "d1--cn-gotcha04.bilivideo.com.sched.l8.tdnsv5.com": {
+            "ipv4": 1,
+            "ipv6": 0
+          }
+        }
+      }
+    },
+    "d1--cn-gotcha104.bilivideo.com": {
+      "hls.4877.liveplay.myqcloud.com": {
+        "txy.wshls.acgvideo.com.tcdnlive.com": {
+          "txy.wshls.acgvideo.com.sched.l8-dk.tdnsv5.com": {
+            "ipv4": 1,
+            "ipv6": 7
+          }
+        }
+      }
+    },
+    "d1--cn-gotcha204.bilivideo.com": {
+      "txy-fmp4hls.bilivideo.com.livecdn.liveplay.myqcloud.com": {
+        "d1--cn-gotcha204.bilivideo.com.tcdnlive.com": {
+          "d1--cn-gotcha204.bilivideo.com.sched.ls5-all.tdnslive1.cn": {
+            "ipv4": 11,
+            "ipv6": 0
+          }
+        }
+      }
+    },
+    "d1--cn-gotcha05.bilivideo.com": {
+      "d1--cn-gotcha05.bilivideo.com.wsdvs.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha105.bilivideo.com": {
+      "d1--cn-gotcha105.bilivideo.com.wsdvs.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha06.bilivideo.com": {},
+    "d1--cn-gotcha106.bilivideo.com": {},
+    "d1--cn-gotcha206.bilivideo.com": {},
+    "d1--cn-gotcha07.bilivideo.com": {
+      "d1--cn-gotcha07.bilivideo.com.a.bcelive.com": {
+        "bcelive.jomodns.com": {
+          "ipv4": 2,
+          "ipv6": 0
+        }
+      }
+    },
+    "c1--cn-gotcha08.bilivideo.com": {
+      "c1--cn-gotcha08.bilivideo.com.c.cdnhwc3.com": {
+        "hcdnl.pullbz.east.gslb.c.cdnhwc2.com": {
+          "ipv4": 6,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha08.bilivideo.com": {
+      "d1--cn-gotcha08.bilivideo.com.c.cdnhwc3.com": {
+        "hcdnl.pullbz.gslb.c.cdnhwc2.com": {
+          "ipv4": 3,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha108.bilivideo.com": {
+      "d1--cn-gotcha108.bilivideo.com.c.cdnhwc3.com": {
+        "hcdnl.pullbz.gslb.c.cdnhwc2.com": {
+          "ipv4": 3,
+          "ipv6": 0
+        }
+      }
+    },
+    "c1--cn-gotcha208.bilivideo.com": {
+      "c1--cn-gotcha208.bilivideo.com.04f6a54d.c.cdnhwc1.com": {
+        "biliv7cold.v6.c.cdnhwc2.com": {
+          "ipv4": 7,
+          "ipv6": 7
+        }
+      }
+    },
+    "d1--cn-gotcha208.bilivideo.com": {
+      "d1--cn-gotcha208.bilivideo.com.c.cdnhwc1.com": {
+        "biliv6.c.cdnhwc2.com": {
+          "ipv4": 5,
+          "ipv6": 5
+        }
+      }
+    },
+    "c1--cn-gotcha09.bilivideo.com": {
+      "c1--cn-gotcha09.bilivideo.com.w.alikunlun.net": {
+        "ipv4": 4,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha09.bilivideo.com": {
+      "d1--cn-gotcha09.bilivideo.com.w.alikunlun.net": {
+        "ipv4": 4,
+        "ipv6": 0
+      }
+    },
+    "d0--cn-gotcha09.bilivideo.com": {
+      "d0--cn-gotcha09.bilivideo.com.w.alikunlun.net": {
+        "ipv4": 4,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha209.bilivideo.com": {
+      "d1--cn-gotcha209.bilivideo.com.w.alikunlun.net": {
+        "ipv4": 8,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha11.bilivideo.com": {
+      "d1--cn-gotcha11.bilivideo.com.live-play.galileo.jcloud-cdn.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha111.bilivideo.com": {
+      "d1--cn-gotcha111.bilivideo.com.live-play.galileo.jcloud-cdn.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--cn-gotcha211.bilivideo.com": {
+      "d1--cn-gotcha211.bilivideo.com.vod.galileo.jcloud-cdn.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--ov-gotcha102.bilivideo.com": {
+      "d1--ov-gotcha102.bilivideo.com.hlsvcloud.ks-cdn.com": {
+        "k1-oversea.gslb.ksyuncdn-k2.com": {
+          "ipv4": 1,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--ov-gotcha04.bilivideo.com": {
+      "d1--ov-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
+        "tdns.l3.sched.dcloudlive.com": {
+          "ipv4": 3,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--ov-gotcha104.bilivideo.com": {
+      "d1--ov-gotcha104.bilivideo.com.liveplay.myqcloud.com": {
+        "tdns.l3.sched.dcloudlive.com": {
+          "ipv4": 3,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--ov-gotcha05.bilivideo.com": {
+      "d1--ov-gotcha05.bilivideo.com.wsdvs.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--ov-gotcha105.bilivideo.com": {
+      "d1--ov-gotcha105.bilivideo.com.wsdvs.com": {
+        "ipv4": 1,
+        "ipv6": 0
+      }
+    },
+    "d1--ov-gotcha06.bilivideo.com": {},
+    "d1--ov-gotcha106.bilivideo.com": {},
+    "d1--ov-gotcha206.bilivideo.com": {},
+    "d1--ov-gotcha07.bilivideo.com": {
+      "d1--ov-gotcha07.bilivideo.com.a.bcelive.com": {
+        "d1--ov-gotcha07.bilivideo.com.zengslb.com": {
+          "ipv4": 5,
+          "ipv6": 5
+        }
+      }
+    },
+    "d1--ov-gotcha107.bilivideo.com": {
+      "d1--ov-gotcha107.bilivideo.com.g3.bcelive.com": {
+        "ipv4": 5,
+        "ipv6": 5
+      }
+    },
+    "d1--ov-gotcha210.bilivideo.com": {
+      "d1-ov-gotcha210.akamaized.net": {
+        "a495.dscz.akamai.net": {
+          "ipv4": 2,
+          "ipv6": 2
+        }
+      }
+    },
+    "d1--tf-gotcha01.bilivideo.com": {
+      "d1--tf-gotcha01-basic.bilivideo.com": {
+        "live-tf-live-tf-0152-ct.bvc-line.bilivideo.com": {
+          "ipv4": 14,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--tf-gotcha04.bilivideo.com": {
+      "d1--tf-gotcha04.bilivideo.com.livecdn.liveplay.myqcloud.com": {
+        "d1--tf-gotcha04.bilivideo.com.tcdnlive.com": {
+          "d1--tf-gotcha04.bilivideo.com.l3bilibiliml.sched.dcloudlive.com": {
+            "ipv4": 1,
+            "ipv6": 0
+          }
+        }
+      }
+    },
+    "d1--p1--cn-gotcha04.bilivideo.com": {
+      "p1-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
+        "tdns.l5.sched.dcloudlive.com": {
+          "ipv4": 3,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--p2--cn-gotcha04.bilivideo.com": {
+      "p2-gotcha04.bilivideo.com.liveplay.myqcloud.com": {
+        "ztcl8.tcdnlive.com": {
+          "ipv4": 2,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha204-1.bilivideo.com": {
+      "d1--cn-gotcha204-1.bilivideo.com.tcdnlive.com": {
+        "d1--cn-gotcha204-1.bilivideo.com.sched.ls5-all.tdnslive1.cn": {
+          "ipv4": 11,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha204-2.bilivideo.com": {
+      "d1--cn-gotcha204-2.bilivideo.com.tcdnlive.com": {
+        "d1--cn-gotcha204-2.bilivideo.com.sched.ls5-all.tdnslive1.cn": {
+          "ipv4": 11,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha204-3.bilivideo.com": {
+      "d1--cn-gotcha204-3.bilivideo.com.tcdnlive.com": {
+        "d1--cn-gotcha204-3.bilivideo.com.sched.ls5-all.tdnslive1.cn": {
+          "ipv4": 11,
+          "ipv6": 0
+        }
+      }
+    },
+    "d1--cn-gotcha204-4.bilivideo.com": {
+      "d1--cn-gotcha204-4.bilivideo.com.tcdnlive.com": {
+        "d1--cn-gotcha204-4.bilivideo.com.sched.ls5-all.tdnslive1.cn": {
+          "ipv4": 11,
+          "ipv6": 0
+        }
+      }
+    }
+  },
+  "map": {
+    "c1--cn-gotcha01.bilivideo.com": {
+      "prefix": "c1",
+      "region": "cn",
+      "type": "",
+      "id": "01"
+    },
+    "d1--cn-gotcha01.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "01"
+    },
+    "d0--cn-gotcha01.bilivideo.com": {
+      "prefix": "d0",
+      "region": "cn",
+      "type": "",
+      "id": "01"
+    },
+    "d1--cn-gotcha101.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "01"
+    },
+    "c1--cn-gotcha03.bilivideo.com": {
+      "prefix": "c1",
+      "region": "cn",
+      "type": "",
+      "id": "03"
+    },
+    "d1--cn-gotcha03.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "03"
+    },
+    "d1--cn-gotcha103.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "03"
+    },
+    "d1--cn-gotcha203.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "03"
+    },
+    "d1--cn-gotcha04.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "04"
+    },
+    "d1--cn-gotcha104.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "04"
+    },
+    "d1--cn-gotcha204.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "04"
+    },
+    "d1--cn-gotcha05.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "05"
+    },
+    "d1--cn-gotcha105.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "05"
+    },
+    "d1--cn-gotcha06.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "06"
+    },
+    "d1--cn-gotcha106.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "06"
+    },
+    "d1--cn-gotcha206.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "06"
+    },
+    "d1--cn-gotcha07.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "07"
+    },
+    "c1--cn-gotcha08.bilivideo.com": {
+      "prefix": "c1",
+      "region": "cn",
+      "type": "",
+      "id": "08"
+    },
+    "d1--cn-gotcha08.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "08"
+    },
+    "d1--cn-gotcha108.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "08"
+    },
+    "c1--cn-gotcha208.bilivideo.com": {
+      "prefix": "c1",
+      "region": "cn",
+      "type": "2",
+      "id": "08"
+    },
+    "d1--cn-gotcha208.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "08"
+    },
+    "c1--cn-gotcha09.bilivideo.com": {
+      "prefix": "c1",
+      "region": "cn",
+      "type": "",
+      "id": "09"
+    },
+    "d1--cn-gotcha09.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "09"
+    },
+    "d0--cn-gotcha09.bilivideo.com": {
+      "prefix": "d0",
+      "region": "cn",
+      "type": "",
+      "id": "09"
+    },
+    "d1--cn-gotcha209.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "09"
+    },
+    "d1--cn-gotcha11.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "",
+      "id": "11"
+    },
+    "d1--cn-gotcha111.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "1",
+      "id": "11"
+    },
+    "d1--cn-gotcha211.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "11"
+    },
+    "d1--ov-gotcha102.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "1",
+      "id": "02"
+    },
+    "d1--ov-gotcha04.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "",
+      "id": "04"
+    },
+    "d1--ov-gotcha104.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "1",
+      "id": "04"
+    },
+    "d1--ov-gotcha05.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "",
+      "id": "05"
+    },
+    "d1--ov-gotcha105.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "1",
+      "id": "05"
+    },
+    "d1--ov-gotcha06.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "",
+      "id": "06"
+    },
+    "d1--ov-gotcha106.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "1",
+      "id": "06"
+    },
+    "d1--ov-gotcha206.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "2",
+      "id": "06"
+    },
+    "d1--ov-gotcha07.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "",
+      "id": "07"
+    },
+    "d1--ov-gotcha107.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "1",
+      "id": "07"
+    },
+    "d1--ov-gotcha210.bilivideo.com": {
+      "prefix": "d1",
+      "region": "ov",
+      "type": "2",
+      "id": "10"
+    },
+    "d1--tf-gotcha01.bilivideo.com": {
+      "prefix": "d1",
+      "region": "tf",
+      "type": "",
+      "id": "01"
+    },
+    "d1--tf-gotcha04.bilivideo.com": {
+      "prefix": "d1",
+      "region": "tf",
+      "type": "",
+      "id": "04"
+    },
+    "d1--p1--cn-gotcha04.bilivideo.com": {
+      "prefix": "d1",
+      "region": "p1--cn",
+      "type": "",
+      "id": "04"
+    },
+    "d1--p2--cn-gotcha04.bilivideo.com": {
+      "prefix": "d1",
+      "region": "p2--cn",
+      "type": "",
+      "id": "04"
+    },
+    "d1--cn-gotcha204-1.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "04"
+    },
+    "d1--cn-gotcha204-2.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "04"
+    },
+    "d1--cn-gotcha204-3.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "04"
+    },
+    "d1--cn-gotcha204-4.bilivideo.com": {
+      "prefix": "d1",
+      "region": "cn",
+      "type": "2",
+      "id": "04"
+    }
+  }
+}

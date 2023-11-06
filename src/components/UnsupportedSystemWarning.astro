@@ -1,0 +1,26 @@
+<div class="old-system-warning" style="display: none;">
+  录播姬已不支持 Windows 7、Windows 8 等旧版本操作系统
+</div>
+
+<style>
+  .old-system-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 1.2em;
+  }
+</style>
+
+<script>
+  const v = navigator.userAgent;
+  if (v.indexOf("Windows") !== -1 && v.indexOf("Windows NT 10.0") === -1) {
+    // remove display none
+    const e = document.querySelector<HTMLDivElement>(".old-system-warning");
+    if (e) e.style.display = "";
+  }
+</script>

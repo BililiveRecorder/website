@@ -1,0 +1,3 @@
+# functions
+
+Cloudflare Pages Functions

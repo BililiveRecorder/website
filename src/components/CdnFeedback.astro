@@ -1,0 +1,111 @@
+---
+import { Card } from "@astrojs/starlight/components";
+---
+
+<div class="not-content">
+  <Card title="信息反馈">
+    <form onsubmit="return false">
+      <textarea
+        id="feedback-text"
+        placeholder="请填写缺少的域名和/或其他相关信息"
+        rows="4"></textarea>
+      <div id="feedback-result" style="text-align:center"></div>
+      <button
+        id="feedback-submit"
+        class="g-recaptcha"
+        data-callback="submitCdnFeedback"
+        data-sitekey="6Les2MkiAAAAAK3eg0tTp2Jm_WfQ4s9qVh5YDAUA">提交</button
+      >
+      <div style="font-size: 0.7em;">
+        This site is protected by reCAPTCHA and the Google <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="nofollow noopener noreferrer">Privacy Policy</a
+        > and <a
+          href="https://policies.google.com/terms"
+          target="_blank"
+          rel="nofollow noopener noreferrer">Terms of Service</a
+        > apply.
+      </div>
+    </form>
+    <script src="https://www.recaptcha.net/recaptcha/api.js" async defer
+    ></script>
+  </Card>
+</div>
+
+<script>
+  (window as any).submitCdnFeedback = function (t: string) {
+    const grecaptcha = (window as any).grecaptcha;
+    const result = document.querySelector<HTMLDivElement>("#feedback-result");
+    const textArea =
+      document.querySelector<HTMLTextAreaElement>("#feedback-text");
+    if (!result || !textArea) return;
+
+    result.textContent = "正在提交...";
+    result.style.color = "";
+
+    const feedback = textArea.value;
+    if (!feedback || feedback.length < 5) {
+      result.textContent = "反馈内容需要至少 5 个字";
+      result.style.color = "red";
+      grecaptcha.reset();
+      return;
+    }
+
+    if (feedback.length > 1000) {
+      result.textContent = "反馈内容不能超过 1000 个字";
+      result.style.color = "red";
+      grecaptcha.reset();
+      return;
+    }
+
+    fetch("/api/send-cdn-feedback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text: feedback,
+        token: t,
+      }),
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        if (r.success) {
+          result.textContent = "反馈已提交！";
+          result.style.color = "green";
+          textArea.value = "";
+        } else {
+          result.textContent = "反馈提交失败，请稍后再试";
+          result.style.color = "red";
+        }
+        grecaptcha.reset();
+      })
+      .catch((e) => {
+        result.textContent = "反馈提交失败，请稍后再试";
+        result.style.color = "red";
+        grecaptcha.reset();
+      });
+  };
+</script>
+
+<style is:global>
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
+</style>
+<style>
+  #feedback-text {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #feedback-submit {
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    padding: 4px;
+    margin: 4px 0;
+    cursor: pointer;
+  }
+</style>
