@@ -81,7 +81,7 @@ import { Card } from "@astrojs/starlight/components";
         }
         grecaptcha.reset();
       })
-      .catch((e) => {
+      .catch(() => {
         result.textContent = "反馈提交失败，请稍后再试";
         result.style.color = "red";
         grecaptcha.reset();

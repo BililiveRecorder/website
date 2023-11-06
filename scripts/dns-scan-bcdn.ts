@@ -1,6 +1,5 @@
 import { Resolver } from "dns/promises";
 import { writeFileSync } from "fs";
-import path from "path";
 
 const r = new Resolver();
 r.setServers(['119.29.29.29', '182.254.118.118'])

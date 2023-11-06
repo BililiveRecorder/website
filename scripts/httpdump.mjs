@@ -1,4 +1,4 @@
-const http = require('http')
+import { createServer } from 'http';
 
 /**
  *
@@ -19,6 +19,6 @@ ${body}
   });
 }
 
-const server = http.createServer(requestListener);
+const server = createServer(requestListener);
 console.log('listening on 8080');
 server.listen(8080);
