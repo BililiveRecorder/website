@@ -28,6 +28,13 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="关于录播姬的官网">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <TextBlock Text="录播姬专用的相关域名可能是被人恶意举报，被腾讯分别标记为“含有黄赌内容”和“传播不实信息”"/>
+              <TextBlock Text="近期录播姬官网域名 rec.danmuji.org 被 QQ 过滤，含有这个域名的消息全部发不出去"/>
+              <TextBlock Text="为了方便各位沟通和通过 QQ 发送链接，站长特意为大家上线了镜像站域名 meiyousetubushihuangdu.danmuji.org"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="关于录制出的视频画面模糊的问题">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <TextBlock Text="2023 年 10 月 25 日直播流地址接口新增加了限制，有多个画质的直播间只能返回“高清”和“流程”两个低画质的直播流。"/>
