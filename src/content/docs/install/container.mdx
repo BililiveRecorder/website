@@ -25,7 +25,7 @@ docker pull ghcr.io/bililiverecorder/bililiverecorder:latest
 
 新建一个 `docker-compose.yml` 文件，内容参考如下：
 
-```yaml
+```yaml title="docker-compose.yml" "用户名" "密码"
 version: "3.8"
 services:
   recorder:
@@ -51,7 +51,7 @@ services:
 </TabItem>
 <TabItem label="docker cli">
 
-```bash
+```bash "bililive-recorder" "/path/to/recordings" "用户名" "密码"
 docker run -d \
   --name bililive-recorder \
   -p 2356:2356 \
@@ -93,7 +93,7 @@ docker compose up -d
 
 更新 docker 容器需要先拉取新的镜像，然后停止并删除旧的容器，再启动新的容器。
 
-```bash
+```bash "bililive-recorder"
 # 拉取最新的镜像
 docker pull bililive/recorder:latest
 

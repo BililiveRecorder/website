@@ -192,7 +192,7 @@ ${region.regionName} ${ispName} (\`${region.regionCode}-${ispId}\`) 共有 ${Obj
 <details>
 <summary>点击展开 ${region.regionName} ${ispName} 的域名列表</summary>
 
-\`\`\`
+\`\`\`txt title="${region.regionName}${ispName[0].match(/[a-zA-Z]/) ? ' ' : ''}${ispName}" /.+bilivideo.com/
 ${Object.entries(region.domains)
         .map(([domain, ips]) => `${domain}
 ${[...(ips.ipv4 || []), ...(ips.ipv6 || [])].map(x => '    ' + x).join('\n')}`)

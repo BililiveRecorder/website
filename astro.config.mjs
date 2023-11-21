@@ -170,16 +170,9 @@ export default defineConfig({
             },
             {
               label: 'HTTP API',
-              items: [
-                {
-                  label: 'GraphQL API',
-                  link: '/reference/api/graphql/'
-                },
-                {
-                  label: 'REST API',
-                  link: '/reference/api/rest/'
-                },
-              ],
+              autogenerate: {
+                directory: '/reference/api/',
+              }
             },
           ],
         },

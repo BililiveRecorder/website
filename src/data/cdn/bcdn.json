@@ -1,5 +1,5 @@
 {
-  "time": "2023/11/6",
+  "time": "2023/11/21",
   "dns": {
     "ct": [
       {
@@ -5203,7 +5203,16 @@
       {
         "regionCode": "nmghhht",
         "regionName": "内蒙古呼和浩特",
-        "domains": {}
+        "domains": {
+          "cn-nmghhht-cm-01-05.bilivideo.com": {
+            "ipv4": [
+              "117.161.13.70"
+            ],
+            "ipv6": [
+              "2409:8c10:c00:4::70"
+            ]
+          }
+        }
       },
       {
         "regionCode": "sccd",

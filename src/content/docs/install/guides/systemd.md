@@ -16,9 +16,9 @@ description: 如何使用 systemd 运行录播姬命令行版
 
 新建一个文件 `/etc/systemd/system/brec.service`
 
-写入以下内容，注意调整 `ExecStart=` 后面的文件路径和参数。
+写入以下内容，**注意调整 `ExecStart=` 后面的文件路径和参数**。
 
-```toml
+```ini title="/etc/systemd/system/brec.service" "录播姬所在位置/BililiveRecorder.Cli"
 [Unit]
 Description=BililiveRecorder
 After=network.target

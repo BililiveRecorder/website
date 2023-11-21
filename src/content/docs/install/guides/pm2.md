@@ -15,10 +15,11 @@ Node.js 的安装请参考下面两个链接
 - [https://nodejs.org/zh-cn/download/](https://nodejs.org/zh-cn/download/)
 - [https://nodejs.org/zh-cn/download/package-manager/](https://nodejs.org/zh-cn/download/package-manager/)
 
+关于 PM2 的安装和使用详细信息请参考 PM2 的官方网站。
+
 安装 PM2:
 
 ```sh
-# 详细信息请参考 PM2 的官方网站
 sudo npm install pm2 -g
 ```
 
@@ -28,12 +29,13 @@ sudo npm install pm2 -g
 
 ## 使用 PM2 启动录播姬
 
-```sh
+```sh "BililiveRecorder.Cli"
 pm2 start --name recorder BililiveRecorder.Cli -- run --bind "http://*:2356" --http-basic-user "用户名" --http-basic-pass "密码" "录播工作目录"
 ```
 
 ![使用 PM2 运行的截图](@assets/install-guides/user-install-cli-pm2.png)
 
+`BililiveRecorder.Cli` 是录播姬可执行文件的路径，请根据自己的需求调整后面的其他参数。  
 其他录播姬的命令和参数请参考[下载使用命令行版](/install/cli/)页面。
 
 ## 设置开机启动
@@ -46,6 +48,8 @@ pm2 start --name recorder BililiveRecorder.Cli -- run --bind "http://*:2356" --h
 pm2 startup
 # 然后复制粘贴并运行这条命令输出的命令。
 ```
+
+再执行：
 
 ```sh
 pm2 save
