@@ -20,3 +20,13 @@
 starlight-tabs section {
   padding: 0 1em;
 }
+
+.sl-markdown-content details {
+  border-radius: 0.5rem;
+  border: 1px solid var(--sl-color-gray-3);
+  padding: 0.25rem 1rem;
+}
+
+.sl-markdown-content details summary {
+  cursor: pointer;
+}
