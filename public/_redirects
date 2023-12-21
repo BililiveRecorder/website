@@ -11,7 +11,7 @@
 
 /user/ /
 /user/system-requirements/ /user/faq/
-/user/install/ /user/versions/
+/user/install/ /install/versions/
 /user/install/wpf/ /install/desktop/
 /user/install/cli/ /install/cli/
 /user/install/cli-pm2/ /install/guides/pm2/
@@ -39,7 +39,9 @@
 /user/repair-feedback /user/repair/
 /user/repair-feedback/ /user/repair/
 
-/docs /user/versions/
-/docs/ /user/versions/
-/docs/* /user/versions/
+/docs /install/versions/
+/docs/ /install/versions/
+/docs/faq /user/faq/
+/docs/faq/ /user/faq/
+/docs/* /install/versions/
 /update/* /user/changelog/
