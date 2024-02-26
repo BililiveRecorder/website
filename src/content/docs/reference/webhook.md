@@ -5,7 +5,7 @@ description: 录播姬 Webhook 说明
 
 录播姬提供了 Webhook，方便有能人士基于录播姬实现其他功能。设置项里可以换行，每行一个 URL，录播姬会向所有 URL 同时发送请求。
 
-测试 webhook 可以使用 [这个 nodejs 脚本](https://github.com/BililiveRecorder/website/blob/main/scripts/httpdump.js) 或者 [https://webhook.site](https://webhook.site)。
+测试 webhook 可以使用 [这个 nodejs 脚本](https://github.com/BililiveRecorder/website/blob/main/scripts/httpdump.mjs) 或者 [https://webhook.site](https://webhook.site)。
 
 ## Webhook v2
 
