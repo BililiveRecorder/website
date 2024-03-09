@@ -39,8 +39,8 @@ squirrel releasify -p "$pkg" -r "$dst" --icon "$icon" --appIcon "$appIcon" -f ne
 
 ## 发布后检查
 
-- Docker Hub 已更新到新版本
-- ghcr.io 已更新到新版本，并且两处的 image hash 一致
-- GitHub Releases 的 Assets 完整
+- [Docker Hub](https://hub.docker.com/r/bililive/recorder/tags) 已更新到新版本
+- [ghcr.io](https://github.com/BililiveRecorder/BililiveRecorder/pkgs/container/bililiverecorder) 已更新到新版本，并且两处的 image hash 一致
+- [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases) 的 Assets 完整
 - 安装包文件已更新
 - WPF 公告页已更新
