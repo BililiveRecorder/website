@@ -33,6 +33,7 @@ Options:
   -b, --bind, --http-bind <http-bind>                                     Bind address for http service []
   --http-basic-user <http-basic-user>                                     Web interface username []
   --http-basic-pass <http-basic-pass>                                     Web interface password []
+  --http-open-access                                                      Allow open access from the internet [default: False]
   --enable-file-browser                                                   Enable file browser located at '/file' [default: True]
   -l, --log, --loglevel <Debug|Error|Fatal|Information|Verbose|Warning>   Minimal log level output to console [default: Information]
   --flog, --logfilelevel <Debug|Error|Fatal|Information|Verbose|Warning>  Minimal log level output to file [default: Debug]
@@ -66,6 +67,14 @@ Options:
 #### `--http-basic-user` `--http-basic-pass`
 
 指定 HTTP 服务的 Basic Auth 用户名和密码，如果不指定则不启用 Basic Auth。
+
+#### `--http-open-access`
+
+允许从公网访问录播姬的 HTTP 服务。也可以设置环境变量 `BREC_HTTP_OPEN_ACCESS` 为任意非空值实现相同效果。
+
+如果没有通过 `--http-basic-user` 和 `--http-basic-pass` 参数设置 Basic Auth 用户名和密码、并且也没有通过此参数或对应的环境变量允许公网访问，则录播姬的 HTTP 服务只允许局域网访问，在检测到疑似非局域网访问时返回错误。
+
+这个功能是为了防止用户在不知情的情况下误把录播姬直接暴露到公网，产生安全风险。
 
 #### `--enable-file-browser`
 
@@ -120,6 +129,7 @@ Options:
   -b, --bind, --http-bind <http-bind>                                     Bind address for http service []
   --http-basic-user <http-basic-user>                                     Web interface username []
   --http-basic-pass <http-basic-pass>                                     Web interface password []
+  --http-open-access                                                      Allow open access from the internet [default: False]
   --enable-file-browser                                                   Enable file browser located at '/file' [default: True]
   -l, --log, --loglevel <Debug|Error|Fatal|Information|Verbose|Warning>   Minimal log level output to console [default: Information]
   --flog, --logfilelevel <Debug|Error|Fatal|Information|Verbose|Warning>  Minimal log level output to file [default: Debug]
