@@ -6,4 +6,4 @@ title: 社区SDK
 
 | Language | URL |
 | --- | --- |
-| Golang | `https://github.com/wintbiit/brec-website` |
+| Golang | `https://github.com/wintbiit/brec-sdk-go` |
