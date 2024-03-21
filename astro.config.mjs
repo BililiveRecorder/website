@@ -207,6 +207,10 @@ export default defineConfig({
                 directory: 'dev/sdk.js/',
               }
             },
+            {
+              label: '社区 SDK',
+              link: '/dev/sdk/'
+            },
           ],
         },
       ],
