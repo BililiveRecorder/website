@@ -1,9 +1,9 @@
 ---
-title: 社区SDK
+title: 社区 SDK
 ---
 
-## 社区贡献的SDK
+由社区贡献的 SDK。
 
-| Language | URL |
-| --- | --- |
-| Golang | `https://github.com/wintbiit/brec-sdk-go` |
+| Language | URL                                       |
+| -------- | ----------------------------------------- |
+| Go       | <https://github.com/wintbiit/brec-sdk-go> |
