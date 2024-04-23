@@ -42,6 +42,12 @@ services:
     environment:
       - BREC_HTTP_BASIC_USER=用户名
       - BREC_HTTP_BASIC_PASS=密码
+      - UMASK=022
+      # (高级参数，非必填)这个值用于控制镜像写出的文件权限，002为当前用户&当前用户组可读写，默认值022为当前用户可读写，其他用户只读
+      - PUID=100
+      # (高级参数，非必填)这个值用于控制文件所有者，建议设置为宿主机的用户的UID或者和宿主机用户相同用户组的用户的UID
+      - PGID=100
+      # (高级参数，非必填)这个值用于控制文件所有者所属的用户组，建议设置为宿主机的用户相同的用户组的GID
 ```
 
 替换上面示例中的 `source` 为宿主机保存录播的路径，设置好管理用户名和密码，然后运行 `docker compose up -d` 即可启动。配置文件和录制的数据都会保存在容器内的 `/rec` 中。
@@ -58,6 +64,9 @@ docker run -d \
   -v /path/to/recordings:/rec \
   -e BREC_HTTP_BASIC_USER=用户名 \
   -e BREC_HTTP_BASIC_PASS=密码 \
+  -e UMASK=022 \
+  -e PUID=100 \
+  -e PGID=100 \
   bililive/recorder:latest
 ```
 
