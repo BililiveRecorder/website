@@ -7,6 +7,31 @@ import RD from "@components/ReleaseDate.astro";
 
 本页面省略了部分早期的更新记录。
 
+## 2.12.0
+
+<RD date={[2024, 7, 7]} />
+
+通用：
+
+- 优化弹幕合并工具的报错信息，显示出错的来源文件名
+
+命令行版：
+
+- 为 `--config-override` 参数添加了传入文件夹路径的支持。原来只支持完整文件路径
+- 调整了无密码公网访问检测逻辑
+- 给 docker 镜像添加了通过环境变量设置 `UMASK`, `PUID`, `PGID` 的功能
+- 禁用了 aspnetcore/dotnet 的 distributed context propagation 功能
+- 更新了 webui
+
+## 2.11.1
+
+<RD date={[2024, 3, 17]} />
+
+命令行版：
+
+- 修复了 `--http-open-access` 参数无效的问题
+- 调整了禁止访问页面上关于安全风险的说明
+
 ## 2.11.0
 
 <RD date={[2024, 3, 9]} />
