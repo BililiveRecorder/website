@@ -41,6 +41,7 @@
 
 /docs /install/versions/
 /docs/ /install/versions/
+/docs/basic/webhook/ /reference/webhook/
 /docs/faq /user/faq/
 /docs/faq/ /user/faq/
 /docs/* /install/versions/
