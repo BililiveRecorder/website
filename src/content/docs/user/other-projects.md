@@ -56,7 +56,7 @@ description: 与录播姬相关的其他工具和项目推荐
 | :--: | ------------ | -------- |
 | valkjsaaa/auto-bilibili-recorder | [GitHub 项目页](https://github.com/valkjsaaa/auto-bilibili-recorder) | 全自动录播上传脚本 |
 | Morax-xyc/bililiveauto | [GitHub 项目页](https://github.com/morax-xyc/bililiveauto) | 自动处理弹幕，转封装,通过rclone上传到网盘的简单脚本 |
-| mwxmmy/biliupforjava | [Docker Hub 镜像页](https://hub.docker.com/r/mwxmmy/biliupforjava) | 基于录播姬WebhookV2使用java编写的录播上传插件支持webui、边录边传、弹幕发送、自定义投稿封面 |
+| mwxmmy/biliupforjava | [GitHub 项目页](https://github.com/mwxmmy/biliupforjava) | 基于录播姬WebhookV2使用java编写的录播上传插件支持webui、边录边传、弹幕发送、自定义投稿封面 |
 | ayumi-otosaka-314/brec-pp | [GitHub 项目页](https://github.com/ayumi-otosaka-314/brec-pp) | 自动上传 Google Drive、删除旧文件、通过 Discord 发消息推送 |
 | renmu123/biliLive-tools | [GitHub 项目页](https://github.com/renmu123/biliLive-tools) | 支持录播姬webhook自动弹幕压制上传，以及单独上传&下载&弹幕转换&转码&合并的GUI |
 
