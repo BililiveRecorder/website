@@ -628,6 +628,19 @@ https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom?room_id={{�
 原画
 ```
 
+#### unescape
+
+反转义 HTML 转义符
+
+```liquid
+{{ "我也不知道为什么直播标题里的 &amp; 会变成 &amp;amp;" | unescape }}
+```
+
+```
+我也不知道为什么直播标题里的 & 会变成 &amp;
+```
+
+
 #### format_date
 
 用 .NET 的 [日期格式字符串](https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/custom-date-and-time-format-strings) 格式化日期。
