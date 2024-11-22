@@ -21,8 +21,8 @@
             <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org">
               <TextBlock TextAlignment="Center" Text="网站 Website&#xa;rec.danmuji.org"/>
             </Button>
-            <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://afdian.net/@genteure">
-              <TextBlock TextAlignment="Center" Text="赞助 Sponsor&#xa;afdian.net/@genteure"/>
+            <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://afdian.com/a/genteure">
+              <TextBlock TextAlignment="Center" Text="赞助 Sponsor&#xa;afdian.com/a/genteure"/>
             </Button>
             <Button Margin="2" Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/faq/">
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
