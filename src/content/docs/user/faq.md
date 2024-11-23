@@ -14,7 +14,7 @@ Discord：[https://discord.gg/YQWtUsbGSw](https://discord.gg/YQWtUsbGSw)
 录播姬已不支持包括 Windows 7 在内的老旧操作系统。
 
 录播姬桌面版支持 Windows 10 1607 或更高版本、Windows 11 和它们对应的 Windows Server 版本。  
-录播姬命令行版的系统支持请参考 [.NET 6 的系统支持](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md)。  
+录播姬命令行版的系统支持请参考 [.NET 8 的系统支持](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md)。  
 录播姬容器镜像支持 `linux/amd64`、`linux/arm64`、`linux/arm/v7` 三个架构。
 
 ### 下载文件不成功
