@@ -218,6 +218,5 @@ export default defineConfig({
     compress(),
   ],
   experimental: {
-    devOverlay: false
   },
 });
