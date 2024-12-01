@@ -38,7 +38,7 @@
           <GroupBox Header="关于服务器提供的直播视频编码格式">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <TextBlock Text="2024 年 11 月月底左右开始发现直播服务器可能会在 AVC 直播流选项里提供 HEVC 格式的直播流。"/>
-              <TextBlock Text="录播姬之前标准模式检测到非 AVC/H.264 格式是停止录制，现已在 1.13.1 中修改为切换原始数据模式。"/>
+              <TextBlock Text="录播姬之前标准模式检测到非 AVC/H.264 格式是停止录制，现已在 2.13.1 中修改为切换原始数据模式。"/>
               <TextBlock Text="视频编码格式为 HEVC 的 FLV 文件是非标准格式，无法在录播姬工具箱里转为 MP4，无法被大部分播放器读取，需用支持这个非标准格式的魔改版 ffmpeg 转成其他格式后使用。有问题可以加群咨询。"/>
             </ui:SimpleStackPanel>
           </GroupBox>
