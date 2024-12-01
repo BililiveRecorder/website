@@ -34,7 +34,26 @@
               <TextBlock Text="因此即使设置录制的画质ID是“原画”，也有可能录制到“高清”之类的低分辨率低码率流。"/>
               <TextBlock Text="本来就没有低画质流的臭底边主播不受影响。"/>
             </ui:SimpleStackPanel>
-          </GroupBox>       
+          </GroupBox>
+          <GroupBox Header="关于服务器提供的直播视频编码格式">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <TextBlock Text="2024 年 11 月月底左右开始发现直播服务器可能会在 AVC 直播流选项里提供 HEVC 格式的直播流。"/>
+              <TextBlock Text="录播姬之前标准模式检测到非 AVC/H.264 格式是停止录制，现已在 1.13.1 中修改为切换原始数据模式。"/>
+              <TextBlock Text="视频编码格式为 HEVC 的 FLV 文件是非标准格式，无法在录播姬工具箱里转为 MP4，无法被大部分播放器读取，需用支持这个非标准格式的魔改版 ffmpeg 转成其他格式后使用。有问题可以加群咨询。"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
+          <GroupBox Header="2.13.1 更新内容（2024年12月1日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 修复了 v2.13.0 新的数据处理逻辑的一个问题"/>
+              <TextBlock Text="- 检测到非 H.264 格式之后尝试用原始数据模式录制而不是停止录制"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.13.0 更新内容（2024年11月22日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
