@@ -42,6 +42,17 @@
               <TextBlock Text="视频编码格式为 HEVC 的 FLV 文件是非标准格式，无法在录播姬工具箱里转为 MP4，无法被大部分播放器读取，需用支持这个非标准格式的魔改版 ffmpeg 转成其他格式后使用。有问题可以加群咨询。"/>
             </ui:SimpleStackPanel>
           </GroupBox>
+          <GroupBox Header="2.14.0 更新内容（2025年1月3日）">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
+                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
+                </StackPanel>
+              </Button>
+              <TextBlock Text="- 录制标准模式兼容非标 HEVC FLV (codec 12)，不再报错/切换原始数据模式"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="2.13.1 更新内容（2024年12月1日）">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
