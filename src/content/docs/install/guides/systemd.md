@@ -3,6 +3,10 @@ title: 配置systemd单元文件
 description: 配置systemd单元文件
 ---
 
+:::note[本教程的内容可能不完全准确]
+如果您发现本教程的内容有误，可以通过发送 Pull Request 来帮助我们改进。编辑链接可以在本页面的最下方找到。
+:::
+
 ## 下载录播姬命令行版
 
 根据CPU架构，下载录播姬命令行版。录播姬Linux版本支持ARM、ARM64和AMD64架构的CPU
