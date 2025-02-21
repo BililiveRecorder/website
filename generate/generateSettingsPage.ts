@@ -88,7 +88,9 @@ const extraDescrption: Record<string, string> = {
 `,
   RecordingQuality: `
 
-录制的直播画质 qn 值，以英文逗号分割，靠前的优先。
+录制的视频编码格式和直播画质 qn 值，以英文逗号分割，靠前的优先。
+
+编码格式支持 \`avc\` 和 \`hevc\` 两种。
 
 **注意**：
 
@@ -98,7 +100,7 @@ const extraDescrption: Record<string, string> = {
 - 这个设置项 **不是录制码率** 。
 - 这个设置项也不是录制分辨率、录制帧率。
 
-画质 | qn 值
+画质名字 | qn 值
 :--:|:--:
 杜比 | 30000
 4K   | 20000

@@ -89,7 +89,7 @@
     "name": "直播画质",
     "type": "string?",
     "configType": "room",
-    "default": "10000"
+    "default": "avc10000,hevc10000"
   },
   {
     "id": "FileNameRecordTemplate",
@@ -177,7 +177,7 @@
     "type": "uint",
     "configType": "globalOnly",
     "advancedConfig": true,
-    "default": 600
+    "default": 180
   },
   {
     "id": "TimingApiTimeout",
