@@ -38,6 +38,8 @@ export const onRequestGet: PagesFunction<{
     '171.13.14.',
     '180.163.220.',
     '218.91.199.',
+    '114.80.9.',
+    '114.230.238',
   ];
   if (blockIpPrefix.some(match => clientIP?.startsWith(match))) {
     console.log('ip in blocklist: ' + clientIP);
