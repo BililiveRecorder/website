@@ -28,6 +28,11 @@
               <TextBlock TextAlignment="Center" Text="常见问题 FAQ&#xa;rec.danmuji.org/docs/faq/"/>
             </Button>
           </WrapPanel>
+          <GroupBox Header="2025 年 4 月 2 日公告">
+            <ui:SimpleStackPanel Margin="5" Spacing="5">
+              <TextBlock Text="日志显示 -352 错误的问题已在修，最近几天会发新版本。"/>
+            </ui:SimpleStackPanel>
+          </GroupBox>
           <GroupBox Header="关于录制出的视频画面模糊的问题">
             <ui:SimpleStackPanel Margin="5" Spacing="5">
               <TextBlock Text="2023 年 10 月 25 日直播流地址接口新增加了限制，有多个画质的直播间只能返回“高清”和“流程”两个低画质的直播流。"/>
@@ -63,31 +68,6 @@
                 </StackPanel>
               </Button>
               <TextBlock Text="- 录制标准模式兼容非标 HEVC FLV (codec 12)，不再报错/切换原始数据模式"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.13.1 更新内容（2024年12月1日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 修复了 v2.13.0 新的数据处理逻辑的一个问题"/>
-              <TextBlock Text="- 检测到非 H.264 格式之后尝试用原始数据模式录制而不是停止录制"/>
-            </ui:SimpleStackPanel>
-          </GroupBox>
-          <GroupBox Header="2.13.0 更新内容（2024年11月22日）">
-            <ui:SimpleStackPanel Margin="5" Spacing="5">
-              <Button Command="{x:Static m:Commands.OpenLink}" CommandParameter="https://rec.danmuji.org/user/change-log/">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                  <TextBlock Text="在浏览器查看完整更新日志" Margin="0,0,5,0"/>
-                  <ui:PathIcon Style="{StaticResource PathIconDataExternalLink}"/>
-                </StackPanel>
-              </Button>
-              <TextBlock Text="- 文件名模板新增了 `unescape` filter 用于反转义字符"/>
-              <TextBlock Text="- 新增了使用正则匹配直播标题跳过录制的功能"/>
-              <TextBlock Text="- 新增了一个新的实验性直播修复逻辑，默认关闭。新逻辑可能可以缓解部分录制出的文件碎片太多的情况。"/>
             </ui:SimpleStackPanel>
           </GroupBox>
         </ui:SimpleStackPanel>
