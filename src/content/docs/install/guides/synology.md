@@ -8,6 +8,11 @@ description: 如何使用 Synology 群晖运行录播姬容器镜像
 如果您发现本教程的内容有误，可以通过发送 Pull Request 来帮助我们改进。编辑链接可以在本页面的最下方找到。
 :::
 
+:::note[部分群晖可能无法使用]
+部分群晖系统linux内核老旧，可能导致无法运行。[issue](https://github.com/BililiveRecorder/BililiveRecorder/issues/667)
+:::
+
+
 ## 拉取 Docker 镜像文件
 
 在 Docker 的“注册表”（其实是镜像仓库）中，右上角的搜索框输入 `bililive/recorder`，选择一个版本，并下载。
