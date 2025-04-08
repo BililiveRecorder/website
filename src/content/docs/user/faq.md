@@ -56,6 +56,19 @@ $ xattr -rd com.apple.quarantine .
 $ codesign -fs - --deep BililiveRecorder.Cli
 ```
 
+### docker / cli 版录播姬无法启动
+
+日志显示
+
+```log
+GC: Failed to initialize GCToOSInterface
+GC initialization failed with error 0x80004005
+Failed to create CoreCLR, HRESULT: 0x80004005
+```
+
+通常是 Linux 内核版本过老，建议升级系统或内核。
+
+
 ## 使用
 
 ### 可以用录播姬录自己直播间吗？
@@ -226,3 +239,26 @@ OBS 录制时推荐设置录制文件格式为 `MKV`，万一发生软件崩溃�
 
 原始数据模式的状态条显示为白色/浅蓝色。  
 录制速度只有标准模式才能统计到，原始数据模式因为是不经处理直接写入硬盘，所以没有这些统计信息。
+
+### 刷新房间信息时出错 调用的目标发生了异常 
+
+日志提示 `刷新房间信息时 出错调用的目标发生了异常。`，同时日志文件显示 `此实现不是 Windows 平台 FIPS 验证的加密算法的一部分。` （使用 docker / cli 版本的可以在 WebUI 中点击日志查看详细信息）
+
+出现这个问题的原因是使用了MD5算法，而系统的组策略安全设置导致无法使用此算法。
+
+要修正此问题，请按照如下操作（两种方法任选其一）。 
+
+方法一：
+
+1. 按 `WIN+R` （或点击开始-运行），并输入 `gpedit.msc` 后确定，启动组策略编辑器。
+2. 左侧列表中找到 `计算机配置` - `Windows设置` - `安全设置` - `本地策略` - `安全选项`，并在右侧找到 `系统加密：将FIPS兼容算法用于加密、哈希和签名`
+3. 双击上述策略，在弹出的选项中，将状态改为已禁用。
+4. 关闭组策略后，重新启动录播姬。
+ 
+方法二：
+
+按 `Win+R` （或点击开始-运行），并输入 `regedit` 后确定，启动注册表编辑器。
+
+浏览到 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy` ，将 `Enabled` 的值改为 `0`
+
+关闭注册表编辑器后，重新启动录播姬。
