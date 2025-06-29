@@ -7,13 +7,25 @@ import RD from "@components/ReleaseDate.astro";
 
 本页面省略了部分早期的更新记录。
 
+## 2.17.3
+
+<RD date={[2025, 6, 29]} />
+
+桌面版：
+
+- 重新编译并更换内置的 miniffmpeg
+
+  说明：桌面版的工具箱里有一个转封装工具，主要是给不太懂的用户提供一个快捷、简单、能用的转封装途径。
+  2.17.2 以及之前几个版本内置的 ffmpeg 被很多杀毒软件标记成了木马，其中 Microsoft Defender 的代码为 `Adware:Win32/Tnega`（和其他一些）。这次更换为今天刚刚从 ffmpeg master branch 编译出来的版本看看效果。发版本前测试发现 Defender 还是会误报，代码为 `Trojan:Win32/Wacatac.B!ml`。
+  如果观察发现还是有大面积负面影响，就把桌面版的转封装功能整体删除了，引导用户自行下载其他工具转封装。
+
 ## 2.17.2
 
 <RD date={[2025, 6, 28]} />
 
 通用：
 
-- 调整了默认使用的 cookie
+- 调整了默认使用的 Cookie
 
 ## 2.17.1
 
@@ -21,7 +33,7 @@ import RD from "@components/ReleaseDate.astro";
 
 通用：
 
-- 调整了 cookie 解析逻辑
+- 调整了 Cookie 设置解析逻辑
 - 调整了弹幕连接 URL 参数
 
 ## 2.17.0

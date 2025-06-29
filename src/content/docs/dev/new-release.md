@@ -44,3 +44,30 @@ squirrel releasify -p "$pkg" -r "$dst" --icon "$icon" --appIcon "$appIcon" -f ne
 - [GitHub Releases](https://github.com/BililiveRecorder/BililiveRecorder/releases) 的 Assets 完整
 - 安装包文件已更新
 - WPF 公告页已更新
+
+## 附 mini ffmpeg 编译流程
+
+- <https://trac.ffmpeg.org/wiki/CompilationGuide/CrossCompilingForWindows>
+- <https://mxe.cc/>
+
+```bash
+docker run -it --name ffbuild ubuntu:noble
+docker start -ai ffbuild
+
+apt update
+apt install -y build-essential git curl wget # ... https://mxe.cc/#requirements-debian
+
+git clone https://github.com/mxe/mxe.git /opt/mxe --depth 1
+cd /opt/mxe
+
+make MXE_TARGETS='i686-w64-mingw32.static' cc --jobs=2 JOBS=6
+export PATH=/opt/mxe/usr/bin:$PATH
+
+cd ~
+git clone https://github.com/ffmpeg/ffmpeg.git --depth 1
+cd ffmpeg
+
+./configure --enable-cross-compile --target-os=mingw32 --arch=i686 --cross-prefix=i686-w64-mingw32.static- --prefix=/output --enable-static --enable-version3 --disable-debug --disable-w32threads --disable-everything --disable-autodetect --disable-asm --enable-small --disable-runtime-cpudetect --disable-doc --disable-ffplay --disable-ffprobe --disable-network --disable-filters --disable-avdevice --disable-swresample --disable-swscale --enable-parser='h264,hevc,av1,aac,mp3' --enable-demuxer='mp4,flv,live_flv' --enable-muxer='flv,mp4' --enable-protocol='file,pipe' --enable-bsf='h264_mp4toannexb,aac_adtstoasc'
+
+make -j10
+```
