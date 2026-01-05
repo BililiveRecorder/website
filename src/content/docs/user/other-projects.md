@@ -60,7 +60,8 @@ description: 与录播姬相关的其他工具和项目推荐
 | ayumi-otosaka-314/brec-pp | [GitHub 项目页](https://github.com/ayumi-otosaka-314/brec-pp) | 自动上传 Google Drive、删除旧文件、通过 Discord 发消息推送 |
 | renmu123/biliLive-tools | [GitHub 项目页](https://github.com/renmu123/biliLive-tools) | 支持录播姬webhook自动弹幕压制上传，以及单独上传&下载&弹幕转换&转码&合并的GUI |
 | TensoRaws/ffmpeg_for_BililiveRecorder | [GitHub 项目页](https://github.com/TensoRaws/ffmpeg_for_BililiveRecorder)| 基于录播姬WebhookV2使用go编写的ffmpeg插件支持自定义ffmpeg参数和预定参数，支持自动删除 |
-| BililiveRecorder-AutoRemove | [GitHub 项目页](https://github.com/feifei2005/BililiveRecorder-AutoRemove) | 基于Python的简单脚本，自动删除早期录播以实现自动录制 |
+| BililiveRecorder-AutoRemove | [GitHub 项目页](https://github.com/feifei2005/BililiveRecorder-AutoRemove) | 基于Python的简单脚本，自动删除早期录播以实现循环录制~~赛博监控室~~ |
+| BililiveRec-Autoarchive | [GitHub 项目页](https://github.com/feifei2005/BililiveRec-Autoarchive) | 录播自动归档工具，支持视频转码 |
 
 ## 其他录播软件
 
@@ -74,6 +75,7 @@ description: 与录播姬相关的其他工具和项目推荐
 可以用来建设录播站
 
 - [AList](https://alist.nn.ci): 多存储后端，在线播放视频、加载弹幕
+- [OpenList](https://doc.oplist.org/): Alist的开源替代
 - [OLAINDEX](https://github.com/WangNingkai/OLAINDEX): 仅 OneDrive，在线播放视频
 - [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index): 仅 OneDrive，在线播放 MP4
 - [OneManager-php](https://github.com/qkqpttgf/OneManager-php): 仅 OneDrive
