@@ -67,7 +67,8 @@ description: 与录播姬相关的其他工具和项目推荐
 
 | 名字 | 链接 | 备注说明 |
 | :--: | ------------ | -------- |
-| blrec | [GitHub 项目页](https://github.com/acgnhiki/blrec) | Python 跨平台，有自己写的直播 FLV 修复，支持录制 HLS |
+| blrec | [GitHub 项目页](https://github.com/acgnhiki/blrec) | Python 跨平台，有自己写的直播 FLV 修复，支持录制 HLS（已归档，作者转为开发OneLiveRec） |
+| OneLiveRec | [GitHub 项目页](https://github.com/oneliverec/OneLiveRec) | Rust 写的简单易用稳定可靠适用于所有直播平台的直播录制工具 |
 
 
 ## 文件浏览器
