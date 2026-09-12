@@ -7,6 +7,33 @@ import RD from "@components/ReleaseDate.astro";
 
 本页面省略了部分早期的更新记录。
 
+## 2.19.0
+
+<RD date={[2026, 9, 12]} />
+
+通用：
+
+- 修复了 FLV 解析中的一个死锁问题
+- 新增 `NetworkTransportBindAddress` 配置项，可将弹幕连接绑定到指定的网络接口或 IP 地址
+- Webhook 事件的 `SessionStarted` / `FileOpening` 新增 `Qn`（画质 ID）和 `QnDescription`（画质名称）字段
+- 默认录制文件名模板中的 `name` 和 `title` 增加 `| unescape`
+
+命令行版：
+
+- 更新内置 WebUI
+
+## 2.18.0
+
+<RD date={[2025, 11, 30]} />
+
+通用：
+
+- 更新了执行用户脚本的运行库
+
+命令行版：
+
+- Web UI 为浏览器可播放的文件都新增了播放按钮
+
 ## 2.17.3
 
 <RD date={[2025, 6, 29]} />
