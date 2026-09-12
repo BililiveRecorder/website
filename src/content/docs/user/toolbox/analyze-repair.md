@@ -49,7 +49,7 @@ description: 录播姬工具箱的录播修复工具说明
 
 > FLV 修复 - 检测到可能缺少数据时分段
 
-标准模式录制的设置和工具箱分析、修复时的设置是独立的，[设置项 `FlvProcessorSplitOnScriptTag`](../settings.md#s-FlvProcessorSplitOnScriptTag) 控制的是录制时的行为。
+标准模式录制的设置和工具箱分析、修复时的设置是独立的，[设置项 `FlvProcessorSplitOnScriptTag`](/reference/settings/#s-FlvProcessorSplitOnScriptTag) 控制的是录制时的行为。
 
 ```sh
 ./BililiveRecorder.Cli tool analyze "input.flv" --pipeline-settings '{"SplitOnScriptTag": true}'

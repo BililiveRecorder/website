@@ -45,7 +45,7 @@ await api.removeRoomByRoomId(10101);
 
 如果只使用 API，不需要上层的抽象，也可以绕过 BililiveRec 直接构造 API 实例
 
-具体参考[纯 API 封装](../api/)
+具体参考[纯 API 封装](/dev/sdkjs/api/)
 
 ## 说明
 

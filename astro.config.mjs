@@ -6,6 +6,7 @@ import compress from "astro-compress";
 
 import rehypeExternalLinks from 'rehype-external-links';
 import { remarkHeadingId } from 'remark-custom-heading-id';
+import { unified } from '@astrojs/markdown-remark';
 
 import { generatePages } from './generate'
 generatePages()
@@ -14,27 +15,38 @@ generatePages()
 export default defineConfig({
   site: 'https://rec.danmuji.org',
   outDir: './site', // for compatibility with mkdocs
+  // Astro 7 defaults `compressHTML` to 'jsx', which drops the whitespace between
+  // inline elements. Keep the previous HTML-aware whitespace handling so
+  // existing spacing (e.g. the cog icon in AdvancedSettingBadge) is preserved.
+  compressHTML: true,
+  // Astro 7 defaults to the Sätteri Markdown processor. This site relies on
+  // remark/rehype plugins (custom heading IDs and external link badges), so it
+  // keeps using the unified() processor that supports them.
   markdown: {
-    remarkPlugins: [
-      remarkHeadingId,
-    ],
-    rehypePlugins: [
-      [
-        rehypeExternalLinks,
-        {
-          content: { type: 'text', value: '' },
-          contentProperties: { className: ['external-link-badge'] },
-          rel: ['noreferrer'],
-          target: '_blank',
-        }
+    processor: unified({
+      remarkPlugins: [
+        remarkHeadingId,
       ],
-    ]
+      rehypePlugins: [
+        [
+          rehypeExternalLinks,
+          {
+            content: { type: 'text', value: '' },
+            contentProperties: { className: ['external-link-badge'] },
+            rel: ['noreferrer'],
+            target: '_blank',
+          }
+        ],
+      ]
+    }),
   },
   integrations: [
-    starlightLinksValidator(),
     starlight({
       title: '录播姬',
       description: '一个简单好用免费开源的直播录制工具',
+      plugins: [
+        starlightLinksValidator(),
+      ],
       logo: {
         src: './public/favicon.svg',
       },
@@ -170,9 +182,13 @@ export default defineConfig({
             },
             {
               label: 'HTTP API',
-              autogenerate: {
-                directory: '/reference/api/',
-              }
+              items: [
+                {
+                  autogenerate: {
+                    directory: '/reference/api/',
+                  }
+                },
+              ],
             },
           ],
         },
@@ -203,9 +219,13 @@ export default defineConfig({
             {
               label: 'sdk.js',
               collapsed: true,
-              autogenerate: {
-                directory: 'dev/sdk.js/',
-              }
+              items: [
+                {
+                  autogenerate: {
+                    directory: 'dev/sdk.js/',
+                  }
+                },
+              ],
             },
             {
               label: '社区 SDK',
@@ -217,6 +237,4 @@ export default defineConfig({
     }),
     compress(),
   ],
-  experimental: {
-  },
 });
