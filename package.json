@@ -17,20 +17,20 @@
     "scan:gotcha": "tsm ./scripts/dns-scan-gotcha.ts"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
-    "@astrojs/markdown-remark": "^7.3.1",
-    "@astrojs/starlight": "^0.42.0",
-    "astro": "^7.3.2",
-    "astro-compress": "^2.3.5",
-    "mermaid": "^11.4.0",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/markdown-remark": "^7.3.10",
+    "@astrojs/starlight": "0.43.1",
+    "astro": "^7.4.13",
+    "astro-compress": "^2.4.3",
+    "mermaid": "^11.17.2",
     "rehype-external-links": "^3.0.0",
     "remark-custom-heading-id": "^2.0.0",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "starlight-links-validator": "^0.26.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241112.0",
+    "@cloudflare/workers-types": "^4.20260702.1",
     "@types/jest": "^29.5.14",
     "@types/service-worker-mock": "^2.0.4",
     "tsm": "^2.3.0"
